@@ -85,6 +85,11 @@ Testuota: **std::vector**, **Strategija 3**, **studentai1000000.txt**. Testavima
 | `-O2` (`programa_vector_O2`) | 2627 |
 | `-O3` (`programa_vector_O3`) | 2657 |
 
+![FlagasO1](screenshots/darbasO1.png)
+![FlagasO2](screenshots/darbasO2.png)
+![FlagasO3](screenshots/darbasO3.png)
+
+
 ---
 
 # Išvados
