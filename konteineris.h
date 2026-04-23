@@ -2,7 +2,7 @@
 #ifndef KONTEINERIS_H
 #define KONTEINERIS_H
 
-#include "studentas.h"
+#include "Studentas.h"
 
 #include <algorithm>
 #include <deque>
@@ -23,6 +23,7 @@ inline std::string aktyvausKonteinerioTrumpasPavadinimas()
 {
     return "list";
 }
+
 #elif defined(USE_DEQUE)
 template <typename T>
 using StudentuKonteineris = std::deque<T>;
@@ -36,6 +37,7 @@ inline std::string aktyvausKonteinerioTrumpasPavadinimas()
 {
     return "deque";
 }
+
 #else
 template <typename T>
 using StudentuKonteineris = std::vector<T>;
@@ -51,7 +53,8 @@ inline std::string aktyvausKonteinerioTrumpasPavadinimas()
 }
 #endif
 
-using StudContainer = StudentuKonteineris<Stud>;
+// StudContainer dabar laiko objektus ( yay :) )
+using StudContainer = StudentuKonteineris<Studentas>;
 
 template <typename T, typename Alloc, typename Compare>
 void konteinerioSort(std::list<T, Alloc>& konteineris, Compare comp)
