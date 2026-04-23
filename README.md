@@ -30,29 +30,6 @@ Makefile
 
 ---
 
-# Kompiliavimas ir paleidimas
-
-## Pagrindiniai
-make
-
-## Su optimizavimo flagais
-make opt
-
-## Paleidimas
-./programa_vector
-./programa_list
-./programa_deque
-
-arba, jei su flagais:
-programa_vector_O1
-programa_vector_O2
-programa_vector_O3
-
-## Valymas
-make clean
-
----
-
 # Studentų skirstymo strategijos
 
 ### Strategija 1
@@ -125,3 +102,26 @@ Testuota: **std::vector**, **Strategija 3**, **studentai1000000.txt**. Testavima
 - RAM: 32.0 GB (31.8 GB usable)
 - Diskas: HDD
 - OS: Windows 10
+
+---
+
+# Kompiliavimas ir paleidimas
+
+## Pagrindiniai
+make
+
+## Su optimizavimo flagais
+make opt
+
+## Paleidimas
+./programa_vector
+./programa_list
+./programa_deque
+
+##Su flagais:
+programa_vector_O1
+programa_vector_O2
+programa_vector_O3
+
+## Valymas
+make clean
