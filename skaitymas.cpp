@@ -1,64 +1,53 @@
 #include "skaitymas.h"
 #include "laikai.h"
 
-#include <algorithm>
 #include <chrono>
 #include <fstream>
 #include <iostream>
-#include <random>
+#include <limits>
 #include <sstream>
 #include <stdexcept>
 #include <string>
 
-void dinamuojamPazymius(Stud& studis)
+void skaitomRanka(Studentas& s)
 {
-    std::cout << "Iveskite namu darbu pazymius. Irasykite 0 kai baigete." << std::endl;
+    std::string v, p;
 
-    studis.rez.clear();
-    studis.vid = 0.0f;
+    std::cout << "Iveskite varda: ";
+    std::cin >> v;
+    s.setVardas(v);
 
-    while (true)
+    std::cout << "Iveskite pavarde: ";
+    std::cin >> p;
+    s.setPavarde(p);
+
+    char c = 'y';
+    std::cout << "Ar naudoti atsitiktinai parinktus n.d. rezultatus? (y/n): ";
+    std::cin >> c;
+
+    if (c == 'n' || c == 'N')
     {
-        int x;
-        std::cin >> x;
+        s.readNdInteractive();
 
-        if (!std::cin)
-        {
-            throw std::runtime_error("Kazkas ne taip su cin");
-        }
-
-        if (x <= 0)
-        {
-            break;
-        }
-
-        if (x > 10)
-        {
-            std::cout << "Netinkamas skaicius. Iveskite tarp 1 ir 10" << std::endl;
-            continue;
-        }
-
-        studis.rez.push_back(x);
-        studis.vid += x;
-    }
-
-    if (!studis.rez.empty())
-    {
-        studis.vid /= static_cast<float>(studis.rez.size());
+        int egz = 0;
+        std::cout << "Iveskite egzamino rezultatasultata (1-10): ";
+        std::cin >> egz;
+        s.setEgzaminas(egz);
     }
     else
     {
-        throw std::runtime_error("Kur pazymiai??");
+        s.parinktiAtsitiktinius();
     }
 }
 
 bool failoSkaitymas(StudContainer& studis)
 {
-    std::cout << "Iveskite failo pavadinima:" << std::endl;
+    std::cout << "Iveskite failo pavadinima: ";
     std::string pav;
     std::cin >> pav;
     return failoSkaitymas(studis, pav);
 }
+
 
 bool failoSkaitymas(StudContainer& studis, const std::string& pav)
 {
@@ -70,54 +59,33 @@ bool failoSkaitymas(StudContainer& studis, const std::string& pav)
 
         if (!read.is_open())
         {
-            throw std::runtime_error("Neatidarem failo. Patikrinkite pavadinima.");
+            throw std::runtime_error("Neatidarem failo: " + pav);
         }
 
-        std::string line;
-        std::getline(read, line);
+        std::string eilute;
+        std::getline(read, eilute);
 
-        while (std::getline(read, line))
+        while (std::getline(read, eilute))
         {
-            if (line.empty())
+            if (eilute.empty())
             {
                 continue;
             }
 
-            std::istringstream ss(line);
-            Stud s;
+            // Studentas konstruktorius kviečia readStudent()
+            std::istringstream ss(eilute);
+            Studentas s(ss);
 
-            ss >> s.vard >> s.pav;
-
-            int x;
-            while (ss >> x)
-            {
-                s.rez.push_back(x);
-            }
-
-            if (s.rez.empty())
+            if (s.getND().empty())
             {
                 continue;
             }
 
-            s.egrez = s.rez.back();
-            s.rez.pop_back();
-
-            for (const auto& pazymys : s.rez)
-            {
-                s.vid += pazymys;
-            }
-
-            if (!s.rez.empty())
-            {
-                s.vid /= static_cast<float>(s.rez.size());
-            }
-
-            studis.push_back(s);
+            studis.push_back(std::move(s));
         }
 
         auto end = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> duration = end - start;
-        timers.skaitymas = duration.count();
+        timers.skaitymas = std::chrono::duration<double>(end - start).count();
 
         return true;
     }
@@ -130,75 +98,8 @@ bool failoSkaitymas(StudContainer& studis, const std::string& pav)
 
 void suskaiciuotiGalutinius(StudContainer& studis)
 {
-    for (auto& i : studis)
+    for (auto& s : studis)
     {
-        std::sort(i.rez.begin(), i.rez.end());
-
-        float med = 0.0f;
-        const int n = static_cast<int>(i.rez.size());
-
-        if (n == 0)
-        {
-            i.galrezMed = 0.0f;
-            i.galrezVid = 0.0f;
-            continue;
-        }
-
-        if (n % 2 == 1)
-        {
-            med = i.rez[n / 2];
-        }
-        else
-        {
-            med = (i.rez[n / 2] + i.rez[n / 2 - 1]) / 2.0f;
-        }
-
-        i.galrezMed = 0.4f * med + 0.6f * i.egrez;
-        i.galrezVid = 0.4f * i.vid + 0.6f * i.egrez;
-    }
-}
-
-void parinktiAtsitiktinius(Stud& studis)
-{
-    std::mt19937 gen(std::random_device{}());
-    std::uniform_int_distribution<> dist(1, 10);
-
-    const int kiekND = dist(gen);
-
-    studis.rez.clear();
-    studis.vid = 0.0f;
-
-    for (int i = 0; i < kiekND; i++)
-    {
-        const int balas = dist(gen);
-        studis.rez.push_back(balas);
-        studis.vid += balas;
-    }
-
-    studis.vid /= static_cast<float>(studis.rez.size());
-    studis.egrez = dist(gen);
-}
-
-void skaitomRanka(Stud& studis)
-{
-    std::cout << "Iveskite varda" << std::endl;
-    std::cin >> studis.vard;
-
-    std::cout << "Iveskite pavarde" << std::endl;
-    std::cin >> studis.pav;
-
-    char c;
-    std::cout << "Ar naudoti atsitiktinai parinktus n.d. rezultatus? (y/n)" << std::endl;
-    std::cin >> c;
-
-    if (c != 'n' && c != 'N')
-    {
-        parinktiAtsitiktinius(studis);
-    }
-    else
-    {
-        dinamuojamPazymius(studis);
-        std::cout << "Iveskite egzamino rezultata" << std::endl;
-        std::cin >> studis.egrez;
+        s.suskaiciuotiGalutini();
     }
 }
