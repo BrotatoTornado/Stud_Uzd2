@@ -1,4 +1,6 @@
 #pragma once
+#ifndef GENERAVIMAS_H
+#define GENERAVIMAS_H
 
 #include "konteineris.h"
 
@@ -11,16 +13,26 @@ enum class SkirstymoStrategija
     Trecia = 3
 };
 
-struct SkirstymoRezultatas
+struct Skirstymorezultatasultatas
 {
     StudContainer vargsiukai;
     StudContainer protai;
 };
 
 void generuotiFaila();
+
 std::string failoPavadinimas(const std::string& bazinisPavadinimas);
+
 SkirstymoStrategija pasirinktiStrategija();
-SkirstymoRezultatas skirstymasStrategija1(const StudContainer& studis);
-SkirstymoRezultatas skirstymasStrategija2(StudContainer& studis);
-SkirstymoRezultatas skirstymasStrategija3(StudContainer& studis);
-SkirstymoRezultatas skirstymasGrupes(StudContainer& studis, SkirstymoStrategija strategija, bool irasytiIFailus = true, bool paprasytiRikiavimo = true);
+
+Skirstymorezultatasultatas skirstymasStrategija1(const StudContainer& studis);
+Skirstymorezultatasultatas skirstymasStrategija2(StudContainer& studis);
+Skirstymorezultatasultatas skirstymasStrategija3(StudContainer& studis);
+
+Skirstymorezultatasultatas skirstymasGrupes(
+    StudContainer& studis,
+    SkirstymoStrategija strategija,
+    bool irasytiIFailus   = true,
+    bool paprasytiRikiavimo = true);
+
+#endif
