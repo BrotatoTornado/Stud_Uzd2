@@ -30,15 +30,15 @@ Makefile
 
 ---
 
-## Kompiliavimas ir paleidimas
+# Kompiliavimas ir paleidimas
 
-# Pagrindiniai
+## Pagrindiniai
 make
 
-# Su optimizavimo flagais
+## Su optimizavimo flagais
 make opt
 
-# Paleidimas
+## Paleidimas
 ./programa_vector
 ./programa_list
 ./programa_deque
@@ -48,12 +48,12 @@ programa_vector_O1
 programa_vector_O2
 programa_vector_O3
 
-# Valymas
+## Valymas
 make clean
 
 ---
 
-## Studentų skirstymo strategijos
+# Studentų skirstymo strategijos
 
 ### Strategija 1
 Iš bendro konteinerio sukuriami **du nauji** – vargšiukai ir protai.
@@ -66,7 +66,7 @@ Naudojamas `std::partition` – vienas perėjimas, minimalus kopijavimas.
 
 ---
 
-## Spartos palyginimas: struct (v1.0) vs class (v1.1)
+# Spartos palyginimas: struct (v1.0) vs class (v1.1)
 
 Testuota su **std::vector**, **Strategija 3** (greičiausia). Testavimas paleistas 10 kartų, rezultatai yra vidurkis.
 Kompiliuota be optimizavimo flagų (`g++ -std=c++17`).
@@ -87,7 +87,7 @@ Kompiliuota be optimizavimo flagų (`g++ -std=c++17`).
 
 ---
 
-## Optimizavimo flagų tyrimas
+# Optimizavimo flagų tyrimas
 
 Kompiliuota su `g++ -std=c++17 -O1/-O2/-O3`.
 Testuota: **std::vector**, **Strategija 3**, **studentai1000000.txt**. Testavimas paleistas 10 kartų, rezultatai yra vidurkis.
@@ -110,7 +110,7 @@ Testuota: **std::vector**, **Strategija 3**, **studentai1000000.txt**. Testavima
 
 ---
 
-## Išvados
+# Išvados
 
 - Perėjimas nuo `struct` prie `class` nepablogino spartos, o kai kuriais atvejais ją šiek tiek pagerino.
 - Visa logika, susijusi su studento duomenimis, perkelta į vieną vietą – kodas tapo aiškesnis, lengviau palaikomas ir plečiamas.
@@ -119,7 +119,7 @@ Testuota: **std::vector**, **Strategija 3**, **studentai1000000.txt**. Testavima
 
 ---
 
-## Sistemos parametrai
+# Sistemos parametrai
 
 - CPU: 12th Gen Intel Core i5-12400F
 - RAM: 32.0 GB (31.8 GB usable)
