@@ -6,26 +6,23 @@
 
 #include <iostream>
 #include <stdexcept>
-				 
-					
+#include <string>
 
 bool vykdytiMeniu(StudContainer& studis)
 {
-		   
-
     while (true)
     {
-        std::cout << "\nPasirinkite programos eiga:\n";
-        std::cout << "1 - Ivesti studenta ranka\n";
-        std::cout << "2 - Skaityti is failo ir iskart apdoroti\n";
-        std::cout << "3 - Prideti studenta su atsitiktiniais pazymiais\n";
-        std::cout << "4 - Prideti sugeneruota studenta (vardas/pavarde/pazymiai)\n";
-        std::cout << "5 - Sugeneruoti studentu faila\n";
-        std::cout << "6 - Atlikti konteineriu ir strategiju tyrima\n";
-        std::cout << "7 - Apdoroti sukauptus studentus\n";
-        std::cout << "8 - Baigti darba\n";
+        std::cout << "\nPasirinkite programos eiga:\n"
+                  << "1 - Ivesti studenta ranka\n"
+                  << "2 - Skaityti is failo ir iskart apdoroti\n"
+                  << "3 - Prideti studenta su atsitiktiniais pazymiais (su vardu)\n"
+                  << "4 - Prideti sugeneruota studenta (auto vardas/pavarde)\n"
+                  << "5 - Sugeneruoti studentu faila\n"
+                  << "6 - Atlikti konteineriu ir strategiju tyrima\n"
+                  << "7 - Apdoroti sukauptus studentus\n"
+                  << "8 - Baigti darba\n";
 
-        int pasirinkimas;
+        int pasirinkimas = 0;
         std::cin >> pasirinkimas;
 
         if (!std::cin)
@@ -37,66 +34,78 @@ bool vykdytiMeniu(StudContainer& studis)
         {
             case 1:
             {
-                Stud s;
+                Studentas s;
                 skaitomRanka(s);
                 studis.push_back(s);
                 break;
             }
+
             case 2:
+            {
                 if (failoSkaitymas(studis))
                 {
                     return true;
                 }
                 break;
+            }
+
             case 3:
             {
-                Stud s;
+                Studentas s;
+                std::string v, p;
                 std::cout << "Iveskite varda: ";
-                std::cin >> s.vard;
+                std::cin >> v;
+                s.setVardas(v);
                 std::cout << "Iveskite pavarde: ";
-                std::cin >> s.pav;
-
-                parinktiAtsitiktinius(s);
-
+                std::cin >> p;
+                s.setPavarde(p);
+                s.parinktiAtsitiktinius();
                 studis.push_back(s);
-
                 break;
             }
+
             case 4:
             {
                 static int nr = 1;
-                Stud s;
-                s.vard = "Vardas" + std::to_string(nr);
-                s.pav = "Pavarde" + std::to_string(nr);
+                Studentas s;
+                s.setVardas ("Vardas"  + std::to_string(nr));
+                s.setPavarde("Pavarde" + std::to_string(nr));
                 nr++;
-
-                parinktiAtsitiktinius(s);
-
+                s.parinktiAtsitiktinius();
                 studis.push_back(s);
-
                 break;
             }
+
             case 5:
+            {
                 generuotiFaila();
                 break;
+            }
+
             case 6:
+            {
                 vykdytiTyrima();
                 break;
+            }
+
             case 7:
+            {
                 if (studis.empty())
-				 
-					
                 {
                     std::cout << "Nera sukauptu studentu.\n";
                     break;
                 }
                 return true;
+            }
+
             case 8:
+            {
                 return false;
+            }
+
             default:
                 std::cout << "Neteisingas pasirinkimas.\n";
                 break;
         }
     }
-				
 }
