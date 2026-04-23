@@ -1,6 +1,6 @@
 #pragma once
-#ifndef MENIU
-#define MENIU
+#ifndef MENIU_H
+#define MENIU_H
 
 #include "konteineris.h"
 
