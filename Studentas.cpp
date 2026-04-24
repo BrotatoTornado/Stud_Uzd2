@@ -1,9 +1,12 @@
 #include "Studentas.h"
 
+#include <iomanip>
 #include <algorithm>
 #include <iostream>
 #include <random>
 #include <stdexcept>
+#include <utility>
+#include <sstream>
 
 
 Studentas::Studentas() : egzaminas(0), vidurkis(0.0f), galrezVid(0.0f), galrezMed(0.0f)
@@ -15,19 +18,121 @@ Studentas::Studentas(std::istream& is): egzaminas(0), vidurkis(0.0f), galrezVid(
     readStudent(is);
 }
 
+// Kopijavimo konstruktorius
+Studentas::Studentas(const Studentas& other): vardas(other.vardas),
+    pavarde(other.pavarde),
+    egzaminas(other.egzaminas),
+    nd(other.nd),
+    vidurkis(other.vidurkis),
+    galrezVid(other.galrezVid),
+    galrezMed(other.galrezMed)
+{
+}
+
+// Kopijavimo priskyrimo operatorius
+Studentas& Studentas::operator=(const Studentas& other)
+{
+    if (this == &other)
+    {
+        return *this;
+    }
+
+    vardas = other.vardas;
+    pavarde = other.pavarde;
+    egzaminas = other.egzaminas;
+    nd = other.nd;
+    vidurkis = other.vidurkis;
+    galrezVid = other.galrezVid;
+    galrezMed = other.galrezMed;
+
+    return *this;
+}
+
+// Perkėlimo konstruktorius
+Studentas::Studentas(Studentas&& other): vardas(std::move(other.vardas)),
+    pavarde(std::move(other.pavarde)),
+    egzaminas(other.egzaminas),
+    nd(std::move(other.nd)),
+    vidurkis(other.vidurkis),
+    galrezVid(other.galrezVid),
+    galrezMed(other.galrezMed)
+{
+    other.egzaminas = 0;
+    other.vidurkis = 0.0f;
+    other.galrezVid = 0.0f;
+    other.galrezMed = 0.0f;
+}
+
+// Perkėlimo priskyrimo operatorius
+Studentas& Studentas::operator=(Studentas&& other)
+{
+    if (this == &other)
+    {
+        return *this;
+    }
+
+    vardas = std::move(other.vardas);
+    pavarde = std::move(other.pavarde);
+    egzaminas = other.egzaminas;
+    nd = std::move(other.nd);
+    vidurkis = other.vidurkis;
+    galrezVid = other.galrezVid;
+    galrezMed = other.galrezMed;
+
+    other.egzaminas = 0;
+    other.vidurkis = 0.0f;
+    other.galrezVid = 0.0f;
+    other.galrezMed = 0.0f;
+
+    return *this;
+}
+
 // Destruktorius
 Studentas::~Studentas() = default;
 
+
+//Ivesties/Išvesties operatoriai
+std::ostream& operator<<(std::ostream& os, const Studentas& s)
+{
+    os << std::left
+        << std::setw(15) << s.getVardas()
+        << std::setw(15) << s.getPavarde()
+        << "Egz: " << std::setw(4) << s.getEgzaminas() << "ND: [";
+
+    for (std::size_t i = 0; i < s.getND().size(); ++i)
+    {
+        if (i > 0) os << ' ';
+        os << s.getND()[i];
+    }
+
+    os << ']'
+        << std::fixed << std::setprecision(2)
+        << "  Gal.Vid: " << s.getgalrezVid()
+        << "  Gal.Med: " << s.getgalrezMed();
+
+    return os;
+}
+
+std::istream& operator>>(std::istream& is, Studentas& s)
+{
+    s.readStudent(is);
+    s.suskaiciuotiGalutini();
+    return is;
+}
+
+
 std::istream& Studentas::readStudent(std::istream& is)
 {
-    is >> vardas >> pavarde;
+    std::string line;
+    std::getline(is, line);
+    std::istringstream ss(line);
+
+    ss >> vardas >> pavarde;
 
     nd.clear();
-    vidurkis = 0.0f;
-    egzaminas = 0;
+    int x;
 
-    int x = 0;
-    while (is >> x)
+    while (ss >> x)
     {
         nd.push_back(x);
     }
