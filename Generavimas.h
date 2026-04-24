@@ -1,6 +1,4 @@
 #pragma once
-#ifndef GENERAVIMAS_H
-#define GENERAVIMAS_H
 
 #include "konteineris.h"
 
@@ -34,5 +32,3 @@ Skirstymorezultatasultatas skirstymasGrupes(
     SkirstymoStrategija strategija,
     bool irasytiIFailus   = true,
     bool paprasytiRikiavimo = true);
-
-#endif
