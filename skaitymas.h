@@ -1,6 +1,4 @@
 #pragma once
-#ifndef SKAITOM
-#define SKAITOM
 
 #include "konteineris.h"
 
@@ -13,5 +11,3 @@ bool failoSkaitymas(StudContainer& studis);
 bool failoSkaitymas(StudContainer& studis, const std::string& pav);
 
 void suskaiciuotiGalutinius(StudContainer& studis);
-
-#endif
