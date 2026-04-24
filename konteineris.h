@@ -1,6 +1,4 @@
 #pragma once
-#ifndef KONTEINERIS_H
-#define KONTEINERIS_H
 
 #include "Studentas.h"
 
@@ -67,5 +65,3 @@ void konteinerioSort(Container& konteineris, Compare comp)
 {
     std::sort(konteineris.begin(), konteineris.end(), comp);
 }
-
-#endif
