@@ -1,6 +1,4 @@
 #pragma once
-#ifndef LAIKAI_H
-#define LAIKAI_H
 
 struct TimerResults
 {
@@ -14,5 +12,3 @@ struct TimerResults
 extern TimerResults timers;
 
 void nunulintiLaikus();
-
-#endif
