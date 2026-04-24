@@ -51,9 +51,9 @@ SkirstymoStrategija pasirinktiStrategija()
     return static_cast<SkirstymoStrategija>(p);
 }
 
-Skirstymorezultatasultatas skirstymasStrategija1(const StudContainer& studis)
+Skirstymorezultatas skirstymasStrategija1(const StudContainer& studis)
 {
-    Skirstymorezultatasultatas rezultatas;
+    Skirstymorezultatas rezultatas;
 
     for (const auto& s : studis)
     {
@@ -70,9 +70,9 @@ Skirstymorezultatasultatas skirstymasStrategija1(const StudContainer& studis)
     return rezultatas;
 }
 
-Skirstymorezultatasultatas skirstymasStrategija2(StudContainer& studis)
+Skirstymorezultatas skirstymasStrategija2(StudContainer& studis)
 {
-    Skirstymorezultatasultatas rezultatas;
+    Skirstymorezultatas rezultatas;
 
     for (auto i = studis.begin(); i != studis.end(); )
     {
@@ -91,9 +91,9 @@ Skirstymorezultatasultatas skirstymasStrategija2(StudContainer& studis)
     return rezultatas;
 }
 
-Skirstymorezultatasultatas skirstymasStrategija3(StudContainer& studis)
+Skirstymorezultatas skirstymasStrategija3(StudContainer& studis)
 {
-    Skirstymorezultatasultatas rezultatas;
+    Skirstymorezultatas rezultatas;
 
     auto riba = std::partition(studis.begin(), studis.end(),
         [](const Studentas& s)
@@ -109,7 +109,7 @@ Skirstymorezultatasultatas skirstymasStrategija3(StudContainer& studis)
     return rezultatas;
 }
 
-Skirstymorezultatasultatas skirstymasGrupes(
+Skirstymorezultatas skirstymasGrupes(
     StudContainer& studis,
     SkirstymoStrategija strategija,
     bool irasytiIFailus,
@@ -117,7 +117,7 @@ Skirstymorezultatasultatas skirstymasGrupes(
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    Skirstymorezultatasultatas rezultatas;
+    Skirstymorezultatas rezultatas;
 
     switch (strategija)
     {
