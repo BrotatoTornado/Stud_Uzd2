@@ -19,15 +19,20 @@ private:
     float galrezMed;
 
 public:
-    Studentas();
-    explicit Studentas(std::istream& is);
-    ~Studentas();
-
-    inline std::string getVardas() const { return vardas; }
-    inline std::string getPavarde() const { return pavarde; }
-    inline int getEgzaminas() const { return egzaminas; }
+    //Rule Of Five
+    Studentas();                                // Default konstruktorius
+    explicit Studentas(std::istream& is);       // stream konstruktorius
+    Studentas(const Studentas& other);          // Kopijavimo konstruktorius
+    Studentas& operator=(const Studentas& other); // Kopijavimo priskyrimo operatorius
+    Studentas(Studentas&& other);        // Perkėlimo konstruktorius
+    Studentas& operator=(Studentas&& other); // Perkėlimo priskyrimo operatorius
+    ~Studentas();                               // Destruktorius
 
     inline const std::vector<int>& getND() const { return nd; }
+
+    inline const std::string getVardas() const { return vardas; }
+    inline const std::string getPavarde() const { return pavarde; }
+    inline int getEgzaminas() const { return egzaminas; }
 
     inline float getVidurkis() const { return vidurkis; }
     inline float getgalrezVid() const { return galrezVid; }
@@ -44,6 +49,10 @@ public:
     void parinktiAtsitiktinius();
     void suskaiciuotiGalutini();
 };
+
+//Ivesties/Išvesties operatoriai
+std::ostream& operator<<(std::ostream& os, const Studentas& s);
+std::istream& operator>>(std::istream& is, Studentas& s);
 
 bool comparePagalVarda   (const Studentas& a, const Studentas& b);
 bool comparePagalPavarde (const Studentas& a, const Studentas& b);
