@@ -6,6 +6,7 @@ struct TimerResults
     double skaitymas = 0.0;
     double rusiavimas = 0.0;
     double skirstymas = 0.0;
+    double isvedimas = 0.0;
 };
 
 extern TimerResults timers;
