@@ -11,7 +11,7 @@ enum class SkirstymoStrategija
     Trecia = 3
 };
 
-struct Skirstymorezultatasultatas
+struct Skirstymorezultatas
 {
     StudContainer vargsiukai;
     StudContainer protai;
@@ -23,11 +23,11 @@ std::string failoPavadinimas(const std::string& bazinisPavadinimas);
 
 SkirstymoStrategija pasirinktiStrategija();
 
-Skirstymorezultatasultatas skirstymasStrategija1(const StudContainer& studis);
-Skirstymorezultatasultatas skirstymasStrategija2(StudContainer& studis);
-Skirstymorezultatasultatas skirstymasStrategija3(StudContainer& studis);
+Skirstymorezultatas skirstymasStrategija1(const StudContainer& studis);
+Skirstymorezultatas skirstymasStrategija2(StudContainer& studis);
+Skirstymorezultatas skirstymasStrategija3(StudContainer& studis);
 
-Skirstymorezultatasultatas skirstymasGrupes(
+Skirstymorezultatas skirstymasGrupes(
     StudContainer& studis,
     SkirstymoStrategija strategija,
     bool irasytiIFailus   = true,
