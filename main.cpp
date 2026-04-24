@@ -112,6 +112,7 @@ void laikorezultatas(double progTrukme)
               << "Failo skaitymas:      " << timers.skaitymas  << " s\n"
               << "Studentu rikiavimas:  " << timers.rusiavimas << " s\n"
               << "Studentu skirstymas:  " << timers.skirstymas << " s\n"
+              << "Failu isvedimas:      " << timers.isvedimas  << " s\n"
               << "Visos programos trukme: " << progTrukme      << " s\n";
 }
 
