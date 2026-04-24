@@ -1,6 +1,4 @@
 #pragma once
-#ifndef STUDENTAS_H
-#define STUDENTAS_H
 
 #include <iostream>
 #include <string>
@@ -58,5 +56,3 @@ bool comparePagalVarda   (const Studentas& a, const Studentas& b);
 bool comparePagalPavarde (const Studentas& a, const Studentas& b);
 bool comparePagalGalVid  (const Studentas& a, const Studentas& b);
 bool comparePagalGalMed  (const Studentas& a, const Studentas& b);
-
-#endif
