@@ -50,7 +50,7 @@ public:
 std::ostream& operator<<(std::ostream& os, const Studentas& s);
 std::istream& operator>>(std::istream& is, Studentas& s);
 
-bool comparePagalVarda   (const Studentas& a, const Studentas& b);
+bool comparePagalVarda (const Studentas& a, const Studentas& b);
 bool comparePagalPavarde (const Studentas& a, const Studentas& b);
 bool comparePagalGalVid  (const Studentas& a, const Studentas& b);
 bool comparePagalGalMed  (const Studentas& a, const Studentas& b);
