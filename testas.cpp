@@ -54,8 +54,8 @@ static void testuotiSrautiniKonstruktoriu()
     Studentas s(ss);
     s.suskaiciuotiGalutini();
 
-    tikrinti("vardas == Petras", s.getVardas() == "Pedro");
-    tikrinti("pavarde == Petraitis", s.getPavarde() == "Pascal");
+    tikrinti("vardas == Pedro", s.getVardas() == "Pedro");
+    tikrinti("pavarde == Pascal", s.getPavarde() == "Pascal");
     tikrinti("egzaminas == 9", s.getEgzaminas() == 9);
     tikrinti("nd.size() == 4", s.getND().size() == 4);
     tikrinti("nd[0] == 5", s.getND()[0] == 5);
@@ -263,4 +263,29 @@ void vykdytiTestus()
     testuotiOstreamOperatoriu();
 
     std::cout << '\n' << std::string(55, '-') << '\n' << "Rezultatas: praejo " << praejo << ", nepraejo " << nepraejo << '\n' << std::string(55, '=') << '\n';
+}
+
+void testuotiAbstraktuma()
+{
+    std::cout << "\n[Zmogus abstraktumas]\n";
+
+    // Zmogus z; <-----ši eilutė nekompiliuosis
+
+    // Galima tik per rodyklę / nuorodą į išvestinę klasę:
+    Studentas s = sukurtiTestiniStudenta();
+    Zmogus* rodykle = &s;
+
+    tikrinti("Zmogus* rodo i Studentas objekta", rodykle != nullptr);
+    tikrinti("getVardas() per baze veikia", rodykle->getVardas() == "Jonas");
+    tikrinti("getVardas() per baze veikia", rodykle->getPavarde() == "Jonaitis");
+
+    // Virtualus dispatch – spausdinti() kviecia Studentas::spausdinti()
+    std::ostringstream os;
+    rodykle->spausdinti(os);
+    tikrinti("spausdinti() per Zmogus* veikia", !os.str().empty());
+    tikrinti("isvestyje yra vardas", os.str().find("Jonas") != std::string::npos);
+
+    // suskaiciuotiGalutini() taip pat polimorfiškai
+    rodykle->suskaiciuotiGalutini();
+    tikrinti("suskaiciuotiGalutini() per Zmogus* veikia", s.getgalrezVid() > 0.0f);
 }
