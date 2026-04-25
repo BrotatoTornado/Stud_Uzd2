@@ -88,6 +88,42 @@ Klasėje realizuoti perdengti operatoriai:
 
 ---
 
+#Testavimas
+
+Projektui sukurta atskira testavimo sistema (testas.cpp), kuri tikrina visų klasės metodų veikimą.
+
+##Testavimo tikslas
+
+###Patikrinti, ar:
+- visi konstruktoriai veikia teisingai;
+- kopijavimo ir perkėlimo operacijos veikia korektiškai;
+- nėra atminties valdymo klaidų;
+- įvesties/išvesties operatoriai veikia teisingai.
+
+| Konstruktorius/operatorius | Kas tikrinama |
+|---|---|
+| `Default konstruktorius` | Objektas inicializuojamas tuščias |
+| `Parametrinis konstruktorius` | Duomenys priskiriami teisingai |
+| `Copy konstruktorius` | Sukuriama teisinga kopija |
+| `Copy priskyrimas` | Priskyrimas veikia teisingai |
+| `Move konstruktorius` | Resursai perkeliami |
+| `Move priskyrimas` | Perkėlimas veikia teisingai |
+| `Destruktorius` | Objektai sunaikinami be klaidų |
+| `operator>>` | Duomenys teisingai nuskaitomi |
+| `operator<<` | Duomenys teisingai išvedami |
+
+##Testų paleidimas
+
+Testai paleidžiami iš main.cpp naudojantis funkcija vykdytiTestus(). Programos pabaigoje pateikiama suvestinė:
+- Praejo: X
+- Nepraejo: Y
+
+(X ir Y yra sveiki skaiciai).
+
+Tai leidžia greitai įvertinti programos korektiškumą.
+
+---
+
 # Kompiliavimas ir paleidimas
 
 ## Pagrindiniai
