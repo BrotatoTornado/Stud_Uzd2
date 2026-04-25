@@ -113,6 +113,7 @@ Projektui sukurta atskira testavimo sistema (testas.cpp), kuri tikrina visų kla
 | `operator<<` | Duomenys teisingai išvedami |
 
 ![Testas1](screenshots/tikrinimas1.png)
+
 ![Testas2](screenshots/tikrinimas2.png)
 
 ##Testų paleidimas
