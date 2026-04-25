@@ -16,7 +16,7 @@ int nepraejo = 0;
 
 void tikrinti(const std::string& pavadinimas, bool salyga)
 {
-    const std::string zenklas = salyga ? "Pavyko" : "Nepavyko";
+    const std::string zenklas = salyga ? "Pavyko --->" : "Nepavyko!!! --->";
     std::cout << zenklas << " " << pavadinimas << '\n';
     salyga ? praejo++ : nepraejo++;
 }
@@ -33,7 +33,7 @@ Studentas sukurtiTestiniStudenta()
 
 static void testuotiDefaultKonstruktoriu()
 {
-    std::cout << "\nDefault konstruktorius\n";
+    std::cout << "\n[Default konstruktorius]\n";
 
     Studentas s;
 
@@ -48,6 +48,8 @@ static void testuotiDefaultKonstruktoriu()
 
 static void testuotiSrautiniKonstruktoriu()
 {
+    std::cout << "\n[Srautinis konstruktorius]\n";
+
     std::istringstream ss("Pedro Pascal 5 6 7 8 9");
     Studentas s(ss);
     s.suskaiciuotiGalutini();
@@ -63,7 +65,7 @@ static void testuotiSrautiniKonstruktoriu()
 
 static void testuotiKopijavimoKonstruktoriu()
 {
-    std::cout << "\nKopijavimo konstruktorius\n";
+    std::cout << "\n[Kopijavimo konstruktorius]\n";
 
     Studentas original = sukurtiTestiniStudenta();
     Studentas kopija(original);
@@ -82,7 +84,7 @@ static void testuotiKopijavimoKonstruktoriu()
 
 static void testuotiKopijavimoPriskyrima()
 {
-    std::cout << "\nKopijavimo priskyrimo operatorius\n";
+    std::cout << "\n[Kopijavimo priskyrimo operatorius]\n";
 
     Studentas original = sukurtiTestiniStudenta();
     Studentas priskirtas;
@@ -101,7 +103,7 @@ static void testuotiKopijavimoPriskyrima()
 
 static void testuotiPerkelimoKonstruktoriu()
 {
-    std::cout << "\nPerkelimo konstruktorius\n";
+    std::cout << "\n[Perkelimo konstruktorius]\n";
 
     Studentas saltinis = sukurtiTestiniStudenta();
 
@@ -127,7 +129,7 @@ static void testuotiPerkelimoKonstruktoriu()
 
 static void testuotiPerkelimoPriskyrima()
 {
-    std::cout << "\nPerkelimo priskyrimo operatorius\n";
+    std::cout << "\n[Perkelimo priskyrimo operatorius]\n";
 
     Studentas saltinis = sukurtiTestiniStudenta();
 
@@ -150,7 +152,7 @@ static void testuotiPerkelimoPriskyrima()
 
 static void testuotiDestruktoriu()
 {
-    std::cout << "\nDestruktorius\n";
+    std::cout << "\n[Destruktorius]\n";
 
     {
         Studentas s = sukurtiTestiniStudenta();
@@ -166,12 +168,12 @@ static void testuotiDestruktoriu()
             daug.push_back(sukurtiTestiniStudenta());
         }
     }
-    tikrinti("destruktorius 100 objektu nesuluzo", true);
+    tikrinti("destruktorius po 100 objektu nesuluzo", true);
 }
 
 static void testuotiIstreamOperatoriu()
 {
-    std::cout << "\noperator>> (istream)\n";
+    std::cout << "\n[operator>> (istream)]\n";
 
     // Vienas studentas per srautą
     std::istringstream ss1("Ona Oniene 3 4 5 6 7");
@@ -211,7 +213,7 @@ static void testuotiIstreamOperatoriu()
 
 static void testuotiOstreamOperatoriu()
 {
-    std::cout << "\noperator<< (ostream)\n";
+    std::cout << "\n[operator<< (ostream)]\n";
 
     Studentas s = sukurtiTestiniStudenta();
     // galrezVid/galrezMed jau apskaičiuoti sukurtiTestiniStudenta()
@@ -223,11 +225,11 @@ static void testuotiOstreamOperatoriu()
 
     tikrinti("isvestyje yra vardas", isvestis.find("Jonas") != std::string::npos);
     tikrinti("isvestyje yra pavarde", isvestis.find("Jonaitis")  != std::string::npos);
-    tikrinti("isvestyje yra Egz:", isvestis.find("Egz:") != std::string::npos);
-    tikrinti("isvestyje yra ND:", isvestis.find("ND:") != std::string::npos);
-    tikrinti("isvestyje yra Gal.Vid:", isvestis.find("Gal.Vid:") != std::string::npos);
-    tikrinti("isvestyje yra Gal.Med:", isvestis.find("Gal.Med:") != std::string::npos);
-    tikrinti("isvestis netucia", !isvestis.empty());
+    tikrinti("isvestyje yra Egz", isvestis.find("Egz:") != std::string::npos);
+    tikrinti("isvestyje yra ND", isvestis.find("ND:") != std::string::npos);
+    tikrinti("isvestyje yra Gal.Vid", isvestis.find("Gal.Vid:") != std::string::npos);
+    tikrinti("isvestyje yra Gal.Med", isvestis.find("Gal.Med:") != std::string::npos);
+    tikrinti("isvestis netuscia", !isvestis.empty());
 
     // Failų srauto testas – operator<< veikia su ofstream
     std::ostringstream failoSim;
@@ -240,7 +242,7 @@ static void testuotiOstreamOperatoriu()
         failoSim << st << '\n';
     }
 
-    tikrinti("isvedimas i failo srautas netucias", !failoSim.str().empty());
+    tikrinti("isvedimo i faila srautas netuscias", !failoSim.str().empty());
 }
 
 void vykdytiTestus()
@@ -248,7 +250,7 @@ void vykdytiTestus()
     praejo = 0;
     nepraejo = 0;
 
-    std::cout << "\n" << std::string(55, '=') << '\n' << "Studentas klases testai  (v1.2 – Rule of Five)\n" << std::string(55, '=') << '\n';
+    std::cout << "\n" << std::string(55, '=') << '\n' << "Studentas klases testai  (v1.2 - Rule of Five)\n" << std::string(55, '=') << '\n';
 
     testuotiDefaultKonstruktoriu();
     testuotiSrautiniKonstruktoriu();
