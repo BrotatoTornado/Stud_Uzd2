@@ -19,8 +19,7 @@ Studentas::Studentas(std::istream& is): egzaminas(0), vidurkis(0.0f), galrezVid(
 }
 
 // Kopijavimo konstruktorius
-Studentas::Studentas(const Studentas& other): vardas(other.vardas),
-    pavarde(other.pavarde),
+Studentas::Studentas(const Studentas& other): Zmogus(other),
     egzaminas(other.egzaminas),
     nd(other.nd),
     vidurkis(other.vidurkis),
@@ -37,8 +36,7 @@ Studentas& Studentas::operator=(const Studentas& other)
         return *this;
     }
 
-    vardas = other.vardas;
-    pavarde = other.pavarde;
+    Zmogus::operator=(other); //vardas, pavarde
     egzaminas = other.egzaminas;
     nd = other.nd;
     vidurkis = other.vidurkis;
@@ -49,8 +47,7 @@ Studentas& Studentas::operator=(const Studentas& other)
 }
 
 // Perkėlimo konstruktorius
-Studentas::Studentas(Studentas&& other): vardas(std::move(other.vardas)),
-    pavarde(std::move(other.pavarde)),
+Studentas::Studentas(Studentas&& other): Zmogus(std::move(other)),
     egzaminas(other.egzaminas),
     nd(std::move(other.nd)),
     vidurkis(other.vidurkis),
@@ -71,8 +68,7 @@ Studentas& Studentas::operator=(Studentas&& other)
         return *this;
     }
 
-    vardas = std::move(other.vardas);
-    pavarde = std::move(other.pavarde);
+    Zmogus::operator=(std::move(other));
     egzaminas = other.egzaminas;
     nd = std::move(other.nd);
     vidurkis = other.vidurkis;
@@ -87,29 +83,60 @@ Studentas& Studentas::operator=(Studentas&& other)
     return *this;
 }
 
-// Destruktorius
-Studentas::~Studentas() = default;
 
-
-//Ivesties/Išvesties operatoriai
-std::ostream& operator<<(std::ostream& os, const Studentas& s)
+// spausdinti – įgyvendina grynąją virtualią funkciją iš Zmogus
+void Studentas::spausdinti(std::ostream& os) const
 {
-    os << std::left
-        << std::setw(15) << s.getVardas()
-        << std::setw(15) << s.getPavarde()
-        << "Egz: " << std::setw(4) << s.getEgzaminas() << "ND: [";
+    os << std::left << std::setw(15) << vardas
+        << std::setw(15) << pavarde
+        << "Egz: " << std::setw(4) << egzaminas << "ND: [";
 
-    for (std::size_t i = 0; i < s.getND().size(); ++i)
+    for (std::size_t i = 0; i < nd.size(); ++i)
     {
         if (i > 0) os << ' ';
-        os << s.getND()[i];
+        os << nd[i];
     }
 
     os << ']'
         << std::fixed << std::setprecision(2)
-        << "  Gal.Vid: " << s.getgalrezVid()
-        << "  Gal.Med: " << s.getgalrezMed();
+        << "  Gal.Vid: " << galrezVid
+        << "  Gal.Med: " << galrezMed;
+}
 
+// suskaiciuotiGalutini – įgyvendina grynąją virtualią funkciją iš Zmogus
+void Studentas::suskaiciuotiGalutini()
+{
+    std::vector<int> surikiuoti = nd;
+    std::sort(surikiuoti.begin(), surikiuoti.end());
+
+    const int n = static_cast<int>(surikiuoti.size());
+
+    if (n == 0)
+    {
+        galrezVid = 0.0f;
+        galrezMed = 0.0f;
+        return;
+    }
+
+    float med = 0.0f;
+    if (n % 2 == 1)
+    {
+        med = static_cast<float>(surikiuoti[n / 2]);
+    }
+    else
+    {
+        med = (static_cast<float>(surikiuoti[n / 2]) +
+            static_cast<float>(surikiuoti[n / 2 - 1])) / 2.0f;
+    }
+
+    galrezVid = 0.4f * vidurkis + 0.6f * static_cast<float>(egzaminas);
+    galrezMed = 0.4f * med + 0.6f * static_cast<float>(egzaminas);
+}
+
+// operator<< – delegacija į virtualią spausdinti()
+std::ostream& operator<<(std::ostream& os, const Studentas& s)
+{
+    s.spausdinti(os);
     return os;
 }
 
@@ -124,13 +151,19 @@ std::istream& operator>>(std::istream& is, Studentas& s)
 std::istream& Studentas::readStudent(std::istream& is)
 {
     std::string line;
-    std::getline(is, line);
+    if (!std::getline(is, line) || line.empty())
+    {
+        return is;
+    }
     std::istringstream ss(line);
 
     ss >> vardas >> pavarde;
 
     nd.clear();
-    int x;
+    vidurkis = 0.0f;
+    egzaminas = 0;
+
+    int x = 0;
 
     while (ss >> x)
     {
@@ -215,35 +248,6 @@ void Studentas::parinktiAtsitiktinius()
 
     vidurkis  /= static_cast<float>(nd.size());
     egzaminas  = dist(gen);
-}
-
-// suskaiciuotiGalutini – skaičiuoja galrezVid ir galrezMed
-void Studentas::suskaiciuotiGalutini()
-{
-    std::vector<int> surikiuoti = nd;
-    std::sort(surikiuoti.begin(), surikiuoti.end());
-
-    const int n = static_cast<int>(surikiuoti.size());
-
-    if (n == 0)
-    {
-        galrezVid = 0.0f;
-        galrezMed = 0.0f;
-        return;
-    }
-
-    float med = 0.0f;
-    if (n % 2 == 1)
-    {
-        med = static_cast<float>(surikiuoti[n / 2]);
-    }
-    else
-    {
-        med = (static_cast<float>(surikiuoti[n / 2]) + static_cast<float>(surikiuoti[n / 2 - 1])) / 2.0f;
-    }
-
-    galrezVid = 0.4f * vidurkis + 0.6f * static_cast<float>(egzaminas);
-    galrezMed = 0.4f * med + 0.6f * static_cast<float>(egzaminas);
 }
 
 
