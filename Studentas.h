@@ -1,15 +1,14 @@
 #pragma once
+#include "Zmogus.h"
 
 #include <iostream>
 #include <string>
 #include <vector>
 
 
-class Studentas
+class Studentas : public Zmogus
 {
 private:
-    std::string vardas;
-    std::string pavarde;
     int egzaminas;
     std::vector<int> nd;
     float vidurkis;
@@ -24,12 +23,9 @@ public:
     Studentas& operator=(const Studentas& other); // Kopijavimo priskyrimo operatorius
     Studentas(Studentas&& other);        // Perkėlimo konstruktorius
     Studentas& operator=(Studentas&& other); // Perkėlimo priskyrimo operatorius
-    ~Studentas();                               // Destruktorius
+    ~Studentas() override = default;        // Destruktorius
 
     inline const std::vector<int>& getND() const { return nd; }
-
-    inline const std::string getVardas() const { return vardas; }
-    inline const std::string getPavarde() const { return pavarde; }
     inline int getEgzaminas() const { return egzaminas; }
 
     inline float getVidurkis() const { return vidurkis; }
@@ -45,7 +41,9 @@ public:
     std::istream& readStudent(std::istream& is); // skaito vardas/pavardė/nd/egz iš stream
     void readNdInteractive();
     void parinktiAtsitiktinius();
-    void suskaiciuotiGalutini();
+    //virtualios funkcijos
+    void suskaiciuotiGalutini() override;
+    void spausdinti(std::ostream& os) const override;
 };
 
 //Ivesties/Išvesties operatoriai
