@@ -41,19 +41,19 @@ static void testuotiDefaultKonstruktoriu()
     tikrinti("pavarde tuscia", s.getPavarde().empty());
     tikrinti("egzaminas == 0", s.getEgzaminas() == 0);
     tikrinti("nd tuscias", s.getND().empty());
-    tikrinti("vidurkis == 0.0f", s.getVidurkis()  == 0.0f);
+    tikrinti("vidurkis == 0.0f", s.getVidurkis() == 0.0f);
     tikrinti("galrezVid == 0.0f", s.getgalrezVid() == 0.0f);
     tikrinti("galrezMed == 0.0f", s.getgalrezMed() == 0.0f);
 }
 
 static void testuotiSrautiniKonstruktoriu()
 {
-    std::istringstream ss("Petras Petraitis 5 6 7 8 9");
+    std::istringstream ss("Pedro Pascal 5 6 7 8 9");
     Studentas s(ss);
     s.suskaiciuotiGalutini();
 
-    tikrinti("vardas == Petras", s.getVardas() == "Petras");
-    tikrinti("pavarde == Petraitis", s.getPavarde() == "Petraitis");
+    tikrinti("vardas == Petras", s.getVardas() == "Pedro");
+    tikrinti("pavarde == Petraitis", s.getPavarde() == "Pascal");
     tikrinti("egzaminas == 9", s.getEgzaminas() == 9);
     tikrinti("nd.size() == 4", s.getND().size() == 4);
     tikrinti("nd[0] == 5", s.getND()[0] == 5);
@@ -193,11 +193,17 @@ static void testuotiIstreamOperatoriu()
     std::string eilute;
     while (std::getline(srautas, eilute))
     {
-        if (eilute.empty()) continue;
+        if (eilute.empty())
+        {
+            continue;
+        }
         std::istringstream esSS(eilute);
         Studentas s;
         esSS >> s;
-        if (!s.getND().empty()) ++skaityta;
+        if (!s.getND().empty())
+        {
+            skaityta++;
+        }
     }
 
     tikrinti("2 studentai nuskaityti is srauto", skaityta == 2);
@@ -205,7 +211,7 @@ static void testuotiIstreamOperatoriu()
 
 static void testuotiOstreamOperatoriu()
 {
-    std::cout << "\n-- operator<< (ostream) --\n";
+    std::cout << "\noperator<< (ostream)\n";
 
     Studentas s = sukurtiTestiniStudenta();
     // galrezVid/galrezMed jau apskaičiuoti sukurtiTestiniStudenta()
