@@ -124,46 +124,11 @@ Kiekvienas `Studentas` specialusis metodas **grandininai kviečia** atitinkamą 
 Jonas           Jonaitis       Egz: 10  ND: [8 7 9 6]  Gal.Vid: 7.60  Gal.Med: 7.60
 ```
 
-**Naudojimo pavyzdžiai:**
-
-```cpp
-Studentas s = ...;
-s.suskaiciuotiGalutini();
-
-// Išvestis į ekraną
-std::cout << s << '\n';
-
-// Polimorfiškai per bazinę klasę
-Zmogus* z = &s;
-z->spausdinti(std::cout);
-
-// Išvestis į failą
-std::ofstream f("rezultatai.txt");
-f << s << '\n';
-```
-
 ---
 
 ### `operator>>` – įvestis iš srauto
 
 Nuskaito duomenis **failo formatu**: `Vardas Pavarde ND1 ND2 ... Egzaminas`
-
-```cpp
-// Iš string srauto
-std::istringstream ss("Jonas Jonaitis 8 7 9 6 10");
-Studentas s;
-ss >> s;  // automatiškai kviečia suskaiciuotiGalutini()
-
-// Iš failo eilutė po eilutės
-std::ifstream f("studentai.txt");
-std::string eilute;
-std::getline(f, eilute); // praleisti antraštę
-while (std::getline(f, eilute)) {
-    std::istringstream ess(eilute);
-    Studentas st;
-    ess >> st;
-}
-```
 
 ---
 
