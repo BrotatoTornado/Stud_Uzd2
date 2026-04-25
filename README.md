@@ -141,7 +141,7 @@ make opt
 ./programa_list
 ./programa_deque
 
-##Su flagais:
+## Su flagais:
 ./programa_vector_O1
 ./programa_vector_O2
 ./programa_vector_O3
