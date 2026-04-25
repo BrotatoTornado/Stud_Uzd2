@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra
 
-SRCS = main.cpp Studentas.cpp meniu.cpp skaitymas.cpp Generavimas.cpp spausdinam.cpp tyrimas.cpp laikai.cpp
+SRCS = main.cpp Studentas.cpp meniu.cpp skaitymas.cpp Generavimas.cpp spausdinam.cpp tyrimas.cpp laikai.cpp Zmogus.cpp
 
 
 .PHONY: all clean
