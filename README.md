@@ -88,13 +88,13 @@ Klasėje realizuoti perdengti operatoriai:
 
 ---
 
-#Testavimas
+# Testavimas
 
 Projektui sukurta atskira testavimo sistema (testas.cpp), kuri tikrina visų klasės metodų veikimą.
 
-##Testavimo tikslas
+## Testavimo tikslas
 
-###Patikrinti, ar:
+### Patikrinti, ar:
 - visi konstruktoriai veikia teisingai;
 - kopijavimo ir perkėlimo operacijos veikia korektiškai;
 - nėra atminties valdymo klaidų;
@@ -116,7 +116,7 @@ Projektui sukurta atskira testavimo sistema (testas.cpp), kuri tikrina visų kla
 
 ![Testas2](screenshots/tikrinimas2.png)
 
-##Testų paleidimas
+## Testų paleidimas
 
 Testai paleidžiami iš main.cpp naudojantis funkcija vykdytiTestus(), kai pagr. meniu vartotojas pasirenka 7 pasirinkimą. Programos pabaigoje pateikiama suvestinė:
 - Praejo: X
