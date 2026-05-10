@@ -1,0 +1,408 @@
+\doxysection{Generavimas.\+h File Reference}
+\hypertarget{Generavimas_8h}{}\label{Generavimas_8h}\index{Generavimas.h@{Generavimas.h}}
+
+
+Studentų failų generavimo ir skirstymo į grupes funkcijų deklaracijos.  
+
+
+{\ttfamily \#include "{}konteineris.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Generavimas.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}
+\begin{DoxyCompactList}\small\item\em Saugo skirstymo į grupes rezultatus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{Skirstymo\+Strategija}} \{ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a85ab2d228b638bbea0a3654ff7f0e73b}{Pirma}} = 1
+, \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a182c4b89a27c52474a0a532d5519f5e1}{Antra}} = 2
+, \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14aa2d8674f7ae44cb2b79d7ade48bd4e85}{Trecia}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Nurodo, kokiu algoritmu skirstyti studentus į grupes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d}{generuoti\+Faila}} ()
+\begin{DoxyCompactList}\small\item\em Generuoja studentų duomenų failą. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba}{failo\+Pavadinimas}} (const std\+::string \&bazinis\+Pavadinimas)
+\begin{DoxyCompactList}\small\item\em Sugeneruoja unikalų failo pavadinimą. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{Skirstymo\+Strategija}} \mbox{\hyperlink{Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92}{pasirinkti\+Strategija}} ()
+\begin{DoxyCompactList}\small\item\em Interaktyviai prašo vartotojo pasirinkti skirstymo strategiją. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} \mbox{\hyperlink{Generavimas_8h_abe8b00215e7c9d927d343694cda2c590}{skirstymas\+Strategija1}} (const \mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Skirsto studentus pagal 1-\/ą strategiją. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} \mbox{\hyperlink{Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5}{skirstymas\+Strategija2}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Skirsto studentus pagal 2-\/ą strategiją. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} \mbox{\hyperlink{Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494}{skirstymas\+Strategija3}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Skirsto studentus pagal 3-\/ą strategiją (efektyviausia). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} \mbox{\hyperlink{Generavimas_8h_abe3d250258257289fcd11ddaeb608055}{skirstymas\+Grupes}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis, \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{Skirstymo\+Strategija}} strategija, bool irasyti\+IFailus=true, bool paprasyti\+Rikiavimo=true)
+\begin{DoxyCompactList}\small\item\em Bendro naudojimo skirstymo funkcija. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Studentų failų generavimo ir skirstymo į grupes funkcijų deklaracijos. 
+
+Apibrėžia {\ttfamily Skirstymo\+Strategija} enumeraciją, {\ttfamily \doxylink{structSkirstymorezultatas}{Skirstymorezultatas}} struktūrą ir visas su studentų generavimu bei grupavimu susijusias funkcijas.
+
+\begin{DoxyAuthor}{Author}
+\doxylink{classStudentas}{Studentas} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{Generavimas_8h_source}{Generavimas.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}\label{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14} 
+\index{Generavimas.h@{Generavimas.h}!SkirstymoStrategija@{SkirstymoStrategija}}
+\index{SkirstymoStrategija@{SkirstymoStrategija}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{SkirstymoStrategija}{SkirstymoStrategija}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{Skirstymo\+Strategija}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Nurodo, kokiu algoritmu skirstyti studentus į grupes. 
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reikšmė   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reikšmė   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-2}
+\endhead
+Pirma   &Du nauji konteineriai (vargsiukai ir protai)    \\\cline{1-2}
+Antra   &Vargsiukai ištraukiami iš bendro konteinerio; protai lieka    \\\cline{1-2}
+Trecia   &Efektyvus {\ttfamily std\+::partition} algoritmas   \\\cline{1-2}
+\end{longtabu}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pirma@{Pirma}!Generavimas.h@{Generavimas.h}}\index{Generavimas.h@{Generavimas.h}!Pirma@{Pirma}}}\Hypertarget{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a85ab2d228b638bbea0a3654ff7f0e73b}\label{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a85ab2d228b638bbea0a3654ff7f0e73b} 
+Pirma&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Antra@{Antra}!Generavimas.h@{Generavimas.h}}\index{Generavimas.h@{Generavimas.h}!Antra@{Antra}}}\Hypertarget{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a182c4b89a27c52474a0a532d5519f5e1}\label{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a182c4b89a27c52474a0a532d5519f5e1} 
+Antra&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trecia@{Trecia}!Generavimas.h@{Generavimas.h}}\index{Generavimas.h@{Generavimas.h}!Trecia@{Trecia}}}\Hypertarget{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14aa2d8674f7ae44cb2b79d7ade48bd4e85}\label{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14aa2d8674f7ae44cb2b79d7ade48bd4e85} 
+Trecia&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8h_source_l00029}{29}} of file \mbox{\hyperlink{Generavimas_8h_source}{Generavimas.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba}\label{Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba} 
+\index{Generavimas.h@{Generavimas.h}!failoPavadinimas@{failoPavadinimas}}
+\index{failoPavadinimas@{failoPavadinimas}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{failoPavadinimas()}{failoPavadinimas()}}
+{\footnotesize\ttfamily std\+::string failo\+Pavadinimas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bazinis\+Pavadinimas }\end{DoxyParamCaption})}
+
+
+
+Sugeneruoja unikalų failo pavadinimą. 
+
+Jei failas su nurodytu pavadinimu jau egzistuoja, automatiškai pridedamas skaitinis sufiksas (pvz. {\ttfamily \+\_\+2}, {\ttfamily \+\_\+3}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em bazinis\+Pavadinimas} & Bazinis failo pavadinimas be plėtinio. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unikalus failo pavadinimas su {\ttfamily .txt} plėtiniu. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8cpp_source_l00016}{galimas\+Pavadinimas()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Generavimas_8cpp_source_l00112}{skirstymas\+Grupes()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d}\label{Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d} 
+\index{Generavimas.h@{Generavimas.h}!generuotiFaila@{generuotiFaila}}
+\index{generuotiFaila@{generuotiFaila}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{generuotiFaila()}{generuotiFaila()}}
+{\footnotesize\ttfamily void generuoti\+Faila (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generuoja studentų duomenų failą. 
+
+Interaktyviai prašo vartotojo įvesti failo pavadinimą ir studentų kiekį. Studentų vardai, pavardės ir pažymiai generuojami automatiškai. 
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{laikai_8h_source_l00022}{Timer\+Results\+::generavimas}}, and \mbox{\hyperlink{laikai_8cpp_source_l00003}{timers}}.
+
+
+
+Referenced by \mbox{\hyperlink{meniu_8cpp_source_l00011}{vykdyti\+Meniu()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92}\label{Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92} 
+\index{Generavimas.h@{Generavimas.h}!pasirinktiStrategija@{pasirinktiStrategija}}
+\index{pasirinktiStrategija@{pasirinktiStrategija}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{pasirinktiStrategija()}{pasirinktiStrategija()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{Skirstymo\+Strategija}} pasirinkti\+Strategija (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interaktyviai prašo vartotojo pasirinkti skirstymo strategiją. 
+
+Išveda meniu į konsolę ir nuskaito vartotojo pasirinkimą.
+
+\begin{DoxyReturn}{Returns}
+Pasirinkta {\ttfamily Skirstymo\+Strategija}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Jei vartotojo įvestis neteisinga. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00122}{main()}}, and \mbox{\hyperlink{tyrimas_8cpp_source_l00134}{vykdyti\+Tyrima()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Generavimas_8h_abe3d250258257289fcd11ddaeb608055}\label{Generavimas_8h_abe3d250258257289fcd11ddaeb608055} 
+\index{Generavimas.h@{Generavimas.h}!skirstymasGrupes@{skirstymasGrupes}}
+\index{skirstymasGrupes@{skirstymasGrupes}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{skirstymasGrupes()}{skirstymasGrupes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} skirstymas\+Grupes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis,  }\item[{\mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{Skirstymo\+Strategija}}}]{strategija,  }\item[{bool}]{irasyti\+IFailus = {\ttfamily true},  }\item[{bool}]{paprasyti\+Rikiavimo = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Bendro naudojimo skirstymo funkcija. 
+
+Išsaugo laiko matavimus į globalų {\ttfamily timers} objektą. Pagal parametrus gali rašyti į failus ir prašyti rikiavimo pasirinkimo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Studentų konteineris. \\
+\hline
+{\em strategija} & Naudojama skirstymo strategija. \\
+\hline
+{\em irasyti\+IFailus} & Jei {\ttfamily true}, rezultatai išsaugomi į failus. \\
+\hline
+{\em paprasyti\+Rikiavimo} & Jei {\ttfamily true}, vartotojas gali pasirinkti rikiavimą. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \doxylink{structSkirstymorezultatas}{Skirstymorezultatas}} su vargsiukais ir protais. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{konteineris_8h_source_l00109}{aktyvaus\+Konteinerio\+Trumpas\+Pavadinimas()}}, \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a182c4b89a27c52474a0a532d5519f5e1}{Antra}}, \mbox{\hyperlink{Generavimas_8cpp_source_l00022}{failo\+Pavadinimas()}}, \mbox{\hyperlink{laikai_8h_source_l00026}{Timer\+Results\+::isvedimas}}, \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a85ab2d228b638bbea0a3654ff7f0e73b}{Pirma}}, \mbox{\hyperlink{Generavimas_8h_source_l00044}{Skirstymorezultatas\+::protai}}, \mbox{\hyperlink{spausdinam_8cpp_source_l00055}{rikiuoti\+Studentus()}}, \mbox{\hyperlink{laikai_8h_source_l00025}{Timer\+Results\+::skirstymas}}, \mbox{\hyperlink{Generavimas_8cpp_source_l00054}{skirstymas\+Strategija1()}}, \mbox{\hyperlink{Generavimas_8cpp_source_l00073}{skirstymas\+Strategija2()}}, \mbox{\hyperlink{Generavimas_8cpp_source_l00094}{skirstymas\+Strategija3()}}, \mbox{\hyperlink{spausdinam_8cpp_source_l00076}{spausdinam()}}, \mbox{\hyperlink{laikai_8cpp_source_l00003}{timers}}, \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14aa2d8674f7ae44cb2b79d7ade48bd4e85}{Trecia}}, and \mbox{\hyperlink{Generavimas_8h_source_l00043}{Skirstymorezultatas\+::vargsiukai}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00122}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_abe3d250258257289fcd11ddaeb608055_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{Generavimas_8h_abe3d250258257289fcd11ddaeb608055_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Generavimas_8h_abe8b00215e7c9d927d343694cda2c590}\label{Generavimas_8h_abe8b00215e7c9d927d343694cda2c590} 
+\index{Generavimas.h@{Generavimas.h}!skirstymasStrategija1@{skirstymasStrategija1}}
+\index{skirstymasStrategija1@{skirstymasStrategija1}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{skirstymasStrategija1()}{skirstymasStrategija1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} skirstymas\+Strategija1 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Skirsto studentus pagal 1-\/ą strategiją. 
+
+Eina per visus studentus ir juos kopijuoja į atskirus konteinerius. Originalus konteineris nekeičiamas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Studentų konteineris (const – nekeičiamas). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \doxylink{structSkirstymorezultatas}{Skirstymorezultatas}} su dviem užpildytais konteineriais. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8h_source_l00044}{Skirstymorezultatas\+::protai}}, and \mbox{\hyperlink{Generavimas_8h_source_l00043}{Skirstymorezultatas\+::vargsiukai}}.
+
+
+
+Referenced by \mbox{\hyperlink{Generavimas_8cpp_source_l00112}{skirstymas\+Grupes()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00416}{TEST()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_abe8b00215e7c9d927d343694cda2c590_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5}\label{Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5} 
+\index{Generavimas.h@{Generavimas.h}!skirstymasStrategija2@{skirstymasStrategija2}}
+\index{skirstymasStrategija2@{skirstymasStrategija2}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{skirstymasStrategija2()}{skirstymasStrategija2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} skirstymas\+Strategija2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Skirsto studentus pagal 2-\/ą strategiją. 
+
+Vargsiukai ištraukiami iš originalaus konteinerio (erase). Likę studentai (protai) perkeliami į rezultatą.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Studentų konteineris (keičiamas – iš jo šalinami vargsiukai). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \doxylink{structSkirstymorezultatas}{Skirstymorezultatas}}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8h_source_l00044}{Skirstymorezultatas\+::protai}}, and \mbox{\hyperlink{Generavimas_8h_source_l00043}{Skirstymorezultatas\+::vargsiukai}}.
+
+
+
+Referenced by \mbox{\hyperlink{Generavimas_8cpp_source_l00112}{skirstymas\+Grupes()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00443}{TEST()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494}\label{Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494} 
+\index{Generavimas.h@{Generavimas.h}!skirstymasStrategija3@{skirstymasStrategija3}}
+\index{skirstymasStrategija3@{skirstymasStrategija3}!Generavimas.h@{Generavimas.h}}
+\doxysubsubsection{\texorpdfstring{skirstymasStrategija3()}{skirstymasStrategija3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}} skirstymas\+Strategija3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Skirsto studentus pagal 3-\/ą strategiją (efektyviausia). 
+
+Naudoja {\ttfamily std\+::partition} algoritmą, kuris perskirsto elementus vietoje, tuomet siunčia į du atskirus konteinerius.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Studentų konteineris (keičiamas). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \doxylink{structSkirstymorezultatas}{Skirstymorezultatas}}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Generavimas_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{Generavimas_8cpp_source}{Generavimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8h_source_l00044}{Skirstymorezultatas\+::protai}}, and \mbox{\hyperlink{Generavimas_8h_source_l00043}{Skirstymorezultatas\+::vargsiukai}}.
+
+
+
+Referenced by \mbox{\hyperlink{Generavimas_8cpp_source_l00112}{skirstymas\+Grupes()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00469}{TEST()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,229 @@
+\doxysection{Generavimas.\+cpp}
+\hypertarget{Generavimas_8cpp_source}{}\label{Generavimas_8cpp_source}\mbox{\hyperlink{Generavimas_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Generavimas_8h}{Generavimas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{laikai_8h}{laikai.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{spausdinam_8h}{spausdinam.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00016}\mbox{\hyperlink{Generavimas_8cpp_a0b0988125d692b59275d54a958937343}{00016}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{Generavimas_8cpp_a0b0988125d692b59275d54a958937343}{galimasPavadinimas}}(\textcolor{keyword}{const}\ std::string\&\ pav)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00018}00018\ \ \ \ \ std::ifstream\ f(pav);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ f.is\_open();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00022}\mbox{\hyperlink{Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba}{00022}}\ std::string\ \mbox{\hyperlink{Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba}{failoPavadinimas}}(\textcolor{keyword}{const}\ std::string\&\ bazinisPavadinimas)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00024}00024\ \ \ \ \ std::string\ pavadinimas\ =\ bazinisPavadinimas\ +\ \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{Generavimas_8cpp_a0b0988125d692b59275d54a958937343}{galimasPavadinimas}}(pavadinimas))}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ pavadinimas\ =\ bazinisPavadinimas\ +\ \textcolor{stringliteral}{"{}\_"{}}\ +\ std::to\_string(count)\ +\ \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ pavadinimas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00036}\mbox{\hyperlink{Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92}{00036}}\ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{SkirstymoStrategija}}\ \mbox{\hyperlink{Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92}{pasirinktiStrategija}}()}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00038}00038\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite\ studentu\ skirstymo\ strategija:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}1\ -\/\ Du\ nauji\ konteineriai\ (vargsiukai\ ir\ protai)\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}2\ -\/\ Tik\ vargsiuku\ konteineris;\ protus\ palikti\ bendrame\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}3\ -\/\ Efektyvi\ strategija\ su\ std::partition\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{int}\ p\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00044}00044\ \ \ \ \ std::cin\ >>\ p;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::cin\ ||\ p\ <\ 1\ ||\ p\ >\ 3)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Neteisingas\ strategijos\ pasirinkimas."{}});}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{SkirstymoStrategija}}\textcolor{keyword}{>}(p);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00054}\mbox{\hyperlink{Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590}{00054}}\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590}{skirstymasStrategija1}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{StudContainer}}\&\ studis)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ s\ :\ studis)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getgalrezVid()\ <\ 5.0f)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}}.push\_back(s);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}}.push\_back(s);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{return}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00073}\mbox{\hyperlink{Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5}{00073}}\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5}{skirstymasStrategija2}}(\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{StudContainer}}\&\ studis)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00074}00074\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ =\ studis.begin();\ i\ !=\ studis.end();\ )}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i-\/>getgalrezVid()\ <\ 5.0f)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}}.push\_back(*i);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ studis.erase(i);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00090}00090\ \ \ \ \ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}}\ =\ std::move(studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00094}\mbox{\hyperlink{Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494}{00094}}\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494}{skirstymasStrategija3}}(\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{StudContainer}}\&\ studis)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00096}00096\ \ \ \ \ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{auto}\ riba\ =\ std::partition(studis.begin(),\ studis.end(),}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ [](\textcolor{keyword}{const}\ \mbox{\hyperlink{classStudentas}{Studentas}}\&\ s)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ return\ s.getgalrezVid()\ >=\ 5.0f;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00104}00104\ \ \ \ \ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}}.assign(riba,\ studis.end());}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00105}00105\ \ \ \ \ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}}.assign(studis.begin(),\ riba);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00107}00107\ \ \ \ \ studis.clear();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{return}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00112}\mbox{\hyperlink{Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e}{00112}}\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e}{skirstymasGrupes}}(}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{StudContainer}}\&\ studis,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{SkirstymoStrategija}}\ strategija,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{bool}\ irasytiIFailus,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ paprasytiRikiavimo)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00117}00117\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{keyword}{auto}\ start\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{switch}\ (strategija)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00123}00123\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a85ab2d228b638bbea0a3654ff7f0e73b}{SkirstymoStrategija::Pirma}}:}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ rezultatas\ =\ \mbox{\hyperlink{Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590}{skirstymasStrategija1}}(studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a182c4b89a27c52474a0a532d5519f5e1}{SkirstymoStrategija::Antra}}:}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ rezultatas\ =\ \mbox{\hyperlink{Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5}{skirstymasStrategija2}}(studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14aa2d8674f7ae44cb2b79d7ade48bd4e85}{SkirstymoStrategija::Trecia}}:}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ rezultatas\ =\ \mbox{\hyperlink{Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494}{skirstymasStrategija3}}(studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00139}00139\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{auto}\ end\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00142}00142\ \ \ \ \ \mbox{\hyperlink{laikai_8cpp_abb50db57757f191694f1e952de1398f8}{timers}}.\mbox{\hyperlink{structTimerResults_a8d469841c67ba8f3b11d9c47f8c815a0}{skirstymas}}\ =\ std::chrono::duration<double>(end\ -\/\ start).count();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00144}00144\ \ \ \ \ \textcolor{keywordflow}{if}\ (!irasytiIFailus)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00145}00145\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{laikai_8cpp_abb50db57757f191694f1e952de1398f8}{timers}}.\mbox{\hyperlink{structTimerResults_ad612f39a53c14411cef33f2e49fef28e}{isvedimas}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00150}00150\ \ \ \ \ \textcolor{keywordflow}{if}\ (paprasytiRikiavimo)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00151}00151\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2}{rikiuotiStudentus}}(rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}},\ \textcolor{stringliteral}{"{}vargsiukus"{}});}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2}{rikiuotiStudentus}}(rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}},\ \textcolor{stringliteral}{"{}protus"{}});}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{keyword}{auto}\ startPrint\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00158}00158\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ sufiksas\ =}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\_"{}}\ +\ \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvausKonteinerioTrumpasPavadinimas}}()\ +}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\_S"{}}\ +\ std::to\_string(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(strategija));}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00162}00162\ \ \ \ \ \mbox{\hyperlink{spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959}{spausdinam}}(rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}},\ \mbox{\hyperlink{Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba}{failoPavadinimas}}(\textcolor{stringliteral}{"{}Vargsiukai"{}}\ +\ sufiksas));}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00163}00163\ \ \ \ \ \mbox{\hyperlink{spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959}{spausdinam}}(rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}},\ \mbox{\hyperlink{Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba}{failoPavadinimas}}(\textcolor{stringliteral}{"{}protai"{}}\ \ \ \ \ +\ sufiksas));}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00165}00165\ \ \ \ \ \textcolor{keyword}{auto}\ endPrint\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00166}00166\ \ \ \ \ \mbox{\hyperlink{laikai_8cpp_abb50db57757f191694f1e952de1398f8}{timers}}.\mbox{\hyperlink{structTimerResults_ad612f39a53c14411cef33f2e49fef28e}{isvedimas}}\ =\ std::chrono::duration<double>(endPrint\ -\/\ startPrint).count();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00168}00168\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Studentai\ suskirstyti.\ Vargsiuku:\ "{}}\ <<\ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}}.size()}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ protu:\ "{}}\ <<\ rezultatas.\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}}.size()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00171}00171\ \ \ \ \ \textcolor{keywordflow}{return}\ rezultatas;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00172}00172\ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00174}\mbox{\hyperlink{Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d}{00174}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d}{generuotiFaila}}()}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00175}00175\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00176}00176\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ failo\ pavadinima:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00177}00177\ \ \ \ \ std::string\ pav;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00178}00178\ \ \ \ \ std::cin\ >>\ pav;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00180}00180\ \ \ \ \ std::ofstream\ write(pav);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00181}00181\ \ \ \ \ \textcolor{keywordflow}{if}\ (!write.is\_open())}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00182}00182\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Nepavyko\ sukurti\ failo."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00185}00185\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00187}00187\ \ \ \ \ std::mt19937\ gen(std::random\_device\{\}());}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00188}00188\ \ \ \ \ std::uniform\_int\_distribution<int>\ dist(1,\ 10);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00190}00190\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ studentu\ kieki:\ "{}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00191}00191\ \ \ \ \ \textcolor{keywordtype}{int}\ kiekis\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00192}00192\ \ \ \ \ std::cin\ >>\ kiekis;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00194}00194\ \ \ \ \ \textcolor{keyword}{auto}\ start\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00196}00196\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ndKiek\ =\ dist(gen);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00198}00198\ \ \ \ \ write\ <<\ std::left\ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Vardas"{}}\ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Pavarde"{}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00199}00199\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ ndKiek;\ ++j)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00200}00200\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ write\ <<\ std::setw(8)\ <<\ (\textcolor{stringliteral}{"{}ND"{}}\ +\ std::to\_string(j\ +\ 1));}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00203}00203\ \ \ \ \ write\ <<\ std::setw(8)\ <<\ \textcolor{stringliteral}{"{}Egz."{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00205}00205\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ kiekis;\ ++i)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00206}00206\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ write\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(15)\ <<\ (\textcolor{stringliteral}{"{}Vardas"{}}\ \ +\ std::to\_string(i\ +\ 1))}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(15)\ <<\ (\textcolor{stringliteral}{"{}Pavarde"{}}\ +\ std::to\_string(i\ +\ 1));}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ ndKiek;\ ++j)}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ write\ <<\ std::setw(8)\ <<\ dist(gen);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ write\ <<\ std::setw(8)\ <<\ dist(gen)\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};\ \textcolor{comment}{//\ egzaminas}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00217}00217\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00219}00219\ \ \ \ \ \textcolor{keyword}{auto}\ end\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00220}00220\ \ \ \ \ \mbox{\hyperlink{laikai_8cpp_abb50db57757f191694f1e952de1398f8}{timers}}.\mbox{\hyperlink{structTimerResults_a5c4c99fc2b3d4980b60fe9ee1897067c}{generavimas}}\ =\ std::chrono::duration<double>(end\ -\/\ start).count();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00222}00222\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Failas\ \(\backslash\)"{}"{}}\ <<\ pav\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ sugeneruotas\ per\ "{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{laikai_8cpp_abb50db57757f191694f1e952de1398f8}{timers}}.\mbox{\hyperlink{structTimerResults_a5c4c99fc2b3d4980b60fe9ee1897067c}{generavimas}}\ <<\ \textcolor{stringliteral}{"{}\ s."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{Generavimas_8cpp_source_l00224}00224\ \}}
+
+\end{DoxyCode}
