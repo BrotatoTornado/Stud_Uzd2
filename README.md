@@ -1,5 +1,3 @@
-<img width="761" height="687" alt="image" src="https://github.com/user-attachments/assets/0e081548-9533-461f-b7a9-89c386140fe8" /># Studentas projektas v2.0
-
 > Studentų duomenų valdymo sistema su abstrakčia bazine klase, Rule of Five, unit testais ir Doxygen dokumentacija.
 
 ---
