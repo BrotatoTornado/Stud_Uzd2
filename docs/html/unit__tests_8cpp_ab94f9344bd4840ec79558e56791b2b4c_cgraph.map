@@ -1,0 +1,17 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title="Tikrina, kad numatytasis konstruktorius inicializuoja tuščius laukus." alt="" coords="5,153,60,179"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#abe38c118e8e899b4de681f1d12adceab" title="Grąžina egzamino pažymį." alt="" coords="108,5,295,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,152,59,98,80,67,106,40,114,35,117,39,110,44,84,70,64,100,40,154"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#ab5f39edb91818c2fd0ec50e35cce4581" title="Grąžina galutinį balą apskaičiuotą pagal medianą." alt="" coords="109,55,293,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="41,151,68,120,107,89,120,83,122,87,109,94,72,124,45,155"/>
+<area shape="rect" id="Node000004" href="$classStudentas.html#a1325b10f479819956015190c8ba49cf0" title="Grąžina galutinį balą apskaičiuotą pagal vidurkį." alt="" coords="113,104,290,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="59,154,107,138,134,130,136,136,109,143,61,159"/>
+<area shape="rect" id="Node000005" href="$classStudentas.html#a72ad9cbcac7d53cefe587120d379a78b" title="Grąžina namų darbų pažymių vektorių (tik skaitymui)." alt="" coords="133,153,269,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="60,163,119,163,119,169,60,169"/>
+<area shape="rect" id="Node000006" href="$classZmogus.html#a004b8eb8a80b2648e45026802b416cfd" title=" " alt="" coords="123,203,279,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="61,172,109,187,140,196,138,202,107,193,59,177"/>
+<area shape="rect" id="Node000007" href="$classZmogus.html#af00bd4ee050cb93b59de8a48340049d7" title=" " alt="" coords="127,252,275,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="46,177,72,207,109,237,125,245,123,250,107,242,69,211,42,181"/>
+<area shape="rect" id="Node000008" href="$classStudentas.html#ab4f6284b5d7e72788df52633239e5df2" title="Grąžina namų darbų pažymių vidurkį." alt="" coords="117,301,286,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="41,178,64,231,84,261,110,287,120,293,117,298,106,291,80,264,60,234,36,180"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title="Tikrina, kad suskaiciuotiGalutini() veikia polimorfiškai." alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#a1325b10f479819956015190c8ba49cf0" title="Grąžina galutinį balą apskaičiuotą pagal vidurkį." alt="" coords="125,5,302,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,78,74,58,107,40,126,32,128,37,109,44,77,63,50,82"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#a659d6bb3cfd109fe095a9a03eaea2667" title="Nustato egzamino pažymį." alt="" coords="120,55,307,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,86,109,79,110,85,61,92"/>
+<area shape="rect" id="Node000004" href="$unit__tests_8cpp.html#ad5555e66227747ad99e35953b7bdbe25" title="Sukuria testinį studentą iš srauto eilutės." alt="" coords="130,104,297,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,94,116,101,116,106,60,99"/>
+<area shape="rect" id="Node000006" href="$classZmogus.html#a960515f30aabeba1c2c73755806de411" title="Apskaičiuoja galutinį įvertinimą." alt="" coords="108,153,319,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="52,103,78,121,109,138,133,147,131,152,107,143,75,126,49,108"/>
+<area shape="rect" id="Node000005" href="$classStudentas.html#a994a9edb8000f03b9fbb7a4f07c7d8d8" title="Apskaičiuoja galutinį įvertinimą (vidurkio ir medianos variantus)." alt="" coords="367,104,589,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="297,114,353,114,353,119,297,119"/>
+</map>

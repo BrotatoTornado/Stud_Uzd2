@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title="Tikrina galutinio balo skaičiavimo formulę (vidurkio variantas)." alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#a1325b10f479819956015190c8ba49cf0" title="Grąžina galutinį balą apskaičiuotą pagal vidurkį." alt="" coords="131,5,308,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,37,116,29,117,35,61,42"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#a994a9edb8000f03b9fbb7a4f07c7d8d8" title="Apskaičiuoja galutinį įvertinimą (vidurkio ir medianos variantus)." alt="" coords="108,55,331,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="61,44,108,50,107,56,60,49"/>
+</map>
