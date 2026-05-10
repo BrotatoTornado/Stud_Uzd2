@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title="Tikrina, kad destruktorius nesukelia klaidų." alt="" coords="5,5,60,31"/>
+<area shape="rect" id="Node000002" href="$unit__tests_8cpp.html#ad5555e66227747ad99e35953b7bdbe25" title="Sukuria testinį studentą iš srauto eilutės." alt="" coords="108,5,275,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,15,94,15,94,21,60,21"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#a994a9edb8000f03b9fbb7a4f07c7d8d8" title="Apskaičiuoja galutinį įvertinimą (vidurkio ir medianos variantus)." alt="" coords="323,5,545,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,15,309,15,309,21,275,21"/>
+</map>
