@@ -1,0 +1,7 @@
+<map id="Studentas::operator&gt;&gt;" name="Studentas::operator&gt;&gt;">
+<area shape="rect" id="Node000001" title="Įvesties operatorius srautui." alt="" coords="5,31,177,56"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#a56cfe16f164d76b63f50898ef0a6403a" title="Nuskaito studento duomenis iš srauto." alt="" coords="249,5,424,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,32,236,26,236,31,178,37"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#a994a9edb8000f03b9fbb7a4f07c7d8d8" title="Apskaičiuoja galutinį įvertinimą (vidurkio ir medianos variantus)." alt="" coords="225,55,448,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,49,212,52,211,58,177,54"/>
+</map>

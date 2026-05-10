@@ -1,0 +1,74 @@
+<map id="Studentas::suskaiciuotiGalutini" name="Studentas::suskaiciuotiGalutini">
+<area shape="rect" id="Node000001" title="Apskaičiuoja galutinį įvertinimą (vidurkio ir medianos variantus)." alt="" coords="703,747,925,772"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#ac63003b577b137ac6ad5b1fb176bd59a" title="Įvesties operatorius srautui." alt="" coords="464,475,636,500"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="801,734,782,686,750,626,707,565,682,537,653,514,632,502,635,498,656,509,685,533,712,561,755,623,786,684,806,732"/>
+<area shape="rect" id="Node000003" href="$unit__tests_8cpp.html#ad5555e66227747ad99e35953b7bdbe25" title="Sukuria testinį studentą iš srauto eilutės." alt="" coords="467,524,633,549"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="794,737,736,666,696,625,653,588,619,567,585,552,587,547,622,563,656,584,700,621,740,662,798,734"/>
+<area shape="rect" id="Node000025" href="$unit__tests_8cpp.html#a705de03520b281ce1bc817e00505ed53" title="Tikrina 1&#45;ą skirstymo strategiją (du nauji konteineriai)." alt="" coords="523,599,577,624"/>
+<area shape="poly" id="edge29_Node000001_Node000025" title=" " alt="" coords="789,739,731,687,693,660,654,638,614,624,577,617,578,612,616,619,656,633,696,656,734,683,792,735"/>
+<area shape="rect" id="Node000026" href="$unit__tests_8cpp.html#aa8c6fec9596bb9ef0254929402846c20" title="Tikrina 2&#45;ą strategiją (erase iš originalaus konteinerio)." alt="" coords="523,648,577,673"/>
+<area shape="poly" id="edge30_Node000001_Node000026" title=" " alt="" coords="777,743,720,714,654,687,577,668,578,663,656,682,722,709,779,738"/>
+<area shape="rect" id="Node000027" href="$unit__tests_8cpp.html#ab944c4561984eed1d9d2d402e1d13232" title="Tikrina 3&#45;ą strategiją (std::partition)." alt="" coords="523,697,577,723"/>
+<area shape="poly" id="edge31_Node000001_Node000027" title=" " alt="" coords="732,747,577,718,578,712,733,742"/>
+<area shape="rect" id="Node000028" href="$unit__tests_8cpp.html#a71af12b4bfd17be4f4e33e55fa857042" title="Tikrina srautinį konstruktorių su standartine eilute." alt="" coords="523,747,577,772"/>
+<area shape="poly" id="edge32_Node000001_Node000028" title=" " alt="" coords="689,762,578,762,578,757,689,757"/>
+<area shape="rect" id="Node000029" href="$unit__tests_8cpp.html#a43cc991979646299df596b1c828f24f2" title="Tikrina, kad galutinis balas nekyla virš 10." alt="" coords="523,796,577,821"/>
+<area shape="poly" id="edge33_Node000001_Node000029" title=" " alt="" coords="733,777,578,806,577,801,732,772"/>
+<area shape="rect" id="Node000030" href="$unit__tests_8cpp.html#a4e180f2a600f9a03b1f17f378d9142d3" title="Tikrina, kad galutinis balas ne mažesnis nei 0." alt="" coords="523,845,577,871"/>
+<area shape="poly" id="edge34_Node000001_Node000030" title=" " alt="" coords="778,781,721,808,656,835,578,856,577,850,654,830,719,804,775,776"/>
+<area shape="rect" id="Node000031" href="$unit__tests_8cpp.html#aeb188f81e57ca13b87179cc2603e968e" title="Tikrina galutinio balo skaičiavimo formulę (vidurkio variantas)." alt="" coords="523,895,577,920"/>
+<area shape="poly" id="edge35_Node000001_Node000031" title=" " alt="" coords="792,784,733,835,696,862,656,884,616,899,578,907,577,901,614,894,654,880,693,857,730,830,788,780"/>
+<area shape="rect" id="Node000032" href="$testas_8cpp.html#a029c23e8b1279f64678ff0d16e3d7d40" title=" " alt="" coords="455,981,645,1007"/>
+<area shape="poly" id="edge36_Node000001_Node000032" title=" " alt="" coords="797,784,738,854,699,895,656,933,616,962,578,983,576,979,613,957,653,929,695,891,734,851,793,781"/>
+<area shape="rect" id="Node000033" href="$testas_8cpp.html#aedb355f6a889a35dc94703016d84240a" title=" " alt="" coords="445,1031,655,1056"/>
+<area shape="poly" id="edge38_Node000001_Node000033" title=" " alt="" coords="807,786,788,836,757,900,713,966,686,996,656,1022,635,1033,633,1028,653,1017,683,992,709,963,752,898,783,834,802,784"/>
+<area shape="rect" id="Node000004" href="$unit__tests_8cpp.html#a8a4c12f379c9593455b66a2bdf11c6af" title="Tikrina, kad suskaiciuotiGalutini() veikia polimorfiškai." alt="" coords="254,5,309,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="453,522,443,513,421,483,407,453,399,423,397,393,404,334,420,275,435,217,442,159,439,130,432,101,417,73,395,44,377,30,354,22,309,18,309,13,355,17,379,25,399,40,422,70,437,99,445,129,447,159,441,218,425,276,409,335,402,393,404,422,412,451,426,480,447,510,456,518"/>
+<area shape="rect" id="Node000005" href="$unit__tests_8cpp.html#a91759e7784a1e58d17448a375cdeeb5c" title="Tikrina virtualų dispatch per bazinės klasės rodyklę." alt="" coords="254,55,309,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="453,522,443,513,423,486,410,459,403,433,401,406,406,353,420,300,433,248,438,196,436,170,428,144,415,119,395,93,377,79,354,71,308,67,309,62,355,66,379,74,399,89,420,116,433,142,441,169,443,196,438,249,425,301,412,354,406,406,408,432,415,458,428,484,447,510,456,518"/>
+<area shape="rect" id="Node000006" href="$unit__tests_8cpp.html#a6166e1b3442418d3630239689ceac9f0" title="Tikrina, kad operator&lt;&lt; išveda reikiamus laukus." alt="" coords="254,104,309,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="453,522,443,513,426,490,414,466,407,442,404,418,409,371,420,325,430,278,434,233,432,210,425,188,413,165,395,143,377,129,354,121,309,117,309,112,355,115,379,124,399,139,417,162,430,186,437,209,440,233,436,279,425,326,414,372,410,418,412,441,419,464,430,487,447,510,456,518"/>
+<area shape="rect" id="Node000007" href="$unit__tests_8cpp.html#a75a7ca8c5faf3d1580e3ee51c804f4f9" title="Tikrina destruktorių su 1000 objektų vektoriuje." alt="" coords="254,153,309,179"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="453,521,443,513,428,493,417,472,408,431,411,390,419,349,428,309,430,270,421,231,411,211,395,192,377,178,354,170,309,166,309,161,355,165,379,173,399,188,415,208,426,229,436,269,433,310,425,351,416,391,413,431,422,470,432,490,447,510,456,517"/>
+<area shape="rect" id="Node000008" href="$unit__tests_8cpp.html#a3db68582701e71e90161e2b917922864" title="Tikrina, kad destruktorius nesukelia klaidų." alt="" coords="254,203,309,228"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="453,521,443,513,420,479,412,444,413,409,419,374,425,340,426,307,418,274,395,241,376,228,354,220,309,216,309,210,355,215,379,223,399,237,423,272,432,306,431,341,425,375,418,409,417,443,425,476,447,510,456,517"/>
+<area shape="rect" id="Node000009" href="$unit__tests_8cpp.html#a6b9f6da88dedebab8c8524e76f5191e1" title="Tikrina, kad kopijavimo konstruktorius sukuria gilią kopiją." alt="" coords="254,252,309,277"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="453,521,443,513,424,485,416,456,415,428,419,399,423,371,423,344,415,317,395,291,376,277,354,269,308,265,309,260,355,264,379,272,399,287,420,315,428,343,428,372,424,400,421,428,421,456,428,483,447,510,456,517"/>
+<area shape="rect" id="Node000010" href="$unit__tests_8cpp.html#aa7de934bc88c4d34b554aa0ceaede9ec" title="Tikrina, kad keičiant kopiją originalas nesikeičia (gili kopija)." alt="" coords="254,301,309,327"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="453,521,443,513,427,491,419,469,419,424,419,381,411,360,396,340,376,327,353,319,309,315,309,310,354,314,378,322,399,336,416,358,424,380,424,424,424,468,432,489,447,509,456,517"/>
+<area shape="rect" id="Node000011" href="$unit__tests_8cpp.html#a99f7a68bbac8a8ba8ea527dc2d98437d" title="Tikrina kopijavimo priskyrimo operatorių." alt="" coords="254,351,309,376"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="453,520,444,513,430,498,423,482,419,449,415,418,408,404,396,389,376,377,353,370,309,365,309,359,354,364,378,372,399,385,413,401,420,417,424,449,428,480,435,495,447,509,456,516"/>
+<area shape="rect" id="Node000012" href="$unit__tests_8cpp.html#ab305d8c8d3775f197223470035d8c765" title="Tikrina, kad savipriskyrimas yra saugus (nekelia crash)." alt="" coords="254,400,309,425"/>
+<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="455,521,444,513,427,495,419,475,412,456,396,439,375,428,352,421,309,415,309,410,353,416,377,423,399,435,416,453,424,473,431,492,447,509,458,516"/>
+<area shape="rect" id="Node000013" href="$unit__tests_8cpp.html#a4ee07601ac25188a62da8c63e7403574" title="Tikrina, kad šaltinis po perkėlimo lieka tuščios būsenos." alt="" coords="254,449,309,475"/>
+<area shape="poly" id="edge12_Node000003_Node000013" title=" " alt="" coords="472,523,444,514,420,501,396,488,350,476,308,468,309,463,351,470,398,484,423,496,446,509,474,518"/>
+<area shape="rect" id="Node000014" href="$unit__tests_8cpp.html#a9a318c8fa767bc8a3cb18a1f031b13a0" title="Tikrina, kad perkėlimo konstruktorius teisingai perkelia duomenis." alt="" coords="254,499,309,524"/>
+<area shape="poly" id="edge13_Node000003_Node000014" title=" " alt="" coords="453,530,309,516,309,511,453,525"/>
+<area shape="rect" id="Node000015" href="$unit__tests_8cpp.html#ae253a6ffd98c1944db6bd8e17f27ca5b" title="Tikrina, kad šaltinis po perkėlimo priskyrimo lieka tuščias." alt="" coords="254,548,309,573"/>
+<area shape="poly" id="edge14_Node000003_Node000015" title=" " alt="" coords="453,548,309,561,309,556,453,543"/>
+<area shape="rect" id="Node000016" href="$unit__tests_8cpp.html#a3c79d26e97519b6203a87793fba89b9b" title="Tikrina perkėlimo priskyrimo operatorių." alt="" coords="254,597,309,623"/>
+<area shape="poly" id="edge15_Node000003_Node000016" title=" " alt="" coords="500,556,398,587,309,608,308,602,397,582,498,551"/>
+<area shape="rect" id="Node000017" href="$testas_8cpp.html#a62345eaf1f8a3d065214eec00726417b" title=" " alt="" coords="203,647,359,672"/>
+<area shape="poly" id="edge16_Node000003_Node000017" title=" " alt="" coords="503,557,447,588,433,601,424,613,414,625,399,636,360,651,359,646,396,632,411,621,420,609,429,597,444,584,501,552"/>
+<area shape="rect" id="Node000018" href="$testas_8cpp.html#afb8a38efa2d4acabf9b5a1c72d1ba626" title=" " alt="" coords="205,696,358,721"/>
+<area shape="poly" id="edge17_Node000003_Node000018" title=" " alt="" coords="495,557,470,570,447,588,431,612,425,637,418,661,411,674,399,685,380,697,359,704,358,699,378,692,396,681,407,670,414,659,420,636,426,610,443,584,467,566,492,552"/>
+<area shape="rect" id="Node000020" href="$testas_8cpp.html#a8a5a7da36716b22c613e0cfa68c42e1c" title=" " alt="" coords="165,745,397,771"/>
+<area shape="poly" id="edge19_Node000003_Node000020" title=" " alt="" coords="492,557,468,570,447,588,435,606,428,625,426,662,422,698,414,717,399,735,380,747,377,743,396,731,410,714,417,697,421,661,423,624,430,604,443,584,465,566,489,552"/>
+<area shape="rect" id="Node000021" href="$testas_8cpp.html#a2004eb505d4b8f7ced0e73394dfb8f4f" title=" " alt="" coords="174,795,389,820"/>
+<area shape="poly" id="edge21_Node000003_Node000021" title=" " alt="" coords="490,557,467,570,447,588,432,613,426,637,427,686,428,711,427,735,418,760,399,784,382,797,379,792,395,780,413,757,421,734,423,711,421,687,420,637,427,611,443,584,464,566,487,552"/>
+<area shape="rect" id="Node000022" href="$testas_8cpp.html#af9afec580e7b23142c6f4d093c46cd18" title=" " alt="" coords="183,844,380,869"/>
+<area shape="poly" id="edge23_Node000003_Node000022" title=" " alt="" coords="489,557,466,570,447,588,429,619,423,650,423,681,428,711,431,742,431,772,421,803,399,833,382,846,379,842,395,829,416,800,425,771,426,742,422,712,418,681,417,650,424,618,443,584,463,566,486,552"/>
+<area shape="rect" id="Node000023" href="$testas_8cpp.html#a326b0b0101acfb38443e5b9e2ce88720" title=" " alt="" coords="169,893,393,919"/>
+<area shape="poly" id="edge25_Node000003_Node000023" title=" " alt="" coords="488,557,466,570,447,588,427,626,420,663,422,700,428,737,434,773,435,809,425,846,399,883,383,895,379,891,395,879,420,844,429,809,429,773,423,737,417,701,414,663,422,624,443,584,462,566,485,552"/>
+<area shape="rect" id="Node000024" href="$testas_8cpp.html#acbc7a298bf5e8af17612dcf6d63f0920" title=" " alt="" coords="178,943,385,968"/>
+<area shape="poly" id="edge27_Node000003_Node000024" title=" " alt="" coords="487,557,465,570,447,588,433,610,424,633,417,676,420,719,429,762,437,804,439,846,428,889,416,910,399,932,383,944,380,940,395,928,412,907,423,887,434,846,432,804,424,763,415,720,411,676,419,631,429,608,443,584,462,566,484,552"/>
+<area shape="rect" id="Node000019" href="$testas_8cpp.html#a5b0bc173f8bb450eee52bf4e5812ea09" title=" " alt="" coords="5,869,117,895"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="193,722,167,735,131,766,103,804,83,842,70,870,65,868,78,839,99,802,128,763,164,730,191,717"/>
+<area shape="poly" id="edge20_Node000020_Node000019" title=" " alt="" coords="181,778,167,784,137,804,111,828,74,871,70,867,107,824,134,800,164,780,179,773"/>
+<area shape="poly" id="edge22_Node000021_Node000019" title=" " alt="" coords="193,826,166,834,123,852,86,872,83,867,120,847,164,829,191,821"/>
+<area shape="poly" id="edge24_Node000022_Node000019" title=" " alt="" coords="169,872,118,878,117,873,168,867"/>
+<area shape="poly" id="edge26_Node000023_Node000019" title=" " alt="" coords="155,895,117,891,118,885,156,890"/>
+<area shape="poly" id="edge28_Node000024_Node000019" title=" " alt="" coords="197,942,164,933,122,915,85,897,87,892,124,910,166,927,198,937"/>
+<area shape="poly" id="edge37_Node000032_Node000019" title=" " alt="" coords="457,1011,390,1015,316,1014,238,1004,164,982,133,964,106,940,69,897,73,893,110,937,136,959,166,977,239,999,316,1009,390,1010,456,1005"/>
+<area shape="poly" id="edge39_Node000033_Node000019" title=" " alt="" coords="459,1060,392,1065,316,1062,238,1049,200,1037,164,1020,128,993,100,958,79,924,66,896,70,894,83,921,104,955,132,989,167,1016,202,1032,239,1044,316,1057,392,1059,459,1055"/>
+</map>

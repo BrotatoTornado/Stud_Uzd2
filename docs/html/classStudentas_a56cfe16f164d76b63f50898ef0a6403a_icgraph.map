@@ -1,0 +1,7 @@
+<map id="Studentas::readStudent" name="Studentas::readStudent">
+<area shape="rect" id="Node000001" title="Nuskaito studento duomenis iš srauto." alt="" coords="225,31,400,56"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#ac63003b577b137ac6ad5b1fb176bd59a" title="Įvesties operatorius srautui." alt="" coords="5,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,34,177,30,178,25,212,29"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#a00d6db6706f5e4182d3677ea4e90de61" title="Srautinis konstruktorius." alt="" coords="11,55,171,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,57,172,61,171,56,211,52"/>
+</map>
