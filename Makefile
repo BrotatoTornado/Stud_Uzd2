@@ -4,7 +4,7 @@ CXXFLAGS = -std=c++17 -Wall -Wextra
 
 SRCS = main.cpp Studentas.cpp meniu.cpp skaitymas.cpp Generavimas.cpp spausdinam.cpp tyrimas.cpp laikai.cpp testas.cpp Zmogus.cpp
 
-TEST_SRCS = unit_tests.cpp Studentas.cpp Generavimas.cpp skaitymas.cpp spausdinam.cpp Zmogus.cpp
+TEST_SRCS = unit_tests.cpp Studentas.cpp Generavimas.cpp skaitymas.cpp spausdinam.cpp Zmogus.cpp laikai.cpp
 
 GTEST = -lgtest -lgtest_main -pthread
 
