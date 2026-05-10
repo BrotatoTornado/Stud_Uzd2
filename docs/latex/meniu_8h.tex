@@ -1,0 +1,110 @@
+\doxysection{meniu.\+h File Reference}
+\hypertarget{meniu_8h}{}\label{meniu_8h}\index{meniu.h@{meniu.h}}
+
+
+Pagrindinio programos meniu funkcijos deklaracija.  
+
+
+{\ttfamily \#include "{}konteineris.\+h"{}}\newline
+Include dependency graph for meniu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{meniu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{meniu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{meniu_8h_a4bb692c238b0368aa3ac013f967f18af}{vykdyti\+Meniu}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Paleidžia pagrindinį interaktyvų programos meniu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pagrindinio programos meniu funkcijos deklaracija. 
+
+\begin{DoxyAuthor}{Author}
+\doxylink{classStudentas}{Studentas} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{meniu_8h_source}{meniu.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{meniu_8h_a4bb692c238b0368aa3ac013f967f18af}\label{meniu_8h_a4bb692c238b0368aa3ac013f967f18af} 
+\index{meniu.h@{meniu.h}!vykdytiMeniu@{vykdytiMeniu}}
+\index{vykdytiMeniu@{vykdytiMeniu}!meniu.h@{meniu.h}}
+\doxysubsubsection{\texorpdfstring{vykdytiMeniu()}{vykdytiMeniu()}}
+{\footnotesize\ttfamily bool vykdyti\+Meniu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Paleidžia pagrindinį interaktyvų programos meniu. 
+
+Leidžia vartotojui pasirinkti vieną iš šių veiksmų\+:
+\begin{DoxyItemize}
+\item įvesti studentą rankiniu būdu;
+\item nuskaityti studentus iš failo;
+\item pridėti atsitiktinius studentus;
+\item generuoti duomenų failą;
+\item atlikti konteinerių greitaveikos tyrimą;
+\item paleisti klasės unit testus;
+\item tikrinti \doxylink{classZmogus}{Zmogus} abstraktumą;
+\item baigti darbą.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Studentų konteineris, į kurį pridedami / keičiami duomenys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} jei reikia tęsti programą (grįžti į pagrindinį ciklą), {\ttfamily false} jei vartotojas pasirinko baigti darbą. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Klaidos įvesties atveju. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{meniu_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{skaitymas_8cpp_source_l00043}{failo\+Skaitymas()}}, \mbox{\hyperlink{Generavimas_8cpp_source_l00174}{generuoti\+Faila()}}, \mbox{\hyperlink{Studentas_8cpp_source_l00312}{Studentas\+::parinkti\+Atsitiktinius()}}, \mbox{\hyperlink{Studentas_8h_source_l00171}{Studentas\+::set\+Pavarde()}}, \mbox{\hyperlink{Studentas_8h_source_l00165}{Studentas\+::set\+Vardas()}}, \mbox{\hyperlink{skaitymas_8cpp_source_l00012}{skaitom\+Ranka()}}, and \mbox{\hyperlink{tyrimas_8cpp_source_l00134}{vykdyti\+Tyrima()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00122}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{meniu_8h_a4bb692c238b0368aa3ac013f967f18af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{meniu_8h_a4bb692c238b0368aa3ac013f967f18af_icgraph}
+\end{center}
+\end{figure}

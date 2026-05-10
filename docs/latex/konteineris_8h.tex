@@ -1,0 +1,243 @@
+\doxysection{konteineris.\+h File Reference}
+\hypertarget{konteineris_8h}{}\label{konteineris_8h}\index{konteineris.h@{konteineris.h}}
+
+
+Kompiliavimo laiku pasirenkamas studentų konteineris.  
+
+
+{\ttfamily \#include "{}Studentas.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for konteineris.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{konteineris_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{konteineris_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{konteineris_8h_a1045504ff0f27f5fc49eb11689e7f394}{Studentu\+Konteineris}} = std\+::vector$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Studentų konteinerio tipo alias (std\+::vector variantas – numatytasis). \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} = \mbox{\hyperlink{konteineris_8h_a1045504ff0f27f5fc49eb11689e7f394}{Studentu\+Konteineris}}$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$
+\begin{DoxyCompactList}\small\item\em Pagrindinis studentų konteineris naudojamas per visą programą. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{aktyvaus\+Konteinerio\+Pavadinimas}} ()
+\begin{DoxyCompactList}\small\item\em Grąžina aktyvaus konteinerio pilną pavadinimą. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvaus\+Konteinerio\+Trumpas\+Pavadinimas}} ()
+\begin{DoxyCompactList}\small\item\em Grąžina aktyvaus konteinerio trumpąjį pavadinimą. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename Alloc , typename Compare $>$ }\\void \mbox{\hyperlink{konteineris_8h_a78a77737a29b58defd2e834d981f3771}{konteinerio\+Sort}} (std\+::list$<$ T, Alloc $>$ \&konteineris, Compare comp)
+\begin{DoxyCompactList}\small\item\em Rikiavimo specializacija {\ttfamily std\+::list} konteineriui. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container , typename Compare $>$ }\\void \mbox{\hyperlink{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802}{konteinerio\+Sort}} (Container \&konteineris, Compare comp)
+\begin{DoxyCompactList}\small\item\em Universali rikiavimo funkcija bet kuriam atsitiktinės prieigos konteineriui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kompiliavimo laiku pasirenkamas studentų konteineris. 
+
+Naudojant preprocesorių galima pasirinkti vieną iš trijų STL konteinerių tipų\+:
+\begin{DoxyItemize}
+\item {\ttfamily std\+::vector} (numatytasis)
+\item {\ttfamily std\+::list} (kompiliuoti su {\ttfamily -\/DUSE\+\_\+\+LIST})
+\item {\ttfamily std\+::deque} (kompiliuoti su {\ttfamily -\/DUSE\+\_\+\+DEQUE})
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+\doxylink{classStudentas}{Studentas} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}\label{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62} 
+\index{konteineris.h@{konteineris.h}!StudContainer@{StudContainer}}
+\index{StudContainer@{StudContainer}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{StudContainer}{StudContainer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}}}
+
+
+
+Pagrindinis studentų konteineris naudojamas per visą programą. 
+
+Tipas priklauso nuo kompiliacijos laiko makro ({\ttfamily USE\+\_\+\+LIST}, {\ttfamily USE\+\_\+\+DEQUE} arba numatytasis {\ttfamily std\+::vector}). 
+
+Definition at line \mbox{\hyperlink{konteineris_8h_source_l00124}{124}} of file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+\Hypertarget{konteineris_8h_a1045504ff0f27f5fc49eb11689e7f394}\label{konteineris_8h_a1045504ff0f27f5fc49eb11689e7f394} 
+\index{konteineris.h@{konteineris.h}!StudentuKonteineris@{StudentuKonteineris}}
+\index{StudentuKonteineris@{StudentuKonteineris}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{StudentuKonteineris}{StudentuKonteineris}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{konteineris_8h_a1045504ff0f27f5fc49eb11689e7f394}{Studentu\+Konteineris}} =  std\+::vector$<$T$>$}
+
+
+
+Studentų konteinerio tipo alias (std\+::vector variantas – numatytasis). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Elementų tipas. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line \mbox{\hyperlink{konteineris_8h_source_l00092}{92}} of file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}\label{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0} 
+\index{konteineris.h@{konteineris.h}!aktyvausKonteinerioPavadinimas@{aktyvausKonteinerioPavadinimas}}
+\index{aktyvausKonteinerioPavadinimas@{aktyvausKonteinerioPavadinimas}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{aktyvausKonteinerioPavadinimas()}{aktyvausKonteinerioPavadinimas()}}
+{\footnotesize\ttfamily std\+::string aktyvaus\+Konteinerio\+Pavadinimas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Grąžina aktyvaus konteinerio pilną pavadinimą. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily "{}std\+::vector"{}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{konteineris_8h_source_l00099}{99}} of file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00122}{main()}}, and \mbox{\hyperlink{tyrimas_8cpp_source_l00134}{vykdyti\+Tyrima()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}\label{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e} 
+\index{konteineris.h@{konteineris.h}!aktyvausKonteinerioTrumpasPavadinimas@{aktyvausKonteinerioTrumpasPavadinimas}}
+\index{aktyvausKonteinerioTrumpasPavadinimas@{aktyvausKonteinerioTrumpasPavadinimas}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{aktyvausKonteinerioTrumpasPavadinimas()}{aktyvausKonteinerioTrumpasPavadinimas()}}
+{\footnotesize\ttfamily std\+::string aktyvaus\+Konteinerio\+Trumpas\+Pavadinimas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Grąžina aktyvaus konteinerio trumpąjį pavadinimą. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily "{}vector"{}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{konteineris_8h_source_l00109}{109}} of file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Generavimas_8cpp_source_l00112}{skirstymas\+Grupes()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802}\label{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802} 
+\index{konteineris.h@{konteineris.h}!konteinerioSort@{konteinerioSort}}
+\index{konteinerioSort@{konteinerioSort}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{konteinerioSort()}{konteinerioSort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Container , typename Compare $>$ \\
+void konteinerio\+Sort (\begin{DoxyParamCaption}\item[{Container \&}]{konteineris,  }\item[{Compare}]{comp }\end{DoxyParamCaption})}
+
+
+
+Universali rikiavimo funkcija bet kuriam atsitiktinės prieigos konteineriui. 
+
+Naudoja {\ttfamily std\+::sort} su pradžios ir pabaigos iteratoriais.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & Konteinerio tipas (pvz. {\ttfamily std\+::vector}, {\ttfamily std\+::deque}). \\
+\hline
+{\em Compare} & Lyginimo funktorius. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em konteineris} & Rikiuojamas konteineris. \\
+\hline
+{\em comp} & Lyginimo funktorius. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{konteineris_8h_source_l00157}{157}} of file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+\Hypertarget{konteineris_8h_a78a77737a29b58defd2e834d981f3771}\label{konteineris_8h_a78a77737a29b58defd2e834d981f3771} 
+\index{konteineris.h@{konteineris.h}!konteinerioSort@{konteinerioSort}}
+\index{konteinerioSort@{konteinerioSort}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{konteinerioSort()}{konteinerioSort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc , typename Compare $>$ \\
+void konteinerio\+Sort (\begin{DoxyParamCaption}\item[{std\+::list$<$ T, Alloc $>$ \&}]{konteineris,  }\item[{Compare}]{comp }\end{DoxyParamCaption})}
+
+
+
+Rikiavimo specializacija {\ttfamily std\+::list} konteineriui. 
+
+{\ttfamily std\+::list} neturi iteratoriaus aritmetikos, todėl reikia naudoti {\ttfamily list\+::sort()} vietoj {\ttfamily std\+::sort()}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Elementų tipas. \\
+\hline
+{\em Alloc} & Alokatorius. \\
+\hline
+{\em Compare} & Lyginimo funktorius. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em konteineris} & Rikiuojamas sąrašas. \\
+\hline
+{\em comp} & Lyginimo funktorius. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{konteineris_8h_source_l00140}{140}} of file \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{spausdinam_8cpp_source_l00010}{surikiuoti\+Studentus()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{konteineris_8h_a78a77737a29b58defd2e834d981f3771_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,202 @@
+\doxysection{skaitymas.\+cpp File Reference}
+\hypertarget{skaitymas_8cpp}{}\label{skaitymas_8cpp}\index{skaitymas.cpp@{skaitymas.cpp}}
+{\ttfamily \#include "{}skaitymas.\+h"{}}\newline
+{\ttfamily \#include "{}laikai.\+h"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for skaitymas.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{skaitymas_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490}{skaitom\+Ranka}} (\mbox{\hyperlink{classStudentas}{Studentas}} \&s)
+\begin{DoxyCompactList}\small\item\em Interaktyviai nuskaito vieno studento duomenis iš konsolės. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22}{failo\+Skaitymas}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Interaktyviai prašo failo pavadinimo ir nuskaito studentus. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302}{failo\+Skaitymas}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis, const std\+::string \&pav)
+\begin{DoxyCompactList}\small\item\em Nuskaito studentus iš nurodyto failo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa}{suskaiciuoti\+Galutinius}} (\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Apskaičiuoja galutinius balus visiems studentams konteineryje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22}\label{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22} 
+\index{skaitymas.cpp@{skaitymas.cpp}!failoSkaitymas@{failoSkaitymas}}
+\index{failoSkaitymas@{failoSkaitymas}!skaitymas.cpp@{skaitymas.cpp}}
+\doxysubsubsection{\texorpdfstring{failoSkaitymas()}{failoSkaitymas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool failo\+Skaitymas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Interaktyviai prašo failo pavadinimo ir nuskaito studentus. 
+
+Pirmoji perkrovos versija – prašo vartotojo įvesti failo pavadinimą ir perduoda jį antrajai versijai.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Konteineris, į kurį pridedami nuskaityti studentai. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} jei failas sėkmingai nuskaitytas, {\ttfamily false} klaidos atveju. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{skaitymas_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{skaitymas_8cpp_source}{skaitymas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{skaitymas_8cpp_source_l00043}{failo\+Skaitymas()}}.
+
+
+
+Referenced by \mbox{\hyperlink{skaitymas_8cpp_source_l00043}{failo\+Skaitymas()}}, and \mbox{\hyperlink{meniu_8cpp_source_l00011}{vykdyti\+Meniu()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302}\label{skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302} 
+\index{skaitymas.cpp@{skaitymas.cpp}!failoSkaitymas@{failoSkaitymas}}
+\index{failoSkaitymas@{failoSkaitymas}!skaitymas.cpp@{skaitymas.cpp}}
+\doxysubsubsection{\texorpdfstring{failoSkaitymas()}{failoSkaitymas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool failo\+Skaitymas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis,  }\item[{const std\+::string \&}]{pav }\end{DoxyParamCaption})}
+
+
+
+Nuskaito studentus iš nurodyto failo. 
+
+Antrarinė perkrovos versija su eksplicitiniu failo pavadinimu. Failo formatas\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Vardas\ Pavardė\ ND1\ ND2\ ...\ NDn\ Egzaminas}
+
+\end{DoxyCode}
+ Pirma eilutė (antraštė) ignoruojama. Matuoja nuskaitymo laiką ir išsaugo į globalų {\ttfamily timers} objektą.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Konteineris, į kurį pridedami nuskaityti studentai. \\
+\hline
+{\em pav} & Failo pavadinimas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} jei failas sėkmingai nuskaitytas, {\ttfamily false} klaidos atveju. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{skaitymas_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{skaitymas_8cpp_source}{skaitymas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{laikai_8h_source_l00023}{Timer\+Results\+::skaitymas}}, and \mbox{\hyperlink{laikai_8cpp_source_l00003}{timers}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490}\label{skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490} 
+\index{skaitymas.cpp@{skaitymas.cpp}!skaitomRanka@{skaitomRanka}}
+\index{skaitomRanka@{skaitomRanka}!skaitymas.cpp@{skaitymas.cpp}}
+\doxysubsubsection{\texorpdfstring{skaitomRanka()}{skaitomRanka()}}
+{\footnotesize\ttfamily void skaitom\+Ranka (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStudentas}{Studentas}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Interaktyviai nuskaito vieno studento duomenis iš konsolės. 
+
+Prašo vartotojo įvesti vardą, pavardę ir (pagal pasirinkimą) namų darbų pažymius bei egzamino rezultatą rankiniu būdu arba sugeneruoja juos atsitiktinai.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Studento objektas, į kurį įrašomi duomenys. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{skaitymas_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{skaitymas_8cpp_source}{skaitymas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8cpp_source_l00312}{Studentas\+::parinkti\+Atsitiktinius()}}, \mbox{\hyperlink{Studentas_8cpp_source_l00266}{Studentas\+::read\+Nd\+Interactive()}}, \mbox{\hyperlink{Studentas_8h_source_l00177}{Studentas\+::set\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00171}{Studentas\+::set\+Pavarde()}}, and \mbox{\hyperlink{Studentas_8h_source_l00165}{Studentas\+::set\+Vardas()}}.
+
+
+
+Referenced by \mbox{\hyperlink{meniu_8cpp_source_l00011}{vykdyti\+Meniu()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa}\label{skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa} 
+\index{skaitymas.cpp@{skaitymas.cpp}!suskaiciuotiGalutinius@{suskaiciuotiGalutinius}}
+\index{suskaiciuotiGalutinius@{suskaiciuotiGalutinius}!skaitymas.cpp@{skaitymas.cpp}}
+\doxysubsubsection{\texorpdfstring{suskaiciuotiGalutinius()}{suskaiciuotiGalutinius()}}
+{\footnotesize\ttfamily void suskaiciuoti\+Galutinius (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_ae28b37c3909d60ce16cc0cdeb99c3e62}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Apskaičiuoja galutinius balus visiems studentams konteineryje. 
+
+Iškviečia {\ttfamily \doxylink{classStudentas_a994a9edb8000f03b9fbb7a4f07c7d8d8}{Studentas\+::suskaiciuoti\+Galutini()}} kiekvienam studentui.
+
+
+\begin{DoxyParams}{Parameters}
+{\em studis} & Studentų konteineris. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{skaitymas_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{skaitymas_8cpp_source}{skaitymas.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00122}{main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph}
+\end{center}
+\end{figure}

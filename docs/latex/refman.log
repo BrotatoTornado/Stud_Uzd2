@@ -1,0 +1,3510 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.5.10)  10 MAY 2026 10:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**refman
+(./refman.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Rollback for package 'array' requested -> date 2016-10-06.
+         Best approximation is the release introduced on 2016-10-06.
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array-2016-10-06.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen142
+\extrarowheight=\dimen143
+\NC@list=\toks17
+\extratabsurround=\skip51
+\backup@length=\skip52
+)) (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+package info suppressed
+) (./doxygen.sty
+Package: doxygen 
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2024/07/07 v2.0g defines alltt environment
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count271
+\calc@Bcount=\count272
+\calc@Adimen=\dimen144
+\calc@Bdimen=\dimen145
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count273
+\calc@Cskip=\skip55
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count274
+\float@exts=\toks18
+\float@box=\box52
+\@float@everytoks=\toks19
+\@floatcapt=\box53
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read2
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+\everycr=\toks22
+\minrowclearance=\skip56
+\rownum=\count275
+) (./longtable_doxygen.sty
+Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
+ozen version for doxygen
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count276
+\LTcapwidth=\dimen146
+\LT@head=\box54
+\LT@firsthead=\box55
+\LT@foot=\box56
+\LT@lastfoot=\box57
+\LT@cols=\count277
+\LT@rows=\count278
+\c@LT@tables=\count279
+\c@LT@chunks=\count280
+\LT@p@ftn=\toks23
+) (./tabu_doxygen.sty
+Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
+rsion for doxygen
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box58
+\sift@deathcycles=\count281
+\@vwid@loff=\dimen147
+\@vwid@roff=\dimen148
+)
+\c@taburow=\count282
+\tabu@nbcols=\count283
+\tabu@cnt=\count284
+\tabu@Xcol=\count285
+\tabu@alloc=\count286
+\tabu@nested=\count287
+\tabu@target=\dimen149
+\tabu@spreadtarget=\dimen150
+\tabu@naturalX=\dimen151
+\tabucolX=\dimen152
+\tabu@Xsum=\dimen153
+\extrarowdepth=\dimen154
+\abovetabulinesep=\dimen155
+\belowtabulinesep=\dimen156
+\tabustrutrule=\dimen157
+\tabu@thebody=\toks24
+\tabu@footnotes=\toks25
+\tabu@box=\box59
+\tabu@arstrutbox=\box60
+\tabu@hleads=\box61
+\tabu@vleads=\box62
+\tabu@cellskip=\skip61
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+\FV@CodeLineNo=\count288
+\FV@InFile=\read3
+\FV@TabBox=\box63
+\c@FancyVerbLine=\count289
+\FV@StepNumber=\count290
+\FV@OutFile=\write3
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen158
+\TX@old@table=\dimen159
+\TX@old@col=\dimen160
+\TX@target=\dimen161
+\TX@delta=\dimen162
+\TX@cols=\count291
+\TX@ftn=\toks27
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
+\c@tracingmulticols=\count292
+\mult@box=\box64
+\multicol@leftmargin=\dimen163
+\c@unbalance=\count293
+\c@collectmore=\count294
+\doublecol@number=\count295
+\multicoltolerance=\count296
+\multicolpretolerance=\count297
+\full@width=\dimen164
+\page@free=\dimen165
+\premulticols=\dimen166
+\postmulticols=\dimen167
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box65
+\last@line=\box66
+\mc@boxedresult=\box67
+\maxbalancingoverflow=\dimen168
+\mult@rightbox=\box68
+\mult@grightbox=\box69
+\mult@firstbox=\box70
+\mult@gfirstbox=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\c@minrows=\count298
+\c@columnbadness=\count299
+\c@finalcolumnbadness=\count300
+\last@try=\dimen169
+\multicolovershoot=\dimen170
+\multicolundershoot=\dimen171
+\mult@nat@firstbox=\box108
+\colbreak@box=\box109
+\mc@col@check@num=\count301
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count302
+\multirow@dima=\skip65
+\bigstrutjot=\dimen172
+) (/usr/share/texlive/texmf-dist/tex/latex/hanging/hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip66
+\h@ngfstopwd=\skip67
+\h@ngquotewd=\skip68
+\h@ngdquotewd=\skip69
+\h@ngquerywd=\skip70
+\h@ngexclwd=\skip71
+\h@ngcolonwd=\skip72
+\h@ngscolonwd=\skip73
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texl
+ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count303
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen173
+\Gin@req@width=\dimen174
+) (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box110
+)
+\tc@llx=\dimen175
+\tc@lly=\dimen176
+\tc@urx=\dimen177
+\tc@ury=\dimen178
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen179
+\adjbox@Height=\dimen180
+\adjbox@Depth=\dimen181
+\adjbox@Totalheight=\dimen182
+\adjbox@pwidth=\dimen183
+\adjbox@pheight=\dimen184
+\adjbox@pdepth=\dimen185
+\adjbox@ptotalheight=\dimen186
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count304
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks30
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient 
+ways
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count305
+) (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty (/usr/
+share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
+\loi_cnt_foreach_nest=\count306
+\loi_nestcnt=\count307
+)
+Package: listofitems 2024/03/09 v1.65 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count308
+\@boxshift=\skip74
+\stack@tmplength=\skip75
+\temp@stkl=\skip76
+\@stackedboxwidth=\skip77
+\@addedbox=\box111
+\@anchorbox=\box112
+\@insetbox=\box113
+\se@backgroundbox=\box114
+\stackedbox=\box115
+\@centerbox=\box116
+\c@ROWcellindex@=\count309
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip78
+\enit@outerparindent=\dimen187
+\enit@toks=\toks31
+\enit@inbox=\box117
+\enit@count@id=\count310
+\enitdp@description=\count311
+) (/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box118
+\UL@hyphenbox=\box119
+\UL@skip=\skip79
+\UL@hook=\toks32
+\UL@height=\dimen188
+\UL@pe=\count312
+\UL@pixel=\dimen189
+\ULC@box=\box120
+Package: ulem 2019/11/18
+\ULdepth=\dimen190
+)
+\xrefbox=\box121
+\xreflength=\skip80
+\CodeWidthChar=\skip81
+\CodeHeightChar=\skip82
+\DoxyCodeWidth=\skip83
+\c@DoxyEnumeratei=\count313
+\c@DoxyEnumerateii=\count314
+\c@DoxyEnumerateiii=\count315
+\c@DoxyEnumerateiv=\count316
+\c@DoxyEnumeratev=\count317
+\c@DoxyEnumeratevi=\count318
+\c@DoxyEnumeratevii=\count319
+\c@DoxyEnumerateviii=\count320
+\c@DoxyEnumerateix=\count321
+\c@DoxyEnumeratex=\count322
+\c@DoxyEnumeratexi=\count323
+\c@DoxyEnumeratexii=\count324
+\enitdp@DoxyEnumerate=\count325
+\enitdp@DoxyItemize=\count326
+\c@subsubsubsection=\count327
+\c@subsubsubsubsection=\count328
+\c@subsubsubsubsubsection=\count329
+\c@subsubsubsubsubsubsection=\count330
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks33
+\inpenc@posthook=\toks34
+) (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count331
+\Gm@cntv=\count332
+\c@Gm@tempcnt=\count333
+\Gm@bindingoffset=\dimen191
+\Gm@wd@mp=\dimen192
+\Gm@odd@mp=\dimen193
+\Gm@even@mp=\dimen194
+\Gm@layoutwidth=\dimen195
+\Gm@layoutheight=\dimen196
+\Gm@layouthoffset=\dimen197
+\Gm@layoutvoffset=\dimen198
+\Gm@dimlist=\toks35
+) (/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count334
+\cp@tempcnt=\count335
+LaTeX Info: Redefining \checkoddpage on input line 59.
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip84
+\f@nch@offset@elh=\skip85
+\f@nch@offset@erh=\skip86
+\f@nch@offset@olh=\skip87
+\f@nch@offset@orh=\skip88
+\f@nch@offset@elf=\skip89
+\f@nch@offset@erf=\skip90
+\f@nch@offset@olf=\skip91
+\f@nch@offset@orf=\skip92
+\f@nch@height=\skip93
+\f@nch@footalignment=\skip94
+\f@nch@widthL=\skip95
+\f@nch@widthC=\skip96
+\f@nch@widthR=\skip97
+\@temptokenb=\toks36
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip98
+\bibsep=\skip99
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count336
+) (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip100
+\cftbeforetoctitleskip=\skip101
+\cftaftertoctitleskip=\skip102
+\cftbeforepartskip=\skip103
+\cftpartnumwidth=\skip104
+\cftpartindent=\skip105
+\cftbeforechapskip=\skip106
+\cftchapindent=\skip107
+\cftchapnumwidth=\skip108
+\cftbeforesecskip=\skip109
+\cftsecindent=\skip110
+\cftsecnumwidth=\skip111
+\cftbeforesubsecskip=\skip112
+\cftsubsecindent=\skip113
+\cftsubsecnumwidth=\skip114
+\cftbeforesubsubsecskip=\skip115
+\cftsubsubsecindent=\skip116
+\cftsubsubsecnumwidth=\skip117
+\cftbeforeparaskip=\skip118
+\cftparaindent=\skip119
+\cftparanumwidth=\skip120
+\cftbeforesubparaskip=\skip121
+\cftsubparaindent=\skip122
+\cftsubparanumwidth=\skip123
+\cftbeforeloftitleskip=\skip124
+\cftafterloftitleskip=\skip125
+\cftbeforefigskip=\skip126
+\cftfigindent=\skip127
+\cftfignumwidth=\skip128
+\c@lofdepth=\count337
+\c@lotdepth=\count338
+\cftbeforelottitleskip=\skip129
+\cftafterlottitleskip=\skip130
+\cftbeforetabskip=\skip131
+\cfttabindent=\skip132
+\cfttabnumwidth=\skip133
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+Writing index file refman.idx
+(/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count339
+) (/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen199
+\Hy@linkcounter=\count340
+\Hy@pagecounter=\count341
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count342
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing ON on input line 4175.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2023-11-26 v1.44 Bibliographical back referencing
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+) (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+))
+\c@Hy@tempcnt=\count343
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen256
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count344
+\Field@Width=\dimen257
+\Fld@charsize=\dimen258
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing ON on input line 6055.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count345
+\c@Item=\count346
+\c@Hfootnote=\count347
+)
+Package hyperref Info: Driver: hpdftex.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+\Fld@listcount=\count348
+\c@bookmark@seq@number=\count349
+\Hy@SectionHShift=\skip134
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 162.
+Package hyperref Info: Option `unicode' set `true' on input line 162.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen259
+\captionmargin=\dimen260
+\caption@leftmargin=\dimen261
+\caption@rightmargin=\dimen262
+\caption@width=\dimen263
+\caption@indent=\dimen264
+\caption@parindent=\dimen265
+\caption@hangindent=\dimen266
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count350
+\c@continuedfloat=\count351
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen267
+\caption@adjustwidth@linewidth=\dimen268
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)) (/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks37
+\c@etoc@tocid=\count352
+\etoc@framed@titlebox=\box122
+\etoc@framed@contentsbox=\box123
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
+4.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 184.
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count353
+\l__pdf_internal_box=\box124
+)
+No file refman.aux.
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count354
+\scratchdimen=\dimen269
+\scratchbox=\box125
+\nofMPsegments=\count355
+\nofMParguments=\count356
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen270
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
+\everyMPtoPDFconversion=\toks39
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package backref Info: ** backref set up for natbib ** on input line 184.
+Package hyperref Info: Link coloring ON on input line 184.
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+No file refman.toc.
+Package hyperref Info: Option `pageanchor' set `false' on input line 192.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 192.
+
+Package hyperref Info: Option `unicode' set `true' on input line 192.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 197.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 198.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 198.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 198
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 198
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 19
+8.
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+)
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}]
+
+[2
+
+]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+Package hyperref Info: Option `pageanchor' set `true' on input line 209.
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 211.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 211.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 211.
+(./hierarchy.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 3.
+
+LaTeX Warning: Reference `structSkirstymorezultatas' on page 1 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Reference `structTimerResults' on page 1 undefined on input line
+ 4.
+
+
+LaTeX Warning: Reference `structTyrimoIrasas' on page 1 undefined on input line
+ 5.
+
+
+LaTeX Warning: Reference `classZmogus' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Reference `classStudentas' on page 1 undefined on input line 8.
+
+)
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 213.
+[1
+
+
+]
+
+[2
+
+]
+Chapter 2.
+(./annotated.tex
+
+LaTeX Warning: Reference `structSkirstymorezultatas' on page 3 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Reference `classStudentas' on page 3 undefined on input line 4.
+
+
+LaTeX Warning: Reference `structTimerResults' on page 3 undefined on input line
+ 5.
+
+
+LaTeX Warning: Reference `structTyrimoIrasas' on page 3 undefined on input line
+ 6.
+
+
+LaTeX Warning: Reference `classZmogus' on page 3 undefined on input line 7.
+
+)
+
+[3]
+
+[4
+
+]
+Chapter 3.
+(./files.tex
+
+LaTeX Warning: Reference `Generavimas_8cpp' on page 5 undefined on input line 3
+.
+
+
+LaTeX Warning: Reference `Generavimas_8h' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Reference `konteineris_8h' on page 5 undefined on input line 5.
+
+
+LaTeX Warning: Reference `laikai_8cpp' on page 5 undefined on input line 6.
+
+
+LaTeX Warning: Reference `laikai_8h' on page 5 undefined on input line 7.
+
+
+LaTeX Warning: Reference `main_8cpp' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Reference `meniu_8cpp' on page 5 undefined on input line 9.
+
+
+LaTeX Warning: Reference `meniu_8h' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Reference `skaitymas_8cpp' on page 5 undefined on input line 11.
+
+
+
+LaTeX Warning: Reference `skaitymas_8h' on page 5 undefined on input line 12.
+
+
+LaTeX Warning: Reference `spausdinam_8cpp' on page 5 undefined on input line 13
+.
+
+
+LaTeX Warning: Reference `spausdinam_8h' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Reference `Studentas_8cpp' on page 5 undefined on input line 15.
+
+
+
+LaTeX Warning: Reference `Studentas_8h' on page 5 undefined on input line 16.
+
+
+LaTeX Warning: Reference `testas_8cpp' on page 5 undefined on input line 17.
+
+
+LaTeX Warning: Reference `testas_8h' on page 5 undefined on input line 18.
+
+
+LaTeX Warning: Reference `tyrimas_8cpp' on page 5 undefined on input line 19.
+
+
+LaTeX Warning: Reference `tyrimas_8h' on page 5 undefined on input line 20.
+
+
+LaTeX Warning: Reference `unit__tests_8cpp' on page 5 undefined on input line 2
+1.
+
+
+LaTeX Warning: Reference `Zmogus_8cpp' on page 5 undefined on input line 22.
+
+
+LaTeX Warning: Reference `Zmogus_8h' on page 5 undefined on input line 23.
+
+)
+
+[5]
+
+[6
+
+]
+Chapter 4.
+(./structSkirstymorezultatas.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
+.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+5.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 15.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 21.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 33.
+) (./classStudentas.tex <./classStudentas__inherit__graph.pdf>
+<classStudentas__inherit__graph.pdf, id=122, 145.54375pt x 154.5775pt>
+File: classStudentas__inherit__graph.pdf Graphic file (type pdf)
+<use classStudentas__inherit__graph.pdf>
+Package pdftex.def Info: classStudentas__inherit__graph.pdf  used on input line
+ 19.
+(pdftex.def)             Requested size: 145.0pt x 154.01102pt.
+
+
+[7] <./classStudentas__coll__graph.pdf>
+<classStudentas__coll__graph.pdf, id=152, 283.0575pt x 310.15875pt>
+File: classStudentas__coll__graph.pdf Graphic file (type pdf)
+<use classStudentas__coll__graph.pdf>
+Package pdftex.def Info: classStudentas__coll__graph.pdf  used on input line 29
+.
+(pdftex.def)             Requested size: 282.0pt x 309.02689pt.
+
+
+[8]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 37.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 37.
+
+
+[9]
+
+[10]
+! Undefined control sequence.
+l.164   \text
+             {galrezVid} = 0.4 \cdot \text{vidurkis} + 0.6 \cdot \text{egzam...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.164   \text{galrezVid} = 0.4 \cdot \text
+                                          {vidurkis} + 0.6 \cdot \text{egzam...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.164 ...4 \cdot \text{vidurkis} + 0.6 \cdot \text
+                                                  {egzaminas}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.166   \text
+             {galrezMed} = 0.4 \cdot \text{mediana} + 0.6 \cdot \text{egzami...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.166   \text{galrezMed} = 0.4 \cdot \text
+                                          {mediana} + 0.6 \cdot \text{egzami...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.166 ....4 \cdot \text{mediana} + 0.6 \cdot \text
+                                                  {egzaminas}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 177.
+
+
+[11]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 194.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.1 on input line 206.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.2 on input line 211.
+
+ <./classStudentas_a00d6db6706f5e4182d3677ea4e90de61_cgraph.pdf>
+<classStudentas_a00d6db6706f5e4182d3677ea4e90de61_cgraph.pdf, id=320, 368.37625
+pt x 99.37125pt>
+File: classStudentas_a00d6db6706f5e4182d3677ea4e90de61_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a00d6db6706f5e4182d3677ea4e90de61_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a00d6db6706f5e4182d3677ea4e90de61_cgrap
+h.pdf  used on input line 225.
+(pdftex.def)             Requested size: 350.0pt x 94.41275pt.
+
+
+[12]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.3 on input line 244.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.4 on input line 249.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.5 on input line 270.
+
+
+
+[13]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.6 on input line 275.
+
+
+Underfull \hbox (badness 10000) detected at line 303
+[][][]
+ []
+
+
+Overfull \hbox (48.01274pt too wide) in paragraph at lines 316--317
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./classStudentas_abe38c118e8e899b4de681f1d12adceab_icgraph.pdf>
+<classStudentas_abe38c118e8e899b4de681f1d12adceab_icgraph.pdf, id=387, 552.0625
+pt x 619.31375pt>
+File: classStudentas_abe38c118e8e899b4de681f1d12adceab_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_abe38c118e8e899b4de681f1d12adceab_icgraph.pdf>
+Package pdftex.def Info: classStudentas_abe38c118e8e899b4de681f1d12adceab_icgra
+ph.pdf  used on input line 323.
+(pdftex.def)             Requested size: 350.0pt x 392.65506pt.
+
+
+[14]
+Underfull \hbox (badness 10000) detected at line 336
+[][][]
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 349--350
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [], [],
+ []
+
+
+Overfull \hbox (45.95195pt too wide) in paragraph at lines 349--350
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./classStudentas_ab5f39edb91818c2fd0ec50e35cce4581_icgraph.pdf>
+<classStudentas_ab5f39edb91818c2fd0ec50e35cce4581_icgraph.pdf, id=436, 832.1087
+5pt x 507.8975pt>
+File: classStudentas_ab5f39edb91818c2fd0ec50e35cce4581_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_ab5f39edb91818c2fd0ec50e35cce4581_icgraph.pdf>
+Package pdftex.def Info: classStudentas_ab5f39edb91818c2fd0ec50e35cce4581_icgra
+ph.pdf  used on input line 356.
+(pdftex.def)             Requested size: 350.0pt x 213.63324pt.
+
+
+[15]
+Underfull \hbox (badness 10000) detected at line 369
+[][][]
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 382--383
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 3333) in paragraph at lines 382--383
+[]\T1/phv/m/n/10 , [], [], [], [], [], [], [],
+ []
+
+
+Overfull \hbox (48.01274pt too wide) in paragraph at lines 382--383
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./classStudentas_a1325b10f479819956015190c8ba49cf0_icgraph.pdf>
+<classStudentas_a1325b10f479819956015190c8ba49cf0_icgraph.pdf, id=483, 823.075p
+t x 842.14626pt>
+File: classStudentas_a1325b10f479819956015190c8ba49cf0_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a1325b10f479819956015190c8ba49cf0_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a1325b10f479819956015190c8ba49cf0_icgra
+ph.pdf  used on input line 389.
+(pdftex.def)             Requested size: 350.0pt x 358.1066pt.
+
+
+[16]
+Underfull \hbox (badness 10000) detected at line 402
+[][][]
+ []
+
+
+Overfull \hbox (36.74493pt too wide) in paragraph at lines 415--416
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./classStudentas_a72ad9cbcac7d53cefe587120d379a78b_icgraph.pdf>
+<classStudentas_a72ad9cbcac7d53cefe587120d379a78b_icgraph.pdf, id=524, 513.92pt
+ x 693.59125pt>
+File: classStudentas_a72ad9cbcac7d53cefe587120d379a78b_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a72ad9cbcac7d53cefe587120d379a78b_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a72ad9cbcac7d53cefe587120d379a78b_icgra
+ph.pdf  used on input line 422.
+(pdftex.def)             Requested size: 350.0pt x 472.36606pt.
+
+
+[17]
+Underfull \hbox (badness 10000) detected at line 435
+[][][]
+ []
+
+ <./classStudentas_ab4f6284b5d7e72788df52633239e5df2_icgraph.pdf>
+<classStudentas_ab4f6284b5d7e72788df52633239e5df2_icgraph.pdf, id=552, 532.9912
+6pt x 173.64874pt>
+File: classStudentas_ab4f6284b5d7e72788df52633239e5df2_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_ab4f6284b5d7e72788df52633239e5df2_icgraph.pdf>
+Package pdftex.def Info: classStudentas_ab4f6284b5d7e72788df52633239e5df2_icgra
+ph.pdf  used on input line 455.
+(pdftex.def)             Requested size: 350.0pt x 114.03354pt.
+
+
+[18]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.7 on input line 474.
+
+
+Underfull \hbox (badness 10000) detected at line 475
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.8 on input line 482.
+
+
+Underfull \hbox (badness 10000) detected at line 483
+[][][]
+ []
+
+ <./classStudentas_a25bcc531503d3bc490dab4a656e3b8e9_cgraph.pdf>
+<classStudentas_a25bcc531503d3bc490dab4a656e3b8e9_cgraph.pdf, id=577, 350.30875
+pt x 99.37125pt>
+File: classStudentas_a25bcc531503d3bc490dab4a656e3b8e9_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a25bcc531503d3bc490dab4a656e3b8e9_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a25bcc531503d3bc490dab4a656e3b8e9_cgrap
+h.pdf  used on input line 499.
+(pdftex.def)             Requested size: 349.0pt x 99.00708pt.
+
+
+[19]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.9 on input line 518.
+
+
+Underfull \hbox (badness 10000) detected at line 519
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.10 on input line 526.
+
+
+Underfull \hbox (badness 10000) detected at line 527
+[][][]
+ []
+
+ <./classStudentas_a2362f28d29a4d2f80c39a04333c15ad4_cgraph.pdf>
+<classStudentas_a2362f28d29a4d2f80c39a04333c15ad4_cgraph.pdf, id=608, 350.30875
+pt x 99.37125pt>
+File: classStudentas_a2362f28d29a4d2f80c39a04333c15ad4_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a2362f28d29a4d2f80c39a04333c15ad4_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a2362f28d29a4d2f80c39a04333c15ad4_cgrap
+h.pdf  used on input line 543.
+(pdftex.def)             Requested size: 349.0pt x 99.00708pt.
+
+
+[20] <./classStudentas_a556816c96b5fd37bf186e57da67e4f91_icgraph.pdf>
+<classStudentas_a556816c96b5fd37bf186e57da67e4f91_icgraph.pdf, id=634, 567.1187
+4pt x 118.4425pt>
+File: classStudentas_a556816c96b5fd37bf186e57da67e4f91_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a556816c96b5fd37bf186e57da67e4f91_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a556816c96b5fd37bf186e57da67e4f91_icgra
+ph.pdf  used on input line 575.
+(pdftex.def)             Requested size: 350.0pt x 73.09923pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.11 on input line 598.
+
+ <./classStudentas_a6d7f01ee88e3bb9a894ead1659090852_icgraph.pdf>
+<classStudentas_a6d7f01ee88e3bb9a894ead1659090852_icgraph.pdf, id=647, 559.0887
+5pt x 99.37125pt>
+File: classStudentas_a6d7f01ee88e3bb9a894ead1659090852_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a6d7f01ee88e3bb9a894ead1659090852_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a6d7f01ee88e3bb9a894ead1659090852_icgra
+ph.pdf  used on input line 616.
+(pdftex.def)             Requested size: 350.0pt x 62.20998pt.
+
+
+[21]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.12 on input line 637.
+
+
+Underfull \hbox (badness 10000) detected at line 638
+[][][]
+ []
+
+ <./classStudentas_a56cfe16f164d76b63f50898ef0a6403a_icgraph.pdf>
+<classStudentas_a56cfe16f164d76b63f50898ef0a6403a_icgraph.pdf, id=677, 377.41pt
+ x 136.51pt>
+File: classStudentas_a56cfe16f164d76b63f50898ef0a6403a_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a56cfe16f164d76b63f50898ef0a6403a_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a56cfe16f164d76b63f50898ef0a6403a_icgra
+ph.pdf  used on input line 658.
+(pdftex.def)             Requested size: 350.0pt x 126.59471pt.
+
+
+[22]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.13 on input line 675.
+
+ <./classStudentas_a659d6bb3cfd109fe095a9a03eaea2667_icgraph.pdf>
+<classStudentas_a659d6bb3cfd109fe095a9a03eaea2667_icgraph.pdf, id=703, 540.0175
+pt x 173.64874pt>
+File: classStudentas_a659d6bb3cfd109fe095a9a03eaea2667_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a659d6bb3cfd109fe095a9a03eaea2667_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a659d6bb3cfd109fe095a9a03eaea2667_icgra
+ph.pdf  used on input line 693.
+(pdftex.def)             Requested size: 350.0pt x 112.54973pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.14 on input line 710.
+
+ <./classStudentas_aa2f8644798ffa4396c35400dfb10ab23_icgraph.pdf>
+<classStudentas_aa2f8644798ffa4396c35400dfb10ab23_icgraph.pdf, id=717, 524.9612
+4pt x 175.65625pt>
+File: classStudentas_aa2f8644798ffa4396c35400dfb10ab23_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_aa2f8644798ffa4396c35400dfb10ab23_icgraph.pdf>
+Package pdftex.def Info: classStudentas_aa2f8644798ffa4396c35400dfb10ab23_icgra
+ph.pdf  used on input line 728.
+(pdftex.def)             Requested size: 350.0pt x 117.11548pt.
+
+
+[23]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.15 on input line 745.
+
+ <./classStudentas_a553cf719758f4821bbd6eeda454fdf03_icgraph.pdf>
+<classStudentas_a553cf719758f4821bbd6eeda454fdf03_icgraph.pdf, id=747, 608.2725
+pt x 249.93375pt>
+File: classStudentas_a553cf719758f4821bbd6eeda454fdf03_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a553cf719758f4821bbd6eeda454fdf03_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a553cf719758f4821bbd6eeda454fdf03_icgra
+ph.pdf  used on input line 763.
+(pdftex.def)             Requested size: 350.0pt x 143.81375pt.
+
+
+[24]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.16 on input line 784.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.17 on input line 789.
+
+ <./classStudentas_af43672203b6f94265280ba9756ee4212_icgraph.pdf>
+<classStudentas_af43672203b6f94265280ba9756ee4212_icgraph.pdf, id=780, 368.3762
+5pt x 99.37125pt>
+File: classStudentas_af43672203b6f94265280ba9756ee4212_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_af43672203b6f94265280ba9756ee4212_icgraph.pdf>
+Package pdftex.def Info: classStudentas_af43672203b6f94265280ba9756ee4212_icgra
+ph.pdf  used on input line 811.
+(pdftex.def)             Requested size: 350.0pt x 94.41275pt.
+ <./classStudentas_a994a9edb8000f03b9fbb7a4f07c7d8d8_icgraph.pdf>
+<classStudentas_a994a9edb8000f03b9fbb7a4f07c7d8d8_icgraph.pdf, id=809, 772.8875
+pt x 876.27374pt>
+File: classStudentas_a994a9edb8000f03b9fbb7a4f07c7d8d8_icgraph.pdf Graphic file
+ (type pdf)
+<use classStudentas_a994a9edb8000f03b9fbb7a4f07c7d8d8_icgraph.pdf>
+Package pdftex.def Info: classStudentas_a994a9edb8000f03b9fbb7a4f07c7d8d8_icgra
+ph.pdf  used on input line 863.
+(pdftex.def)             Requested size: 350.0pt x 396.81989pt.
+
+
+[25]
+
+[26]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.18 on input line 885.
+
+
+Underfull \hbox (badness 10000) detected at line 886
+[][][]
+ []
+
+ <./classStudentas_a765147d9fed463e16e0c55e3e5da8aa1_cgraph.pdf>
+<classStudentas_a765147d9fed463e16e0c55e3e5da8aa1_cgraph.pdf, id=849, 433.62pt 
+x 99.37125pt>
+File: classStudentas_a765147d9fed463e16e0c55e3e5da8aa1_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a765147d9fed463e16e0c55e3e5da8aa1_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a765147d9fed463e16e0c55e3e5da8aa1_cgrap
+h.pdf  used on input line 902.
+(pdftex.def)             Requested size: 350.0pt x 80.21278pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.19 on input line 921.
+
+
+Underfull \hbox (badness 10000) detected at line 922
+[][][]
+ []
+
+ <./classStudentas_a7603032016d04ebc25fc72a2581f7493_cgraph.pdf>
+<classStudentas_a7603032016d04ebc25fc72a2581f7493_cgraph.pdf, id=862, 423.5825p
+t x 99.37125pt>
+File: classStudentas_a7603032016d04ebc25fc72a2581f7493_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a7603032016d04ebc25fc72a2581f7493_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a7603032016d04ebc25fc72a2581f7493_cgrap
+h.pdf  used on input line 938.
+(pdftex.def)             Requested size: 350.0pt x 82.11116pt.
+
+
+[27]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.20 on input line 957.
+
+
+Underfull \hbox (badness 10000) detected at line 958
+[][][]
+ []
+
+ <./classStudentas_a3bb6ccb88204b8e5648eaedf0ac7bfa7_cgraph.pdf>
+<classStudentas_a3bb6ccb88204b8e5648eaedf0ac7bfa7_cgraph.pdf, id=884, 413.545pt
+ x 99.37125pt>
+File: classStudentas_a3bb6ccb88204b8e5648eaedf0ac7bfa7_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a3bb6ccb88204b8e5648eaedf0ac7bfa7_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a3bb6ccb88204b8e5648eaedf0ac7bfa7_cgrap
+h.pdf  used on input line 974.
+(pdftex.def)             Requested size: 350.0pt x 84.10356pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.21 on input line 993.
+
+
+Underfull \hbox (badness 10000) detected at line 994
+[][][]
+ []
+
+ <./classStudentas_a82a044563f7e43f694ae771b27a6e89c_cgraph.pdf>
+<classStudentas_a82a044563f7e43f694ae771b27a6e89c_cgraph.pdf, id=897, 396.48125
+pt x 99.37125pt>
+File: classStudentas_a82a044563f7e43f694ae771b27a6e89c_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a82a044563f7e43f694ae771b27a6e89c_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a82a044563f7e43f694ae771b27a6e89c_cgrap
+h.pdf  used on input line 1010.
+(pdftex.def)             Requested size: 350.0pt x 87.72292pt.
+
+
+[28]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.22 on input line 1031.
+
+
+Underfull \hbox (badness 10000) detected at line 1032
+[][][]
+ []
+
+ <./classStudentas_a4062cbd3f4c44fac2063e38cfa00a8cf_cgraph.pdf>
+<classStudentas_a4062cbd3f4c44fac2063e38cfa00a8cf_cgraph.pdf, id=923, 368.37625
+pt x 99.37125pt>
+File: classStudentas_a4062cbd3f4c44fac2063e38cfa00a8cf_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_a4062cbd3f4c44fac2063e38cfa00a8cf_cgraph.pdf>
+Package pdftex.def Info: classStudentas_a4062cbd3f4c44fac2063e38cfa00a8cf_cgrap
+h.pdf  used on input line 1048.
+(pdftex.def)             Requested size: 350.0pt x 94.41275pt.
+
+
+[29]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.23 on input line 1069.
+
+
+Underfull \hbox (badness 10000) detected at line 1070
+[][][]
+ []
+
+ <./classStudentas_ac63003b577b137ac6ad5b1fb176bd59a_cgraph.pdf>
+<classStudentas_ac63003b577b137ac6ad5b1fb176bd59a_cgraph.pdf, id=947, 413.545pt
+ x 136.51pt>
+File: classStudentas_ac63003b577b137ac6ad5b1fb176bd59a_cgraph.pdf Graphic file 
+(type pdf)
+<use classStudentas_ac63003b577b137ac6ad5b1fb176bd59a_cgraph.pdf>
+Package pdftex.def Info: classStudentas_ac63003b577b137ac6ad5b1fb176bd59a_cgrap
+h.pdf  used on input line 1086.
+(pdftex.def)             Requested size: 350.0pt x 115.53621pt.
+
+
+[30]
+Underfull \hbox (badness 2173) in paragraph at lines 1146--1147
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [],
+ []
+
+) (./structTimerResults.tex
+
+[31]) (./structTyrimoIrasas.tex <./structTyrimoIrasas__coll__graph.pdf>
+<structTyrimoIrasas__coll__graph.pdf, id=1049, 184.69pt x 232.87pt>
+File: structTyrimoIrasas__coll__graph.pdf Graphic file (type pdf)
+<use structTyrimoIrasas__coll__graph.pdf>
+Package pdftex.def Info: structTyrimoIrasas__coll__graph.pdf  used on input lin
+e 10.
+(pdftex.def)             Requested size: 184.0pt x 232.0024pt.
+
+
+[32]
+
+[33]) (./classZmogus.tex <./classZmogus__inherit__graph.pdf>
+<classZmogus__inherit__graph.pdf, id=1116, 145.54375pt x 154.5775pt>
+File: classZmogus__inherit__graph.pdf Graphic file (type pdf)
+<use classZmogus__inherit__graph.pdf>
+Package pdftex.def Info: classZmogus__inherit__graph.pdf  used on input line 19
+.
+(pdftex.def)             Requested size: 145.0pt x 154.01102pt.
+ <./classZmogus__coll__graph.pdf>
+<classZmogus__coll__graph.pdf, id=1124, 184.69pt x 243.91125pt>
+File: classZmogus__coll__graph.pdf Graphic file (type pdf)
+<use classZmogus__coll__graph.pdf>
+Package pdftex.def Info: classZmogus__coll__graph.pdf  used on input line 29.
+(pdftex.def)             Requested size: 184.0pt x 243.00252pt.
+
+
+[34]
+
+[35]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.24 on input line 112.
+
+
+
+[36]
+Underfull \hbox (badness 1057) in paragraph at lines 166--167
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 166--167
+[]\T1/phv/m/n/10 , [], [], [], [], [],
+ []
+
+
+Overfull \hbox (75.7142pt too wide) in paragraph at lines 166--167
+[]\T1/phv/m/n/10 , [], [], and []. 
+ []
+
+ <./classZmogus_a004b8eb8a80b2648e45026802b416cfd_icgraph.pdf>
+<classZmogus_a004b8eb8a80b2648e45026802b416cfd_icgraph.pdf, id=1215, 812.03375p
+t x 656.4525pt>
+File: classZmogus_a004b8eb8a80b2648e45026802b416cfd_icgraph.pdf Graphic file (t
+ype pdf)
+<use classZmogus_a004b8eb8a80b2648e45026802b416cfd_icgraph.pdf>
+Package pdftex.def Info: classZmogus_a004b8eb8a80b2648e45026802b416cfd_icgraph.
+pdf  used on input line 173.
+(pdftex.def)             Requested size: 350.0pt x 282.94019pt.
+
+
+[37]
+Underfull \hbox (badness 2573) in paragraph at lines 192--193
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [],
+ []
+
+
+Overfull \hbox (48.01274pt too wide) in paragraph at lines 192--193
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./classZmogus_af00bd4ee050cb93b59de8a48340049d7_icgraph.pdf>
+<classZmogus_af00bd4ee050cb93b59de8a48340049d7_icgraph.pdf, id=1258, 800.9925pt
+ x 842.14626pt>
+File: classZmogus_af00bd4ee050cb93b59de8a48340049d7_icgraph.pdf Graphic file (t
+ype pdf)
+<use classZmogus_af00bd4ee050cb93b59de8a48340049d7_icgraph.pdf>
+Package pdftex.def Info: classZmogus_af00bd4ee050cb93b59de8a48340049d7_icgraph.
+pdf  used on input line 199.
+(pdftex.def)             Requested size: 350.0pt x 367.98833pt.
+ <./classZmogus_ad536d2094bc65dd238b5c538a56c9bfc_icgraph.pdf>
+<classZmogus_ad536d2094bc65dd238b5c538a56c9bfc_icgraph.pdf, id=1270, 350.30875p
+t x 136.51pt>
+File: classZmogus_ad536d2094bc65dd238b5c538a56c9bfc_icgraph.pdf Graphic file (t
+ype pdf)
+<use classZmogus_ad536d2094bc65dd238b5c538a56c9bfc_icgraph.pdf>
+Package pdftex.def Info: classZmogus_ad536d2094bc65dd238b5c538a56c9bfc_icgraph.
+pdf  used on input line 221.
+(pdftex.def)             Requested size: 349.0pt x 136.00974pt.
+
+
+[38]
+
+[39]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.25 on input line 276.
+
+ <./classZmogus_a2bc49f28f437cca626bd9c7b0778b12f_icgraph.pdf>
+<classZmogus_a2bc49f28f437cca626bd9c7b0778b12f_icgraph.pdf, id=1312, 347.2975pt
+ x 136.51pt>
+File: classZmogus_a2bc49f28f437cca626bd9c7b0778b12f_icgraph.pdf Graphic file (t
+ype pdf)
+<use classZmogus_a2bc49f28f437cca626bd9c7b0778b12f_icgraph.pdf>
+Package pdftex.def Info: classZmogus_a2bc49f28f437cca626bd9c7b0778b12f_icgraph.
+pdf  used on input line 290.
+(pdftex.def)             Requested size: 346.0pt x 136.00557pt.
+ <./classZmogus_a960515f30aabeba1c2c73755806de411_icgraph.pdf>
+<classZmogus_a960515f30aabeba1c2c73755806de411_icgraph.pdf, id=1323, 392.46625p
+t x 136.51pt>
+File: classZmogus_a960515f30aabeba1c2c73755806de411_icgraph.pdf Graphic file (t
+ype pdf)
+<use classZmogus_a960515f30aabeba1c2c73755806de411_icgraph.pdf>
+Package pdftex.def Info: classZmogus_a960515f30aabeba1c2c73755806de411_icgraph.
+pdf  used on input line 316.
+(pdftex.def)             Requested size: 350.0pt x 121.74763pt.
+
+Overfull \hbox (32.56238pt too wide) in paragraph at lines 334--335
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], and []. 
+ []
+
+
+
+[40]
+Overfull \hbox (17.95546pt too wide) in paragraph at lines 348--349
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], and []. 
+ []
+
+)
+
+[41]
+
+[42
+
+]
+Chapter 5.
+(./Generavimas_8cpp.tex <./Generavimas_8cpp__incl.pdf>
+<Generavimas_8cpp__incl.pdf, id=1367, 971.63pt x 375.4025pt>
+File: Generavimas_8cpp__incl.pdf Graphic file (type pdf)
+<use Generavimas_8cpp__incl.pdf>
+Package pdftex.def Info: Generavimas_8cpp__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 135.22499pt.
+
+
+[43]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 48.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.1 on input line 60.
+
+
+Underfull \hbox (badness 10000) detected at line 61
+[][][]
+ []
+
+ <./Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf>
+<Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf, id=1411, 336.25
+626pt x 99.37125pt>
+File: Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf Graphic fil
+e (type pdf)
+<use Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_cgr
+aph.pdf  used on input line 81.
+(pdftex.def)             Requested size: 335.0pt x 99.00102pt.
+ <./Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf>
+<Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf, id=1419, 400.4
+9625pt x 99.37125pt>
+File: Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a89fc80e8e121774a0c47c091ddc5c1ba_icg
+raph.pdf  used on input line 89.
+(pdftex.def)             Requested size: 350.0pt x 86.84651pt.
+
+
+[44] <./Generavimas_8cpp_a0b0988125d692b59275d54a958937343_icgraph.pdf>
+<Generavimas_8cpp_a0b0988125d692b59275d54a958937343_icgraph.pdf, id=1449, 555.0
+7375pt x 99.37125pt>
+File: Generavimas_8cpp_a0b0988125d692b59275d54a958937343_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_a0b0988125d692b59275d54a958937343_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a0b0988125d692b59275d54a958937343_icg
+raph.pdf  used on input line 111.
+(pdftex.def)             Requested size: 350.0pt x 62.6588pt.
+ <./Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf>
+<Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf, id=1462, 363.3
+575pt x 99.37125pt>
+File: Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a533a0a21b762dcd162d0c0ee9af14c1d_icg
+raph.pdf  used on input line 141.
+(pdftex.def)             Requested size: 350.0pt x 95.7213pt.
+
+
+[45]
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.2 on input line 163.
+
+ <./Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf>
+<Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf, id=1486, 509.9
+05pt x 118.4425pt>
+File: Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a7e9f03aafbd3f06297c723240a87ce92_icg
+raph.pdf  used on input line 177.
+(pdftex.def)             Requested size: 350.0pt x 81.30249pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.3 on input line 202.
+
+
+
+[46]
+Underfull \hbox (badness 10000) detected at line 203
+[][][]
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 212--213
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+[]\T1/phv/m/n/10 , [], [], [], [],
+ []
+
+ <./Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_cgraph.pdf>
+<Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_cgraph.pdf, id=1529, 709.65
+125pt x 334.24875pt>
+File: Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_cgraph.pdf Graphic fil
+e (type pdf)
+<use Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_cgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_cgr
+aph.pdf  used on input line 223.
+(pdftex.def)             Requested size: 350.0pt x 164.85435pt.
+ <./Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_icgraph.pdf>
+<Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_icgraph.pdf, id=1537, 262.9
+825pt x 99.37125pt>
+File: Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a83f8917f2570ce710ba6698a644d450e_icg
+raph.pdf  used on input line 231.
+(pdftex.def)             Requested size: 262.0pt x 99.00406pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.4 on input line 250.
+
+
+
+[47]
+Underfull \hbox (badness 10000) detected at line 251
+[][][]
+ []
+
+ <./Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf>
+<Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf, id=1571, 423.5
+825pt x 136.51pt>
+File: Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_abe8b00215e7c9d927d343694cda2c590_icg
+raph.pdf  used on input line 271.
+(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.5 on input line 290.
+
+
+Underfull \hbox (badness 10000) detected at line 291
+[][][]
+ []
+
+ <./Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf>
+<Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf, id=1588, 423.5
+825pt x 136.51pt>
+File: Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_a0e5db32447f63219df43b26626dd1ee5_icg
+raph.pdf  used on input line 311.
+(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
+
+
+[48]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.6 on input line 330.
+
+
+Underfull \hbox (badness 10000) detected at line 331
+[][][]
+ []
+
+ <./Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf>
+<Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf, id=1613, 423.5
+825pt x 136.51pt>
+File: Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf Graphic fi
+le (type pdf)
+<use Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8cpp_aedd48f7ce08ae142d078ad92729ef494_icg
+raph.pdf  used on input line 351.
+(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
+) (./Generavimas_8cpp_source.tex
+
+[49]
+
+[50]
+
+[51]) (./Generavimas_8h.tex <./Generavimas_8h__incl.pdf>
+<Generavimas_8h__incl.pdf, id=1880, 519.9425pt x 320.19624pt>
+File: Generavimas_8h__incl.pdf Graphic file (type pdf)
+<use Generavimas_8h__incl.pdf>
+Package pdftex.def Info: Generavimas_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 215.54172pt.
+
+
+[52] <./Generavimas_8h__dep__incl.pdf>
+<Generavimas_8h__dep__incl.pdf, id=1947, 546.04pt x 154.5775pt>
+File: Generavimas_8h__dep__incl.pdf Graphic file (type pdf)
+<use Generavimas_8h__dep__incl.pdf>
+Package pdftex.def Info: Generavimas_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 350.0pt x 99.0802pt.
+
+
+[53]
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.8 on input line 113.
+
+
+
+[54]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.9 on input line 137.
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+ <./Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf>
+<Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf, id=2016, 336.2562
+6pt x 99.37125pt>
+File: Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf Graphic file 
+(type pdf)
+<use Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_cgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_cgrap
+h.pdf  used on input line 158.
+(pdftex.def)             Requested size: 335.0pt x 99.00102pt.
+ <./Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf>
+<Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf, id=2024, 400.496
+25pt x 99.37125pt>
+File: Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba_icgra
+ph.pdf  used on input line 166.
+(pdftex.def)             Requested size: 350.0pt x 86.84651pt.
+
+
+[55] <./Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf>
+<Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf, id=2047, 363.357
+5pt x 99.37125pt>
+File: Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d_icgra
+ph.pdf  used on input line 196.
+(pdftex.def)             Requested size: 350.0pt x 95.7213pt.
+
+Underfull \hbox (badness 10000) detected at line 211
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.10 on input line 218.
+
+ <./Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf>
+<Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf, id=2060, 509.905
+pt x 118.4425pt>
+File: Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92_icgra
+ph.pdf  used on input line 232.
+(pdftex.def)             Requested size: 350.0pt x 81.30249pt.
+
+
+[56]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.11 on input line 257.
+
+
+Underfull \hbox (badness 10000) detected at line 258
+[][][]
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 267--268
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+[]\T1/phv/m/n/10 , [], [], [], [],
+ []
+
+ <./Generavimas_8h_abe3d250258257289fcd11ddaeb608055_cgraph.pdf>
+<Generavimas_8h_abe3d250258257289fcd11ddaeb608055_cgraph.pdf, id=2099, 709.6512
+5pt x 334.24875pt>
+File: Generavimas_8h_abe3d250258257289fcd11ddaeb608055_cgraph.pdf Graphic file 
+(type pdf)
+<use Generavimas_8h_abe3d250258257289fcd11ddaeb608055_cgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_abe3d250258257289fcd11ddaeb608055_cgrap
+h.pdf  used on input line 278.
+(pdftex.def)             Requested size: 350.0pt x 164.85435pt.
+
+
+[57] <./Generavimas_8h_abe3d250258257289fcd11ddaeb608055_icgraph.pdf>
+<Generavimas_8h_abe3d250258257289fcd11ddaeb608055_icgraph.pdf, id=2116, 262.982
+5pt x 99.37125pt>
+File: Generavimas_8h_abe3d250258257289fcd11ddaeb608055_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_abe3d250258257289fcd11ddaeb608055_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_abe3d250258257289fcd11ddaeb608055_icgra
+ph.pdf  used on input line 286.
+(pdftex.def)             Requested size: 262.0pt x 99.00406pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.12 on input line 305.
+
+
+Underfull \hbox (badness 10000) detected at line 306
+[][][]
+ []
+
+ <./Generavimas_8h_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf>
+<Generavimas_8h_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf, id=2133, 423.582
+5pt x 136.51pt>
+File: Generavimas_8h_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_abe8b00215e7c9d927d343694cda2c590_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_abe8b00215e7c9d927d343694cda2c590_icgra
+ph.pdf  used on input line 326.
+(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
+
+
+[58]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.13 on input line 345.
+
+
+Underfull \hbox (badness 10000) detected at line 346
+[][][]
+ []
+
+ <./Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf>
+<Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf, id=2159, 423.582
+5pt x 136.51pt>
+File: Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5_icgra
+ph.pdf  used on input line 366.
+(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
+
+
+[59]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.14 on input line 385.
+
+
+Underfull \hbox (badness 10000) detected at line 386
+[][][]
+ []
+
+ <./Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf>
+<Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf, id=2186, 423.582
+5pt x 136.51pt>
+File: Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf Graphic file
+ (type pdf)
+<use Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494_icgraph.pdf>
+Package pdftex.def Info: Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494_icgra
+ph.pdf  used on input line 406.
+(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
+) (./Generavimas_8h_source.tex
+
+[60]) (./konteineris_8h.tex <./konteineris_8h__incl.pdf>
+<konteineris_8h__incl.pdf, id=2251, 519.9425pt x 264.99pt>
+File: konteineris_8h__incl.pdf Graphic file (type pdf)
+<use konteineris_8h__incl.pdf>
+Package pdftex.def Info: konteineris_8h__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 178.37936pt.
+ <./konteineris_8h__dep__incl.pdf>
+<konteineris_8h__dep__incl.pdf, id=2259, 766.865pt x 209.78375pt>
+File: konteineris_8h__dep__incl.pdf Graphic file (type pdf)
+<use konteineris_8h__dep__incl.pdf>
+Package pdftex.def Info: konteineris_8h__dep__incl.pdf  used on input line 27.
+(pdftex.def)             Requested size: 350.0pt x 95.74623pt.
+
+
+[61]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 45.
+
+Underfull \hbox (badness 10000) detected at line 60
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+
+[62]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.15 on input line 102.
+
+
+Underfull \hbox (badness 10000) detected at line 120
+[][][]
+ []
+
+ <./konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0_icgraph.pdf>
+<konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0_icgraph.pdf, id=2331, 579.163
+76pt x 118.4425pt>
+File: konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0_icgraph.pdf Graphic file
+ (type pdf)
+<use konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0_icgraph.pdf>
+Package pdftex.def Info: konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0_icgra
+ph.pdf  used on input line 136.
+(pdftex.def)             Requested size: 350.0pt x 71.5775pt.
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+ <./konteineris_8h_a1ccfb203c1563ac53807708248e3a95e_icgraph.pdf>
+<konteineris_8h_a1ccfb203c1563ac53807708248e3a95e_icgraph.pdf, id=2342, 457.71p
+t x 110.4125pt>
+File: konteineris_8h_a1ccfb203c1563ac53807708248e3a95e_icgraph.pdf Graphic file
+ (type pdf)
+<use konteineris_8h_a1ccfb203c1563ac53807708248e3a95e_icgraph.pdf>
+Package pdftex.def Info: konteineris_8h_a1ccfb203c1563ac53807708248e3a95e_icgra
+ph.pdf  used on input line 165.
+(pdftex.def)             Requested size: 350.0pt x 84.43326pt.
+
+
+[63]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.16 on input line 187.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.17 on input line 194.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.18 on input line 220.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.19 on input line 227.
+
+ <./konteineris_8h_a78a77737a29b58defd2e834d981f3771_icgraph.pdf>
+<konteineris_8h_a78a77737a29b58defd2e834d981f3771_icgraph.pdf, id=2367, 717.681
+24pt x 136.51pt>
+File: konteineris_8h_a78a77737a29b58defd2e834d981f3771_icgraph.pdf Graphic file
+ (type pdf)
+<use konteineris_8h_a78a77737a29b58defd2e834d981f3771_icgraph.pdf>
+Package pdftex.def Info: konteineris_8h_a78a77737a29b58defd2e834d981f3771_icgra
+ph.pdf  used on input line 241.
+(pdftex.def)             Requested size: 350.0pt x 66.57387pt.
+) (./konteineris_8h_source.tex
+
+[64]
+
+[65]) (./laikai_8cpp.tex <./laikai_8cpp__incl.pdf>
+<laikai_8cpp__incl.pdf, id=2477, 143.53625pt x 154.5775pt>
+File: laikai_8cpp__incl.pdf Graphic file (type pdf)
+<use laikai_8cpp__incl.pdf>
+Package pdftex.def Info: laikai_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 143.0pt x 154.00394pt.
+ <./laikai_8cpp_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf>
+<laikai_8cpp_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf, id=2492, 247.92625p
+t x 99.37125pt>
+File: laikai_8cpp_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf Graphic file (t
+ype pdf)
+<use laikai_8cpp_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf>
+Package pdftex.def Info: laikai_8cpp_aa184823ba754ad9c466d6d0c700982a4_icgraph.
+pdf  used on input line 52.
+(pdftex.def)             Requested size: 247.0pt x 99.00102pt.
+
+
+[66]) (./laikai_8cpp_source.tex) (./laikai_8h.tex <./laikai_8h__dep__incl.pdf>
+<laikai_8h__dep__incl.pdf, id=2535, 658.46pt x 154.5775pt>
+File: laikai_8h__dep__incl.pdf Graphic file (type pdf)
+<use laikai_8h__dep__incl.pdf>
+Package pdftex.def Info: laikai_8h__dep__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 350.0pt x 82.16624pt.
+
+
+[67]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+ <./laikai_8h_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf>
+<laikai_8h_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf, id=2571, 247.92625pt 
+x 99.37125pt>
+File: laikai_8h_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf Graphic file (typ
+e pdf)
+<use laikai_8h_aa184823ba754ad9c466d6d0c700982a4_icgraph.pdf>
+Package pdftex.def Info: laikai_8h_aa184823ba754ad9c466d6d0c700982a4_icgraph.pd
+f  used on input line 78.
+(pdftex.def)             Requested size: 247.0pt x 99.00102pt.
+
+
+[68]) (./laikai_8h_source.tex) (./main_8cpp.tex <./main_8cpp__incl.pdf>
+<main_8cpp__incl.pdf, id=2617, 882.29625pt x 375.4025pt>
+File: main_8cpp__incl.pdf Graphic file (type pdf)
+<use main_8cpp__incl.pdf>
+Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 148.92105pt.
+
+
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+ <./main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
+<main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=2655, 867.24pt x 68
+3.55376pt>
+File: main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file (type
+ pdf)
+<use main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
+Package pdftex.def Info: main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf
+  used on input line 48.
+(pdftex.def)             Requested size: 350.0pt x 275.86775pt.
+) (./main_8cpp_source.tex
+
+[70]
+
+[71]
+
+[72]) (./meniu_8cpp.tex <./meniu_8cpp__incl.pdf>
+<meniu_8cpp__incl.pdf, id=2903, 754.82pt x 375.4025pt>
+File: meniu_8cpp__incl.pdf Graphic file (type pdf)
+<use meniu_8cpp__incl.pdf>
+Package pdftex.def Info: meniu_8cpp__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 174.06773pt.
+
+
+[73]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.20 on input line 52.
+
+
+Underfull \hbox (badness 10000) detected at line 53
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.21 on input line 60.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+ <./meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf>
+<meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf, id=2938, 504.88625pt 
+x 415.5525pt>
+File: meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf Graphic file (typ
+e pdf)
+<use meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf>
+Package pdftex.def Info: meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_cgraph.pd
+f  used on input line 78.
+(pdftex.def)             Requested size: 350.0pt x 288.07578pt.
+ <./meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf>
+<meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf, id=2946, 240.9pt x 9
+9.37125pt>
+File: meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf Graphic file (ty
+pe pdf)
+<use meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf>
+Package pdftex.def Info: meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af_icgraph.p
+df  used on input line 86.
+(pdftex.def)             Requested size: 240.0pt x 99.00253pt.
+) (./meniu_8cpp_source.tex
+
+[74]
+
+[75]) (./meniu_8h.tex <./meniu_8h__incl.pdf>
+<meniu_8h__incl.pdf, id=3055, 519.9425pt x 320.19624pt>
+File: meniu_8h__incl.pdf Graphic file (type pdf)
+<use meniu_8h__incl.pdf>
+Package pdftex.def Info: meniu_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 215.54172pt.
+ <./meniu_8h__dep__incl.pdf>
+<meniu_8h__dep__incl.pdf, id=3063, 228.855pt x 154.5775pt>
+File: meniu_8h__dep__incl.pdf Graphic file (type pdf)
+<use meniu_8h__dep__incl.pdf>
+Package pdftex.def Info: meniu_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 228.0pt x 154.0063pt.
+
+
+[76]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+
+[77]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.22 on input line 74.
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.23 on input line 82.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+ <./meniu_8h_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf>
+<meniu_8h_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf, id=3148, 504.88625pt x 
+415.5525pt>
+File: meniu_8h_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf Graphic file (type 
+pdf)
+<use meniu_8h_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf>
+Package pdftex.def Info: meniu_8h_a4bb692c238b0368aa3ac013f967f18af_cgraph.pdf 
+ used on input line 100.
+(pdftex.def)             Requested size: 350.0pt x 288.07578pt.
+ <./meniu_8h_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf>
+<meniu_8h_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf, id=3156, 240.9pt x 99.
+37125pt>
+File: meniu_8h_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf Graphic file (type
+ pdf)
+<use meniu_8h_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf>
+Package pdftex.def Info: meniu_8h_a4bb692c238b0368aa3ac013f967f18af_icgraph.pdf
+  used on input line 108.
+(pdftex.def)             Requested size: 240.0pt x 99.00253pt.
+) (./meniu_8h_source.tex
+
+[78]) (./skaitymas_8cpp.tex <./skaitymas_8cpp__incl.pdf>
+<skaitymas_8cpp__incl.pdf, id=3175, 967.615pt x 375.4025pt>
+File: skaitymas_8cpp__incl.pdf Graphic file (type pdf)
+<use skaitymas_8cpp__incl.pdf>
+Package pdftex.def Info: skaitymas_8cpp__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 135.78635pt.
+
+
+[79]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.24 on input line 50.
+
+
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+ <./skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf>
+<skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf, id=3214, 169.6337
+4pt x 117.43875pt>
+File: skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf Graphic file 
+(type pdf)
+<use skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf>
+Package pdftex.def Info: skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_cgrap
+h.pdf  used on input line 71.
+(pdftex.def)             Requested size: 169.0pt x 117.00478pt.
+ <./skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf>
+<skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf, id=3222, 366.368
+74pt x 117.43875pt>
+File: skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf Graphic file
+ (type pdf)
+<use skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf>
+Package pdftex.def Info: skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22_icgra
+ph.pdf  used on input line 79.
+(pdftex.def)             Requested size: 350.0pt x 112.19872pt.
+
+
+[80]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.25 on input line 105.
+
+
+Underfull \hbox (badness 10000) detected at line 106
+[][][]
+ []
+
+ <./skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf>
+<skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf, id=3248, 308.1512
+5pt x 99.37125pt>
+File: skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf Graphic file 
+(type pdf)
+<use skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf>
+Package pdftex.def Info: skaitymas_8cpp_a635053d42c395cc960020c5a3cbf6302_cgrap
+h.pdf  used on input line 122.
+(pdftex.def)             Requested size: 307.0pt x 99.00708pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.26 on input line 141.
+
+
+
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+[]\T1/phv/m/n/10 References [], [], [],
+ []
+
+ <./skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf>
+<skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf, id=3275, 370.3837
+4pt x 247.92625pt>
+File: skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf Graphic file 
+(type pdf)
+<use skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf>
+Package pdftex.def Info: skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_cgrap
+h.pdf  used on input line 159.
+(pdftex.def)             Requested size: 350.0pt x 234.28398pt.
+ <./skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf>
+<skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf, id=3283, 363.357
+5pt x 99.37125pt>
+File: skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf Graphic file
+ (type pdf)
+<use skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf>
+Package pdftex.def Info: skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490_icgra
+ph.pdf  used on input line 167.
+(pdftex.def)             Requested size: 350.0pt x 95.7213pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.27 on input line 186.
+
+
+Overfull \vbox (2.62968pt too high) has occurred while \output is active []
+
+
+
+[82] <./skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf>
+<skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf, id=3306, 282.053
+76pt x 99.37125pt>
+File: skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf Graphic file
+ (type pdf)
+<use skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf>
+Package pdftex.def Info: skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa_icgra
+ph.pdf  used on input line 200.
+(pdftex.def)             Requested size: 281.0pt x 99.00708pt.
+) (./skaitymas_8cpp_source.tex
+
+[83]) (./skaitymas_8h.tex <./skaitymas_8h__incl.pdf>
+<skaitymas_8h__incl.pdf, id=3399, 519.9425pt x 320.19624pt>
+File: skaitymas_8h__incl.pdf Graphic file (type pdf)
+<use skaitymas_8h__incl.pdf>
+Package pdftex.def Info: skaitymas_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 215.54172pt.
+
+
+[84] <./skaitymas_8h__dep__incl.pdf>
+<skaitymas_8h__dep__incl.pdf, id=3462, 427.5975pt x 154.5775pt>
+File: skaitymas_8h__dep__incl.pdf Graphic file (type pdf)
+<use skaitymas_8h__dep__incl.pdf>
+Package pdftex.def Info: skaitymas_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 350.0pt x 126.52556pt.
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+
+[85]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.28 on input line 73.
+
+
+Underfull \hbox (badness 10000) detected at line 74
+[][][]
+ []
+
+ <./skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf>
+<skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf, id=3499, 169.63374p
+t x 117.43875pt>
+File: skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf Graphic file (t
+ype pdf)
+<use skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_cgraph.pdf>
+Package pdftex.def Info: skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_cgraph.
+pdf  used on input line 94.
+(pdftex.def)             Requested size: 169.0pt x 117.00478pt.
+ <./skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf>
+<skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf, id=3507, 366.36874
+pt x 117.43875pt>
+File: skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf Graphic file (
+type pdf)
+<use skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_icgraph.pdf>
+Package pdftex.def Info: skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22_icgraph
+.pdf  used on input line 102.
+(pdftex.def)             Requested size: 350.0pt x 112.19872pt.
+
+
+[86]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.29 on input line 128.
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+ <./skaitymas_8h_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf>
+<skaitymas_8h_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf, id=3532, 308.15125p
+t x 99.37125pt>
+File: skaitymas_8h_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf Graphic file (t
+ype pdf)
+<use skaitymas_8h_a635053d42c395cc960020c5a3cbf6302_cgraph.pdf>
+Package pdftex.def Info: skaitymas_8h_a635053d42c395cc960020c5a3cbf6302_cgraph.
+pdf  used on input line 145.
+(pdftex.def)             Requested size: 307.0pt x 99.00708pt.
+
+
+[87]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.30 on input line 164.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+[]\T1/phv/m/n/10 References [], [], [],
+ []
+
+ <./skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf>
+<skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf, id=3558, 370.38374p
+t x 247.92625pt>
+File: skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf Graphic file (t
+ype pdf)
+<use skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_cgraph.pdf>
+Package pdftex.def Info: skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_cgraph.
+pdf  used on input line 182.
+(pdftex.def)             Requested size: 350.0pt x 234.28398pt.
+ <./skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf>
+<skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf, id=3566, 363.3575p
+t x 99.37125pt>
+File: skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf Graphic file (
+type pdf)
+<use skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_icgraph.pdf>
+Package pdftex.def Info: skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490_icgraph
+.pdf  used on input line 190.
+(pdftex.def)             Requested size: 350.0pt x 95.7213pt.
+
+
+[88]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.31 on input line 209.
+
+ <./skaitymas_8h_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf>
+<skaitymas_8h_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf, id=3588, 282.05376
+pt x 99.37125pt>
+File: skaitymas_8h_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf Graphic file (
+type pdf)
+<use skaitymas_8h_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph.pdf>
+Package pdftex.def Info: skaitymas_8h_a23423a68a7c6da7c2698b2ccbf9557aa_icgraph
+.pdf  used on input line 223.
+(pdftex.def)             Requested size: 281.0pt x 99.00708pt.
+) (./skaitymas_8h_source.tex) (./spausdinam_8cpp.tex <./spausdinam_8cpp__incl.p
+df>
+<spausdinam_8cpp__incl.pdf, id=3606, 827.09pt x 375.4025pt>
+File: spausdinam_8cpp__incl.pdf Graphic file (type pdf)
+<use spausdinam_8cpp__incl.pdf>
+Package pdftex.def Info: spausdinam_8cpp__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 158.85944pt.
+
+
+[89]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.32 on input line 50.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.33 on input line 55.
+
+
+
+[90] <./spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf>
+<spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf, id=3667, 502.878
+75pt x 247.92625pt>
+File: spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf Graphic file
+ (type pdf)
+<use spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf>
+Package pdftex.def Info: spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_cgra
+ph.pdf  used on input line 73.
+(pdftex.def)             Requested size: 350.0pt x 172.55225pt.
+ <./spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf>
+<spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf, id=3675, 399.49
+25pt x 118.4425pt>
+File: spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf Graphic fil
+e (type pdf)
+<use spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf>
+Package pdftex.def Info: spausdinam_8cpp_a70a103dcbe6b70e700d8a2411aff17e2_icgr
+aph.pdf  used on input line 81.
+(pdftex.def)             Requested size: 350.0pt x 103.77428pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.34 on input line 102.
+
+
+
+[91] <./spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf>
+<spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf, id=3697, 375.40
+25pt x 99.37125pt>
+File: spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf Graphic fil
+e (type pdf)
+<use spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf>
+Package pdftex.def Info: spausdinam_8cpp_ae6b484589c99d92f7ac9cbe8ce00b959_icgr
+aph.pdf  used on input line 116.
+(pdftex.def)             Requested size: 350.0pt x 92.65236pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.35 on input line 135.
+
+ <./spausdinam_8cpp_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf>
+<spausdinam_8cpp_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf, id=3709, 546.04p
+t x 247.92625pt>
+File: spausdinam_8cpp_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf Graphic file
+ (type pdf)
+<use spausdinam_8cpp_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf>
+Package pdftex.def Info: spausdinam_8cpp_a7e246727d186158daa8643faf7eefcfe_cgra
+ph.pdf  used on input line 149.
+(pdftex.def)             Requested size: 350.0pt x 158.91437pt.
+
+
+[92]
+
+[93]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.36 on input line 168.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.37 on input line 173.
+
+ <./spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf>
+<spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf, id=3745, 366.368
+74pt x 247.92625pt>
+File: spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf Graphic file
+ (type pdf)
+<use spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf>
+Package pdftex.def Info: spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_cgra
+ph.pdf  used on input line 191.
+(pdftex.def)             Requested size: 350.0pt x 236.86401pt.
+ <./spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf>
+<spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf, id=3753, 590.20
+5pt x 136.51pt>
+File: spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf Graphic fil
+e (type pdf)
+<use spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf>
+Package pdftex.def Info: spausdinam_8cpp_aba4d2eddda9e028acf1b8c2faba126d2_icgr
+aph.pdf  used on input line 199.
+(pdftex.def)             Requested size: 350.0pt x 80.95262pt.
+) (./spausdinam_8cpp_source.tex
+
+[94]
+
+[95]) (./spausdinam_8h.tex <./spausdinam_8h__incl.pdf>
+<spausdinam_8h__incl.pdf, id=3896, 519.9425pt x 320.19624pt>
+File: spausdinam_8h__incl.pdf Graphic file (type pdf)
+<use spausdinam_8h__incl.pdf>
+Package pdftex.def Info: spausdinam_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 215.54172pt.
+ <./spausdinam_8h__dep__incl.pdf>
+<spausdinam_8h__dep__incl.pdf, id=3904, 469.755pt x 154.5775pt>
+File: spausdinam_8h__dep__incl.pdf Graphic file (type pdf)
+<use spausdinam_8h__dep__incl.pdf>
+Package pdftex.def Info: spausdinam_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 350.0pt x 115.17097pt.
+
+
+[96]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.38 on input line 75.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.39 on input line 80.
+
+
+
+[97] <./spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf>
+<spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf, id=3970, 502.87875
+pt x 247.92625pt>
+File: spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf Graphic file (
+type pdf)
+<use spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_cgraph.pdf>
+Package pdftex.def Info: spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_cgraph
+.pdf  used on input line 98.
+(pdftex.def)             Requested size: 350.0pt x 172.55225pt.
+ <./spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf>
+<spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf, id=3979, 399.4925
+pt x 118.4425pt>
+File: spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf Graphic file 
+(type pdf)
+<use spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_icgraph.pdf>
+Package pdftex.def Info: spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2_icgrap
+h.pdf  used on input line 106.
+(pdftex.def)             Requested size: 350.0pt x 103.77428pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.40 on input line 127.
+
+
+
+[98] <./spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf>
+<spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf, id=4000, 375.4025
+pt x 99.37125pt>
+File: spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf Graphic file 
+(type pdf)
+<use spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959_icgraph.pdf>
+Package pdftex.def Info: spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959_icgrap
+h.pdf  used on input line 141.
+(pdftex.def)             Requested size: 350.0pt x 92.65236pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.41 on input line 160.
+
+ <./spausdinam_8h_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf>
+<spausdinam_8h_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf, id=4012, 546.04pt 
+x 247.92625pt>
+File: spausdinam_8h_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf Graphic file (
+type pdf)
+<use spausdinam_8h_a7e246727d186158daa8643faf7eefcfe_cgraph.pdf>
+Package pdftex.def Info: spausdinam_8h_a7e246727d186158daa8643faf7eefcfe_cgraph
+.pdf  used on input line 174.
+(pdftex.def)             Requested size: 350.0pt x 158.91437pt.
+
+
+[99]
+
+[100]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.42 on input line 193.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.43 on input line 198.
+
+ <./spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf>
+<spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf, id=4047, 366.36874
+pt x 247.92625pt>
+File: spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf Graphic file (
+type pdf)
+<use spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_cgraph.pdf>
+Package pdftex.def Info: spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_cgraph
+.pdf  used on input line 216.
+(pdftex.def)             Requested size: 350.0pt x 236.86401pt.
+ <./spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf>
+<spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf, id=4055, 590.205p
+t x 136.51pt>
+File: spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf Graphic file 
+(type pdf)
+<use spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_icgraph.pdf>
+Package pdftex.def Info: spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2_icgrap
+h.pdf  used on input line 224.
+(pdftex.def)             Requested size: 350.0pt x 80.95262pt.
+) (./spausdinam_8h_source.tex
+
+[101]) (./Studentas_8cpp.tex <./Studentas_8cpp__incl.pdf>
+<Studentas_8cpp__incl.pdf, id=4083, 757.83125pt x 264.99pt>
+File: Studentas_8cpp__incl.pdf Graphic file (type pdf)
+<use Studentas_8cpp__incl.pdf>
+Package pdftex.def Info: Studentas_8cpp__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 122.38612pt.
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+
+
+[102]) (./Studentas_8cpp_source.tex
+
+[103]
+
+[104]
+
+[105]
+
+[106]) (./Studentas_8h.tex <./Studentas_8h__incl.pdf>
+<Studentas_8h__incl.pdf, id=4523, 283.0575pt x 209.78375pt>
+File: Studentas_8h__incl.pdf Graphic file (type pdf)
+<use Studentas_8h__incl.pdf>
+Package pdftex.def Info: Studentas_8h__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 282.0pt x 209.01816pt.
+ <./Studentas_8h__dep__incl.pdf>
+<Studentas_8h__dep__incl.pdf, id=4531, 766.865pt x 264.99pt>
+File: Studentas_8h__dep__incl.pdf Graphic file (type pdf)
+<use Studentas_8h__dep__incl.pdf>
+Package pdftex.def Info: Studentas_8h__dep__incl.pdf  used on input line 25.
+(pdftex.def)             Requested size: 350.0pt x 120.94263pt.
+
+
+[107]
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+) (./Studentas_8h_source.tex
+
+[108]) (./testas_8cpp.tex <./testas_8cpp__incl.pdf>
+<testas_8cpp__incl.pdf, id=4674, 651.43375pt x 264.99pt>
+File: testas_8cpp__incl.pdf Graphic file (type pdf)
+<use testas_8cpp__incl.pdf>
+Package pdftex.def Info: testas_8cpp__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 142.37677pt.
+
+
+[109]
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+ <./testas_8cpp_a62345eaf1f8a3d065214eec00726417b_cgraph.pdf>
+<testas_8cpp_a62345eaf1f8a3d065214eec00726417b_cgraph.pdf, id=4757, 596.2275pt 
+x 285.065pt>
+File: testas_8cpp_a62345eaf1f8a3d065214eec00726417b_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_a62345eaf1f8a3d065214eec00726417b_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a62345eaf1f8a3d065214eec00726417b_cgraph.p
+df  used on input line 66.
+(pdftex.def)             Requested size: 350.0pt x 167.33868pt.
+
+
+[110] <./testas_8cpp_af0795b8e97d908a2f00597677222fac2_cgraph.pdf>
+<testas_8cpp_af0795b8e97d908a2f00597677222fac2_cgraph.pdf, id=4797, 412.54124pt
+ x 322.20375pt>
+File: testas_8cpp_af0795b8e97d908a2f00597677222fac2_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_af0795b8e97d908a2f00597677222fac2_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_af0795b8e97d908a2f00597677222fac2_cgraph.p
+df  used on input line 92.
+(pdftex.def)             Requested size: 350.0pt x 273.36316pt.
+ <./testas_8cpp_af0795b8e97d908a2f00597677222fac2_icgraph.pdf>
+<testas_8cpp_af0795b8e97d908a2f00597677222fac2_icgraph.pdf, id=4805, 356.33125p
+t x 99.37125pt>
+File: testas_8cpp_af0795b8e97d908a2f00597677222fac2_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_af0795b8e97d908a2f00597677222fac2_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_af0795b8e97d908a2f00597677222fac2_icgraph.
+pdf  used on input line 100.
+(pdftex.def)             Requested size: 350.0pt x 97.60907pt.
+ <./testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_cgraph.pdf>
+<testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_cgraph.pdf, id=4818, 561.09625pt
+ x 99.37125pt>
+File: testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_cgraph.p
+df  used on input line 126.
+(pdftex.def)             Requested size: 350.0pt x 61.98557pt.
+
+
+[111] <./testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_icgraph.pdf>
+<testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_icgraph.pdf, id=4835, 316.18124p
+t x 99.37125pt>
+File: testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_afb8a38efa2d4acabf9b5a1c72d1ba626_icgraph.
+pdf  used on input line 134.
+(pdftex.def)             Requested size: 315.0pt x 99.00708pt.
+ <./testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_cgraph.pdf>
+<testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_cgraph.pdf, id=4852, 427.5975pt 
+x 285.065pt>
+File: testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_cgraph.p
+df  used on input line 160.
+(pdftex.def)             Requested size: 350.0pt x 233.33289pt.
+
+
+[112] <./testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_icgraph.pdf>
+<testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_icgraph.pdf, id=4870, 344.28625p
+t x 99.37125pt>
+File: testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a029c23e8b1279f64678ff0d16e3d7d40_icgraph.
+pdf  used on input line 168.
+(pdftex.def)             Requested size: 343.0pt x 99.00102pt.
+ <./testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_cgraph.pdf>
+<testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_cgraph.pdf, id=4889, 635.37375pt
+ x 359.3425pt>
+File: testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_cgraph.p
+df  used on input line 194.
+(pdftex.def)             Requested size: 350.0pt x 197.9515pt.
+
+
+[113] <./testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_icgraph.pdf>
+<testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_icgraph.pdf, id=4906, 375.4025pt
+ x 99.37125pt>
+File: testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a8a5a7da36716b22c613e0cfa68c42e1c_icgraph.
+pdf  used on input line 202.
+(pdftex.def)             Requested size: 350.0pt x 92.65236pt.
+ <./testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_cgraph.pdf>
+<testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_cgraph.pdf, id=4924, 622.325pt x
+ 322.20375pt>
+File: testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_cgraph.p
+df  used on input line 228.
+(pdftex.def)             Requested size: 350.0pt x 181.20966pt.
+
+
+[114] <./testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_icgraph.pdf>
+<testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_icgraph.pdf, id=4941, 362.35374p
+t x 99.37125pt>
+File: testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a2004eb505d4b8f7ced0e73394dfb8f4f_icgraph.
+pdf  used on input line 236.
+(pdftex.def)             Requested size: 350.0pt x 95.98514pt.
+ <./testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_cgraph.pdf>
+<testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_cgraph.pdf, id=4953, 594.22pt x 
+99.37125pt>
+File: testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_cgraph.p
+df  used on input line 262.
+(pdftex.def)             Requested size: 350.0pt x 58.53299pt.
+ <./testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_icgraph.pdf>
+<testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_icgraph.pdf, id=4961, 349.305pt 
+x 99.37125pt>
+File: testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_af9afec580e7b23142c6f4d093c46cd18_icgraph.
+pdf  used on input line 270.
+(pdftex.def)             Requested size: 348.0pt x 99.00557pt.
+
+
+[115] <./testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_cgraph.pdf>
+<testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_cgraph.pdf, id=4989, 629.35126pt
+ x 322.20375pt>
+File: testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_cgraph.p
+df  used on input line 296.
+(pdftex.def)             Requested size: 350.0pt x 179.18408pt.
+ <./testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_icgraph.pdf>
+<testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_icgraph.pdf, id=4997, 369.38pt x
+ 99.37125pt>
+File: testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a326b0b0101acfb38443e5b9e2ce88720_icgraph.
+pdf  used on input line 304.
+(pdftex.def)             Requested size: 350.0pt x 94.15802pt.
+
+
+[116] <./testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_cgraph.pdf>
+<testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_cgraph.pdf, id=5023, 616.3025pt 
+x 285.065pt>
+File: testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_cgraph.p
+df  used on input line 330.
+(pdftex.def)             Requested size: 350.0pt x 161.89282pt.
+ <./testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_icgraph.pdf>
+<testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_icgraph.pdf, id=5031, 356.33125p
+t x 99.37125pt>
+File: testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_acbc7a298bf5e8af17612dcf6d63f0920_icgraph.
+pdf  used on input line 338.
+(pdftex.def)             Requested size: 350.0pt x 97.60907pt.
+ <./testas_8cpp_aedb355f6a889a35dc94703016d84240a_cgraph.pdf>
+<testas_8cpp_aedb355f6a889a35dc94703016d84240a_cgraph.pdf, id=5049, 441.65pt x 
+322.20375pt>
+File: testas_8cpp_aedb355f6a889a35dc94703016d84240a_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_aedb355f6a889a35dc94703016d84240a_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_aedb355f6a889a35dc94703016d84240a_cgraph.p
+df  used on input line 364.
+(pdftex.def)             Requested size: 350.0pt x 255.3543pt.
+
+
+[117] <./testas_8cpp_aedb355f6a889a35dc94703016d84240a_icgraph.pdf>
+<testas_8cpp_aedb355f6a889a35dc94703016d84240a_icgraph.pdf, id=5067, 358.33875p
+t x 99.37125pt>
+File: testas_8cpp_aedb355f6a889a35dc94703016d84240a_icgraph.pdf Graphic file (t
+ype pdf)
+<use testas_8cpp_aedb355f6a889a35dc94703016d84240a_icgraph.pdf>
+Package pdftex.def Info: testas_8cpp_aedb355f6a889a35dc94703016d84240a_icgraph.
+pdf  used on input line 372.
+(pdftex.def)             Requested size: 350.0pt x 97.06473pt.
+
+Overfull \hbox (47.44554pt too wide) in paragraph at lines 387--388
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+
+Overfull \hbox (37.88794pt too wide) in paragraph at lines 387--388
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./testas_8cpp_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf>
+<testas_8cpp_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf, id=5086, 755.82375pt
+ x 467.7475pt>
+File: testas_8cpp_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf Graphic file (ty
+pe pdf)
+<use testas_8cpp_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf>
+Package pdftex.def Info: testas_8cpp_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.p
+df  used on input line 394.
+(pdftex.def)             Requested size: 350.0pt x 216.60103pt.
+) (./testas_8cpp_source.tex
+
+[118]
+
+[119]
+
+[120]
+
+[121]) (./testas_8h.tex <./testas_8h__dep__incl.pdf>
+<testas_8h__dep__incl.pdf, id=5472, 147.55125pt x 154.5775pt>
+File: testas_8h__dep__incl.pdf Graphic file (type pdf)
+<use testas_8h__dep__incl.pdf>
+Package pdftex.def Info: testas_8h__dep__incl.pdf  used on input line 8.
+(pdftex.def)             Requested size: 147.0pt x 154.00394pt.
+
+
+[122]
+Overfull \hbox (47.44554pt too wide) in paragraph at lines 31--32
+[]\T1/phv/m/n/10 References [], [], [], [],
+ []
+
+
+Overfull \hbox (37.88794pt too wide) in paragraph at lines 31--32
+[]\T1/phv/m/n/10 , [], [], [],
+ []
+
+ <./testas_8h_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf>
+<testas_8h_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf, id=5566, 755.82375pt x
+ 467.7475pt>
+File: testas_8h_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf Graphic file (type
+ pdf)
+<use testas_8h_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf>
+Package pdftex.def Info: testas_8h_a5b0bc173f8bb450eee52bf4e5812ea09_cgraph.pdf
+  used on input line 38.
+(pdftex.def)             Requested size: 350.0pt x 216.60103pt.
+) (./testas_8h_source.tex
+
+[123]) (./tyrimas_8cpp.tex <./tyrimas_8cpp__incl.pdf>
+<tyrimas_8cpp__incl.pdf, id=5589, 959.585pt x 375.4025pt>
+File: tyrimas_8cpp__incl.pdf Graphic file (type pdf)
+<use tyrimas_8cpp__incl.pdf>
+Package pdftex.def Info: tyrimas_8cpp__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 136.92625pt.
+
+
+[124] <./tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf>
+<tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf, id=5620, 382.42876p
+t x 136.51pt>
+File: tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf Graphic file (t
+ype pdf)
+<use tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf>
+Package pdftex.def Info: tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_cgraph.
+pdf  used on input line 69.
+(pdftex.def)             Requested size: 350.0pt x 124.94083pt.
+ <./tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf>
+<tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf, id=5628, 363.3575p
+t x 99.37125pt>
+File: tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf Graphic file (
+type pdf)
+<use tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf>
+Package pdftex.def Info: tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99_icgraph
+.pdf  used on input line 77.
+(pdftex.def)             Requested size: 350.0pt x 95.7213pt.
+) (./tyrimas_8cpp_source.tex
+
+[125]
+
+[126]
+
+[127]) (./tyrimas_8h.tex <./tyrimas_8h__dep__incl.pdf>
+<tyrimas_8h__dep__incl.pdf, id=5887, 240.9pt x 154.5775pt>
+File: tyrimas_8h__dep__incl.pdf Graphic file (type pdf)
+<use tyrimas_8h__dep__incl.pdf>
+Package pdftex.def Info: tyrimas_8h__dep__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 240.0pt x 154.00394pt.
+
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+
+[128] <./tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf>
+<tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf, id=5929, 382.42876pt 
+x 136.51pt>
+File: tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf Graphic file (typ
+e pdf)
+<use tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pdf>
+Package pdftex.def Info: tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_cgraph.pd
+f  used on input line 75.
+(pdftex.def)             Requested size: 350.0pt x 124.94083pt.
+ <./tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf>
+<tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf, id=5937, 363.3575pt 
+x 99.37125pt>
+File: tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf Graphic file (ty
+pe pdf)
+<use tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_icgraph.pdf>
+Package pdftex.def Info: tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_icgraph.p
+df  used on input line 83.
+(pdftex.def)             Requested size: 350.0pt x 95.7213pt.
+) (./tyrimas_8h_source.tex) (./unit__tests_8cpp.tex <./unit__tests_8cpp__incl.p
+df>
+<unit__tests_8cpp__incl.pdf, id=5948, 714.67pt x 375.4025pt>
+File: unit__tests_8cpp__incl.pdf Graphic file (type pdf)
+<use unit__tests_8cpp__incl.pdf>
+Package pdftex.def Info: unit__tests_8cpp__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 183.84572pt.
+
+
+[129]
+
+[130]
+Underfull \hbox (badness 10000) detected at line 94
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+
+
+[131]
+Underfull \hbox (badness 2401) in paragraph at lines 137--138
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [], [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 7907) in paragraph at lines 137--138
+[]\T1/phv/m/n/10 , [], [], [], [], [],
+ []
+
+
+Overfull \hbox (54.80763pt too wide) in paragraph at lines 137--138
+[]\T1/phv/m/n/10 , [], [], and []. 
+ []
+
+ <./unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_cgraph.pdf>
+<unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_cgraph.pdf, id=6068, 409.53
+pt x 99.37125pt>
+File: unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_cgr
+aph.pdf  used on input line 144.
+(pdftex.def)             Requested size: 350.0pt x 84.93144pt.
+ <./unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_icgraph.pdf>
+<unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_icgraph.pdf, id=6076, 537.0
+0626pt x 805.0075pt>
+File: unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_icgraph.pdf Graphic fi
+le (type pdf)
+<use unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_icgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_icg
+raph.pdf  used on input line 152.
+(pdftex.def)             Requested size: 350.0pt x 524.67357pt.
+
+
+[132]
+Overfull \hbox (49.8403pt too wide) in paragraph at lines 171--172
+[]\T1/phv/m/n/10 References [], [], [], and []. 
+ []
+
+ <./unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af_cgraph.pdf>
+<unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af_cgraph.pdf, id=6103, 519.94
+25pt x 210.7875pt>
+File: unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af_cgr
+aph.pdf  used on input line 178.
+(pdftex.def)             Requested size: 350.0pt x 141.89267pt.
+
+
+[133] <./unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c_cgraph.pdf>
+<unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c_cgraph.pdf, id=6124, 486.81
+876pt x 210.7875pt>
+File: unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c_cgr
+aph.pdf  used on input line 204.
+(pdftex.def)             Requested size: 350.0pt x 151.54495pt.
+ <./unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080_cgraph.pdf>
+<unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080_cgraph.pdf, id=6135, 259.97
+125pt x 99.37125pt>
+File: unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080_cgr
+aph.pdf  used on input line 230.
+(pdftex.def)             Requested size: 259.0pt x 98.99951pt.
+
+
+[134] <./unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8_cgraph.pdf>
+<unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8_cgraph.pdf, id=6159, 298.11
+375pt x 247.92625pt>
+File: unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8_cgr
+aph.pdf  used on input line 256.
+(pdftex.def)             Requested size: 297.0pt x 247.01392pt.
+
+
+[135] <./unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0_cgraph.pdf>
+<unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0_cgraph.pdf, id=6179, 486.81
+876pt x 99.37125pt>
+File: unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0_cgr
+aph.pdf  used on input line 282.
+(pdftex.def)             Requested size: 350.0pt x 71.44261pt.
+ <./unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c_cgraph.pdf>
+<unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c_cgraph.pdf, id=6196, 298.11
+375pt x 322.20375pt>
+File: unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c_cgr
+aph.pdf  used on input line 308.
+(pdftex.def)             Requested size: 297.0pt x 321.0181pt.
+
+
+[136] <./unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9_cgraph.pdf>
+<unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9_cgraph.pdf, id=6215, 486.81
+876pt x 99.37125pt>
+File: unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9_cgr
+aph.pdf  used on input line 334.
+(pdftex.def)             Requested size: 350.0pt x 71.44261pt.
+
+
+[137] <./unit__tests_8cpp_a3db68582701e71e90161e2b917922864_cgraph.pdf>
+<unit__tests_8cpp_a3db68582701e71e90161e2b917922864_cgraph.pdf, id=6235, 486.81
+876pt x 99.37125pt>
+File: unit__tests_8cpp_a3db68582701e71e90161e2b917922864_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a3db68582701e71e90161e2b917922864_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a3db68582701e71e90161e2b917922864_cgr
+aph.pdf  used on input line 360.
+(pdftex.def)             Requested size: 350.0pt x 71.44261pt.
+ <./unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1_cgraph.pdf>
+<unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1_cgraph.pdf, id=6252, 501.87
+5pt x 322.20375pt>
+File: unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1_cgr
+aph.pdf  used on input line 386.
+(pdftex.def)             Requested size: 350.0pt x 224.7102pt.
+
+
+[138] <./unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec_cgraph.pdf>
+<unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec_cgraph.pdf, id=6275, 486.81
+876pt x 173.64874pt>
+File: unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec_cgr
+aph.pdf  used on input line 412.
+(pdftex.def)             Requested size: 350.0pt x 124.84416pt.
+ <./unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d_cgraph.pdf>
+<unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d_cgraph.pdf, id=6291, 501.87
+5pt x 285.065pt>
+File: unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d_cgr
+aph.pdf  used on input line 438.
+(pdftex.def)             Requested size: 350.0pt x 198.80902pt.
+
+
+[139] <./unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765_cgraph.pdf>
+<unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765_cgraph.pdf, id=6312, 486.81
+876pt x 136.51pt>
+File: unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765_cgr
+aph.pdf  used on input line 464.
+(pdftex.def)             Requested size: 350.0pt x 98.14339pt.
+ <./unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574_cgraph.pdf>
+<unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574_cgraph.pdf, id=6324, 486.81
+876pt x 136.51pt>
+File: unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574_cgr
+aph.pdf  used on input line 490.
+(pdftex.def)             Requested size: 350.0pt x 98.14339pt.
+ <./unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0_cgraph.pdf>
+<unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0_cgraph.pdf, id=6339, 501.87
+5pt x 247.92625pt>
+File: unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0_cgr
+aph.pdf  used on input line 516.
+(pdftex.def)             Requested size: 350.0pt x 172.90785pt.
+
+
+[140] <./unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b_cgraph.pdf>
+<unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b_cgraph.pdf, id=6362, 501.87
+5pt x 210.7875pt>
+File: unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b_cgr
+aph.pdf  used on input line 542.
+(pdftex.def)             Requested size: 350.0pt x 147.00668pt.
+
+
+[141] <./unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b_cgraph.pdf>
+<unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b_cgraph.pdf, id=6385, 499.86
+75pt x 173.64874pt>
+File: unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b_cgr
+aph.pdf  used on input line 568.
+(pdftex.def)             Requested size: 350.0pt x 121.59038pt.
+ <./unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a_cgraph.pdf>
+<unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a_cgraph.pdf, id=6401, 298.11
+375pt x 285.065pt>
+File: unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a_cgr
+aph.pdf  used on input line 594.
+(pdftex.def)             Requested size: 297.0pt x 284.016pt.
+
+
+[142] <./unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53_cgraph.pdf>
+<unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53_cgraph.pdf, id=6421, 325.21
+5pt x 136.51pt>
+File: unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53_cgr
+aph.pdf  used on input line 620.
+(pdftex.def)             Requested size: 324.0pt x 136.00974pt.
+
+
+[143] <./unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20_cgraph.pdf>
+<unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20_cgraph.pdf, id=6442, 325.21
+5pt x 136.51pt>
+File: unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20_cgr
+aph.pdf  used on input line 646.
+(pdftex.def)             Requested size: 324.0pt x 136.00974pt.
+ <./unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232_cgraph.pdf>
+<unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232_cgraph.pdf, id=6454, 325.21
+5pt x 136.51pt>
+File: unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232_cgr
+aph.pdf  used on input line 672.
+(pdftex.def)             Requested size: 324.0pt x 136.00974pt.
+
+
+[144] <./unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042_cgraph.pdf>
+<unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042_cgraph.pdf, id=6479, 325.21
+5pt x 285.065pt>
+File: unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042_cgr
+aph.pdf  used on input line 698.
+(pdftex.def)             Requested size: 324.0pt x 284.02036pt.
+ <./unit__tests_8cpp_a43cc991979646299df596b1c828f24f2_cgraph.pdf>
+<unit__tests_8cpp_a43cc991979646299df596b1c828f24f2_cgraph.pdf, id=6492, 325.21
+5pt x 173.64874pt>
+File: unit__tests_8cpp_a43cc991979646299df596b1c828f24f2_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a43cc991979646299df596b1c828f24f2_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a43cc991979646299df596b1c828f24f2_cgr
+aph.pdf  used on input line 724.
+(pdftex.def)             Requested size: 324.0pt x 173.01239pt.
+
+
+[145] <./unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3_cgraph.pdf>
+<unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3_cgraph.pdf, id=6514, 325.21
+5pt x 173.64874pt>
+File: unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3_cgr
+aph.pdf  used on input line 750.
+(pdftex.def)             Requested size: 324.0pt x 173.01239pt.
+
+
+[146] <./unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e_cgraph.pdf>
+<unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e_cgraph.pdf, id=6534, 325.21
+5pt x 136.51pt>
+File: unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e_cgraph.pdf Graphic fil
+e (type pdf)
+<use unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e_cgraph.pdf>
+Package pdftex.def Info: unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e_cgr
+aph.pdf  used on input line 776.
+(pdftex.def)             Requested size: 324.0pt x 136.00974pt.
+) (./unit__tests_8cpp_source.tex
+
+[147]
+
+[148]
+
+[149]
+
+Package textcomp Warning: Symbol \textrightarrow not provided by
+(textcomp)                font family pcr in TS1 encoding.
+(textcomp)                Default family used instead on input line 266.
+
+
+
+[150{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[151]) (./Zmogus_8cpp.tex <./Zmogus_8cpp__incl.pdf>
+<Zmogus_8cpp__incl.pdf, id=7134, 202.7575pt x 209.78375pt>
+File: Zmogus_8cpp__incl.pdf Graphic file (type pdf)
+<use Zmogus_8cpp__incl.pdf>
+Package pdftex.def Info: Zmogus_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 202.0pt x 209.00536pt.
+) (./Zmogus_8cpp_source.tex) (./Zmogus_8h.tex
+
+[152] <./Zmogus_8h__incl.pdf>
+<Zmogus_8h__incl.pdf, id=7192, 202.7575pt x 154.5775pt>
+File: Zmogus_8h__incl.pdf Graphic file (type pdf)
+<use Zmogus_8h__incl.pdf>
+Package pdftex.def Info: Zmogus_8h__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 202.0pt x 154.00394pt.
+ <./Zmogus_8h__dep__incl.pdf>
+<Zmogus_8h__dep__incl.pdf, id=7200, 766.865pt x 320.19624pt>
+File: Zmogus_8h__dep__incl.pdf Graphic file (type pdf)
+<use Zmogus_8h__dep__incl.pdf>
+Package pdftex.def Info: Zmogus_8h__dep__incl.pdf  used on input line 23.
+(pdftex.def)             Requested size: 350.0pt x 146.139pt.
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+) (./Zmogus_8h_source.tex
+
+[153])
+
+[154]
+No file refman.ind.
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+(./refman.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `refman.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `refman.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  69E96471300004A7EA97A5EC109A273C;51016.
+ ) 
+Here is how much of TeX's memory you used:
+ 23251 strings out of 473197
+ 472356 string characters out of 5718605
+ 724158 words of memory out of 5000000
+ 43011 multiletter control sequences out of 15000+600000
+ 617964 words of font info for 117 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 101i,16n,117p,1523b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt08
+00.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
+c/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pf
+b>
+Output written on refman.pdf (156 pages, 1672634 bytes).
+PDF statistics:
+ 7999 PDF objects out of 8907 (max. 8388607)
+ 7216 compressed objects within 73 object streams
+ 3065 named destinations out of 3580 (max. 500000)
+ 821 words of extra memory for PDF output out of 10000 (max. 10000000)
+
