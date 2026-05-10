@@ -1,0 +1,62 @@
+<map id="Zmogus::getVardas" name="Zmogus::getVardas">
+<area shape="rect" id="Node000001" title=" " alt="" coords="815,499,963,524"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#a82a044563f7e43f694ae771b27a6e89c" title="Lyginimo funkcija rikiavimui pagal vardą." alt="" coords="539,5,763,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="882,486,868,387,843,254,827,187,809,126,788,77,765,44,750,33,753,29,769,40,792,74,814,124,832,186,849,253,873,387,887,485"/>
+<area shape="rect" id="Node000003" href="$spausdinam_8cpp.html#aba4d2eddda9e028acf1b8c2faba126d2" title="Rikiuoja studentus pagal nurodytą kriterijų (int kodas)." alt="" coords="577,55,725,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="886,485,884,407,878,356,869,301,854,244,832,189,803,138,765,93,746,81,724,73,726,68,748,76,768,89,807,135,837,187,859,243,874,300,884,356,889,407,891,485"/>
+<area shape="rect" id="Node000008" href="$unit__tests_8cpp.html#a91759e7784a1e58d17448a375cdeeb5c" title="Tikrina virtualų dispatch per bazinės klasės rodyklę." alt="" coords="623,104,678,129"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="885,485,880,416,863,323,847,273,827,225,799,181,765,143,745,130,722,122,678,118,678,112,723,117,747,125,768,139,804,178,831,223,852,272,868,322,885,415,890,485"/>
+<area shape="rect" id="Node000009" href="$unit__tests_8cpp.html#a754a81f6be0f1a41f41a3a19ffc085f8" title="Tikrina operator&gt;&gt; su vienu studentu." alt="" coords="623,153,678,179"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="883,485,875,424,856,344,841,302,821,262,796,224,765,192,745,180,722,172,678,167,679,162,723,167,747,175,768,188,800,221,825,259,845,300,861,343,880,423,888,484"/>
+<area shape="rect" id="Node000010" href="$unit__tests_8cpp.html#ab94f9344bd4840ec79558e56791b2b4c" title="Tikrina, kad numatytasis konstruktorius inicializuoja tuščius laukus." alt="" coords="623,203,678,228"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="881,486,870,433,849,367,834,332,815,299,792,268,765,241,745,229,722,222,678,217,678,212,723,217,747,224,768,237,796,264,819,296,839,330,854,365,875,432,886,485"/>
+<area shape="rect" id="Node000011" href="$unit__tests_8cpp.html#a6b9f6da88dedebab8c8524e76f5191e1" title="Tikrina, kad kopijavimo konstruktorius sukuria gilią kopiją." alt="" coords="623,252,678,277"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="878,486,864,442,842,389,809,335,788,311,765,291,744,279,722,272,678,267,679,261,723,267,747,274,768,286,792,308,813,332,846,387,869,440,883,484"/>
+<area shape="rect" id="Node000012" href="$unit__tests_8cpp.html#aa7de934bc88c4d34b554aa0ceaede9ec" title="Tikrina, kad keičiant kopiją originalas nesikeičia (gili kopija)." alt="" coords="623,301,678,327"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="875,487,858,453,834,413,803,373,765,340,744,329,721,323,678,317,679,311,722,317,746,325,768,336,807,369,839,410,863,450,879,485"/>
+<area shape="rect" id="Node000013" href="$unit__tests_8cpp.html#a99f7a68bbac8a8ba8ea527dc2d98437d" title="Tikrina kopijavimo priskyrimo operatorių." alt="" coords="623,351,678,376"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="869,489,826,438,797,411,765,390,720,374,678,367,678,362,722,368,768,385,801,407,830,434,873,486"/>
+<area shape="rect" id="Node000014" href="$unit__tests_8cpp.html#ab305d8c8d3775f197223470035d8c765" title="Tikrina, kad savipriskyrimas yra saugus (nekelia crash)." alt="" coords="623,400,678,425"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="858,492,816,465,766,439,720,426,678,418,679,413,721,420,768,434,818,460,861,488"/>
+<area shape="rect" id="Node000015" href="$unit__tests_8cpp.html#a9a318c8fa767bc8a3cb18a1f031b13a0" title="Tikrina, kad perkėlimo konstruktorius teisingai perkelia duomenis." alt="" coords="623,449,678,475"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="813,498,766,489,678,470,679,465,767,483,814,493"/>
+<area shape="rect" id="Node000016" href="$unit__tests_8cpp.html#a3c79d26e97519b6203a87793fba89b9b" title="Tikrina perkėlimo priskyrimo operatorių." alt="" coords="623,499,678,524"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="800,514,678,514,678,509,800,509"/>
+<area shape="rect" id="Node000017" href="$unit__tests_8cpp.html#aaf665588271cf44b3c89ee52f3f50d8a" title="Tikrina, kad setVardas/setPavarde/setEgzaminas veikia teisingai." alt="" coords="623,548,678,573"/>
+<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="814,529,679,558,678,553,813,524"/>
+<area shape="rect" id="Node000018" href="$unit__tests_8cpp.html#a71af12b4bfd17be4f4e33e55fa857042" title="Tikrina srautinį konstruktorių su standartine eilute." alt="" coords="623,597,678,623"/>
+<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="861,534,818,562,768,587,721,601,679,609,678,604,720,596,766,582,815,557,858,530"/>
+<area shape="rect" id="Node000019" href="$testas_8cpp.html#a62345eaf1f8a3d065214eec00726417b" title=" " alt="" coords="573,647,729,672"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="873,537,830,588,800,614,768,636,730,651,728,646,765,632,797,610,826,584,869,533"/>
+<area shape="rect" id="Node000020" href="$testas_8cpp.html#af0795b8e97d908a2f00597677222fac2" title=" " alt="" coords="547,696,754,721"/>
+<area shape="poly" id="edge20_Node000001_Node000020" title=" " alt="" coords="879,538,863,572,838,612,807,652,768,686,742,698,740,694,765,681,803,648,834,609,858,569,875,535"/>
+<area shape="rect" id="Node000022" href="$testas_8cpp.html#a029c23e8b1279f64678ff0d16e3d7d40" title=" " alt="" coords="555,745,746,771"/>
+<area shape="poly" id="edge22_Node000001_Node000022" title=" " alt="" coords="883,538,869,582,846,635,813,689,792,714,768,735,745,748,743,743,765,730,788,710,809,686,841,633,864,580,878,537"/>
+<area shape="rect" id="Node000023" href="$testas_8cpp.html#a8a5a7da36716b22c613e0cfa68c42e1c" title=" " alt="" coords="535,795,767,820"/>
+<area shape="poly" id="edge24_Node000001_Node000023" title=" " alt="" coords="886,539,875,591,853,658,838,692,819,726,796,757,768,784,748,797,745,792,765,780,792,754,814,723,833,690,848,656,870,590,881,537"/>
+<area shape="rect" id="Node000024" href="$testas_8cpp.html#a2004eb505d4b8f7ced0e73394dfb8f4f" title=" " alt="" coords="543,844,758,869"/>
+<area shape="poly" id="edge26_Node000001_Node000024" title=" " alt="" coords="888,538,880,599,861,679,845,721,825,762,800,800,768,833,749,846,746,842,765,829,795,797,820,760,840,719,855,677,875,598,883,537"/>
+<area shape="rect" id="Node000025" href="$testas_8cpp.html#a326b0b0101acfb38443e5b9e2ce88720" title=" " alt="" coords="539,893,763,919"/>
+<area shape="poly" id="edge28_Node000001_Node000025" title=" " alt="" coords="890,538,884,607,867,701,852,750,831,799,803,844,768,883,749,895,746,891,765,879,799,840,826,796,847,748,862,699,879,607,884,538"/>
+<area shape="rect" id="Node000026" href="$testas_8cpp.html#acbc7a298bf5e8af17612dcf6d63f0920" title=" " alt="" coords="547,943,754,968"/>
+<area shape="poly" id="edge30_Node000001_Node000026" title=" " alt="" coords="891,538,889,615,883,666,874,722,859,779,837,835,807,887,768,932,750,945,747,940,765,928,803,884,832,832,853,777,868,721,878,666,883,615,886,538"/>
+<area shape="rect" id="Node000027" href="$testas_8cpp.html#aedb355f6a889a35dc94703016d84240a" title=" " alt="" coords="546,992,755,1017"/>
+<area shape="poly" id="edge32_Node000001_Node000027" title=" " alt="" coords="887,538,873,636,849,770,832,837,814,898,792,949,769,983,753,994,750,990,765,979,788,946,809,897,827,836,843,769,868,635,882,537"/>
+<area shape="rect" id="Node000004" href="$spausdinam_8cpp.html#a70a103dcbe6b70e700d8a2411aff17e2" title="Interaktyviai prašo rikiavimo kriterijaus ir rikiuoja studentus." alt="" coords="325,31,458,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="563,62,458,52,459,47,563,57"/>
+<area shape="rect" id="Node000007" href="$spausdinam_8cpp.html#a7e246727d186158daa8643faf7eefcfe" title="Rikiuoja studentus pagal galutinį vidurkio balą (didėjančia tvarka)." alt="" coords="296,80,487,105"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="563,78,487,86,487,81,563,73"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="311,46,60,46,60,41,311,41"/>
+<area shape="rect" id="Node000006" href="$Generavimas_8cpp.html#a83f8917f2570ce710ba6698a644d450e" title="Bendro naudojimo skirstymo funkcija." alt="" coords="108,56,248,81"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="311,55,248,63,248,58,311,50"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="94,57,60,51,61,45,95,51"/>
+<area shape="rect" id="Node000021" href="$testas_8cpp.html#a5b0bc173f8bb450eee52bf4e5812ea09" title=" " alt="" coords="335,844,447,869"/>
+<area shape="poly" id="edge21_Node000020_Node000021" title=" " alt="" coords="552,728,536,735,495,761,458,791,405,846,401,842,454,787,492,756,533,730,550,723"/>
+<area shape="poly" id="edge23_Node000022_Node000021" title=" " alt="" coords="562,776,536,784,468,815,414,846,411,842,465,811,534,780,560,771"/>
+<area shape="poly" id="edge25_Node000023_Node000021" title=" " alt="" coords="571,825,448,849,447,843,570,820"/>
+<area shape="poly" id="edge27_Node000024_Node000021" title=" " alt="" coords="530,859,448,859,448,854,530,854"/>
+<area shape="poly" id="edge29_Node000025_Node000021" title=" " alt="" coords="570,893,447,870,448,865,571,888"/>
+<area shape="poly" id="edge31_Node000026_Node000021" title=" " alt="" coords="564,942,534,932,466,902,412,872,414,867,468,897,536,928,566,937"/>
+<area shape="poly" id="edge33_Node000027_Node000021" title=" " alt="" coords="550,990,533,983,492,957,454,926,401,871,405,868,458,922,495,953,536,978,552,985"/>
+</map>
