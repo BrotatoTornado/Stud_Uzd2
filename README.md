@@ -1,4 +1,4 @@
-#Studentas užduotis v2.0
+# Studentas užduotis v2.0
 
 > Studentų duomenų valdymo sistema su abstrakčia bazine klase, Rule of Five, unit testais ir Doxygen dokumentacija.
 
