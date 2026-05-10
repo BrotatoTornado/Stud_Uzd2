@@ -1,3 +1,5 @@
+#Studentas užduotis v2.0
+
 > Studentų duomenų valdymo sistema su abstrakčia bazine klase, Rule of Five, unit testais ir Doxygen dokumentacija.
 
 ---
@@ -236,8 +238,8 @@ Ona       Onienė     5    6    7         8
 | `Abstraktumas.VirtualusDispatchPerZmogusPtri` | Polimorfizmas |
 | `Skirstymas.Strategija1/2/3` | Skirstymo algoritmų tikrinimas |
 
-![testavimas1](screenshots/unit_test1.png)
-![testavimas1](screenshots/unit_test2.png)
+![testavimas1](screenshots/unit_test1.PNG)
+![testavimas1](screenshots/unit_test2.PNG)
 
 ### Vidinis testavimo modulis (v1.2)
 
