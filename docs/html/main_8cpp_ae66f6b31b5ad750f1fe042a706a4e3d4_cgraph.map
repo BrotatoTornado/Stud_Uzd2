@@ -1,0 +1,68 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,368,60,393"/>
+<area shape="rect" id="Node000002" href="$konteineris_8h.html#affb0aabac553e6cf28ed415389b1c4e0" title="Grąžina aktyvaus konteinerio pilną pavadinimą." alt="" coords="580,5,819,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="33,368,38,330,51,276,72,218,87,190,106,164,152,119,206,84,265,56,327,36,390,22,452,13,566,8,567,13,453,19,391,27,328,41,267,61,209,88,156,124,110,168,92,193,77,220,56,278,43,331,38,368"/>
+<area shape="rect" id="Node000003" href="$laikai_8cpp.html#aa184823ba754ad9c466d6d0c700982a4" title="Nulinina visus laiko matavimus." alt="" coords="131,368,251,393"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,378,117,378,117,383,60,383"/>
+<area shape="rect" id="Node000004" href="$Generavimas_8cpp.html#a7e9f03aafbd3f06297c723240a87ce92" title="Interaktyviai prašo vartotojo pasirinkti skirstymo strategiją." alt="" coords="626,80,773,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="38,367,73,309,134,226,173,182,217,141,267,105,320,78,362,65,405,57,491,54,572,62,639,74,638,79,572,67,491,59,405,63,363,70,322,83,269,110,221,145,177,186,138,229,77,312,43,369"/>
+<area shape="rect" id="Node000005" href="$spausdinam_8cpp.html#a70a103dcbe6b70e700d8a2411aff17e2" title="Interaktyviai prašo rikiavimo kriterijaus ir rikiuoja studentus." alt="" coords="360,469,493,495"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="61,387,109,402,239,436,355,464,354,469,238,442,107,407,59,392"/>
+<area shape="rect" id="Node000012" href="$Generavimas_8cpp.html#a83f8917f2570ce710ba6698a644d450e" title="Bendro naudojimo skirstymo funkcija." alt="" coords="121,584,261,609"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="45,392,174,571,170,574,41,395"/>
+<area shape="rect" id="Node000020" href="$skaitymas_8cpp.html#a23423a68a7c6da7c2698b2ccbf9557aa" title="Apskaičiuoja galutinius balus visiems studentams konteineryje." alt="" coords="108,633,273,659"/>
+<area shape="poly" id="edge20_Node000001_Node000020" title=" " alt="" coords="37,394,39,436,49,497,71,562,88,592,110,619,116,624,112,628,106,623,84,595,67,564,44,498,34,437,31,394"/>
+<area shape="rect" id="Node000021" href="$meniu_8cpp.html#a4bb692c238b0368aa3ac013f967f18af" title="Paleidžia pagrindinį interaktyvų programos meniu." alt="" coords="135,292,246,317"/>
+<area shape="poly" id="edge21_Node000001_Node000021" title=" " alt="" coords="59,366,150,321,152,326,61,370"/>
+<area shape="rect" id="Node000006" href="$spausdinam_8cpp.html#aba4d2eddda9e028acf1b8c2faba126d2" title="Rikiuoja studentus pagal nurodytą kriterijų (int kodas)." alt="" coords="625,513,773,539"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="494,490,612,509,611,515,493,495"/>
+<area shape="rect" id="Node000007" href="$classStudentas.html#ab5f39edb91818c2fd0ec50e35cce4581" title="Grąžina galutinį balą apskaičiuotą pagal medianą." alt="" coords="867,415,1051,440"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="773,515,817,498,832,487,841,475,850,462,865,449,878,443,880,447,868,454,854,465,845,478,836,491,820,503,775,520"/>
+<area shape="rect" id="Node000008" href="$classStudentas.html#a1325b10f479819956015190c8ba49cf0" title="Grąžina galutinį balą apskaičiuotą pagal vidurkį." alt="" coords="870,464,1047,489"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="766,511,877,489,878,495,767,516"/>
+<area shape="rect" id="Node000009" href="$classZmogus.html#a004b8eb8a80b2648e45026802b416cfd" title=" " alt="" coords="881,513,1037,539"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="774,523,867,523,867,529,774,529"/>
+<area shape="rect" id="Node000010" href="$classZmogus.html#af00bd4ee050cb93b59de8a48340049d7" title=" " alt="" coords="885,563,1033,588"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="767,536,878,557,877,563,766,541"/>
+<area shape="rect" id="Node000011" href="$konteineris_8h.html#a78a77737a29b58defd2e834d981f3771" title="Rikiavimo specializacija std::list konteineriui." alt="" coords="898,612,1019,637"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="740,536,820,569,844,583,868,597,891,605,889,610,866,602,841,588,817,574,738,541"/>
+<area shape="poly" id="edge15_Node000012_Node000005" title=" " alt="" coords="205,582,254,544,286,523,320,505,346,495,348,500,322,510,289,527,257,548,208,586"/>
+<area shape="rect" id="Node000013" href="$konteineris_8h.html#a1ccfb203c1563ac53807708248e3a95e" title="Grąžina aktyvaus konteinerio trumpąjį pavadinimą." alt="" coords="321,519,532,559"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="243,581,330,560,331,565,244,587"/>
+<area shape="rect" id="Node000014" href="$Generavimas_8cpp.html#a89fc80e8e121774a0c47c091ddc5c1ba" title="Sugeneruoja unikalų failo pavadinimą." alt="" coords="359,584,494,609"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="261,594,345,594,345,599,261,599"/>
+<area shape="rect" id="Node000016" href="$Generavimas_8cpp.html#abe8b00215e7c9d927d343694cda2c590" title="Skirsto studentus pagal 1&#45;ą strategiją." alt="" coords="344,633,509,659"/>
+<area shape="poly" id="edge16_Node000012_Node000016" title=" " alt="" coords="253,607,352,628,351,633,252,612"/>
+<area shape="rect" id="Node000017" href="$Generavimas_8cpp.html#a0e5db32447f63219df43b26626dd1ee5" title="Skirsto studentus pagal 2&#45;ą strategiją." alt="" coords="344,683,509,708"/>
+<area shape="poly" id="edge17_Node000012_Node000017" title=" " alt="" coords="250,607,275,618,290,631,299,644,308,656,323,668,339,676,337,680,320,672,304,660,295,647,286,635,272,623,248,612"/>
+<area shape="rect" id="Node000018" href="$Generavimas_8cpp.html#aedd48f7ce08ae142d078ad92729ef494" title="Skirsto studentus pagal 3&#45;ą strategiją (efektyviausia)." alt="" coords="344,732,509,757"/>
+<area shape="poly" id="edge18_Node000012_Node000018" title=" " alt="" coords="257,607,275,619,287,631,294,645,300,671,305,696,312,707,323,719,333,725,330,730,320,723,308,710,300,697,294,672,289,646,282,634,272,623,254,612"/>
+<area shape="rect" id="Node000019" href="$spausdinam_8cpp.html#ae6b484589c99d92f7ac9cbe8ce00b959" title="Išveda studentų sąrašą į nurodytą failą." alt="" coords="376,781,477,807"/>
+<area shape="poly" id="edge19_Node000012_Node000019" title=" " alt="" coords="259,607,275,619,290,638,297,657,299,696,302,733,309,751,323,768,341,780,363,788,361,793,339,785,320,772,304,753,297,734,294,696,292,658,285,640,271,623,256,612"/>
+<area shape="rect" id="Node000015" href="$Generavimas_8cpp.html#a0b0988125d692b59275d54a958937343" title=" " alt="" coords="621,584,778,609"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="494,594,607,594,607,599,494,599"/>
+<area shape="rect" id="Node000022" href="$skaitymas_8cpp.html#a90ec6d53fd600e09f06272997c86dc22" title="Interaktyviai prašo failo pavadinimo ir nuskaito studentus." alt="" coords="367,167,486,192"/>
+<area shape="poly" id="edge22_Node000021_Node000022" title=" " alt="" coords="202,290,251,246,284,222,320,201,353,189,355,194,322,206,287,226,254,250,206,294"/>
+<area shape="rect" id="Node000023" href="$Generavimas_8cpp.html#a533a0a21b762dcd162d0c0ee9af14c1d" title="Generuoja studentų duomenų failą." alt="" coords="369,216,484,241"/>
+<area shape="poly" id="edge24_Node000021_Node000023" title=" " alt="" coords="228,289,321,258,369,243,371,248,322,263,230,294"/>
+<area shape="rect" id="Node000024" href="$classStudentas.html#a556816c96b5fd37bf186e57da67e4f91" title="Sugeneruoja atsitiktinius namų darbų ir egzamino pažymius." alt="" coords="588,267,811,292"/>
+<area shape="poly" id="edge25_Node000021_Node000024" title=" " alt="" coords="246,299,321,295,574,283,575,288,321,301,246,305"/>
+<area shape="rect" id="Node000025" href="$classStudentas.html#aa2f8644798ffa4396c35400dfb10ab23" title="Nustato studento pavardę." alt="" coords="616,316,783,341"/>
+<area shape="poly" id="edge26_Node000021_Node000025" title=" " alt="" coords="246,305,602,321,602,327,246,310"/>
+<area shape="rect" id="Node000026" href="$classStudentas.html#a553cf719758f4821bbd6eeda454fdf03" title="Nustato studento vardą." alt="" coords="620,464,779,489"/>
+<area shape="poly" id="edge27_Node000021_Node000026" title=" " alt="" coords="217,315,275,353,289,367,298,380,308,392,323,402,373,421,447,437,606,463,606,468,445,443,372,426,320,407,304,395,294,383,285,371,272,357,214,320"/>
+<area shape="rect" id="Node000027" href="$skaitymas_8cpp.html#a7e691d0dbb70e6032759fbfad443c490" title="Interaktyviai nuskaito vieno studento duomenis iš konsolės." alt="" coords="369,368,484,393"/>
+<area shape="poly" id="edge28_Node000021_Node000027" title=" " alt="" coords="230,315,322,346,371,361,369,366,321,351,228,320"/>
+<area shape="rect" id="Node000030" href="$tyrimas_8cpp.html#a0fc853d31f208eafd9f0ecb727511e99" title="Paleidžia interaktyvų konteinerių greitaveikos tyrimą." alt="" coords="369,93,484,119"/>
+<area shape="poly" id="edge34_Node000021_Node000030" title=" " alt="" coords="195,290,212,257,239,213,275,167,320,128,355,112,357,117,323,132,279,170,243,216,217,260,200,293"/>
+<area shape="poly" id="edge23_Node000022_Node000022" title=" " alt="" coords="389,168,380,158,385,148,400,142,427,140,460,144,472,153,469,158,458,149,427,145,402,147,388,152,385,158,392,165"/>
+<area shape="poly" id="edge29_Node000027_Node000024" title=" " alt="" coords="448,365,505,333,579,301,606,293,608,298,581,306,508,338,450,370"/>
+<area shape="poly" id="edge32_Node000027_Node000025" title=" " alt="" coords="484,367,618,341,619,347,485,372"/>
+<area shape="poly" id="edge33_Node000027_Node000026" title=" " alt="" coords="484,391,533,410,548,420,558,431,567,440,581,449,607,459,605,464,579,454,564,444,554,434,545,425,531,415,482,396"/>
+<area shape="rect" id="Node000028" href="$classStudentas.html#a6d7f01ee88e3bb9a894ead1659090852" title="Interaktyviai įveda namų darbų pažymius iš konsolės." alt="" coords="593,365,805,391"/>
+<area shape="poly" id="edge30_Node000027_Node000028" title=" " alt="" coords="485,377,579,377,579,382,485,383"/>
+<area shape="rect" id="Node000029" href="$classStudentas.html#a659d6bb3cfd109fe095a9a03eaea2667" title="Nustato egzamino pažymį." alt="" coords="606,415,793,440"/>
+<area shape="poly" id="edge31_Node000027_Node000029" title=" " alt="" coords="485,388,612,410,611,415,484,393"/>
+<area shape="poly" id="edge35_Node000030_Node000002" title=" " alt="" coords="466,91,645,32,647,37,468,96"/>
+<area shape="poly" id="edge36_Node000030_Node000004" title=" " alt="" coords="484,101,612,94,612,100,485,106"/>
+</map>

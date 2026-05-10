@@ -1,0 +1,29 @@
+<map id="vykdytiMeniu" name="vykdytiMeniu">
+<area shape="rect" id="Node000001" title="Paleidžia pagrindinį interaktyvų programos meniu." alt="" coords="5,180,116,205"/>
+<area shape="rect" id="Node000002" href="$skaitymas_8cpp.html#a90ec6d53fd600e09f06272997c86dc22" title="Interaktyviai prašo failo pavadinimo ir nuskaito studentus." alt="" coords="164,29,283,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,178,104,124,131,92,162,64,169,59,172,64,166,68,135,96,108,127,72,181"/>
+<area shape="rect" id="Node000003" href="$Generavimas_8cpp.html#a533a0a21b762dcd162d0c0ee9af14c1d" title="Generuoja studentų duomenų failą." alt="" coords="166,79,281,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="78,178,163,121,184,108,187,113,165,126,81,182"/>
+<area shape="rect" id="Node000004" href="$classStudentas.html#a556816c96b5fd37bf186e57da67e4f91" title="Sugeneruoja atsitiktinius namų darbų ir egzamino pažymius." alt="" coords="339,129,561,155"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="116,179,164,171,324,151,325,157,164,177,117,185"/>
+<area shape="rect" id="Node000005" href="$classStudentas.html#aa2f8644798ffa4396c35400dfb10ab23" title="Nustato studento pavardę." alt="" coords="367,179,533,204"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="116,190,353,189,353,194,116,195"/>
+<area shape="rect" id="Node000006" href="$classStudentas.html#a553cf719758f4821bbd6eeda454fdf03" title="Nustato studento vardą." alt="" coords="371,327,529,352"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="78,204,116,234,165,265,213,285,262,301,357,323,356,329,261,306,211,290,163,270,113,239,74,208"/>
+<area shape="rect" id="Node000007" href="$skaitymas_8cpp.html#a7e691d0dbb70e6032759fbfad443c490" title="Interaktyviai nuskaito vieno studento duomenis iš konsolės." alt="" coords="166,231,281,256"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="103,203,169,224,168,229,102,208"/>
+<area shape="rect" id="Node000010" href="$tyrimas_8cpp.html#a0fc853d31f208eafd9f0ecb727511e99" title="Paleidžia interaktyvų konteinerių greitaveikos tyrimą." alt="" coords="166,376,281,401"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="72,204,111,261,166,332,199,365,195,369,162,336,106,264,68,207"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="196,31,190,21,193,11,205,5,223,3,246,6,255,15,252,19,243,11,223,8,206,10,197,15,196,20,201,28"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="237,228,276,195,330,164,349,156,351,161,332,168,280,200,240,232"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="270,228,330,213,369,204,370,209,331,218,271,233"/>
+<area shape="poly" id="edge12_Node000007_Node000006" title=" " alt="" coords="241,254,281,283,332,312,358,321,356,326,330,316,278,288,238,258"/>
+<area shape="rect" id="Node000008" href="$classStudentas.html#a6d7f01ee88e3bb9a894ead1659090852" title="Interaktyviai įveda namų darbų pažymius iš konsolės." alt="" coords="344,277,556,303"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="282,252,375,272,374,277,281,258"/>
+<area shape="rect" id="Node000009" href="$classStudentas.html#a659d6bb3cfd109fe095a9a03eaea2667" title="Nustato egzamino pažymį." alt="" coords="357,228,543,253"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="281,240,343,239,343,245,281,245"/>
+<area shape="rect" id="Node000011" href="$konteineris_8h.html#affb0aabac553e6cf28ed415389b1c4e0" title="Grąžina aktyvaus konteinerio pilną pavadinimą." alt="" coords="331,425,569,451"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="277,399,331,411,372,420,370,425,330,417,276,404"/>
+<area shape="rect" id="Node000012" href="$Generavimas_8cpp.html#a7e9f03aafbd3f06297c723240a87ce92" title="Interaktyviai prašo vartotojo pasirinkti skirstymo strategiją." alt="" coords="377,376,523,401"/>
+<area shape="poly" id="edge15_Node000010_Node000012" title=" " alt="" coords="281,386,363,386,363,391,281,391"/>
+</map>

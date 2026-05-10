@@ -1,0 +1,15 @@
+<map id="laikai.h" name="laikai.h">
+<area shape="rect" id="Node000001" title="Laiko matavimų struktūra ir pagalbinės funkcijos." alt="" coords="343,5,412,31"/>
+<area shape="rect" id="Node000002" href="$Generavimas_8cpp.html" title=" " alt="" coords="5,79,141,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="330,33,123,81,122,76,329,28"/>
+<area shape="rect" id="Node000003" href="$laikai_8cpp.html" title=" " alt="" coords="166,79,250,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="339,38,237,81,235,76,336,34"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="275,79,357,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="360,43,328,80,324,77,356,40"/>
+<area shape="rect" id="Node000005" href="$skaitymas_8cpp.html" title=" " alt="" coords="382,79,498,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="399,39,432,77,428,80,395,43"/>
+<area shape="rect" id="Node000006" href="$spausdinam_8cpp.html" title=" " alt="" coords="523,79,651,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="425,33,554,76,552,81,423,38"/>
+<area shape="rect" id="Node000007" href="$tyrimas_8cpp.html" title=" " alt="" coords="675,79,773,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="426,27,675,77,674,82,425,32"/>
+</map>
