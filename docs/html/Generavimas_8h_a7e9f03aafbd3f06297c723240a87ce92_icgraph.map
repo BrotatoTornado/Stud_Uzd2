@@ -1,0 +1,10 @@
+<map id="pasirinktiStrategija" name="pasirinktiStrategija">
+<area shape="rect" id="Node000001" title="Interaktyviai prašo vartotojo pasirinkti skirstymo strategiją." alt="" coords="429,5,576,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,21,60,21,60,15,415,15"/>
+<area shape="rect" id="Node000003" href="$tyrimas_8cpp.html#a0fc853d31f208eafd9f0ecb727511e99" title="Paleidžia interaktyvų konteinerių greitaveikos tyrimą." alt="" coords="267,31,381,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="416,33,382,38,381,33,416,28"/>
+<area shape="rect" id="Node000004" href="$meniu_8cpp.html#a4bb692c238b0368aa3ac013f967f18af" title="Paleidžia pagrindinį interaktyvų programos meniu." alt="" coords="108,31,219,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="253,46,219,46,219,41,253,41"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="94,33,60,26,61,21,95,27"/>
+</map>

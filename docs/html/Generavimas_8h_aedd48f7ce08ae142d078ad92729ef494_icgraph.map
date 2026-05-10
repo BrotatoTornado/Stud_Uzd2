@@ -1,0 +1,9 @@
+<map id="skirstymasStrategija3" name="skirstymasStrategija3">
+<area shape="rect" id="Node000001" title="Skirsto studentus pagal 3&#45;ą strategiją (efektyviausia)." alt="" coords="296,31,461,56"/>
+<area shape="rect" id="Node000002" href="$Generavimas_8cpp.html#a83f8917f2570ce710ba6698a644d450e" title="Bendro naudojimo skirstymo funkcija." alt="" coords="108,5,248,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,34,248,29,249,24,283,29"/>
+<area shape="rect" id="Node000004" href="$unit__tests_8cpp.html#ab944c4561984eed1d9d2d402e1d13232" title="Tikrina 3&#45;ą strategiją (std::partition)." alt="" coords="151,55,205,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="283,57,206,67,205,61,282,52"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
