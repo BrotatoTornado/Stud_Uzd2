@@ -38,6 +38,11 @@ pilnai realizuoja **Rule of Five**. Sistema palaiko tris STL konteinerius
 - `Zmogus` iškeltas į atskirą abstrakčią bazinę klasę
 - Atnaujintas `README.md`
 
+### v1.5
+- Nauja **abstrakti bazinė klasė `Zmogus`** – aprašo bendrą žmogaus sąvoką
+-`Studentas` dabar yra **išvestinė klasė** iš `Zmogus`
+-`Zmogus` objektų kurti **negalima** – klasė abstrakti (turi grynąsias virtualias funkcijas)
+
 ### v1.2
 - Realizuoti visi **Rule of Five** metodai `Studentas` klasėje
 - Realizuoti `operator>>` ir `operator<<`
