@@ -1,0 +1,778 @@
+\doxysection{unit\+\_\+tests.\+cpp File Reference}
+\hypertarget{unit__tests_8cpp}{}\label{unit__tests_8cpp}\index{unit\_tests.cpp@{unit\_tests.cpp}}
+
+
+Google Test unit testai \doxylink{classStudentas}{Studentas} klasei.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include "{}Studentas.\+h"{}}\newline
+{\ttfamily \#include "{}Generavimas.\+h"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for unit\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classStudentas}{Studentas}} \mbox{\hyperlink{unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25}{sukurti\+Testini\+Studenta}} ()
+\begin{DoxyCompactList}\small\item\em Sukuria testinį studentą iš srauto eilutės. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c}{TEST}} (Rule\+Of\+Five, Default\+Konstruktorius\+\_\+\+Laukai\+Tusci)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad numatytasis konstruktorius inicializuoja tuščius laukus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1}{TEST}} (Rule\+Of\+Five, Kopijavimo\+Konstruktorius\+\_\+\+Gili\+Kopija)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad kopijavimo konstruktorius sukuria gilią kopiją. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec}{TEST}} (Rule\+Of\+Five, Kopijavimo\+Konstruktorius\+\_\+\+Originalas\+Ne\+Isikis)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad keičiant kopiją originalas nesikeičia (gili kopija). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d}{TEST}} (Rule\+Of\+Five, Kopijavimo\+Priskyrimas\+\_\+\+Duomenys\+Sutampa)
+\begin{DoxyCompactList}\small\item\em Tikrina kopijavimo priskyrimo operatorių. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765}{TEST}} (Rule\+Of\+Five, Kopijavimo\+Priskyrimas\+\_\+\+Savipriskryrimas\+Saugus)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad savipriskyrimas yra saugus (nekelia crash). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0}{TEST}} (Rule\+Of\+Five, Perkelimo\+Konstruktorius\+\_\+\+Tikslas\+Gauna\+Korektiskus\+Duomenis)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad perkėlimo konstruktorius teisingai perkelia duomenis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574}{TEST}} (Rule\+Of\+Five, Perkelimo\+Konstruktorius\+\_\+\+Saltinis\+Lieka\+Ersatz\+Busenos)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad šaltinis po perkėlimo lieka tuščios būsenos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b}{TEST}} (Rule\+Of\+Five, Perkelimo\+Priskyrimas\+\_\+\+Tikslas\+Gauna\+Korektiskus\+Duomenis)
+\begin{DoxyCompactList}\small\item\em Tikrina perkėlimo priskyrimo operatorių. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b}{TEST}} (Rule\+Of\+Five, Perkelimo\+Priskyrimas\+\_\+\+Saltinis\+Lieka\+Ersatz\+Busenos)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad šaltinis po perkėlimo priskyrimo lieka tuščias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a3db68582701e71e90161e2b917922864}{TEST}} (Rule\+Of\+Five, Destruktorius\+\_\+\+Nesukelia\+Klaidos\+Duomenys\+Sunaikinami)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad destruktorius nesukelia klaidų. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9}{TEST}} (Rule\+Of\+Five, Destruktorius\+\_\+\+Masinis\+Sunaikinimas)
+\begin{DoxyCompactList}\small\item\em Tikrina destruktorių su 1000 objektų vektoriuje. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042}{TEST}} (Srautinis\+Konstruktorius, Nuskaito\+Teisingai\+Is\+Eilutes)
+\begin{DoxyCompactList}\small\item\em Tikrina srautinį konstruktorių su standartine eilute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8}{TEST}} (Istream\+Operatorius, Nuskaito\+Viena\+Sudenta)
+\begin{DoxyCompactList}\small\item\em Tikrina operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} su vienu studentu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080}{TEST}} (Istream\+Operatorius, Nuskaito\+Kelis\+Studentus)
+\begin{DoxyCompactList}\small\item\em Tikrina operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} su keliais studentais (eilutė po eilutės). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0}{TEST}} (Ostream\+Operatorius, Isvedas\+Turi\+Bazinius\+Laukus)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} išveda reikiamus laukus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e}{TEST}} (Suskaiciuoti\+Galutini, Vidurkio\+Formule\+Teisinga)
+\begin{DoxyCompactList}\small\item\em Tikrina galutinio balo skaičiavimo formulę (vidurkio variantas). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a43cc991979646299df596b1c828f24f2}{TEST}} (Suskaiciuoti\+Galutini, Galutinis\+Nedaugiau\+Nei10)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad galutinis balas nekyla virš 10. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3}{TEST}} (Suskaiciuoti\+Galutini, Galutinis\+Ne\+Mazesnis\+Nei0)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad galutinis balas ne mažesnis nei 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c}{TEST}} (Abstraktumas, Virtualus\+Dispatch\+Per\+Zmogus\+Ptri)
+\begin{DoxyCompactList}\small\item\em Tikrina virtualų dispatch per bazinės klasės rodyklę. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af}{TEST}} (Abstraktumas, Suskaiciuoti\+Galutini\+Polimorfiskai)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad suskaiciuoti\+Galutini() veikia polimorfiškai. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53}{TEST}} (Skirstymas, Strategija1\+\_\+\+Teisingai\+Skirsto\+Vargsiukus\+Ir\+Protus)
+\begin{DoxyCompactList}\small\item\em Tikrina 1-\/ą skirstymo strategiją (du nauji konteineriai). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20}{TEST}} (Skirstymas, Strategija2\+\_\+\+Istrina\+Mas\+Vargsiukus\+Is\+Originalaus)
+\begin{DoxyCompactList}\small\item\em Tikrina 2-\/ą strategiją (erase iš originalaus konteinerio). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232}{TEST}} (Skirstymas, Strategija3\+\_\+\+Partition\+Teisingai\+Skirsto\+Grupes)
+\begin{DoxyCompactList}\small\item\em Tikrina 3-\/ą strategiją (std\+::partition). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a}{TEST}} (Setters\+Getters, Nustatimo\+Funkcijos\+Veikia)
+\begin{DoxyCompactList}\small\item\em Tikrina, kad set\+Vardas/set\+Pavarde/set\+Egzaminas veikia teisingai. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{unit__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Google Test unit testai \doxylink{classStudentas}{Studentas} klasei. 
+
+Tikrinami visi Rule of Five metodai (privaloma), įvesties/išvesties operatoriai, galutinių balų skaičiavimas ir skirstymo funkcijos.
+
+Paleidimas\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build\ \&\&\ cd\ build}
+\DoxyCodeLine{cmake\ ..\ -\/DBUILD\_TESTS=ON}
+\DoxyCodeLine{cmake\ -\/-\/build\ .}
+\DoxyCodeLine{ctest\ -\/-\/verbose}
+
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+\doxylink{classStudentas}{Studentas} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{unit__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{unit__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!main@{main}}
+\index{main@{main}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00512}{512}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25}\label{unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!sukurtiTestiniStudenta@{sukurtiTestiniStudenta}}
+\index{sukurtiTestiniStudenta@{sukurtiTestiniStudenta}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{sukurtiTestiniStudenta()}{sukurtiTestiniStudenta()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classStudentas}{Studentas}} sukurti\+Testini\+Studenta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sukuria testinį studentą iš srauto eilutės. 
+
+Eilutė\+: "{}\+Jonas Jonaitis 8 7 9 6 10"{} (paskutinis skaičius – egzaminas, likę – namų darbai) 
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+
+
+Referenced by \mbox{\hyperlink{unit__tests_8cpp_source_l00397}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00379}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00309}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00223}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00208}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00070}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00086}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00104}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00120}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00157}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00137}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00190}{TEST()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00173}{TEST()}}, \mbox{\hyperlink{testas_8cpp_source_l00268}{testuoti\+Abstraktuma()}}, \mbox{\hyperlink{testas_8cpp_source_l00153}{testuoti\+Destruktoriu()}}, \mbox{\hyperlink{testas_8cpp_source_l00066}{testuoti\+Kopijavimo\+Konstruktoriu()}}, \mbox{\hyperlink{testas_8cpp_source_l00085}{testuoti\+Kopijavimo\+Priskyrima()}}, \mbox{\hyperlink{testas_8cpp_source_l00214}{testuoti\+Ostream\+Operatoriu()}}, \mbox{\hyperlink{testas_8cpp_source_l00104}{testuoti\+Perkelimo\+Konstruktoriu()}}, and \mbox{\hyperlink{testas_8cpp_source_l00130}{testuoti\+Perkelimo\+Priskyrima()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_ad5555e66227747ad99e35953b7bdbe25_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af}\label{unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Abstraktumas}]{,  }\item[{Suskaiciuoti\+Galutini\+Polimorfiskai}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad suskaiciuoti\+Galutini() veikia polimorfiškai. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00397}{397}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00177}{Studentas\+::set\+Egzaminas()}}, \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}, and \mbox{\hyperlink{classZmogus_a960515f30aabeba1c2c73755806de411}{Zmogus\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a8a4c12f379c9593455b66a2bdf11c6af_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c}\label{unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Abstraktumas}]{,  }\item[{Virtualus\+Dispatch\+Per\+Zmogus\+Ptri}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina virtualų dispatch per bazinės klasės rodyklę. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00379}{379}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, \mbox{\hyperlink{classZmogus_a2bc49f28f437cca626bd9c7b0778b12f}{Zmogus\+::spausdinti()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a91759e7784a1e58d17448a375cdeeb5c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080}\label{unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Istream\+Operatorius}]{,  }\item[{Nuskaito\+Kelis\+Studentus}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} su keliais studentais (eilutė po eilutės). 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00280}{280}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{unit__tests_8cpp_aec6d4b5377b45e35c2a846d268ae9080_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8}\label{unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Istream\+Operatorius}]{,  }\item[{Nuskaito\+Viena\+Sudenta}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} su vienu studentu. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00264}{264}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, and \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{unit__tests_8cpp_a754a81f6be0f1a41f41a3a19ffc085f8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0}\label{unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Ostream\+Operatorius}]{,  }\item[{Isvedas\+Turi\+Bazinius\+Laukus}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} išveda reikiamus laukus. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00309}{309}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a6166e1b3442418d3630239689ceac9f0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c}\label{unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Default\+Konstruktorius\+\_\+\+Laukai\+Tusci}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad numatytasis konstruktorius inicializuoja tuščius laukus. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00153}{Studentas\+::getgalrez\+Med()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{Studentas_8h_source_l00141}{Studentas\+::get\+Vidurkis()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{unit__tests_8cpp_ab94f9344bd4840ec79558e56791b2b4c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9}\label{unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Destruktorius\+\_\+\+Masinis\+Sunaikinimas}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina destruktorių su 1000 objektų vektoriuje. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00223}{223}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a75a7ca8c5faf3d1580e3ee51c804f4f9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a3db68582701e71e90161e2b917922864}\label{unit__tests_8cpp_a3db68582701e71e90161e2b917922864} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Destruktorius\+\_\+\+Nesukelia\+Klaidos\+Duomenys\+Sunaikinami}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad destruktorius nesukelia klaidų. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00208}{208}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a3db68582701e71e90161e2b917922864_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1}\label{unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Kopijavimo\+Konstruktorius\+\_\+\+Gili\+Kopija}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad kopijavimo konstruktorius sukuria gilią kopiją. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00153}{Studentas\+::getgalrez\+Med()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a6b9f6da88dedebab8c8524e76f5191e1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec}\label{unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Kopijavimo\+Konstruktorius\+\_\+\+Originalas\+Ne\+Isikis}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad keičiant kopiją originalas nesikeičia (gili kopija). 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, \mbox{\hyperlink{Studentas_8h_source_l00165}{Studentas\+::set\+Vardas()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_aa7de934bc88c4d34b554aa0ceaede9ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d}\label{unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Kopijavimo\+Priskyrimas\+\_\+\+Duomenys\+Sutampa}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina kopijavimo priskyrimo operatorių. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a99f7a68bbac8a8ba8ea527dc2d98437d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765}\label{unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Kopijavimo\+Priskyrimas\+\_\+\+Savipriskryrimas\+Saugus}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad savipriskyrimas yra saugus (nekelia crash). 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_ab305d8c8d3775f197223470035d8c765_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574}\label{unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Perkelimo\+Konstruktorius\+\_\+\+Saltinis\+Lieka\+Ersatz\+Busenos}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad šaltinis po perkėlimo lieka tuščios būsenos. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00157}{157}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a4ee07601ac25188a62da8c63e7403574_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0}\label{unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Perkelimo\+Konstruktorius\+\_\+\+Tikslas\+Gauna\+Korektiskus\+Duomenis}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad perkėlimo konstruktorius teisingai perkelia duomenis. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00137}{137}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a9a318c8fa767bc8a3cb18a1f031b13a0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b}\label{unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Perkelimo\+Priskyrimas\+\_\+\+Saltinis\+Lieka\+Ersatz\+Busenos}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad šaltinis po perkėlimo priskyrimo lieka tuščias. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00190}{190}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_ae253a6ffd98c1944db6bd8e17f27ca5b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b}\label{unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Rule\+Of\+Five}]{,  }\item[{Perkelimo\+Priskyrimas\+\_\+\+Tikslas\+Gauna\+Korektiskus\+Duomenis}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina perkėlimo priskyrimo operatorių. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00153}{Studentas\+::getgalrez\+Med()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{unit__tests_8cpp_source_l00035}{sukurti\+Testini\+Studenta()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__tests_8cpp_a3c79d26e97519b6203a87793fba89b9b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a}\label{unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Setters\+Getters}]{,  }\item[{Nustatimo\+Funkcijos\+Veikia}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad set\+Vardas/set\+Pavarde/set\+Egzaminas veikia teisingai. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00496}{496}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, \mbox{\hyperlink{Studentas_8h_source_l00177}{Studentas\+::set\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00171}{Studentas\+::set\+Pavarde()}}, and \mbox{\hyperlink{Studentas_8h_source_l00165}{Studentas\+::set\+Vardas()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{unit__tests_8cpp_aaf665588271cf44b3c89ee52f3f50d8a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53}\label{unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Skirstymas}]{,  }\item[{Strategija1\+\_\+\+Teisingai\+Skirsto\+Vargsiukus\+Ir\+Protus}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina 1-\/ą skirstymo strategiją (du nauji konteineriai). 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00416}{416}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8cpp_source_l00054}{skirstymas\+Strategija1()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_a705de03520b281ce1bc817e00505ed53_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20}\label{unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Skirstymas}]{,  }\item[{Strategija2\+\_\+\+Istrina\+Mas\+Vargsiukus\+Is\+Originalaus}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina 2-\/ą strategiją (erase iš originalaus konteinerio). 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00443}{443}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8cpp_source_l00073}{skirstymas\+Strategija2()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_aa8c6fec9596bb9ef0254929402846c20_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232}\label{unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Skirstymas}]{,  }\item[{Strategija3\+\_\+\+Partition\+Teisingai\+Skirsto\+Grupes}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina 3-\/ą strategiją (std\+::partition). 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00469}{469}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Generavimas_8cpp_source_l00094}{skirstymas\+Strategija3()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_ab944c4561984eed1d9d2d402e1d13232_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042}\label{unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Srautinis\+Konstruktorius}]{,  }\item[{Nuskaito\+Teisingai\+Is\+Eilutes}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina srautinį konstruktorių su standartine eilute. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00243}{243}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00135}{Studentas\+::get\+Egzaminas()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, \mbox{\hyperlink{Studentas_8h_source_l00129}{Studentas\+::get\+ND()}}, \mbox{\hyperlink{Zmogus_8h_source_l00070}{Zmogus\+::get\+Pavarde()}}, \mbox{\hyperlink{Zmogus_8h_source_l00069}{Zmogus\+::get\+Vardas()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_a71af12b4bfd17be4f4e33e55fa857042_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a43cc991979646299df596b1c828f24f2}\label{unit__tests_8cpp_a43cc991979646299df596b1c828f24f2} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Suskaiciuoti\+Galutini}]{,  }\item[{Galutinis\+Nedaugiau\+Nei10}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad galutinis balas nekyla virš 10. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00348}{348}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00153}{Studentas\+::getgalrez\+Med()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_a43cc991979646299df596b1c828f24f2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3}\label{unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Suskaiciuoti\+Galutini}]{,  }\item[{Galutinis\+Ne\+Mazesnis\+Nei0}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina, kad galutinis balas ne mažesnis nei 0. 
+
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00362}{362}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00153}{Studentas\+::getgalrez\+Med()}}, \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_a4e180f2a600f9a03b1f17f378d9142d3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e}\label{unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e} 
+\index{unit\_tests.cpp@{unit\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/24]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Suskaiciuoti\+Galutini}]{,  }\item[{Vidurkio\+Formule\+Teisinga}]{ }\end{DoxyParamCaption})}
+
+
+
+Tikrina galutinio balo skaičiavimo formulę (vidurkio variantas). 
+
+Formulė\+: galrez\+Vid = 0.\+4 \texorpdfstring{$\ast$}{*} vidurkis + 0.\+6 \texorpdfstring{$\ast$}{*} egzaminas 
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00335}{335}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Studentas_8h_source_l00147}{Studentas\+::getgalrez\+Vid()}}, and \mbox{\hyperlink{Studentas_8cpp_source_l00162}{Studentas\+::suskaiciuoti\+Galutini()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{unit__tests_8cpp_aeb188f81e57ca13b87179cc2603e968e_cgraph}
+\end{center}
+\end{figure}

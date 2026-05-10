@@ -1,0 +1,85 @@
+\doxysection{tyrimas.\+h File Reference}
+\hypertarget{tyrimas_8h}{}\label{tyrimas_8h}\index{tyrimas.h@{tyrimas.h}}
+
+
+Konteinerių ir skirstymo strategijų greitaveikos tyrimo funkcijos.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{tyrimas_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99}{vykdyti\+Tyrima}} ()
+\begin{DoxyCompactList}\small\item\em Paleidžia interaktyvų konteinerių greitaveikos tyrimą. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Konteinerių ir skirstymo strategijų greitaveikos tyrimo funkcijos. 
+
+Atlieka laiko matavimus skaitant failus, rikiuojant ir skirstant studentus bei išveda rezultatus į konsolę ir Markdown lentelę.
+
+\begin{DoxyAuthor}{Author}
+\doxylink{classStudentas}{Studentas} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{tyrimas_8h_source}{tyrimas.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99}\label{tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99} 
+\index{tyrimas.h@{tyrimas.h}!vykdytiTyrima@{vykdytiTyrima}}
+\index{vykdytiTyrima@{vykdytiTyrima}!tyrimas.h@{tyrimas.h}}
+\doxysubsubsection{\texorpdfstring{vykdytiTyrima()}{vykdytiTyrima()}}
+{\footnotesize\ttfamily void vykdyti\+Tyrima (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Paleidžia interaktyvų konteinerių greitaveikos tyrimą. 
+
+Vartotojas gali pasirinkti\+:
+\begin{DoxyItemize}
+\item skirstymo strategiją;
+\item kartojimų skaičių (rezultatai vidurkinami);
+\item testuojamą failą arba standartinį failų rinkinį (1k–10M eilučių).
+\end{DoxyItemize}
+
+Rezultatai išvedami į konsolę ir išsaugomi kaip Markdown lentelė faile {\ttfamily benchmark\+\_\+\texorpdfstring{$<$}{<}konteineris\texorpdfstring{$>$}{>}\+\_\+S\texorpdfstring{$<$}{<}strategija\texorpdfstring{$>$}{>}.md}. 
+
+Definition at line \mbox{\hyperlink{tyrimas_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{tyrimas_8cpp_source}{tyrimas.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{konteineris_8h_source_l00099}{aktyvaus\+Konteinerio\+Pavadinimas()}}, and \mbox{\hyperlink{Generavimas_8cpp_source_l00036}{pasirinkti\+Strategija()}}.
+
+
+
+Referenced by \mbox{\hyperlink{meniu_8cpp_source_l00011}{vykdyti\+Meniu()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99_icgraph}
+\end{center}
+\end{figure}
