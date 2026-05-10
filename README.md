@@ -77,10 +77,8 @@ pilnai realizuoja **Rule of Five**. Sistema palaiko tris STL konteinerius
 ├── tyrimas.h / .cpp       # Greitaveikos tyrimas
 ├── testas.h / .cpp        # Vidinis testavimo modulis (v1.2)
 ├── laikai.h               # Laiko matavimų struktūra
-├── tests/
-│   └── unit_tests.cpp     # Google Test unit testai (v2.0)
+├── unit_tests.cpp         # Google Test unit testai (v2.0)
 ├── Makefile               # Makefile sistema
-├── Makefile               # Alternatyvus Makefile (Unix)
 ├── Doxyfile               # Doxygen konfigūracija
 └── docs/
     ├── refman.pdf
