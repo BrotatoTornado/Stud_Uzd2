@@ -143,36 +143,23 @@ galrezMed = 0.4 × mediana   + 0.6 × egzaminas
 ## Įdiegimas ir kompiliavimas
 
 ### Reikalavimai
-
-- CMake ≥ 3.16
 - C++17 palaikantis kompiliatorius (GCC ≥ 9, Clang ≥ 10, MSVC 2019+)
 - (Neprivaloma) Doxygen + Graphviz – dokumentacijai
 - (Neprivaloma) TexLive – PDF generavimui iš LaTeX
 
-### CMake (rekomenduojama, visos OS)
+### Kompiliavimo instrukcijos
 
 ```bash
-# Klonuoti repoziciją
-git clone <repo-url>
-cd <repo>
-
-# Sukurti build katalogą
-mkdir build && cd build
 
 # Konfigūruoti (numatytasis: vector, su testais)
-cmake ..
+make ..(programa_vector arba programa_list arba programa_deque)
 
-# Su list konteineriu:
-cmake .. -DUSE_LIST=ON
+make opt -- su optimizavimo flagais
 
-# Su deque konteineriu:
-cmake .. -DUSE_DEQUE=ON
-
-# Be testų:
-cmake .. -DBUILD_TESTS=OFF
+make tests -- su google unit testavimu
 
 # Kompiliuoti
-cmake --build .
+make
 
 # Paleisti programą
 ##Vector
@@ -186,20 +173,6 @@ cmake --build .
 ##Deque
 ./programa_deque        # Linux/macOS
 .\programa_deque      # Windows
-```
-
-### Makefile (Unix)
-
-```bash
-# Numatytasis (vector)
-make
-
-# Su optimizavimo flagais
-make opt
-
-# Su list / deque
-make list
-make deque
 
 # Valymas
 make clean
@@ -242,17 +215,7 @@ Ona       Onienė     5    6    7         8
 
 ---
 
-## Unit testai
-
-### Google Test (v2.0)
-
-```bash
-cd build
-cmake --build .
-ctest --verbose
-# arba tiesiogiai:
-./unit_tests
-```
+## Google Unit testavimas
 
 ### Testuojami komponentai
 
@@ -288,9 +251,6 @@ Meniu pasirinkimas `7` paleidžia `vykdytiTestus()` funkciją iš `testas.cpp`.
 ```bash
 # Iš projekto šaknies:
 doxygen Doxyfile
-
-# Arba per CMake:
-cd build && cmake --build . --target docs
 ```
 
 Dokumentacija bus sukurta kataloguose:
@@ -311,10 +271,10 @@ make          # Linux/macOS (reikia TexLive)
 
 Meniu pasirinkimas `6` atlieka greitaveikos tyrimą:
 
-| Konteineris | Kompiliavimas |
-|-------------|---------------|
-| `std::vector` | `cmake ..` (numatytasis) |
-| `std::list` | `cmake .. -DUSE_LIST=ON` |
-| `std::deque` | `cmake .. -DUSE_DEQUE=ON` |
+| Konteineris |
+|-------------|
+| `std::vector`|
+| `std::list`|
+| `std::deque`|
 
 Rezultatai išsaugomi `benchmark_<konteineris>_S<strategija>.md` faile.
