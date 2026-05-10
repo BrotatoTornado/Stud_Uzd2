@@ -1,0 +1,13 @@
+<map id="skaitomRanka" name="skaitomRanka">
+<area shape="rect" id="Node000001" title="Interaktyviai nuskaito vieno studento duomenis iš konsolės." alt="" coords="5,104,120,129"/>
+<area shape="rect" id="Node000002" href="$classStudentas.html#a556816c96b5fd37bf186e57da67e4f91" title="Sugeneruoja atsitiktinius namų darbų ir egzamino pažymius." alt="" coords="168,5,391,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,101,116,70,167,40,186,32,188,37,169,44,119,74,80,106"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#a6d7f01ee88e3bb9a894ead1659090852" title="Interaktyviai įveda namų darbų pažymius iš konsolės." alt="" coords="173,55,385,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,101,167,89,205,80,206,86,169,94,116,107"/>
+<area shape="rect" id="Node000004" href="$classStudentas.html#a659d6bb3cfd109fe095a9a03eaea2667" title="Nustato egzamino pažymį." alt="" coords="186,104,373,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,114,172,114,172,119,120,119"/>
+<area shape="rect" id="Node000005" href="$classStudentas.html#aa2f8644798ffa4396c35400dfb10ab23" title="Nustato studento pavardę." alt="" coords="196,153,363,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="120,127,169,138,210,148,209,153,167,143,118,132"/>
+<area shape="rect" id="Node000006" href="$classStudentas.html#a553cf719758f4821bbd6eeda454fdf03" title="Nustato studento vardą." alt="" coords="200,203,359,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="80,127,119,158,169,188,193,196,191,201,167,192,116,162,77,132"/>
+</map>

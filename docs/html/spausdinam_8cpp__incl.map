@@ -1,0 +1,39 @@
+<map id="spausdinam.cpp" name="spausdinam.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="591,5,719,31"/>
+<area shape="rect" id="Node000002" href="$spausdinam_8h.html" title="Studentų duomenų rikiavimo ir išvedimo funkcijų deklaracijos." alt="" coords="164,79,277,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="591,32,291,81,290,76,590,27"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="312,372,392,397"/>
+<area shape="poly" id="edge20_Node000001_Node000006" title=" " alt="" coords="602,33,557,51,536,64,518,80,504,100,496,118,494,163,494,239,490,286,483,305,468,326,438,351,405,369,402,364,435,347,464,322,478,302,485,284,488,239,488,163,491,117,499,97,514,77,533,60,555,46,600,28"/>
+<area shape="rect" id="Node000012" href="$laikai_8h.html" title="Laiko matavimų struktūra ir pagalbinės funkcijos." alt="" coords="528,79,598,104"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="642,33,590,72,587,68,639,29"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="622,79,688,104"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="658,31,658,65,652,65,652,31"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="713,79,786,104"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="672,29,725,68,722,72,669,33"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="811,79,886,104"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="687,28,805,71,803,76,685,33"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="910,79,997,104"/>
+<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="704,28,898,74,896,79,702,33"/>
+<area shape="rect" id="Node000003" href="$konteineris_8h.html" title="Kompiliavimo laiku pasirenkamas studentų konteineris." alt="" coords="167,152,274,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,104,223,138,218,138,218,104"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="34,372,92,397"/>
+<area shape="poly" id="edge15_Node000002_Node000007" title=" " alt="" coords="184,107,141,123,94,149,49,183,30,204,15,226,10,241,8,264,10,292,19,323,29,343,43,360,39,363,25,346,14,325,5,293,3,264,5,240,10,224,26,200,45,179,91,144,139,119,182,102"/>
+<area shape="rect" id="Node000004" href="$Studentas_8h.html" title="Studento klasės apibrėžimas." alt="" coords="304,225,403,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="243,175,321,216,319,221,241,180"/>
+<area shape="poly" id="edge13_Node000003_Node000007" title=" " alt="" coords="167,169,131,174,93,184,58,201,30,227,22,242,19,259,22,295,34,330,50,359,45,361,29,332,17,296,13,259,17,240,26,224,55,196,91,179,130,168,166,164"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="390,299,453,324"/>
+<area shape="poly" id="edge14_Node000003_Node000008" title=" " alt="" coords="274,164,311,169,350,179,387,197,417,224,425,238,429,254,429,285,424,285,424,255,420,240,413,227,384,201,348,184,310,174,274,169"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="40,225,126,251"/>
+<area shape="poly" id="edge10_Node000003_Node000009" title=" " alt="" coords="199,180,119,221,116,217,197,175"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="150,225,213,251"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="216,179,197,215,192,212,212,176"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="238,225,280,251"/>
+<area shape="poly" id="edge12_Node000003_Node000011" title=" " alt="" coords="229,176,249,212,244,215,224,179"/>
+<area shape="rect" id="Node000005" href="$Zmogus_8h.html" title="Abstrakti bazinė klasė žmogui." alt="" coords="228,299,314,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="342,253,297,292,293,287,339,249"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="356,251,355,358,350,358,351,251"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="326,253,218,301,95,367,93,363,215,296,324,248"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="367,249,403,287,399,290,363,253"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="286,322,331,361,327,365,282,326"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="238,327,107,371,105,366,237,321"/>
+</map>

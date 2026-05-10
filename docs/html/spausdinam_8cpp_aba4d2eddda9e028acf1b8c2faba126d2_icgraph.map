@@ -1,0 +1,12 @@
+<map id="surikiuotiStudentus" name="surikiuotiStudentus">
+<area shape="rect" id="Node000001" title="Rikiuoja studentus pagal nurodytą kriterijų (int kodas)." alt="" coords="535,31,683,56"/>
+<area shape="rect" id="Node000002" href="$spausdinam_8cpp.html#a70a103dcbe6b70e700d8a2411aff17e2" title="Interaktyviai prašo rikiavimo kriterijaus ir rikiuoja studentus." alt="" coords="325,5,458,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,36,458,28,458,23,521,31"/>
+<area shape="rect" id="Node000005" href="$spausdinam_8cpp.html#a7e246727d186158daa8643faf7eefcfe" title="Rikiuoja studentus pagal galutinį vidurkio balą (didėjančia tvarka)." alt="" coords="296,55,487,80"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="521,56,487,59,487,54,521,50"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,21,60,21,60,15,311,15"/>
+<area shape="rect" id="Node000004" href="$Generavimas_8cpp.html#a83f8917f2570ce710ba6698a644d450e" title="Bendro naudojimo skirstymo funkcija." alt="" coords="108,31,248,56"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="311,30,248,38,248,32,311,25"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="94,31,60,25,61,20,95,26"/>
+</map>

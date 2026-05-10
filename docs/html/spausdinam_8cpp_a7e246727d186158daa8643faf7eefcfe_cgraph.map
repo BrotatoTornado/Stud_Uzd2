@@ -1,0 +1,15 @@
+<map id="surikiuotiPagalGalutiniVid" name="surikiuotiPagalGalutiniVid">
+<area shape="rect" id="Node000001" title="Rikiuoja studentus pagal galutinį vidurkio balą (didėjančia tvarka)." alt="" coords="5,104,196,129"/>
+<area shape="rect" id="Node000002" href="$spausdinam_8cpp.html#aba4d2eddda9e028acf1b8c2faba126d2" title="Rikiuoja studentus pagal nurodytą kriterijų (int kodas)." alt="" coords="244,104,392,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,114,230,114,230,119,196,119"/>
+<area shape="rect" id="Node000003" href="$classStudentas.html#ab5f39edb91818c2fd0ec50e35cce4581" title="Grąžina galutinį balą apskaičiuotą pagal medianą." alt="" coords="440,5,624,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,102,381,71,439,40,458,32,460,37,441,44,383,75,338,106"/>
+<area shape="rect" id="Node000004" href="$classStudentas.html#a1325b10f479819956015190c8ba49cf0" title="Grąžina galutinį balą apskaičiuotą pagal vidurkį." alt="" coords="443,55,621,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="373,101,462,81,463,86,374,107"/>
+<area shape="rect" id="Node000005" href="$classZmogus.html#a004b8eb8a80b2648e45026802b416cfd" title=" " alt="" coords="454,104,610,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="392,114,440,114,440,119,392,119"/>
+<area shape="rect" id="Node000006" href="$classZmogus.html#af00bd4ee050cb93b59de8a48340049d7" title=" " alt="" coords="458,153,606,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="374,127,463,148,462,153,373,132"/>
+<area shape="rect" id="Node000007" href="$konteineris_8h.html#a78a77737a29b58defd2e834d981f3771" title="Rikiavimo specializacija std::list konteineriui." alt="" coords="471,203,593,228"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="338,127,384,157,441,188,464,196,462,201,439,192,381,162,335,132"/>
+</map>

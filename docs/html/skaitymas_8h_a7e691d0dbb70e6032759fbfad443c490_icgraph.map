@@ -1,0 +1,7 @@
+<map id="skaitomRanka" name="skaitomRanka">
+<area shape="rect" id="Node000001" title="Interaktyviai nuskaito vieno studento duomenis iš konsolės." alt="" coords="267,5,381,31"/>
+<area shape="rect" id="Node000002" href="$meniu_8cpp.html#a4bb692c238b0368aa3ac013f967f18af" title="Paleidžia pagrindinį interaktyvų programos meniu." alt="" coords="108,5,219,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,21,219,21,219,15,253,15"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
