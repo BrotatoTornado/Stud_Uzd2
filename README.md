@@ -74,10 +74,11 @@ pilnai realizuoja **Rule of Five**. Sistema palaiko tris STL konteinerius
 ├── laikai.h               # Laiko matavimų struktūra
 ├── tests/
 │   └── unit_tests.cpp     # Google Test unit testai (v2.0)
-├── CMakeLists.txt         # CMake build sistema
+├── Makefile               # Makefile sistema
 ├── Makefile               # Alternatyvus Makefile (Unix)
 ├── Doxyfile               # Doxygen konfigūracija
 └── docs/
+    ├── refman.pdf
     ├── html/              # HTML dokumentacija
     └── latex/             # LaTeX dokumentacija + PDF
 ```
