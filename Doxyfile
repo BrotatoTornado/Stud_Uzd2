@@ -1,0 +1,100 @@
+# Doxyfile 1.9.x
+# Sugeneruota automatiškai programai StudentuProjektasV3
+
+#---------------------------------------------------------------------------
+# Projekto informacija
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "Studentų Projektas v3.0 – Vector<T>"
+PROJECT_NUMBER         = 3.0
+PROJECT_BRIEF          = "std::vector alternatyva – nuosava Vector<T> klasė ir studentų valdymo programa"
+OUTPUT_DIRECTORY       = docs/html
+CREATE_SUBDIRS         = YES
+
+#---------------------------------------------------------------------------
+# Įvesties šaltiniai
+#---------------------------------------------------------------------------
+INPUT                  = src/Vector.h \
+                         src/Studentas.h src/Studentas.cpp \
+                         src/Zmogus.h src/Zmogus.cpp \
+                         src/konteineris.h \
+                         src/laikai.h src/laikai.cpp \
+                         src/skaitymas.h src/skaitymas.cpp \
+                         src/spausdinam.h src/spausdinam.cpp \
+                         src/meniu.h src/meniu.cpp \
+                         src/Generavimas.h src/Generavimas.cpp \
+                         src/tyrimas.h src/tyrimas.cpp \
+                         src/main.cpp \
+                         tests/vector_tests.cpp \
+                         benchmark/spartos_analize.cpp
+
+RECURSIVE              = NO
+FILE_PATTERNS          = *.h *.cpp
+
+#---------------------------------------------------------------------------
+# Išvestis
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+HTML_OUTPUT            = .
+HTML_FILE_EXTENSION    = .html
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 100
+
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_XML           = NO
+
+#---------------------------------------------------------------------------
+# Ekvilibracija
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = NO
+
+INHERIT_DOCS           = YES
+SEPARATE_MEMBER_PAGES  = NO
+
+#---------------------------------------------------------------------------
+# Grafiniai elementai
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+CLASS_DIAGRAMS         = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+#---------------------------------------------------------------------------
+# Kalbos ir koduotė
+#---------------------------------------------------------------------------
+OUTPUT_LANGUAGE        = Lithuanian
+INPUT_ENCODING         = UTF-8
+
+#---------------------------------------------------------------------------
+# Šaltinio kodo rodymas
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+STRIP_CODE_COMMENTS    = NO
+VERBATIM_HEADERS       = YES
+
+#---------------------------------------------------------------------------
+# Perspėjimai
+#---------------------------------------------------------------------------
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+
+#---------------------------------------------------------------------------
+# Preprocesorius
+#---------------------------------------------------------------------------
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+PREDEFINED             = USE_MYVECTOR
+SKIP_FUNCTION_MACROS   = YES
