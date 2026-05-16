@@ -36,6 +36,23 @@ inline std::string aktyvausKonteinerioTrumpasPavadinimas()
     return "deque";
 }
 
+#elif defined(USE_MYVECTOR)
+
+#include "Vector.h"
+
+template <typename T>
+using StudentuKonteineris = Vector<T>;
+
+inline std::string aktyvausKonteinerioPavadinimas()
+{
+    return "Vector<T> (nuosava realizacija)";
+}
+
+inline std::string aktyvausKonteinerioTrumpasPavadinimas()
+{
+    return "myvector";
+}
+
 #else
 template <typename T>
 using StudentuKonteineris = std::vector<T>;
