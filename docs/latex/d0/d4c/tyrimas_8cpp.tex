@@ -1,0 +1,47 @@
+\doxysection{tyrimas.\+cpp Failo Nuoroda}
+\hypertarget{tyrimas_8cpp}{}\label{tyrimas_8cpp}\index{tyrimas.cpp@{tyrimas.cpp}}
+{\ttfamily \#include "{}tyrimas.\+h"{}}\newline
+{\ttfamily \#include "{}Generavimas.\+h"{}}\newline
+{\ttfamily \#include "{}konteineris.\+h"{}}\newline
+{\ttfamily \#include "{}laikai.\+h"{}}\newline
+{\ttfamily \#include "{}skaitymas.\+h"{}}\newline
+{\ttfamily \#include "{}spausdinam.\+h"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Klasės}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTyrimoIrasas}{Tyrimo\+Irasas}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99}{vykdyti\+Tyrima}} ()
+\begin{DoxyCompactList}\small\item\em Paleidžia interaktyvų konteinerių greitaveikos tyrimą. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99}\label{tyrimas_8cpp_a0fc853d31f208eafd9f0ecb727511e99} 
+\index{tyrimas.cpp@{tyrimas.cpp}!vykdytiTyrima@{vykdytiTyrima}}
+\index{vykdytiTyrima@{vykdytiTyrima}!tyrimas.cpp@{tyrimas.cpp}}
+\doxysubsubsection{\texorpdfstring{vykdytiTyrima()}{vykdytiTyrima()}}
+{\footnotesize\ttfamily void vykdyti\+Tyrima (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Paleidžia interaktyvų konteinerių greitaveikos tyrimą. 
+
+Vartotojas gali pasirinkti\+:
+\begin{DoxyItemize}
+\item skirstymo strategiją;
+\item kartojimų skaičių (rezultatai vidurkinami);
+\item testuojamą failą arba standartinį failų rinkinį (1k–10M eilučių).
+\end{DoxyItemize}
+
+Rezultatai išvedami į konsolę ir išsaugomi kaip Markdown lentelė faile {\ttfamily benchmark\+\_\+\texorpdfstring{$<$}{<}konteineris\texorpdfstring{$>$}{>}\+\_\+S\texorpdfstring{$<$}{<}strategija\texorpdfstring{$>$}{>}.md}. 
+
+Apibrėžimas failo \mbox{\hyperlink{tyrimas_8cpp_source}{tyrimas.\+cpp}} eilutėje \mbox{\hyperlink{tyrimas_8cpp_source_l00134}{134}}.
+

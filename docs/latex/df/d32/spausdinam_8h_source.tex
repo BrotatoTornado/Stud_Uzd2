@@ -1,0 +1,65 @@
+\doxysection{spausdinam.\+h}
+\hypertarget{spausdinam_8h_source}{}\label{spausdinam_8h_source}\mbox{\hyperlink{spausdinam_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ spausdinam.h}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Studentų\ duomenų\ rikiavimo\ ir\ išvedimo\ funkcijų\ deklaracijos.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Pateikia\ funkcijas\ studentų\ rikiavimui\ pagal\ įvairius\ kriterijus}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00006}00006\ \textcolor{comment}{\ *\ ir\ duomenų\ išvedimui\ į\ failą.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00007}00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00008}00008\ \textcolor{comment}{\ *\ @author\ Studentas}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00009}00009\ \textcolor{comment}{\ *\ @version\ 3.0}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00010}00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00012}00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{konteineris_8h}{konteineris.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00017}00017\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00018}00018\ \textcolor{comment}{\ /**}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00019}00019\ \textcolor{comment}{\ \ *\ @brief\ Išveda\ studentų\ sąrašą\ į\ nurodytą\ failą.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00020}00020\ \textcolor{comment}{\ \ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00021}00021\ \textcolor{comment}{\ \ *\ Rašo\ lentelę\ su\ kolonėlėmis:\ Vardas,\ Pavardė,\ Galutinis(Vid.),\ Galutinis(Med.).}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00022}00022\ \textcolor{comment}{\ \ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00023}00023\ \textcolor{comment}{\ \ *\ @param\ studis\ Studentų\ konteineris.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00024}00024\ \textcolor{comment}{\ \ *\ @param\ pav\ Išvesties\ failo\ pavadinimas.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00025}00025\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00027}00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959}{spausdinam}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector}{StudContainer}}\&\ studis,\ \textcolor{keyword}{const}\ std::string\&\ pav);}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00028}00028\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00029}00029\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00030}00030\ \textcolor{comment}{\ *\ @brief\ Interaktyviai\ prašo\ rikiavimo\ kriterijaus\ ir\ rikiuoja\ studentus.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00031}00031\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00032}00032\ \textcolor{comment}{\ *\ Išveda\ meniu\ į\ konsolę,\ leidžia\ pasirinkti\ rikiavimą\ pagal:}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00033}00033\ \textcolor{comment}{\ *\ vardą,\ pavardę,\ galutinį\ vidurkio\ arba\ medianos\ balą.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00034}00034\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00035}00035\ \textcolor{comment}{\ *\ @param\ studis\ Rikiuojamas\ konteineris.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00036}00036\ \textcolor{comment}{\ *\ @param\ target\ Rodomas\ tekste\ vardas\ (pvz.\ \`{}"{}studentus"{}`,\ \`{}"{}vargsiukus"{}`).}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @throws\ std::runtime\_error\ Jei\ vartotojo\ įvestis\ neteisinga.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00038}00038\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2}{rikiuotiStudentus}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis,\ \textcolor{keyword}{const}\ std::string\&\ target);}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00041}00041\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00042}00042\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00043}00043\ \textcolor{comment}{\ *\ @brief\ Rikiuoja\ studentus\ pagal\ nurodytą\ kriterijų\ (int\ kodas).}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00044}00044\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00045}00045\ \textcolor{comment}{\ *\ @param\ studis\ Rikiuojamas\ konteineris.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00046}00046\ \textcolor{comment}{\ *\ @param\ pasirinkimas\ Rikiavimo\ kriterijus:\ 1–vardas,\ 2–pavardė,\ 3–Vid.,\ 4–Med.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00047}00047\ \textcolor{comment}{\ *\ @throws\ std::runtime\_error\ Jei\ \`{}pasirinkimas`\ nėra\ 1–4.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00048}00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00050}00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2}{surikiuotiStudentus}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis,\ \textcolor{keywordtype}{int}\ pasirinkimas);}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00051}00051\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00052}00052\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00053}00053\ \textcolor{comment}{\ *\ @brief\ Rikiuoja\ studentus\ pagal\ galutinį\ vidurkio\ balą\ (didėjančia\ tvarka).}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00054}00054\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00055}00055\ \textcolor{comment}{\ *\ Patogiausia\ funkcija\ tyrimui\ -\/\ nenaudoja\ interaktyvaus\ meniu.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00056}00056\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00057}00057\ \textcolor{comment}{\ *\ @param\ studis\ Rikiuojamas\ konteineris.}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00058}00058\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{spausdinam_8h_source_l00060}00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spausdinam_8h_a7e246727d186158daa8643faf7eefcfe}{surikiuotiPagalGalutiniVid}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis);}
+
+\end{DoxyCode}

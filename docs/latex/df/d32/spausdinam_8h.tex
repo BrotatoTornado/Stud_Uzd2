@@ -1,0 +1,138 @@
+\doxysection{spausdinam.\+h Failo Nuoroda}
+\hypertarget{spausdinam_8h}{}\label{spausdinam_8h}\index{spausdinam.h@{spausdinam.h}}
+
+
+Studentų duomenų rikiavimo ir išvedimo funkcijų deklaracijos.  
+
+
+{\ttfamily \#include "{}konteineris.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959}{spausdinam}} (const \mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&studis, const std\+::string \&pav)
+\begin{DoxyCompactList}\small\item\em Išveda studentų sąrašą į nurodytą failą. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2}{rikiuoti\+Studentus}} (\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&studis, const std\+::string \&target)
+\begin{DoxyCompactList}\small\item\em Interaktyviai prašo rikiavimo kriterijaus ir rikiuoja studentus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2}{surikiuoti\+Studentus}} (\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&studis, int pasirinkimas)
+\begin{DoxyCompactList}\small\item\em Rikiuoja studentus pagal nurodytą kriterijų (int kodas). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spausdinam_8h_a7e246727d186158daa8643faf7eefcfe}{surikiuoti\+Pagal\+Galutini\+Vid}} (\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Rikiuoja studentus pagal galutinį vidurkio balą (didėjančia tvarka). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Smulkus aprašymas}
+Studentų duomenų rikiavimo ir išvedimo funkcijų deklaracijos. 
+
+Pateikia funkcijas studentų rikiavimui pagal įvairius kriterijus ir duomenų išvedimui į failą.
+
+\begin{DoxyAuthor}{Autorius}
+\doxylink{classStudentas}{Studentas} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versija}
+3.\+0 
+\end{DoxyVersion}
+
+
+Apibrėžimas faile \mbox{\hyperlink{spausdinam_8h_source}{spausdinam.\+h}}.
+
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2}\label{spausdinam_8h_a70a103dcbe6b70e700d8a2411aff17e2} 
+\index{spausdinam.h@{spausdinam.h}!rikiuotiStudentus@{rikiuotiStudentus}}
+\index{rikiuotiStudentus@{rikiuotiStudentus}!spausdinam.h@{spausdinam.h}}
+\doxysubsubsection{\texorpdfstring{rikiuotiStudentus()}{rikiuotiStudentus()}}
+{\footnotesize\ttfamily void rikiuoti\+Studentus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&}]{studis,  }\item[{const std\+::string \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Interaktyviai prašo rikiavimo kriterijaus ir rikiuoja studentus. 
+
+Išveda meniu į konsolę, leidžia pasirinkti rikiavimą pagal\+: vardą, pavardę, galutinį vidurkio arba medianos balą.
+
+
+\begin{DoxyParams}{Parametrai}
+{\em studis} & Rikiuojamas konteineris. \\
+\hline
+{\em target} & Rodomas tekste vardas (pvz. {\ttfamily "{}studentus"{}}, {\ttfamily "{}vargsiukus"{}}). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Išimtys}
+{\em std\+::runtime\+\_\+error} & Jei vartotojo įvestis neteisinga. \\
+\hline
+\end{DoxyExceptions}
+
+
+Apibrėžimas failo \mbox{\hyperlink{spausdinam_8cpp_source}{spausdinam.\+cpp}} eilutėje \mbox{\hyperlink{spausdinam_8cpp_source_l00055}{55}}.
+
+\Hypertarget{spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959}\label{spausdinam_8h_ae6b484589c99d92f7ac9cbe8ce00b959} 
+\index{spausdinam.h@{spausdinam.h}!spausdinam@{spausdinam}}
+\index{spausdinam@{spausdinam}!spausdinam.h@{spausdinam.h}}
+\doxysubsubsection{\texorpdfstring{spausdinam()}{spausdinam()}}
+{\footnotesize\ttfamily void spausdinam (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&}]{studis,  }\item[{const std\+::string \&}]{pav }\end{DoxyParamCaption})}
+
+
+
+Išveda studentų sąrašą į nurodytą failą. 
+
+Rašo lentelę su kolonėlėmis\+: Vardas, Pavardė, Galutinis(Vid.), Galutinis(Med.).
+
+
+\begin{DoxyParams}{Parametrai}
+{\em studis} & Studentų konteineris. \\
+\hline
+{\em pav} & Išvesties failo pavadinimas. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \mbox{\hyperlink{spausdinam_8cpp_source}{spausdinam.\+cpp}} eilutėje \mbox{\hyperlink{spausdinam_8cpp_source_l00076}{76}}.
+
+\Hypertarget{spausdinam_8h_a7e246727d186158daa8643faf7eefcfe}\label{spausdinam_8h_a7e246727d186158daa8643faf7eefcfe} 
+\index{spausdinam.h@{spausdinam.h}!surikiuotiPagalGalutiniVid@{surikiuotiPagalGalutiniVid}}
+\index{surikiuotiPagalGalutiniVid@{surikiuotiPagalGalutiniVid}!spausdinam.h@{spausdinam.h}}
+\doxysubsubsection{\texorpdfstring{surikiuotiPagalGalutiniVid()}{surikiuotiPagalGalutiniVid()}}
+{\footnotesize\ttfamily void surikiuoti\+Pagal\+Galutini\+Vid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Rikiuoja studentus pagal galutinį vidurkio balą (didėjančia tvarka). 
+
+Patogiausia funkcija tyrimui -\/ nenaudoja interaktyvaus meniu.
+
+
+\begin{DoxyParams}{Parametrai}
+{\em studis} & Rikiuojamas konteineris. \\
+\hline
+\end{DoxyParams}
+
+
+Apibrėžimas failo \mbox{\hyperlink{spausdinam_8cpp_source}{spausdinam.\+cpp}} eilutėje \mbox{\hyperlink{spausdinam_8cpp_source_l00050}{50}}.
+
+\Hypertarget{spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2}\label{spausdinam_8h_aba4d2eddda9e028acf1b8c2faba126d2} 
+\index{spausdinam.h@{spausdinam.h}!surikiuotiStudentus@{surikiuotiStudentus}}
+\index{surikiuotiStudentus@{surikiuotiStudentus}!spausdinam.h@{spausdinam.h}}
+\doxysubsubsection{\texorpdfstring{surikiuotiStudentus()}{surikiuotiStudentus()}}
+{\footnotesize\ttfamily void surikiuoti\+Studentus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&}]{studis,  }\item[{int}]{pasirinkimas }\end{DoxyParamCaption})}
+
+
+
+Rikiuoja studentus pagal nurodytą kriterijų (int kodas). 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em studis} & Rikiuojamas konteineris. \\
+\hline
+{\em pasirinkimas} & Rikiavimo kriterijus\+: 1–vardas, 2–pavardė, 3–\+Vid., 4–\+Med. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Išimtys}
+{\em std\+::runtime\+\_\+error} & Jei {\ttfamily pasirinkimas} nėra 1–4. \\
+\hline
+\end{DoxyExceptions}
+
+
+Apibrėžimas failo \mbox{\hyperlink{spausdinam_8cpp_source}{spausdinam.\+cpp}} eilutėje \mbox{\hyperlink{spausdinam_8cpp_source_l00010}{10}}.
+

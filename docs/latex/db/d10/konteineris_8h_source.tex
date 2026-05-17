@@ -1,0 +1,89 @@
+\doxysection{konteineris.\+h}
+\hypertarget{konteineris_8h_source}{}\label{konteineris_8h_source}\mbox{\hyperlink{konteineris_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Studentas_8h}{Studentas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00011}00011\ \textcolor{preprocessor}{\#if\ defined(USE\_LIST)}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00012}00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00013}00013\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classVector}{StudentuKonteineris}}\ =\ std::list<T>;}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00015}00015\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{aktyvausKonteinerioPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}std::list"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00020}00020\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvausKonteinerioTrumpasPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}list"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00025}00025\ \textcolor{preprocessor}{\#elif\ defined(USE\_DEQUE)}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00026}00026\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00027}00027\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classVector}{StudentuKonteineris}}\ =\ std::deque<T>;}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00029}00029\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{aktyvausKonteinerioPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}std::deque"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00034}00034\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvausKonteinerioTrumpasPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}deque"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00039}00039\ \textcolor{preprocessor}{\#elif\ defined(USE\_MYVECTOR)}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00041}00041\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector_8h}{Vector.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00043}00043\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00044}\mbox{\hyperlink{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea}{00044}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classVector}{StudentuKonteineris}}\ =\ \mbox{\hyperlink{classVector}{Vector<T>}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00046}\mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{00046}}\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{aktyvausKonteinerioPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Vector<T>\ (nuosava\ realizacija)"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00051}\mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{00051}}\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvausKonteinerioTrumpasPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00052}00052\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}myvector"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00056}00056\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00057}00057\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00058}00058\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classVector}{StudentuKonteineris}}\ =\ std::vector<T>;}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00060}00060\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{aktyvausKonteinerioPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}std::vector"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00065}00065\ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvausKonteinerioTrumpasPavadinimas}}()}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}vector"{}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00069}00069\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00071}00071\ \textcolor{comment}{//\ StudContainer\ dabar\ laiko\ objektus\ (\ yay\ :)\ )}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00072}\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{00072}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classVector}{StudContainer}}\ =\ \mbox{\hyperlink{classVector}{StudentuKonteineris<Studentas>}};}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00074}00074\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ Alloc,\ \textcolor{keyword}{typename}\ Compare>}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00075}\mbox{\hyperlink{konteineris_8h_a78a77737a29b58defd2e834d981f3771}{00075}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{konteineris_8h_a78a77737a29b58defd2e834d981f3771}{konteinerioSort}}(std::list<T,\ Alloc>\&\ konteineris,\ Compare\ comp)}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00076}00076\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00077}00077\ \ \ \ \ konteineris.sort(comp);}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00080}00080\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ Container,\ \textcolor{keyword}{typename}\ Compare>}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00081}\mbox{\hyperlink{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{konteineris_8h_a78a77737a29b58defd2e834d981f3771}{konteinerioSort}}(Container\&\ konteineris,\ Compare\ comp)}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00082}00082\ \{}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00083}00083\ \ \ \ \ std::sort(konteineris.begin(),\ konteineris.end(),\ comp);}
+\DoxyCodeLine{\Hypertarget{konteineris_8h_source_l00084}00084\ \}}
+
+\end{DoxyCode}

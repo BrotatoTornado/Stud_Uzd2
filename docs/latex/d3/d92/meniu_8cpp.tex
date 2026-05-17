@@ -1,0 +1,56 @@
+\doxysection{meniu.\+cpp Failo Nuoroda}
+\hypertarget{meniu_8cpp}{}\label{meniu_8cpp}\index{meniu.cpp@{meniu.cpp}}
+{\ttfamily \#include "{}meniu.\+h"{}}\newline
+{\ttfamily \#include "{}Generavimas.\+h"{}}\newline
+{\ttfamily \#include "{}skaitymas.\+h"{}}\newline
+{\ttfamily \#include "{}tyrimas.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af}{vykdyti\+Meniu}} (\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&studis)
+\begin{DoxyCompactList}\small\item\em Paleidžia pagrindinį interaktyvų programos meniu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af}\label{meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af} 
+\index{meniu.cpp@{meniu.cpp}!vykdytiMeniu@{vykdytiMeniu}}
+\index{vykdytiMeniu@{vykdytiMeniu}!meniu.cpp@{meniu.cpp}}
+\doxysubsubsection{\texorpdfstring{vykdytiMeniu()}{vykdytiMeniu()}}
+{\footnotesize\ttfamily bool vykdyti\+Meniu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} \&}]{studis }\end{DoxyParamCaption})}
+
+
+
+Paleidžia pagrindinį interaktyvų programos meniu. 
+
+Leidžia vartotojui pasirinkti vieną iš šių veiksmų\+:
+\begin{DoxyItemize}
+\item įvesti studentą rankiniu būdu;
+\item nuskaityti studentus iš failo;
+\item pridėti atsitiktinius studentus;
+\item generuoti duomenų failą;
+\item atlikti konteinerių greitaveikos tyrimą;
+\item paleisti klasės unit testus;
+\item tikrinti \doxylink{classZmogus}{Zmogus} abstraktumą;
+\item baigti darbą.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametrai}
+{\em studis} & Studentų konteineris, į kurį pridedami / keičiami duomenys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+{\ttfamily true} jei reikia tęsti programą (grįžti į pagrindinį ciklą), {\ttfamily false} jei vartotojas pasirinko baigti darbą. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Išimtys}
+{\em std\+::runtime\+\_\+error} & Klaidos įvesties atveju. \\
+\hline
+\end{DoxyExceptions}
+
+
+Apibrėžimas failo \mbox{\hyperlink{meniu_8cpp_source}{meniu.\+cpp}} eilutėje \mbox{\hyperlink{meniu_8cpp_source_l00011}{11}}.
+

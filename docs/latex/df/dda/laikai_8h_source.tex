@@ -1,0 +1,43 @@
+\doxysection{laikai.\+h}
+\hypertarget{laikai_8h_source}{}\label{laikai_8h_source}\mbox{\hyperlink{laikai_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ laikai.h}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Laiko\ matavimų\ struktūra\ ir\ pagalbinės\ funkcijos.}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Apibrėžia\ globalų\ \`{}timers`\ objektą,\ kuriame\ kaupiami\ kiekvienos}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00006}00006\ \textcolor{comment}{\ *\ programos\ fazės\ trukmės\ matavimai.}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00007}00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00008}00008\ \textcolor{comment}{\ *\ @author\ Studentas}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00009}00009\ \textcolor{comment}{\ *\ @version\ 3.0}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00010}00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00013}00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00014}00014\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00015}00015\ \textcolor{comment}{\ /**}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00016}00016\ \textcolor{comment}{\ \ *\ @struct\ TimerResults}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00017}00017\ \textcolor{comment}{\ \ *\ @brief\ Saugo\ kiekvienos\ programos\ fazės\ laiko\ matavimus\ (sekundėmis).}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00018}00018\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00020}\mbox{\hyperlink{structTimerResults}{00020}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structTimerResults}{TimerResults}}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00022}\mbox{\hyperlink{structTimerResults_a5c4c99fc2b3d4980b60fe9ee1897067c}{00022}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structTimerResults_a5c4c99fc2b3d4980b60fe9ee1897067c}{generavimas}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00023}\mbox{\hyperlink{structTimerResults_a9d2aaf87658fddef8a2dcee90a1aedeb}{00023}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structTimerResults_a9d2aaf87658fddef8a2dcee90a1aedeb}{skaitymas}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00024}\mbox{\hyperlink{structTimerResults_ad24f0351f118924c312509fe339b629c}{00024}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structTimerResults_ad24f0351f118924c312509fe339b629c}{rusiavimas}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00025}\mbox{\hyperlink{structTimerResults_a8d469841c67ba8f3b11d9c47f8c815a0}{00025}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structTimerResults_a8d469841c67ba8f3b11d9c47f8c815a0}{skirstymas}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00026}\mbox{\hyperlink{structTimerResults_ad612f39a53c14411cef33f2e49fef28e}{00026}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structTimerResults_ad612f39a53c14411cef33f2e49fef28e}{isvedimas}}\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00027}00027\ \};}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00028}00028\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00029}00029\ \textcolor{comment}{/**\ @brief\ Globalus\ laiko\ matavimų\ objektas.\ */}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00030}00030\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structTimerResults}{TimerResults}}\ \mbox{\hyperlink{laikai_8h_abb50db57757f191694f1e952de1398f8}{timers}};}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00031}00031\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00032}00032\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00033}00033\ \textcolor{comment}{\ *\ @brief\ Nulinina\ visus\ laiko\ matavimus.}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00034}00034\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00035}00035\ \textcolor{comment}{\ *\ Iškviečiama\ kiekvienos\ naujos\ iteracijos\ pradžioje.}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00036}00036\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{laikai_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{laikai_8h_aa184823ba754ad9c466d6d0c700982a4}{nunulintiLaikus}}();}
+
+\end{DoxyCode}
