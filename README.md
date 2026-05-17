@@ -16,7 +16,6 @@
 - [Įdiegimas ir kompiliavimas](#įdiegimas-ir-kompiliavimas)
 - [Doxygen dokumentacija](#doxygen-dokumentacija)
 - [Diegimo paketas](#diegimo-paketas)
-- [Konteinerių tyrimas](#konteinerių-tyrimas)
 
 ---
 
