@@ -1,246 +1,287 @@
-# Studentų duomenų apdorojimo programa v1.5
+# Studentų duomenų apdorojimo programa v3.0
 
-## Projekto aprašymas
+> Studentų duomenų valdymo sistema su nuosava `Vector<T>` klase – pilnaverčiu `std::vector` pakaitalu, spartos analize, Google Test testais ir Inno Setup diegimo paketu.
 
-**v1.5** versija sukurta remiantis **v1.2** baze. Pagrindinis pokytis – įvesta paveldėjimo hierarchija:
+---
 
-- Nauja **abstrakti bazinė klasė `Zmogus`** – aprašo bendrą žmogaus sąvoką
--`Studentas` dabar yra **išvestinė klasė** iš `Zmogus`
--`Zmogus` objektų kurti **negalima** – klasė abstrakti (turi grynąsias virtualias funkcijas)
-- Visi **Rule of Five** metodai ir **I/O operatoriai** iš v1.2 išlaikyti ir pritaikyti paveldėjimui
-- Visi v1.2 testai **išliko galiojantys** ir papildyti abstraktumo demonstravimu
+## Turinys
+
+- [Aprašymas](#aprašymas)
+- [Versijų istorija](#versijų-istorija)
+- [Projekto struktūra](#projekto-struktūra)
+- [Vector klasė](#vector-klasė)
+- [Klasių hierarchija](#klasių-hierarchija)
+- [Rule of Five](#rule-of-five)
+- [Sistemos parametrai](#sistemos-parametrai)
+- [Įdiegimas ir kompiliavimas](#įdiegimas-ir-kompiliavimas)
+- [Naudojimosi instrukcija](#naudojimosi-instrukcija)
+- [Spartos analizė](#spartos-analizė)
+- [Perskirstymų skaičius](#perskirstymų-skaičius)
+- [Unit testai](#unit-testai)
+- [Doxygen dokumentacija](#doxygen-dokumentacija)
+- [Diegimo paketas](#diegimo-paketas)
+- [Konteinerių tyrimas](#konteinerių-tyrimas)
+
+---
+
+## Aprašymas
+
+Projektas realizuoja studentų duomenų valdymo sistemą naudojant C++17.
+Pagrindinė klasė `Studentas` paveldi iš abstrakčios `Zmogus` bazės ir
+pilnai realizuoja **Rule of Five**. Sistema palaiko keturis konteinerius:
+`std::vector`, `std::list`, `std::deque` bei **nuosavą `Vector<T>`** klasę,
+kuri apima ne mažiau 80% `std::vector` funkcijų. Pateikiamas Inno Setup
+diegimo paketas su Start meniu ir darbastalio nuorodomis.
+
+---
+
+## Versijų istorija
+
+### v3.0 (dabartinė)
+- Sukurta **nuosava `Vector<T>`** klasė – pilnavertė `std::vector` alternatyva
+- Atlikta **spartos analizė**: `std::vector` vs `Vector<T>` (push_back, insert, erase)
+- Palyginti **atminties perskirstymų** skaičiai užpildant iki 100 000 000 elementų
+- Pridėta ** Google Test** testų `Vector<T>` klasei
+- Sukurtas **Inno Setup** diegimo paketas (`setup.iss` → `Setup.exe`)
 
 ---
 
 ## Projekto struktūra
 
 ```
-Zmogus.h            - abstrakti bazinė klasė (v1.5 nauja)
-Zmogus.cpp          - Zmogus realizacija      (v1.5 nauja)
-Studentas.h         - išvestinė klasė iš Zmogus (v1.5 atnaujinta)
-Studentas.cpp       - Studentas realizacija     (v1.5 atnaujinta)
-testas.h            - testų antraštinis failas
-testas.cpp          - testai (v1.5: papildytas abstraktumo testu)
-konteineris.h       - studentu konteineris<Studentas>
-main.cpp
-meniu.cpp -- meniu.h
-skaitymas.cpp -- skaitymas.h
-Generavimas.cpp -- Generavimas.h
-spausdinam.cpp -- spausdinam.h
-tyrimas.cpp -- tyrimas.h
-laikai.cpp -- laikai.h
-Makefile
+.
+├── main.cpp                  # Pagrindinis failas
+├── Zmogus.h / .cpp           # Abstrakti bazinė klasė
+├── Studentas.h / .cpp        # Konkreti klasė (Rule of Five)
+├── Vector.h                  # Nuosava Vector<T> klasė (v3.0)
+├── konteineris.h             # Kompiliavimo laiku pasirenkamas konteineris
+├── Generavimas.h / .cpp      # Generavimas ir skirstymas į grupes
+├── skaitymas.h / .cpp        # Duomenų skaitymas
+├── spausdinam.h / .cpp       # Rikiavimas ir išvedimas
+├── meniu.h / .cpp            # Interaktyvus meniu
+├── tyrimas.h / .cpp          # Greitaveikos tyrimas
+├── testas.h / .cpp           # Vidinis testavimo modulis
+├── laikai.h / .cpp           # Laiko matavimų struktūra
+├── vector_tests.cpp          # Google Test testai Vector<T> (v3.0)
+├── spartos_analize.cpp       # Spartos analizės programa (v3.0)
+├── Makefile                  # Makefile sistema
+├── Doxyfile                  # Doxygen konfigūracija
+├── setup.iss                 # Inno Setup skriptas
+└── docs/
+    ├── refman.pdf
+    ├── html/              # HTML dokumentacija
+    └── latex/             # LaTeX dokumentacija + PDF
 ```
 
 ---
 
-# Sistemos parametrai
+## Vector klasė
 
-- CPU: 12th Gen Intel Core i5-12400F
-- RAM: 32.0 GB (31.8 GB usable)
-- Diskas: HDD
-- OS: Windows 10
+`Vector<T>` – nuosava dinaminė masyvo realizacija, apimanti:
+
+### Member types
+| Tipas | Aprašymas |
+|-------|-----------|
+| `value_type` | Saugomo elemento tipas `T` |
+| `size_type` | `std::size_t` |
+| `iterator` | `T*` rodyklė |
+| `reverse_iterator` | `std::reverse_iterator<iterator>` |
+| `allocator_type` | `std::allocator<T>` |
+
+### Realizuotos funkcijos (pavyzdžiai)
+
+**1. `push_back` / `emplace_back`**
+```cpp
+Vector<int> v;
+v.push_back(1);
+v.push_back(2);
+v.emplace_back(3);
+// v = {1, 2, 3}
+```
+
+**2. `insert`**
+```cpp
+Vector<int> v = {1, 3, 4};
+v.insert(v.begin() + 1, 2);
+// v = {1, 2, 3, 4}
+```
+
+**3. `erase`**
+```cpp
+Vector<int> v = {1, 2, 3, 4};
+v.erase(v.begin() + 1, v.begin() + 3);
+// v = {1, 4}
+```
+
+**4. `resize` ir `reserve`**
+```cpp
+Vector<int> v;
+v.reserve(100);   // rezervuoja atmintį, size=0
+v.resize(5, 99);  // v = {99, 99, 99, 99, 99}
+```
+
+**5. Palyginimo operatoriai**
+```cpp
+Vector<int> a = {1, 2, 3};
+Vector<int> b = {1, 2, 4};
+bool r1 = (a == a);  // true
+bool r2 = (a < b);   // true
+bool r3 = (a != b);  // true
+```
+
+### Funkcijų padengimas
+
+| Kategorija | Funkcijos | Realizuota |
+|-----------|-----------|-----------|
+| Konstruktoriai | 8 | 8 |
+| Elementų prieiga | `at`, `[]`, `front`, `back`, `data` | 5 |
+| Iteratoriai | `begin/end`, `rbegin/rend`, `cbegin/cend` | 8 |
+| Talpa | `size`, `capacity`, `empty`, `reserve`, `shrink_to_fit` | 6 |
+| Modifikatoriai | `push_back`, `pop_back`, `insert`, `erase`, `emplace`, `emplace_back`, `clear`, `resize`, `swap`, `assign` | 10 |
+| Non-member | `==`, `!=`, `<`, `<=`, `>`, `>=`, `swap`, `erase`, `erase_if` | 9 |
 
 ---
 
 ## Klasių hierarchija
 
 ```
-Zmogus          (abstrakti – objektų kurti negalima)
-│   # protected:
-│       vardas, pavarde
-│   + getVardas(), getPavarde()
-│   + setVardas(), setPavarde()
-│   + virtual suskaiciuotiGalutini() = 0   ← grynoji virtuali
-│   + virtual spausdinti(ostream&)  = 0   ← grynoji virtuali
-│   + virtual ~Zmogus()
+Zmogus  (abstrakti)
+│   ├── vardas : string
+│   ├── pavarde : string
+│   ├── getVardas() : string
+│   ├── getPavarde() : string
+│   ├── suskaiciuotiGalutini() = 0  ← grynoji virtuali
+│   └── spausdinti(ostream&) = 0   ← grynoji virtuali
 │
-└── Studentas   (išvestinė – objektų kurti galima)
-        # private:
-            egzaminas, nd, vidurkis, galrezVid, galrezMed
-        + Rule of Five (visi 5 metodai)
-        + suskaiciuotiGalutini() override
-        + spausdinti(ostream&)  override
-        + operator<<, operator>>
-        + readStudent(), readNdInteractive(), parinktiAtsitiktinius()
+└── Studentas  (konkreti)
+        ├── egzaminas : int
+        ├── nd : vector<int>
+        ├── vidurkis : float
+        ├── galrezVid : float
+        ├── galrezMed : float
+        ├── suskaiciuotiGalutini() override
+        └── spausdinti(ostream&) override
 ```
 
 ---
 
-## Zmogus – abstrakti bazinė klasė
+## Rule of Five
 
-`Zmogus` yra abstrakti, nes turi **grynąsias virtualias funkcijas** (`= 0`).
-Tai reiškia, kad:
+| Metodas | Realizacija |
+|---------|-------------|
+| Default konstruktorius | Inicializuoja laukus į 0 / tuščius |
+| Kopijavimo konstruktorius | Gili kopija (`nd` vektorius) |
+| Kopijavimo priskyrimo op. | Savipriskyrimo apsauga |
+| Perkėlimo konstruktorius | Perkelia `nd`; šaltinis lieka tuščias |
+| Perkėlimo priskyrimo op. | Savipriskyrimo apsauga + perkėlimas |
+| Destruktorius | `= default` (vektorius atlaisvinamas automatiškai) |
 
-```cpp
-Zmogus z;           // KLAIDA – cannot declare variable of abstract type
-Zmogus* p = ...;   // Gerai – rodyklė į išvestinę klasę
+### Galutinio balo formulė
+
 ```
-
-### Grynosios virtualios funkcijos
-
-| Funkcija | Paskirtis |
-|---|---|
-| `virtual void suskaiciuotiGalutini() = 0` | Kiekviena išvestinė klasė turi pati apskaičiuoti galutinį rezultatą pagal savo logiką |
-| `virtual void spausdinti(std::ostream&) const = 0` | Kiekviena išvestinė klasė spausdina save pagal savo formatą |
-
-### Zmogus Rule of Five
-
-Kadangi `Zmogus` neturi dinaminių išteklių (tik `std::string`), visi specialieji metodai deklaruoti su `= default`. Virtualus destruktorius **būtinas**, nes klasė turi virtualių funkcijų.
-
-| Metodas | Deklaracija |
-|---|---|
-| Default konstruktorius | `= default` |
-| Kopijavimo konstruktorius | `= default` |
-| Kopijavimo priskyrimo op. | `= default` |
-| Perkėlimo konstruktorius | `= default` |
-| Perkėlimo priskyrimo op. | `= default` |
-| Destruktorius | `virtual ~Zmogus() = default` |
-
----
-
-## Studentas – Rule of Five su paveldėjimu
-
-Kiekvienas `Studentas` specialusis metodas **grandininai kviečia** atitinkamą `Zmogus` metodą, kad teisingai tvarkytų ir bazinę dalį (`vardas`, `pavarde`).
-
-| Metodas | Kaip kviečia bazę |
-|---|---|
-| Kopijavimo konstruktorius | `: Zmogus(other)` |
-| Kopijavimo priskyrimo op. | `Zmogus::operator=(other)` |
-| Perkėlimo konstruktorius | `: Zmogus(std::move(other))` |
-| Perkėlimo priskyrimo op. | `Zmogus::operator=(std::move(other))` |
-| Destruktorius | `~Studentas() override = default` |
-
----
-
-## Įvesties ir išvesties operatoriai
-
-### `operator<<` – išvestis į srautą
-
-`operator<<` kviečia virtualią `spausdinti()` funkciją – tai leidžia polimorfiškai spausdinti per `Zmogus*` rodyklę.
-
-**Išvesties formatas:**
-```
-Jonas           Jonaitis       Egz: 10  ND: [8 7 9 6]  Gal.Vid: 7.60  Gal.Med: 7.60
+galrezVid = 0.4 × vidurkis  + 0.6 × egzaminas
+galrezMed = 0.4 × mediana   + 0.6 × egzaminas
 ```
 
 ---
 
-### `operator>>` – įvestis iš srauto
+## Sistemos parametrai
 
-Nuskaito duomenis **failo formatu**: `Vardas Pavarde ND1 ND2 ... Egzaminas`
-
----
-
-## Duomenų įvestis ir išvestis – apžvalga
-
-### Duomenų įvestis
-
-| Būdas | Aprašymas | Kur naudojama |
-|---|---|---|
-| **Rankinis įvedimas** | Vartotojas klaviatūra įveda vardą, pavardę, pažymius, egzaminą | `skaitomRanka()`, meniu 1 |
-| **Automatinis generavimas** | Pažymiai atsitiktinai, vardas/pavardė automatiškai | `parinktiAtsitiktinius()`, meniu 3, 4 |
-| **Skaitymas iš failo** | Duomenys nuskaitomi iš tekstinio failo | `failoSkaitymas()`, meniu 2; naudoja `Studentas(istream&)` ir `operator>>` |
-
-### Duomenų išvestis
-
-| Būdas | Aprašymas | Kur naudojama |
-|---|---|---|
-| **Išvestis į ekraną** | Suformatuota lentelė | `main.cpp` → `pradetiSpausdint()` |
-| **Išvestis į failą** | Lentelė įrašoma į `.txt` failą | `spausdinam()`, po skirstymo |
-| **`operator<<`** | Per `spausdinti()` virtualią f-ją bet kuriam srautui | `testas.cpp`, visi naudotojai |
-| **Polimorfiškai per `Zmogus*`** | `z->spausdinti(os)` | Galima naudoti su bet kuria išvestine klase |
+| Parametras | Reikšmė |
+|------------|---------|
+| CPU | 12th Gen Intel Core i5-12400F |
+| RAM | 32 GB DDR4 |
+| Diskas | HDD |
+| OS | Windows 10 |
+| Kompiliatorius | GCC / MSVC |
 
 ---
 
-## Testai (testas.cpp)
+## Įdiegimas ir kompiliavimas
 
-Testai paleidžiami pasirinkus **meniu pasirinikimą 7**. Galima patikrinti abstraktumą per **meniu pasirinkimą 8**.
+### Reikalavimai
+- C++17 palaikantis kompiliatorius (GCC ≥ 9, Clang ≥ 10, MSVC 2019+)
+- (Neprivaloma) Google Test – unit testams
+- (Neprivaloma) Doxygen – dokumentacijai
+- (Neprivaloma) Inno Setup – diegimo paketui
 
-### Testuojami metodai (v1.5)
+### Kompiliavimo instrukcijos
 
-| Testas | Tikrinama |
-|---|---|
-| **Zmogus abstraktumas** | `Zmogus*` rodo į `Studentas`; virtualios f-jos veikia polimorfiškai |
-| Default konstruktorius | Visi laukai = 0 / tuščia |
-| Srautinis konstruktorius | Teisingas nuskaitymas iš `istream` |
-| Kopijavimo konstruktorius | Gili kopija; bazinė dalis kopijuojama per `Zmogus(other)` |
-| Kopijavimo priskyrimo op. | Teisingas priskyrimas; saugus savipriskyrimas |
-| Perkėlimo konstruktorius | Ištekliai perkelti; šaltinis „tuščias"; bazė perkelta per `Zmogus(move)` |
-| Perkėlimo priskyrimo op. | Ištekliai perkelti; saugus saviperkelimas |
-| Destruktorius | Nenulūžta po objekto sunaikinimo |
-| `operator>>` | Teisingas nuskaitymas ir `suskaiciuotiGalutini()` |
-| `operator<<` | Visi laukai išvedami teisingai |
-
----
-
-# Studentų skirstymo strategijos
-
-### Strategija 1
-Iš bendro konteinerio sukuriami **du nauji** – vargšiukai ir protai.
-
-### Strategija 2
-Kuriamas tik **vargšiukų** konteineris; vargšiukai ištrinami iš bendro konteinerio, likę = protai.
-
-### Strategija 3 (optimizuota)
-Naudojamas `std::partition` – vienas perėjimas, minimalus kopijavimas.
-
----
-
-# Spartos palyginimas: struct (v1.0) vs class (v1.1)
-
-Testuota su **std::vector**, **Strategija 3**. Testavimas paleistas 10 kartų, rezultatai yra vidurkis.
-
-### 1 000 000 įrašų – std::vector, Strategija 3
-
-| Versija | Skaitymas (s) | Rikiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|
-| v1.0 (`struct Stud`) | 1.887719 | 1.974143 | 0.425847 | 4.287709 |
-| v1.1 (`class Studentas`) | 1.905067 | 1.874186 | 0.251693 | 4.030946 |
-
----
-
-# Optimizavimo flagų tyrimas
-
-### Sparta (1 000 000 įrašų, Strategija 3)
-
-| Flag'as | Skaitymas (s) | Rikiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|
-| `-O1` | 1.348002 | 0.542123 | 0.106222 | 1.996347 |
-| `-O2` | 1.255266 | 0.536366 | 0.107149 | 1.898781 |
-| `-O3` | 1.311384 | 0.538993 | 0.106197 | 1.958474 |
-
----
-
-# Išvados
-
-- `Zmogus` abstrakti bazinė klasė užtikrina, kad negalima sukurti „bendro žmogaus" objekto – tik konkrečias išvestines klases (pvz. `Studentas`).
-- `Studentas` Rule of Five metodai kviečia `Zmogus` atitinkamus metodus – bazinė dalis (`vardas`, `pavarde`) visada tinkamai kopijuojama / perkraunama.
-- `operator<<` per virtualią `spausdinti()` leidžia polimorfiškai spausdinti per `Zmogus*` rodyklę.
-- Visi 64 testai praėjo – v1.2 sąsaja visiškai išlaikyta.
-
----
-
-# Kompiliavimas ir paleidimas
-
-## Pagrindiniai
-```
+```bash
+# Visi 4 konteineriai su -O2
 make
-```
 
-## Su optimizavimo flagais
-```
-make opt
-```
+# Atskiras konteineris
+make programa_vector      # std::vector
+make programa_manoVector  # Vector<T> nuosava
+make programa_list        # std::list
+make programa_deque       # std::deque
 
-## Paleidimas
-```
-./programa_vector
-./programa_list
-./programa_deque
-```
+# Optimizuotos std::vector versijos (O1, O2, O3)
+make opt_vector
 
-## Valymas
-```
+# Optimizuotos Vector<T> versijos (O1, O2, O3)
+make opt_manoVector
+
+# Spartos analizė
+make benchmark
+
+# Unit testai (reikia įdiegti GTest: sudo apt install libgtest-dev)
+make test
+
+# Doxygen dokumentacija
+make docs
+
+# Valymas
 make clean
 ```
+
+### Paleidimas
+
+```bash
+# Linux/macOS
+./programa_vector
+./programa_manoVector
+
+# Windows
+.\programa_vector.exe
+.\programa_manoVector.exe
+```
+
+---
+
+## Doxygen dokumentacija
+
+### Generavimas
+
+```bash
+make docs
+# arba tiesiogiai:
+doxygen Doxyfile
+```
+
+Dokumentacija sukuriama:
+- `docs/html/index.html` – HTML versija naršyklėje
+
+---
+
+## Diegimo paketas
+
+### Reikalavimai
+- [Inno Setup 6.x](https://jrsoftware.org/isdl.php)
+
+### Diegimo sukūrimas
+
+```bash
+# 1. Sukompiliuoti
+make programa_manoVector
+
+# 2. Paruošti struktūrą
+#    build\Release\programa_manoVector.exe
+#    data\studentai10000.txt
+#    data\studentai100000.txt
+
+# 3. Kompiliuoti .iss
+iscc installer\setup.iss
+# Arba atidaryti Inno Setup IDE ir paspausti Ctrl+F9
+``
