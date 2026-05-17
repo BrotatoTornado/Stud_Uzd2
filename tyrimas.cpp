@@ -12,34 +12,39 @@
 #include <string>
 #include <vector>
 
+
 struct TyrimoIrasas
 {
     std::string failas;
     std::size_t irasuKiekis = 0;
-    double skaitymas = 0.0;
-    double rusiavimas = 0.0;
-    double skirstymas = 0.0;
+    double skaitymas   = 0.0;
+    double rusiavimas  = 0.0;
+    double skirstymas  = 0.0;
 };
 
 namespace
 {
+
 bool failasEgzistuoja(const std::string& pav)
 {
     std::ifstream f(pav);
     return f.good();
 }
 
-TyrimoIrasas atliktiBandymuSerija(const std::string& failas, SkirstymoStrategija strategija, int kartojimai)
+TyrimoIrasas atliktiBandymuSerija(
+    const std::string& failas,
+    SkirstymoStrategija strategija,
+    int kartojimai)
 {
     TyrimoIrasas vidurkiai;
     vidurkiai.failas = failas;
 
-    for (int i = 0; i < kartojimai; i++)
+    for (int i = 0; i < kartojimai; ++i)
     {
         nunulintiLaikus();
 
         StudContainer studis;
-        if (!failoSkaitymas(studis, failas))
+        if (!failoSkaitymas(studis, failas)) // naudoja Studentas() vid.
         {
             return {};
         }
@@ -50,55 +55,67 @@ TyrimoIrasas atliktiBandymuSerija(const std::string& failas, SkirstymoStrategija
         surikiuotiPagalGalutiniVid(studis);
         skirstymasGrupes(studis, strategija, false, false);
 
-        vidurkiai.skaitymas += timers.skaitymas;
+        vidurkiai.skaitymas  += timers.skaitymas;
         vidurkiai.rusiavimas += timers.rusiavimas;
         vidurkiai.skirstymas += timers.skirstymas;
     }
 
-    vidurkiai.skaitymas /= kartojimai;
+    vidurkiai.skaitymas  /= kartojimai;
     vidurkiai.rusiavimas /= kartojimai;
     vidurkiai.skirstymas /= kartojimai;
 
     return vidurkiai;
 }
 
-void spausdintiLentele(const std::vector<TyrimoIrasas>& rezultatai)
+void spausdintiLentele(const std::vector<TyrimoIrasas>& rezultatasultatai)
 {
-    std::cout << '\n';
-    std::cout << std::left << std::setw(22) << "Failas" << std::setw(16) << "Irasu kiekis" << std::setw(16) << "Skaitymas (s)" << std::setw(18) << "Rusiavimas (s)" << std::setw(18) << "Skirstymas (s)" << "Is viso (s)" << '\n';
+    std::cout << '\n'
+              << std::left
+              << std::setw(22) << "Failas"
+              << std::setw(16) << "Irasu kiekis"
+              << std::setw(16) << "Skaitymas (s)"
+              << std::setw(18) << "Rusiavimas (s)"
+              << std::setw(18) << "Skirstymas (s)"
+              << "Is viso (s)\n"
+              << std::string(90, '-') << '\n';
 
-    std::cout << std::string(90, '-') << '\n';
-
-    for (const auto& rez : rezultatai)
+    for (const auto& r : rezultatasultatai)
     {
-        std::cout << std::left << std::setw(22) << rez.failas << std::setw(16) << rez.irasuKiekis << std::setw(16) << std::fixed << std::setprecision(6) << rez.skaitymas << std::setw(18) << std::fixed << std::setprecision(6) << rez.rusiavimas << std::setw(18) << std::fixed << std::setprecision(6) << rez.skirstymas << '\n';
+        const double isViso = r.skaitymas + r.rusiavimas + r.skirstymas;
+
+        std::cout << std::left
+                  << std::setw(22) << r.failas
+                  << std::setw(16) << r.irasuKiekis
+                  << std::setw(16) << std::fixed << std::setprecision(6) << r.skaitymas
+                  << std::setw(18) << std::fixed << std::setprecision(6) << r.rusiavimas
+                  << std::setw(18) << std::fixed << std::setprecision(6) << r.skirstymas
+                  << std::fixed << std::setprecision(6) << isViso << '\n';
     }
 }
 
-//spausdinam i faila readme formatu, kad butu lengviau ikelti
-void iREADME(const std::vector<TyrimoIrasas>& rezultatai, SkirstymoStrategija strategija)
+void iREADME(const std::vector<TyrimoIrasas>& rezultatasultatai, SkirstymoStrategija strategija)
 {
-    const std::string pav = "benchmark_" + aktyvausKonteinerioTrumpasPavadinimas()
-        + "_S" + std::to_string(static_cast<int>(strategija)) + ".md";
+    const std::string pav = "benchmark_" + aktyvausKonteinerioTrumpasPavadinimas() + "_S" + std::to_string(static_cast<int>(strategija)) + ".md";
 
     std::ofstream write(pav);
-    if (!write.is_open())
+    if (!write.is_open()) { return; }
+
+    write << "# " << aktyvausKonteinerioPavadinimas() << " - strategija " << static_cast<int>(strategija) << "\n\n";
+    write << "| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Is viso (s) |\n";
+    write << "|---|---:|---:|---:|---:|---:|\n";
+
+    for (const auto& r : rezultatasultatai)
     {
-        return;
+        const double isViso = r.skaitymas + r.rusiavimas + r.skirstymas;
+        write << "| " << r.failas
+              << " | " << r.irasuKiekis
+              << " | " << std::fixed << std::setprecision(6) << r.skaitymas
+              << " | " << std::fixed << std::setprecision(6) << r.rusiavimas
+              << " | " << std::fixed << std::setprecision(6) << r.skirstymas
+              << " | " << std::fixed << std::setprecision(6) << isViso<< " |\n";
     }
 
-    write << "# " << aktyvausKonteinerioPavadinimas() << " - strategija "
-        << static_cast<int>(strategija) << "\n\n";
-    write << "| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) |\n";
-    write << "|---|---:|---:|---:|---:|\n";
-
-    for (auto& rez : rezultatai)
-    {
-        double isViso = rez.skaitymas + rez.rusiavimas + rez.skirstymas;
-        write << "| " << rez.failas << " | " << rez.irasuKiekis << " | " << std::fixed << std::setprecision(6) << rez.skaitymas << " | " << std::fixed << std::setprecision(6) << rez.rusiavimas << " | " << std::fixed << std::setprecision(6) << rez.skirstymas << " | " << std::fixed << std::setprecision(6) << isViso << " |\n";
-    }
-
-    std::cout << "Rezultatu lentele issaugota i faila: " << pav << std::endl;
+    std::cout << "Rezultatu lentele issaugota: " << pav << '\n';
 }
 
 std::vector<std::string> sudarytiNumatytujuFailuSarasa(const std::string& prefiksas)
@@ -111,16 +128,17 @@ std::vector<std::string> sudarytiNumatytujuFailuSarasa(const std::string& prefik
         prefiksas + "10000000.txt"
     };
 }
+
 }
 
 void vykdytiTyrima()
 {
-    std::cout << "\nAktyvus studentu konteineris: " << aktyvausKonteinerioPavadinimas() << '\n';
+    std::cout << "\nAktyvus konteineris: " << aktyvausKonteinerioPavadinimas() << '\n';
 
     const SkirstymoStrategija strategija = pasirinktiStrategija();
 
     std::cout << "Kiek kartu kartoti kiekviena testa? ";
-    int kartojimai;
+    int kartojimai = 1;
     std::cin >> kartojimai;
 
     if (!std::cin || kartojimai < 1)
@@ -128,10 +146,10 @@ void vykdytiTyrima()
         throw std::runtime_error("Neteisingas kartojimu skaicius.");
     }
 
-    std::cout << "\n1 - Testuoti viena faila\n";
-    std::cout << "2 - Testuoti numatytuosius failus pagal prefiksa (pvz. studentai1000.txt ir t.t.)\n";
+    std::cout << "\n1 - Testuoti viena faila\n"
+              << "2 - Testuoti numatytuosius failus (1k, 10k, 100k, 1M, 10M)\n";
 
-    int pasirinkimas;
+    int pasirinkimas = 0;
     std::cin >> pasirinkimas;
 
     if (!std::cin || pasirinkimas < 1 || pasirinkimas > 2)
@@ -140,12 +158,13 @@ void vykdytiTyrima()
     }
 
     std::vector<std::string> failai;
+
     if (pasirinkimas == 1)
     {
         std::cout << "Iveskite pilna failo pavadinima: ";
-        std::string failas;
-        std::cin >> failas;
-        failai.push_back(failas);
+        std::string f;
+        std::cin >> f;
+        failai.push_back(f);
     }
     else
     {
@@ -155,28 +174,29 @@ void vykdytiTyrima()
         failai = sudarytiNumatytujuFailuSarasa(prefiksas);
     }
 
-    std::vector<TyrimoIrasas> rezultatai;
+    std::vector<TyrimoIrasas> rezultatasultatai;
+
     for (const auto& failas : failai)
     {
         if (!failasEgzistuoja(failas))
         {
-            std::cout << "Failas nerastas, praleidziamas: " << failas << std::endl;
+            std::cout << "Failas nerastas, praleidziamas: " << failas << '\n';
             continue;
         }
 
-        auto rez = atliktiBandymuSerija(failas, strategija, kartojimai);
-        if (rez.irasuKiekis != 0)
+        auto rezultatas = atliktiBandymuSerija(failas, strategija, kartojimai);
+        if (rezultatas.irasuKiekis != 0)
         {
-            rezultatai.push_back(rez);
+            rezultatasultatai.push_back(rezultatas);
         }
     }
 
-    if (rezultatai.empty())
+    if (rezultatasultatai.empty())
     {
-        std::cout << "Tyrimui tinkamu failu nerasta." << std::endl;
+        std::cout << "Tyrimui tinkamu failu nerasta.\n";
         return;
     }
 
-    spausdintiLentele(rezultatai);
-    iREADME(rezultatai, strategija);
+    spausdintiLentele(rezultatasultatai);
+    iREADME(rezultatasultatai, strategija);
 }

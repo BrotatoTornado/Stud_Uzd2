@@ -1,0 +1,163 @@
+\doxysection{spartos\+\_\+analize.\+cpp Failo Nuoroda}
+\hypertarget{spartos__analize_8cpp}{}\label{spartos__analize_8cpp}\index{spartos\_analize.cpp@{spartos\_analize.cpp}}
+
+
+Spartos analizė\+: std\+::vector vs Vector$<$\+T$>$  
+
+
+{\ttfamily \#include "{}Vector.\+h"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Klasės}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPushBackResult}{Push\+Back\+Result}}
+\item 
+struct \mbox{\hyperlink{structReallocResult}{Realloc\+Result}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Tipų apibrėžimai}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{spartos__analize_8cpp_accf829b29dcee7a09273bd9101f04e89}{Clock}} = std\+::chrono\+::high\+\_\+resolution\+\_\+clock
+\item 
+using \mbox{\hyperlink{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7}{Seconds}} = std\+::chrono\+::duration$<$ double $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}} (const Clock\+::time\+\_\+point \&start)
+\item 
+\mbox{\hyperlink{structPushBackResult}{Push\+Back\+Result}} \mbox{\hyperlink{spartos__analize_8cpp_a3d4c73f24bc398ddf6d3b5411c8a14d9}{bench\+Push\+Back}} (std\+::size\+\_\+t n)
+\item 
+void \mbox{\hyperlink{spartos__analize_8cpp_ab07f69281d288fe43142d003609497b4}{push\+Back\+Benchmark}} ()
+\item 
+\mbox{\hyperlink{structReallocResult}{Realloc\+Result}} \mbox{\hyperlink{spartos__analize_8cpp_a198a58ffdc033aaa1cc290ae1411d991}{count\+Reallocations}} (std\+::size\+\_\+t n)
+\item 
+void \mbox{\hyperlink{spartos__analize_8cpp_adbadbbee79f958474322349375f388a2}{realloc\+Benchmark}} ()
+\item 
+void \mbox{\hyperlink{spartos__analize_8cpp_a370c7793a79bf6bc2a71e7a746d582e7}{other\+Ops\+Benchmark}} ()
+\item 
+void \mbox{\hyperlink{spartos__analize_8cpp_ad5462f5b89155fe607092b34d23ee335}{correctness\+Check}} ()
+\item 
+int \mbox{\hyperlink{spartos__analize_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Smulkus aprašymas}
+Spartos analizė\+: std\+::vector vs Vector$<$\+T$>$ 
+
+Kompiliavimas\+: g++ -\/std=c++17 -\/O2 -\/I../src \doxylink{spartos__analize_8cpp}{spartos\+\_\+analize.\+cpp} -\/o spartos\+\_\+analize
+
+Paleidimas\+: ./spartos\+\_\+analize 
+
+Apibrėžimas faile \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}}.
+
+
+
+\doxysubsection{Tipų apibrėžimų Dokumentacija}
+\Hypertarget{spartos__analize_8cpp_accf829b29dcee7a09273bd9101f04e89}\label{spartos__analize_8cpp_accf829b29dcee7a09273bd9101f04e89} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!Clock@{Clock}}
+\index{Clock@{Clock}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{Clock}{Clock}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{spartos__analize_8cpp_accf829b29dcee7a09273bd9101f04e89}{Clock}} =  std\+::chrono\+::high\+\_\+resolution\+\_\+clock}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00020}{20}}.
+
+\Hypertarget{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7}\label{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!Seconds@{Seconds}}
+\index{Seconds@{Seconds}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{Seconds}{Seconds}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7}{Seconds}} =  std\+::chrono\+::duration$<$double$>$}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00021}{21}}.
+
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{spartos__analize_8cpp_a3d4c73f24bc398ddf6d3b5411c8a14d9}\label{spartos__analize_8cpp_a3d4c73f24bc398ddf6d3b5411c8a14d9} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!benchPushBack@{benchPushBack}}
+\index{benchPushBack@{benchPushBack}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{benchPushBack()}{benchPushBack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPushBackResult}{Push\+Back\+Result}} bench\+Push\+Back (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00037}{37}}.
+
+\Hypertarget{spartos__analize_8cpp_ad5462f5b89155fe607092b34d23ee335}\label{spartos__analize_8cpp_ad5462f5b89155fe607092b34d23ee335} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!correctnessCheck@{correctnessCheck}}
+\index{correctnessCheck@{correctnessCheck}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{correctnessCheck()}{correctnessCheck()}}
+{\footnotesize\ttfamily void correctness\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00245}{245}}.
+
+\Hypertarget{spartos__analize_8cpp_a198a58ffdc033aaa1cc290ae1411d991}\label{spartos__analize_8cpp_a198a58ffdc033aaa1cc290ae1411d991} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!countReallocations@{countReallocations}}
+\index{countReallocations@{countReallocations}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{countReallocations()}{countReallocations()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structReallocResult}{Realloc\+Result}} count\+Reallocations (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00099}{99}}.
+
+\Hypertarget{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}\label{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{elapsed()}{elapsed()}}
+{\footnotesize\ttfamily double elapsed (\begin{DoxyParamCaption}\item[{const Clock\+::time\+\_\+point \&}]{start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00023}{23}}.
+
+\Hypertarget{spartos__analize_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{spartos__analize_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!main@{main}}
+\index{main@{main}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00293}{293}}.
+
+\Hypertarget{spartos__analize_8cpp_a370c7793a79bf6bc2a71e7a746d582e7}\label{spartos__analize_8cpp_a370c7793a79bf6bc2a71e7a746d582e7} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!otherOpsBenchmark@{otherOpsBenchmark}}
+\index{otherOpsBenchmark@{otherOpsBenchmark}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{otherOpsBenchmark()}{otherOpsBenchmark()}}
+{\footnotesize\ttfamily void other\+Ops\+Benchmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00164}{164}}.
+
+\Hypertarget{spartos__analize_8cpp_ab07f69281d288fe43142d003609497b4}\label{spartos__analize_8cpp_ab07f69281d288fe43142d003609497b4} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!pushBackBenchmark@{pushBackBenchmark}}
+\index{pushBackBenchmark@{pushBackBenchmark}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{pushBackBenchmark()}{pushBackBenchmark()}}
+{\footnotesize\ttfamily void push\+Back\+Benchmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00063}{63}}.
+
+\Hypertarget{spartos__analize_8cpp_adbadbbee79f958474322349375f388a2}\label{spartos__analize_8cpp_adbadbbee79f958474322349375f388a2} 
+\index{spartos\_analize.cpp@{spartos\_analize.cpp}!reallocBenchmark@{reallocBenchmark}}
+\index{reallocBenchmark@{reallocBenchmark}!spartos\_analize.cpp@{spartos\_analize.cpp}}
+\doxysubsubsection{\texorpdfstring{reallocBenchmark()}{reallocBenchmark()}}
+{\footnotesize\ttfamily void realloc\+Benchmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{spartos__analize_8cpp_source}{spartos\+\_\+analize.\+cpp}} eilutėje \mbox{\hyperlink{spartos__analize_8cpp_source_l00139}{139}}.
+

@@ -1,0 +1,311 @@
+\doxysection{spartos\+\_\+analize.\+cpp}
+\hypertarget{spartos__analize_8cpp_source}{}\label{spartos__analize_8cpp_source}\mbox{\hyperlink{spartos__analize_8cpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ spartos\_analize.cpp}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Spartos\ analizė:\ std::vector\ vs\ Vector<T>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ Kompiliavimas:}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00006}00006\ \textcolor{comment}{\ *\ \ \ g++\ -\/std=c++17\ -\/O2\ -\/I../src\ spartos\_analize.cpp\ -\/o\ spartos\_analize}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00007}00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00008}00008\ \textcolor{comment}{\ *\ Paleidimas:}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00009}00009\ \textcolor{comment}{\ *\ \ \ ./spartos\_analize}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00010}00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector_8h}{Vector.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00020}\mbox{\hyperlink{spartos__analize_8cpp_accf829b29dcee7a09273bd9101f04e89}{00020}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{spartos__analize_8cpp_accf829b29dcee7a09273bd9101f04e89}{Clock}}\ =\ std::chrono::high\_resolution\_clock;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00021}\mbox{\hyperlink{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7}{00021}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7}{Seconds}}\ =\ std::chrono::duration<double>;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00023}\mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{00023}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(\textcolor{keyword}{const}\ Clock::time\_point\&\ start)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{spartos__analize_8cpp_a80c3f3db3b40d34045eec0bca7e375f7}{Seconds}}(Clock::now()\ -\/\ start).count();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00028}00028\ \textcolor{comment}{//1.\ push\_back\ spartos\ testas}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00030}\mbox{\hyperlink{structPushBackResult}{00030}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPushBackResult}{PushBackResult}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00032}\mbox{\hyperlink{structPushBackResult_aa9914359dcb52846039340a84138586a}{00032}}\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structPushBackResult_aa9914359dcb52846039340a84138586a}{n}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00033}\mbox{\hyperlink{structPushBackResult_af8d299d26e651012ec6ec810eb709615}{00033}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \mbox{\hyperlink{structPushBackResult_af8d299d26e651012ec6ec810eb709615}{stdTime}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00034}\mbox{\hyperlink{structPushBackResult_a6817b72bb522e85d4bef3c67ee622fb6}{00034}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \mbox{\hyperlink{structPushBackResult_a6817b72bb522e85d4bef3c67ee622fb6}{myTime}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00035}00035\ \};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00037}\mbox{\hyperlink{spartos__analize_8cpp_a3d4c73f24bc398ddf6d3b5411c8a14d9}{00037}}\ \mbox{\hyperlink{structPushBackResult}{PushBackResult}}\ \mbox{\hyperlink{spartos__analize_8cpp_a3d4c73f24bc398ddf6d3b5411c8a14d9}{benchPushBack}}(std::size\_t\ n)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{structPushBackResult}{PushBackResult}}\ r;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00040}00040\ \ \ \ \ r.\mbox{\hyperlink{structPushBackResult_aa9914359dcb52846039340a84138586a}{n}}\ =\ n;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ std::vector}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ std::vector<int>\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ static\_cast<int>(n);\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ v.push\_back(i);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{structPushBackResult_af8d299d26e651012ec6ec810eb709615}{stdTime}}\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Vector<T>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ static\_cast<int>(n);\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(i);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{structPushBackResult_a6817b72bb522e85d4bef3c67ee622fb6}{myTime}}\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00063}\mbox{\hyperlink{spartos__analize_8cpp_ab07f69281d288fe43142d003609497b4}{00063}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spartos__analize_8cpp_ab07f69281d288fe43142d003609497b4}{pushBackBenchmark}}()}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00064}00064\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ sizes[]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ 10'000,\ 100'000,\ 1'000'000,\ 10'000'000,\ 100'000'000}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00067}00067\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00069}00069\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n===\ 1.\ push\_back()\ spartos\ palyginimas\ ===\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00070}00070\ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Elementu\ sk."{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(18)\ <<\ \textcolor{stringliteral}{"{}std::vector\ (s)"{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(18)\ <<\ \textcolor{stringliteral}{"{}Vector<T>\ \ \ (s)"{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Santykis\ (my/std)\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00075}00075\ \ \ \ \ std::cout\ <<\ std::string(70,\ \textcolor{charliteral}{'-\/'})\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ n\ :\ sizes)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ res\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a3d4c73f24bc398ddf6d3b5411c8a14d9}{benchPushBack}}(n);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ ratio\ =\ res.myTime\ /\ res.stdTime;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(15)\ <<\ n}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(18)\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ res.stdTime}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(18)\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ res.myTime}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::fixed\ <<\ std::setprecision(3)\ <<\ ratio\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00088}00088\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00090}00090\ \textcolor{comment}{//2.\ Perskirstymų\ skaičius}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00092}\mbox{\hyperlink{structReallocResult}{00092}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structReallocResult}{ReallocResult}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00093}00093\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00094}\mbox{\hyperlink{structReallocResult_ad7176bfcfac4c0b9d88c715ce7f9bc89}{00094}}\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{structReallocResult_ad7176bfcfac4c0b9d88c715ce7f9bc89}{n}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00095}\mbox{\hyperlink{structReallocResult_a34890ad3435f12da61d63ab205fb170c}{00095}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structReallocResult_a34890ad3435f12da61d63ab205fb170c}{stdReallocations}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00096}\mbox{\hyperlink{structReallocResult_a7b6a3bee9ecaf5f17543090784556273}{00096}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structReallocResult_a7b6a3bee9ecaf5f17543090784556273}{myReallocations}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00097}00097\ \};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00099}\mbox{\hyperlink{spartos__analize_8cpp_a198a58ffdc033aaa1cc290ae1411d991}{00099}}\ \mbox{\hyperlink{structReallocResult}{ReallocResult}}\ \mbox{\hyperlink{spartos__analize_8cpp_a198a58ffdc033aaa1cc290ae1411d991}{countReallocations}}(std::size\_t\ n)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00100}00100\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00101}00101\ \ \ \ \ \mbox{\hyperlink{structReallocResult}{ReallocResult}}\ r;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00102}00102\ \ \ \ \ r.\mbox{\hyperlink{structReallocResult_ad7176bfcfac4c0b9d88c715ce7f9bc89}{n}}\ =\ n;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ std::vector}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ std::vector<int>\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{structReallocResult_a34890ad3435f12da61d63ab205fb170c}{stdReallocations}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ std::size\_t\ prevCap\ =\ v.capacity();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ static\_cast<int>(n);\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ v.push\_back(i);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v.capacity()\ !=\ prevCap)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prevCap\ =\ v.capacity();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++r.\mbox{\hyperlink{structReallocResult_a34890ad3435f12da61d63ab205fb170c}{stdReallocations}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{comment}{//\ Vector<T>}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00121}00121\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{structReallocResult_a7b6a3bee9ecaf5f17543090784556273}{myReallocations}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ std::size\_t\ prevCap\ =\ v.\mbox{\hyperlink{classVector_a60671a453740307c95b9716139acfaf0}{capacity}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ static\_cast<int>(n);\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(i);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v.\mbox{\hyperlink{classVector_a60671a453740307c95b9716139acfaf0}{capacity}}()\ !=\ prevCap)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prevCap\ =\ v.\mbox{\hyperlink{classVector_a60671a453740307c95b9716139acfaf0}{capacity}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++r.\mbox{\hyperlink{structReallocResult_a7b6a3bee9ecaf5f17543090784556273}{myReallocations}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00139}\mbox{\hyperlink{spartos__analize_8cpp_adbadbbee79f958474322349375f388a2}{00139}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spartos__analize_8cpp_adbadbbee79f958474322349375f388a2}{reallocBenchmark}}()}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00140}00140\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00141}00141\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n===\ 2.\ Atminties\ perskirstymu\ skaičius\ ===\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00142}00142\ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Elementu\ sk."{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(22)\ <<\ \textcolor{stringliteral}{"{}std::vector\ perskirst."{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Vector<T>\ perskirst.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00146}00146\ \ \ \ \ std::cout\ <<\ std::string(60,\ \textcolor{charliteral}{'-\/'})\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00148}00148\ \ \ \ \ \textcolor{keyword}{const}\ std::size\_t\ sizes[]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ 100'000,\ 1'000'000,\ 10'000'000,\ 100'000'000}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00150}00150\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ n\ :\ sizes)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00153}00153\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ res\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a198a58ffdc033aaa1cc290ae1411d991}{countReallocations}}(n);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(15)\ <<\ n}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(22)\ <<\ res.stdReallocations}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ res.myReallocations\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00160}00160\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00162}00162\ \textcolor{comment}{//\ 3.\ Kitos\ operacijos\ (insert,\ erase,\ reserve)}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00164}\mbox{\hyperlink{spartos__analize_8cpp_a370c7793a79bf6bc2a71e7a746d582e7}{00164}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spartos__analize_8cpp_a370c7793a79bf6bc2a71e7a746d582e7}{otherOpsBenchmark}}()}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00165}00165\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00166}00166\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ N\ =\ 1'000'000;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00168}00168\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n===\ 3.\ Kitos\ operacijos\ (N="{}}\ <<\ N\ <<\ \textcolor{stringliteral}{"{})\ ===\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00170}00170\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ reserve\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00171}00171\ \ \ \ \ \textcolor{keywordtype}{double}\ stdT,\ myT;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00172}00172\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ std::vector<int>\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ v.reserve(N);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N;\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ v.push\_back(i);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ stdT\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00180}00180\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a658009973274a1ee66854b00cac8d64c}{reserve}}(N);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N;\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(i);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ myT\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00187}00187\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00188}00188\ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(30)\ <<\ \textcolor{stringliteral}{"{}reserve(N)\ +\ push\_back:"{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}std="{}}\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ stdT}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}s\ \ my="{}}\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ myT\ <<\ \textcolor{stringliteral}{"{}s\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ erase\ (priekis)\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00194}00194\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ kiekis\ =\ 10000;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00195}00195\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ std::vector<int>\ v(kiekis);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ v.size();\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ v[i]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!v.empty())}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ v.erase(v.begin());}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ stdT\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00205}00205\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00206}00206\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v(kiekis);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ v.\mbox{\hyperlink{classVector_ade9ce4c7602280a9c935c919afe10098}{size}}();\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ v[i]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!v.\mbox{\hyperlink{classVector_ad5e31c0f82683ece1b5b020c15a8b77b}{empty}}())}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a9475371e34e4ce47ec3359ff25fed6ec}{erase}}(v.\mbox{\hyperlink{classVector_aea04561325108b73824e4ad1dd8114b2}{begin}}());}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ myT\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00216}00216\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00217}00217\ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(30)\ <<\ \textcolor{stringliteral}{"{}erase(begin())\ x"{}}\ +\ std::to\_string(kiekis)\ +\ \textcolor{stringliteral}{"{}:"{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}std="{}}\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ stdT}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}s\ \ my="{}}\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ myT\ <<\ \textcolor{stringliteral}{"{}s\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00222}00222\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ shrink\_to\_fit\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00223}00223\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ std::vector<int>\ v(N);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ v.resize(10);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ v.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ stdT\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00229}00229\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00230}00230\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v(N);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a4cd2d6e5693f1001618fa7f078f5a603}{resize}}(10);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ t\ =\ Clock::now();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a5746026edae1b2adb3b2133b99996f32}{shrink\_to\_fit}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ myT\ =\ \mbox{\hyperlink{spartos__analize_8cpp_a28b2db8ac5602ffc9e8461c766f4cedc}{elapsed}}(t);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00236}00236\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00237}00237\ \ \ \ \ std::cout\ <<\ std::left}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ std::setw(30)\ <<\ \textcolor{stringliteral}{"{}shrink\_to\_fit\ (N-\/>10):"{}}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}std="{}}\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ stdT}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}s\ \ my="{}}\ <<\ std::fixed\ <<\ std::setprecision(6)\ <<\ myT\ <<\ \textcolor{stringliteral}{"{}s\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00241}00241\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00243}00243\ \textcolor{comment}{//4.\ Paprastas\ korektiškumo\ patikrinimas}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00245}\mbox{\hyperlink{spartos__analize_8cpp_ad5462f5b89155fe607092b34d23ee335}{00245}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spartos__analize_8cpp_ad5462f5b89155fe607092b34d23ee335}{correctnessCheck}}()}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00246}00246\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00247}00247\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n===\ 4.\ Greitas\ korektiškumo\ patikrinimas\ ===\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00249}00249\ \ \ \ \ \textcolor{keywordtype}{bool}\ ok\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00251}00251\ \ \ \ \ \textcolor{comment}{//\ push\_back\ +\ at}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00252}00252\ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00253}00253\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 1000;\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ v.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(i\ *\ 2);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00255}00255\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 1000;\ ++i)}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v.\mbox{\hyperlink{classVector_a0949c5f412f6fedaa2a35d35752f0555}{at}}(i)\ !=\ i\ *\ 2)\ \{\ ok\ =\ \textcolor{keyword}{false};\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00257}00257\ \ \ \ \ std::cout\ <<\ (ok\ ?\ \textcolor{stringliteral}{"{}\ \ [OK]\ "{}}\ :\ \textcolor{stringliteral}{"{}\ \ [FAIL]\ "{}})}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}push\_back\ +\ at\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00260}00260\ \ \ \ \ \textcolor{comment}{//\ insert\ viduryje}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00261}00261\ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v2\ =\ \{1,\ 3\};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00262}00262\ \ \ \ \ v2.\mbox{\hyperlink{classVector_a58b6689868c3d347a90f6c7c2d60be12}{insert}}(v2.begin()\ +\ 1,\ 2);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00263}00263\ \ \ \ \ ok\ =\ (v2[0]\ ==\ 1\ \&\&\ v2[1]\ ==\ 2\ \&\&\ v2[2]\ ==\ 3);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00264}00264\ \ \ \ \ std::cout\ <<\ (ok\ ?\ \textcolor{stringliteral}{"{}\ \ [OK]\ "{}}\ :\ \textcolor{stringliteral}{"{}\ \ [FAIL]\ "{}})}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}insert(begin+1,\ value)\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00267}00267\ \ \ \ \ \textcolor{comment}{//\ erase}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00268}00268\ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v3\ =\ \{10,\ 20,\ 30,\ 40\};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00269}00269\ \ \ \ \ v3.\mbox{\hyperlink{classVector_a9475371e34e4ce47ec3359ff25fed6ec}{erase}}(v3.begin()\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00270}00270\ \ \ \ \ ok\ =\ (v3.size()\ ==\ 3\ \&\&\ v3[1]\ ==\ 30);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00271}00271\ \ \ \ \ std::cout\ <<\ (ok\ ?\ \textcolor{stringliteral}{"{}\ \ [OK]\ "{}}\ :\ \textcolor{stringliteral}{"{}\ \ [FAIL]\ "{}})}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}erase\ single\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00274}00274\ \ \ \ \ \textcolor{comment}{//\ swap}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00275}00275\ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ a\ =\ \{1,\ 2\},\ b\ =\ \{9,\ 8,\ 7\};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00276}00276\ \ \ \ \ a.\mbox{\hyperlink{classVector_ae1387b115ad4874d76690acc701ce976}{swap}}(b);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00277}00277\ \ \ \ \ ok\ =\ (a.size()\ ==\ 3\ \&\&\ b.size()\ ==\ 2);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00278}00278\ \ \ \ \ std::cout\ <<\ (ok\ ?\ \textcolor{stringliteral}{"{}\ \ [OK]\ "{}}\ :\ \textcolor{stringliteral}{"{}\ \ [FAIL]\ "{}})}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}swap\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00281}00281\ \ \ \ \ \textcolor{comment}{//\ erase(value)\ non-\/member}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00282}00282\ \ \ \ \ \mbox{\hyperlink{classVector}{Vector<int>}}\ v4\ =\ \{1,\ 2,\ 3,\ 2,\ 4\};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00283}00283\ \ \ \ \ erase(v4,\ 2);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00284}00284\ \ \ \ \ ok\ =\ (v4.size()\ ==\ 3\ \&\&\ v4[1]\ ==\ 3);}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00285}00285\ \ \ \ \ std::cout\ <<\ (ok\ ?\ \textcolor{stringliteral}{"{}\ \ [OK]\ "{}}\ :\ \textcolor{stringliteral}{"{}\ \ [FAIL]\ "{}})}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}non-\/member\ erase(value)\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00288}00288\ \ \ \ \ std::cout\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00289}00289\ \}}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00293}\mbox{\hyperlink{spartos__analize_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00293}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{spartos__analize_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00294}00294\ \{}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00295}00295\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}================================================================\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00296}00296\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ Vector<T>\ vs\ std::vector\ –\ Spartos\ analize\ v3.0\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00297}00297\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}================================================================\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00299}00299\ \ \ \ \ \mbox{\hyperlink{spartos__analize_8cpp_ad5462f5b89155fe607092b34d23ee335}{correctnessCheck}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00300}00300\ \ \ \ \ \mbox{\hyperlink{spartos__analize_8cpp_ab07f69281d288fe43142d003609497b4}{pushBackBenchmark}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00301}00301\ \ \ \ \ \mbox{\hyperlink{spartos__analize_8cpp_adbadbbee79f958474322349375f388a2}{reallocBenchmark}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00302}00302\ \ \ \ \ \mbox{\hyperlink{spartos__analize_8cpp_a370c7793a79bf6bc2a71e7a746d582e7}{otherOpsBenchmark}}();}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00304}00304\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n[Baigta]\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00305}00305\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{spartos__analize_8cpp_source_l00306}00306\ \}}
+
+\end{DoxyCode}

@@ -1,364 +1,282 @@
-# Studentų duomenų apdorojimo programa v1.0
+# Studentų duomenų apdorojimo programa v3.0
 
-## Projekto aprašymas
-
-Ši v1.0 versija sukurta remiantis v0.4 baze ir papildyta taip, kad studentų konteinerio tipas gali būti keičiamas nekeičiant programos logikos, naudojant:
-
-- std::vector<Stud>
-- std::list<Stud>
-- std::deque<Stud>
-
-Programa leidžia atlikti studentų duomenų apdorojimą, analizę bei konteinerių ir algoritmų veikimo spartos tyrimą.
+> Studentų duomenų valdymo sistema su nuosava `Vector<T>` klase – pilnaverčiu `std::vector` pakaitalu, spartos analize, Google Test testais ir Inno Setup diegimo paketu.
 
 ---
 
-## Programos galimybės
+## Turinys
 
-Programa leidžia:
-
-- įvesti studentus rankiniu būdu
-- nuskaityti studentus iš failo
-- generuoti studentus su atsitiktiniais pažymiais
-- sugeneruoti pilnus studentų failus
-- rūšiuoti studentus
-- skirstyti studentus į dvi kategorijas:
-  - vargšiukai
-  - protai
-- atlikti konteinerių ir strategijų veikimo spartos tyrimą
-
----
-
-## Konteineriai
-
-Programa palaiko tris konteinerių tipus:
-
-- std::vector
-- std::list
-- std::deque
-
-Konteinerio tipas keičiamas kompiliavimo metu.
+- [Aprašymas](#aprašymas)
+- [Versijų istorija](#versijų-istorija)
+- [Projekto struktūra](#projekto-struktūra)
+- [Vector klasė](#vector-klasė)
+- [Klasių hierarchija](#klasių-hierarchija)
+- [Rule of Five](#rule-of-five)
+- [Sistemos parametrai](#sistemos-parametrai)
+- [Įdiegimas ir kompiliavimas](#įdiegimas-ir-kompiliavimas)
+- [Doxygen dokumentacija](#doxygen-dokumentacija)
+- [Diegimo paketas](#diegimo-paketas)
 
 ---
 
-## Konteinerio paleidimas
+## Aprašymas
 
-Sukompiliavus programą, galima paleisti atskiras versijas:
-
-- programa_vector
-- programa_list
-- programa_deque
-
----
-
-## Studentų skirstymo strategijos
-
-### Strategija 1
-
-Bendras konteineris skaidomas į du naujus konteinerius:
-
-- vargšiukai
-- protai
+Projektas realizuoja studentų duomenų valdymo sistemą naudojant C++17.
+Pagrindinė klasė `Studentas` paveldi iš abstrakčios `Zmogus` bazės ir
+pilnai realizuoja **Rule of Five**. Sistema palaiko keturis konteinerius:
+`std::vector`, `std::list`, `std::deque` bei **nuosavą `Vector<T>`** klasę,
+kuri apima ne mažiau 80% `std::vector` funkcijų. Pateikiamas Inno Setup
+diegimo paketas su Start meniu ir darbastalio nuorodomis.
 
 ---
 
-### Strategija 2
-
-Kuriamas tik vienas naujas konteineris:
-
-- vargšiukai
-
-Studentai, kurie yra vargšiukai, perkeliami į naują konteinerį ir pašalinami iš bendro konteinerio. Likę studentai laikomi protai.
-
----
-
-### Strategija 3 (optimizuota)
-
-Naudojamas std::stable_partition algoritmas.
-
-Skirstymas atliekamas vienu perėjimu per duomenis, minimaliai kopijuojant elementus.
-
----
-
-## Efektyvumo tyrimas
-
-Atliekamas programos veikimo spartos palyginimas tarp:
-
-- konteinerių tipų (vector, list, deque)
-- skirtingų skirstymo strategijų
-
-Matuojami etapai:
-
-- duomenų nuskaitymas
-- rūšiavimas
-- skirstymas į grupes
-
----
-
-## Testavimo duomenys
-
-Testai atliekami su šiais failų dydžiais:
-
-- 1000 įrašų
-- 10000 įrašų
-- 100000 įrašų
-- 1000000 įrašų
-- 10000000 įrašų
-
-[Pačius failus galima atsisiųsti iš čia.](https://drive.google.com/drive/folders/1qzaUmH6uCoukvYfjZTGOEyJnYAvrIs-E?usp=sharing)
-
-![Procesoriaus darbas](screenshots/darbas.png)
-
----
-
-## Testavimo rezultatai
-
-# std::deque - strategija 1
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001088 | 0.000116 | 0.000088 | 0.001292 |
-| studentai10000.txt | 10000 | 0.019456 | 0.001118 | 0.000851 | 0.021425 |
-| studentai100000.txt | 100000 | 0.240544 | 0.013359 | 0.012605 | 0.266508 |
-| studentai1000000.txt | 1000000 | 1.219317 | 0.174047 | 0.116091 | 1.509455 |
-| studentai10000000.txt | 10000000 | 6.691773 | 2.170694 | 1.034858 | 9.897325 |
-
-# std::deque - strategija 2
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001043 | 0.000110 | 0.000036 | 0.001189 |
-| studentai10000.txt | 10000 | 0.019482 | 0.001123 | 0.000288 | 0.020893 |
-| studentai100000.txt | 100000 | 0.245771 | 0.013894 | 0.007279 | 0.266944 |
-| studentai1000000.txt | 1000000 | 1.281482 | 0.184023 | 0.087429 | 1.552934 |
-| studentai10000000.txt | 10000000 | 6.802008 | 2.208903 | 0.561585 | 9.572496 |
-
-# std::deque - strategija 3
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001488 | 0.000151 | 0.000100 | 0.001739 |
-| studentai10000.txt | 10000 | 0.020055 | 0.001143 | 0.000797 | 0.021995 |
-| studentai100000.txt | 100000 | 0.243454 | 0.013540 | 0.008227 | 0.265221 |
-| studentai1000000.txt | 1000000 | 1.234033 | 0.172399 | 0.087062 | 1.493494 |
-| studentai10000000.txt | 10000000 | 6.620737 | 2.150159 | 0.871913 | 9.642809 |
-
----
-
-# std::list - strategija 1
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001034 | 0.000071 | 0.000106 | 0.001211 |
-| studentai10000.txt | 10000 | 0.019678 | 0.000911 | 0.001092 | 0.021681 |
-| studentai100000.txt | 100000 | 0.250740 | 0.018391 | 0.019181 | 0.288312 |
-| studentai1000000.txt | 1000000 | 1.291901 | 0.431670 | 0.184415 | 1.907986 |
-| studentai10000000.txt | 10000000 | 6.922176 | 7.359163 | 1.730864 | 16.012203 |
-
-# std::list - strategija 2
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001329 | 0.000093 | 0.000067 | 0.001489 |
-| studentai10000.txt | 10000 | 0.020439 | 0.000924 | 0.000502 | 0.021865 |
-| studentai100000.txt | 100000 | 0.252130 | 0.020488 | 0.012339 | 0.284957 |
-| studentai1000000.txt | 1000000 | 1.286158 | 0.423615 | 0.136856 | 1.846629 |
-| studentai10000000.txt | 10000000 | 6.921217 | 7.349575 | 1.309352 | 15.580144 |
-
-# std::list - strategija 3
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001206 | 0.000083 | 0.000141 | 0.001430 |
-| studentai10000.txt | 10000 | 0.020519 | 0.000940 | 0.001364 | 0.022823 |
-| studentai100000.txt | 100000 | 0.259262 | 0.019805 | 0.021550 | 0.300617 |
-| studentai1000000.txt | 1000000 | 1.290978 | 0.433556 | 0.375643 | 2.100177 |
-| studentai10000000.txt | 10000000 | 6.960070 | 7.341990 | 3.725538 | 18.027598 |
-
----
-
-# std::vector - strategija 1
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001248 | 0.000110 | 0.000124 | 0.001482 |
-| studentai10000.txt | 10000 | 0.020431 | 0.000955 | 0.001172 | 0.022558 |
-| studentai100000.txt | 100000 | 0.248936 | 0.011622 | 0.013477 | 0.274035 |
-| studentai1000000.txt | 1000000 | 1.250284 | 0.144832 | 0.126277 | 1.521393 |
-| studentai10000000.txt | 10000000 | 6.825194 | 1.810164 | 1.103925 | 9.739283 |
-
-# std::vector - strategija 2
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001230 | 0.000108 | 0.000098 | 0.001436 |
-| studentai10000.txt | 10000 | 0.020310 | 0.000940 | 0.000760 | 0.022010 |
-| studentai100000.txt | 100000 | 0.248500 | 0.011510 | 0.009800 | 0.269810 |
-| studentai1000000.txt | 1000000 | 1.245600 | 0.145900 | 0.082500 | 1.474000 |
-| studentai10000000.txt | 10000000 | 6.810500 | 1.805300 | 0.780200 | 9.396000 |
-
-# std::vector - strategija 3
-
-| Failas | Irasu kiekis | Skaitymas (s) | Rusiavimas (s) | Skirstymas (s) | Iš viso (s) |
-|---|---:|---:|---:|---:|---:|
-| studentai1000.txt | 1000 | 0.001518 | 0.000132 | 0.000116 | 0.001766 |
-| studentai10000.txt | 10000 | 0.020278 | 0.000921 | 0.000860 | 0.022059 |
-| studentai100000.txt | 100000 | 0.240527 | 0.011495 | 0.014369 | 0.266391 |
-| studentai1000000.txt | 1000000 | 1.232487 | 0.156806 | 0.158842 | 1.548135 |
-| studentai10000000.txt | 10000000 | 6.882318 | 1.811622 | 1.405848 | 10.099788 |
-
-![Procesoriaus darbas](screenshots/v1.0_rez1.png)
-
-![Procesoriaus darbas](screenshots/v1.0_rez2.png)
-
----
-
-# Bendras konteinerių ir strategijų palyginimas (Iš viso laikas)
-
-## 1000 įrašų
-
-| Konteineris | Strategija 1 | Strategija 2 | Strategija 3 |
-|---|---:|---:|---:|
-| vector | 0.001482 | 0.001436 | 0.001766 |
-| list   | 0.001211 | 0.001489 | 0.001430 |
-| deque  | 0.001292 | 0.001189 | 0.001739 |
-
----
-
-## 10 000 įrašų
-
-| Konteineris | Strategija 1 | Strategija 2 | Strategija 3 |
-|---|---:|---:|---:|
-| vector | 0.022558 | 0.022010 | 0.022059 |
-| list   | 0.021681 | 0.021865 | 0.022823 |
-| deque  | 0.021425 | 0.020893 | 0.021995 |
-
----
-
-## 100 000 įrašų
-
-| Konteineris | Strategija 1 | Strategija 2 | Strategija 3 |
-|---|---:|---:|---:|
-| vector | 0.274035 | 0.269810 | 0.266391 |
-| list   | 0.288312 | 0.284957 | 0.300617 |
-| deque  | 0.266508 | 0.266944 | 0.265221 |
-
----
-
-## 1 000 000 įrašų
-
-| Konteineris | Strategija 1 | Strategija 2 | Strategija 3 |
-|---|---:|---:|---:|
-| vector | 1.521393 | 1.474000 | 1.548135 |
-| list   | 1.907986 | 1.846629 | 2.100177 |
-| deque  | 1.509455 | 1.552934 | 1.493494 |
-
----
-
-## 10 000 000 įrašų
-
-| Konteineris | Strategija 1 | Strategija 2 | Strategija 3 |
-|---|---:|---:|---:|
-| vector | 9.739283 | 9.396000 | 10.099788 |
-| list   | 16.012203 | 15.580144 | 18.027598 |
-| deque  | 9.897325 | 9.572496 | 9.642809 |
-
----
-
-### Išvados
-
-
-## Konteinerių palyginimas
-
-**std::deque**
-- Bendrai demonstruoja vienus geriausių arba geriausius rezultatus.
-- Ypač efektyvus skirstymo (strategija 2 ir 3) operacijose.
-- Dideliuose duomenų rinkiniuose dažnai lenkia vector.
-
-**std::vector**
-- Labai artimi rezultatai deque, dažnai šiek tiek lėtesnis skirstymo operacijose.
-- Greitas rūšiavimas.
-- Stiprus pasirinkimas, bet ne visada greičiausias skirstymo etape.
-
-**std::list**
-- Nuosekliai lėčiausias visais atvejais.
-- Netinka dideliems duomenų kiekiams.
-
----
-
-## Strategijų palyginimas
-
-**Strategija 1**
-- Paprasta realizacija.
-- Naudoja daugiau atminties dėl duomenų dubliavimo.
-- Stabilus, bet neoptimalus sprendimas.
-
-**Strategija 2**
-- Efektyvesnė atminties atžvilgiu.
-- Lėtesnė dėl `erase` operacijų, ypač su vector ir deque.
-
-**Strategija 3**
-- Dažniausiai greičiausia arba viena greičiausių strategijų.
-- Naudoja `std::partition` algoritmą.
-- Minimalus kopijavimas.
-
----
-
-## Galutinės išvados
-
-- Konteinerio tipas turi didelę įtaką rezultatams, ypač skirstymo operacijose.
-- **std::deque šiame teste pasirodė kaip greičiausias operacijose su daug įrašų.**
-- **std::vector yra labai artimas deque ir dažniausiai tinkamiausias pasirinkimas.**
-- **std::list yra lėtesnis, ypač kai riekia apdoroti daug įrašų, tad yra netinkamas dideliems duomenims.**
-- Geriausias bendras derinys priklauso nuo atvejo, tačiau dažniausiai optimalu yra:
-  - deque + Strategija 3
-  - vector + Strategija 2 (labai artimas rezultatas)
-
-## Sistemos parametrai
-
-- CPU:  12th Gen Intel Core i5-12400F
-- RAM:  32.0 GB (31.8 GB usable)
-- Diskas:  HDD
-- Operacinė sistema:  Windows 10
+## Versijų istorija
+
+### v3.0 (dabartinė)
+- Sukurta **nuosava `Vector<T>`** klasė – pilnavertė `std::vector` alternatyva
+- Atlikta **spartos analizė**: `std::vector` vs `Vector<T>` (push_back, insert, erase)
+- Palyginti **atminties perskirstymų** skaičiai užpildant iki 100 000 000 elementų
+- Pridėta ** Google Test** testų `Vector<T>` klasei
+- Sukurtas **Inno Setup** diegimo paketas (`setup.iss` → `Setup.exe`)
 
 ---
 
 ## Projekto struktūra
 
-main.cpp  
-meniu.cpp  
-skaitymas.cpp  
-Generavimas.cpp  
-spausdinam.cpp  
-tyrimas.cpp  
-laikai.cpp  
-
-studentas.h  
-konteineris.h  
-meniu.h  
-skaitymas.h  
-Generavimas.h  
-spausdinam.h  
-tyrimas.h  
-laikai.h  
-
-Makefile  
+```
+.
+├── main.cpp                  # Pagrindinis failas
+├── Zmogus.h / .cpp           # Abstrakti bazinė klasė
+├── Studentas.h / .cpp        # Konkreti klasė (Rule of Five)
+├── Vector.h                  # Nuosava Vector<T> klasė (v3.0)
+├── konteineris.h             # Kompiliavimo laiku pasirenkamas konteineris
+├── Generavimas.h / .cpp      # Generavimas ir skirstymas į grupes
+├── skaitymas.h / .cpp        # Duomenų skaitymas
+├── spausdinam.h / .cpp       # Rikiavimas ir išvedimas
+├── meniu.h / .cpp            # Interaktyvus meniu
+├── tyrimas.h / .cpp          # Greitaveikos tyrimas
+├── testas.h / .cpp           # Vidinis testavimo modulis
+├── laikai.h / .cpp           # Laiko matavimų struktūra
+├── vector_tests.cpp          # Google Test testai Vector<T> (v3.0)
+├── spartos_analize.cpp       # Spartos analizės programa (v3.0)
+├── Makefile                  # Makefile sistema
+├── Doxyfile                  # Doxygen konfigūracija
+├── setup.iss                 # Inno Setup skriptas
+└── docs/
+    ├── refman.pdf
+    ├── html/              # HTML dokumentacija
+    └── latex/             # LaTeX dokumentacija + PDF
+```
 
 ---
 
-## Paleidimas
+## Vector klasė
 
-### Kompiliavimas
+`Vector<T>` – nuosava dinaminė masyvo realizacija, apimanti:
 
+### Member types
+| Tipas | Aprašymas |
+|-------|-----------|
+| `value_type` | Saugomo elemento tipas `T` |
+| `size_type` | `std::size_t` |
+| `iterator` | `T*` rodyklė |
+| `reverse_iterator` | `std::reverse_iterator<iterator>` |
+| `allocator_type` | `std::allocator<T>` |
+
+### Realizuotos funkcijos (pavyzdžiai)
+
+**1. `push_back` / `emplace_back`**
+```cpp
+Vector<int> v;
+v.push_back(1);
+v.push_back(2);
+v.emplace_back(3);
+// v = {1, 2, 3}
+```
+
+**2. `insert`**
+```cpp
+Vector<int> v = {1, 3, 4};
+v.insert(v.begin() + 1, 2);
+// v = {1, 2, 3, 4}
+```
+
+**3. `erase`**
+```cpp
+Vector<int> v = {1, 2, 3, 4};
+v.erase(v.begin() + 1, v.begin() + 3);
+// v = {1, 4}
+```
+
+**4. `resize` ir `reserve`**
+```cpp
+Vector<int> v;
+v.reserve(100);   // rezervuoja atmintį, size=0
+v.resize(5, 99);  // v = {99, 99, 99, 99, 99}
+```
+
+**5. Palyginimo operatoriai**
+```cpp
+Vector<int> a = {1, 2, 3};
+Vector<int> b = {1, 2, 4};
+bool r1 = (a == a);  // true
+bool r2 = (a < b);   // true
+bool r3 = (a != b);  // true
+```
+
+### Funkcijų padengimas
+
+| Kategorija | Funkcijos | Realizuota |
+|-----------|-----------|-----------|
+| Konstruktoriai | 8 | 8 |
+| Elementų prieiga | `at`, `[]`, `front`, `back`, `data` | 5 |
+| Iteratoriai | `begin/end`, `rbegin/rend`, `cbegin/cend` | 8 |
+| Talpa | `size`, `capacity`, `empty`, `reserve`, `shrink_to_fit` | 6 |
+| Modifikatoriai | `push_back`, `pop_back`, `insert`, `erase`, `emplace`, `emplace_back`, `clear`, `resize`, `swap`, `assign` | 10 |
+| Non-member | `==`, `!=`, `<`, `<=`, `>`, `>=`, `swap`, `erase`, `erase_if` | 9 |
+
+---
+
+## Klasių hierarchija
+
+```
+Zmogus  (abstrakti)
+│   ├── vardas : string
+│   ├── pavarde : string
+│   ├── getVardas() : string
+│   ├── getPavarde() : string
+│   ├── suskaiciuotiGalutini() = 0  ← grynoji virtuali
+│   └── spausdinti(ostream&) = 0   ← grynoji virtuali
+│
+└── Studentas  (konkreti)
+        ├── egzaminas : int
+        ├── nd : vector<int>
+        ├── vidurkis : float
+        ├── galrezVid : float
+        ├── galrezMed : float
+        ├── suskaiciuotiGalutini() override
+        └── spausdinti(ostream&) override
+```
+
+---
+
+## Rule of Five
+
+| Metodas | Realizacija |
+|---------|-------------|
+| Default konstruktorius | Inicializuoja laukus į 0 / tuščius |
+| Kopijavimo konstruktorius | Gili kopija (`nd` vektorius) |
+| Kopijavimo priskyrimo op. | Savipriskyrimo apsauga |
+| Perkėlimo konstruktorius | Perkelia `nd`; šaltinis lieka tuščias |
+| Perkėlimo priskyrimo op. | Savipriskyrimo apsauga + perkėlimas |
+| Destruktorius | `= default` (vektorius atlaisvinamas automatiškai) |
+
+### Galutinio balo formulė
+
+```
+galrezVid = 0.4 × vidurkis  + 0.6 × egzaminas
+galrezMed = 0.4 × mediana   + 0.6 × egzaminas
+```
+
+---
+
+## Sistemos parametrai
+
+| Parametras | Reikšmė |
+|------------|---------|
+| CPU | 12th Gen Intel Core i5-12400F |
+| RAM | 32 GB DDR4 |
+| Diskas | HDD |
+| OS | Windows 10 |
+| Kompiliatorius | GCC / MSVC |
+
+---
+
+## Įdiegimas ir kompiliavimas
+
+### Reikalavimai
+- C++17 palaikantis kompiliatorius (GCC ≥ 9, Clang ≥ 10, MSVC 2019+)
+- (Neprivaloma) Google Test – unit testams
+- (Neprivaloma) Doxygen – dokumentacijai
+- (Neprivaloma) Inno Setup – diegimo paketui
+
+### Kompiliavimo instrukcijos
+
+```bash
+# Visi 4 konteineriai su -O2
 make
+
+# Atskiras konteineris
+make programa_vector      # std::vector
+make programa_manoVector  # Vector<T> nuosava
+make programa_list        # std::list
+make programa_deque       # std::deque
+
+# Optimizuotos std::vector versijos (O1, O2, O3)
+make opt_vector
+
+# Optimizuotos Vector<T> versijos (O1, O2, O3)
+make opt_manoVector
+
+# Spartos analizė
+make benchmark
+
+# Unit testai (reikia įdiegti GTest: sudo apt install libgtest-dev)
+make test
+
+# Doxygen dokumentacija
+make docs
+
+# Valymas
+make clean
+```
 
 ### Paleidimas
 
-.\programa_vector  
-.\programa_list  
-.\programa_deque  
+```bash
+# Linux/macOS
+./programa_vector
+./programa_manoVector
+
+# Windows
+.\programa_vector.exe
+.\programa_manoVector.exe
+```
 
 ---
 
-## Valymas
+## Doxygen dokumentacija
 
-make clean
+### Generavimas
+
+```bash
+make docs
+# arba tiesiogiai:
+doxygen Doxyfile
+```
+
+Dokumentacija sukuriama:
+- `docs/html/index.html` – HTML versija naršyklėje
+
+---
+
+## Diegimo paketas
+
+### Reikalavimai
+- [Inno Setup 6.x](https://jrsoftware.org/isdl.php)
+
+### Diegimo sukūrimas
+
+```bash
+# 1. Sukompiliuoti
+make programa_manoVector
+
+# 2. Paruošti struktūrą
+#    programa_manoVector.exe
+#    studfailai\studentai10000.txt
+#    studfailai\studentai100000.txt ir t.t.
+
+# 3. Kompiliuoti .iss
+iscc setup.iss
+# Arba atidaryti Inno Setup IDE ir paspausti Ctrl+F9
+``

@@ -1,0 +1,110 @@
+\doxysection{skaitymas.\+cpp}
+\hypertarget{skaitymas_8cpp_source}{}\label{skaitymas_8cpp_source}\mbox{\hyperlink{skaitymas_8cpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{skaitymas_8h}{skaitymas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{laikai_8h}{laikai.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00012}\mbox{\hyperlink{skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{skaitymas_8cpp_a7e691d0dbb70e6032759fbfad443c490}{skaitomRanka}}(\mbox{\hyperlink{classStudentas}{Studentas}}\&\ s)}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00014}00014\ \ \ \ \ std::string\ v,\ p;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00016}00016\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ varda:\ "{}};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00017}00017\ \ \ \ \ std::cin\ >>\ v;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00018}00018\ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a553cf719758f4821bbd6eeda454fdf03}{setVardas}}(v);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00020}00020\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ pavarde:\ "{}};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00021}00021\ \ \ \ \ std::cin\ >>\ p;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00022}00022\ \ \ \ \ s.\mbox{\hyperlink{classStudentas_aa2f8644798ffa4396c35400dfb10ab23}{setPavarde}}(p);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'y'};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00025}00025\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Ar\ naudoti\ atsitiktinai\ parinktus\ n.d.\ rezultatus?\ (y/n):\ "{}};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00026}00026\ \ \ \ \ std::cin\ >>\ c;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'n'}\ ||\ c\ ==\ \textcolor{charliteral}{'N'})}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a6d7f01ee88e3bb9a894ead1659090852}{readNdInteractive}}();}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ egz\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ egzamino\ rezultatasultata\ (1-\/10):\ "{}};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ std::cin\ >>\ egz;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a659d6bb3cfd109fe095a9a03eaea2667}{setEgzaminas}}(egz);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a556816c96b5fd37bf186e57da67e4f91}{parinktiAtsitiktinius}}();}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00043}\mbox{\hyperlink{skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22}{00043}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22}{failoSkaitymas}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis)}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00045}00045\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ failo\ pavadinima:\ "{}};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00046}00046\ \ \ \ \ std::string\ pav;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00047}00047\ \ \ \ \ std::cin\ >>\ pav;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22}{failoSkaitymas}}(studis,\ pav);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00052}\mbox{\hyperlink{skaitymas_8h_a635053d42c395cc960020c5a3cbf6302}{00052}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{skaitymas_8cpp_a90ec6d53fd600e09f06272997c86dc22}{failoSkaitymas}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis,\ \textcolor{keyword}{const}\ std::string\&\ pav)}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{auto}\ start\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00057}00057\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ std::ifstream\ read(pav);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!read.is\_open())}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Neatidarem\ failo:\ "{}}\ +\ pav);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ std::string\ eilute;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ std::getline(read,\ eilute);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(read,\ eilute))}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (eilute.empty())}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Studentas\ konstruktorius\ kviečia\ readStudent()}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ ss(eilute);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStudentas}{Studentas}}\ s(ss);}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.\mbox{\hyperlink{classStudentas_a72ad9cbcac7d53cefe587120d379a78b}{getND}}().empty())}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ studis.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(std::move(s));}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ end\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{laikai_8h_abb50db57757f191694f1e952de1398f8}{timers}}.\mbox{\hyperlink{structTimerResults_a9d2aaf87658fddef8a2dcee90a1aedeb}{skaitymas}}\ =\ std::chrono::duration<double>(end\ -\/\ start).count();}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\&\ e)}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Klaida\ skaitant\ faila:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00099}\mbox{\hyperlink{skaitymas_8h_a23423a68a7c6da7c2698b2ccbf9557aa}{00099}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{skaitymas_8cpp_a23423a68a7c6da7c2698b2ccbf9557aa}{suskaiciuotiGalutinius}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis)}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00100}00100\ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ s\ :\ studis)}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ s.suskaiciuotiGalutini();}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{skaitymas_8cpp_source_l00105}00105\ \}}
+
+\end{DoxyCode}

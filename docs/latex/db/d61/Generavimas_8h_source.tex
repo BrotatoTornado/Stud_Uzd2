@@ -1,0 +1,136 @@
+\doxysection{Generavimas.\+h}
+\hypertarget{Generavimas_8h_source}{}\label{Generavimas_8h_source}\mbox{\hyperlink{Generavimas_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ Generavimas.h}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Studentų\ failų\ generavimo\ ir\ skirstymo\ į\ grupes\ funkcijų\ deklaracijos.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Apibrėžia\ \`{}SkirstymoStrategija`\ enumeraciją,\ \`{}Skirstymorezultatas`\ struktūrą}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00006}00006\ \textcolor{comment}{\ *\ ir\ visas\ su\ studentų\ generavimu\ bei\ grupavimu\ susijusias\ funkcijas.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00007}00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00008}00008\ \textcolor{comment}{\ *\ @author\ Studentas}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00009}00009\ \textcolor{comment}{\ *\ @version\ 3.0}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00010}00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00012}00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{konteineris_8h}{konteineris.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00017}00017\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00018}00018\ \textcolor{comment}{\ /**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00019}00019\ \textcolor{comment}{\ \ *\ @enum\ SkirstymoStrategija}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00020}00020\ \textcolor{comment}{\ \ *\ @brief\ Nurodo,\ kokiu\ algoritmu\ skirstyti\ studentus\ į\ grupes.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00021}00021\ \textcolor{comment}{\ \ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00022}00022\ \textcolor{comment}{\ \ *\ |\ Reikšmė\ |\ Aprašymas\ |}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00023}00023\ \textcolor{comment}{\ \ *\ |-\/-\/-\/-\/-\/-\/-\/-\/-\/|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00024}00024\ \textcolor{comment}{\ \ *\ |\ Pirma\ \ \ |\ Du\ nauji\ konteineriai\ (vargsiukai\ ir\ protai)\ |}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00025}00025\ \textcolor{comment}{\ \ *\ |\ Antra\ \ \ |\ Vargsiukai\ ištraukiami\ iš\ bendro\ konteinerio;\ protai\ lieka\ |}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00026}00026\ \textcolor{comment}{\ \ *\ |\ Trecia\ \ |\ Efektyvus\ \`{}std::partition`\ algoritmas\ |}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00027}00027\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00029}\mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{00029}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{SkirstymoStrategija}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a85ab2d228b638bbea0a3654ff7f0e73b}{Pirma}}\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14a182c4b89a27c52474a0a532d5519f5e1}{Antra}}\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14aa2d8674f7ae44cb2b79d7ade48bd4e85}{Trecia}}\ =\ 3}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00034}00034\ \};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00035}00035\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00036}00036\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00037}00037\ \textcolor{comment}{\ *\ @struct\ Skirstymorezultatas}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00038}00038\ \textcolor{comment}{\ *\ @brief\ Saugo\ skirstymo\ į\ grupes\ rezultatus.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00039}00039\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00041}\mbox{\hyperlink{structSkirstymorezultatas}{00041}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00043}\mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{00043}}\ \ \ \ \ \mbox{\hyperlink{classVector}{StudContainer}}\ \mbox{\hyperlink{structSkirstymorezultatas_ac4d77b91c6727bb4a544cac828e5ba69}{vargsiukai}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00044}\mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{00044}}\ \ \ \ \ \mbox{\hyperlink{classVector}{StudContainer}}\ \mbox{\hyperlink{structSkirstymorezultatas_aa70aac51bda81fe3b5c878633a6ac099}{protai}};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00045}00045\ \};}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00046}00046\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00047}00047\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00048}00048\ \textcolor{comment}{\ *\ @brief\ Generuoja\ studentų\ duomenų\ failą.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00049}00049\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00050}00050\ \textcolor{comment}{\ *\ Interaktyviai\ prašo\ vartotojo\ įvesti\ failo\ pavadinimą\ ir\ studentų\ kiekį.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00051}00051\ \textcolor{comment}{\ *\ Studentų\ vardai,\ pavardės\ ir\ pažymiai\ generuojami\ automatiškai.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00052}00052\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00053}00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d}{generuotiFaila}}();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00054}00054\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00055}00055\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00056}00056\ \textcolor{comment}{\ *\ @brief\ Sugeneruoja\ unikalų\ failo\ pavadinimą.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00057}00057\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00058}00058\ \textcolor{comment}{\ *\ Jei\ failas\ su\ nurodytu\ pavadinimu\ jau\ egzistuoja,\ automatiškai}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00059}00059\ \textcolor{comment}{\ *\ pridedamas\ skaitinis\ sufiksas\ (pvz.\ \`{}\_2`,\ \`{}\_3`).}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00060}00060\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00061}00061\ \textcolor{comment}{\ *\ @param\ bazinisPavadinimas\ Bazinis\ failo\ pavadinimas\ be\ plėtinio.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00062}00062\ \textcolor{comment}{\ *\ @return\ Unikalus\ failo\ pavadinimas\ su\ \`{}.txt`\ plėtiniu.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00063}00063\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00065}00065\ std::string\ \mbox{\hyperlink{Generavimas_8h_a89fc80e8e121774a0c47c091ddc5c1ba}{failoPavadinimas}}(\textcolor{keyword}{const}\ std::string\&\ bazinisPavadinimas);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00066}00066\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00067}00067\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00068}00068\ \textcolor{comment}{\ *\ @brief\ Interaktyviai\ prašo\ vartotojo\ pasirinkti\ skirstymo\ strategiją.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00069}00069\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00070}00070\ \textcolor{comment}{\ *\ Išveda\ meniu\ į\ konsolę\ ir\ nuskaito\ vartotojo\ pasirinkimą.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00071}00071\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00072}00072\ \textcolor{comment}{\ *\ @return\ Pasirinkta\ \`{}SkirstymoStrategija`.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00073}00073\ \textcolor{comment}{\ *\ @throws\ std::runtime\_error\ Jei\ vartotojo\ įvestis\ neteisinga.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00074}00074\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00076}00076\ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{SkirstymoStrategija}}\ \mbox{\hyperlink{Generavimas_8h_a7e9f03aafbd3f06297c723240a87ce92}{pasirinktiStrategija}}();}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00077}00077\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00078}00078\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00079}00079\ \textcolor{comment}{\ *\ @brief\ Skirsto\ studentus\ pagal\ 1-\/ą\ strategiją.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00080}00080\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00081}00081\ \textcolor{comment}{\ *\ Eina\ per\ visus\ studentus\ ir\ juos\ kopijuoja\ į\ atskirus\ konteinerius.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00082}00082\ \textcolor{comment}{\ *\ Originalus\ konteineris\ nekeičiamas.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00083}00083\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00084}00084\ \textcolor{comment}{\ *\ @param\ studis\ Studentų\ konteineris\ (const\ –\ nekeičiamas).}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00085}00085\ \textcolor{comment}{\ *\ @return\ \`{}Skirstymorezultatas`\ su\ dviem\ užpildytais\ konteineriais.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00086}00086\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00088}00088\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8h_abe8b00215e7c9d927d343694cda2c590}{skirstymasStrategija1}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVector}{StudContainer}}\&\ studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00089}00089\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00090}00090\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00091}00091\ \textcolor{comment}{\ *\ @brief\ Skirsto\ studentus\ pagal\ 2-\/ą\ strategiją.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00092}00092\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00093}00093\ \textcolor{comment}{\ *\ Vargsiukai\ ištraukiami\ iš\ originalaus\ konteinerio\ (erase).}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00094}00094\ \textcolor{comment}{\ *\ Likę\ studentai\ (protai)\ perkeliami\ į\ rezultatą.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00095}00095\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00096}00096\ \textcolor{comment}{\ *\ @param\ studis\ Studentų\ konteineris\ (keičiamas\ –\ iš\ jo\ šalinami\ vargsiukai).}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00097}00097\ \textcolor{comment}{\ *\ @return\ \`{}Skirstymorezultatas`.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00098}00098\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00100}00100\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8h_a0e5db32447f63219df43b26626dd1ee5}{skirstymasStrategija2}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00101}00101\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00102}00102\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00103}00103\ \textcolor{comment}{\ *\ @brief\ Skirsto\ studentus\ pagal\ 3-\/ą\ strategiją\ (efektyviausia).}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00104}00104\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00105}00105\ \textcolor{comment}{\ *\ Naudoja\ \`{}std::partition`\ algoritmą,\ kuris\ perskirsto\ elementus}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00106}00106\ \textcolor{comment}{\ *\ vietoje,\ tuomet\ siunčia\ į\ du\ atskirus\ konteinerius.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00107}00107\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00108}00108\ \textcolor{comment}{\ *\ @param\ studis\ Studentų\ konteineris\ (keičiamas).}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00109}00109\ \textcolor{comment}{\ *\ @return\ \`{}Skirstymorezultatas`.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00110}00110\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00112}00112\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8h_aedd48f7ce08ae142d078ad92729ef494}{skirstymasStrategija3}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis);}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00113}00113\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00114}00114\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00115}00115\ \textcolor{comment}{\ *\ @brief\ Bendro\ naudojimo\ skirstymo\ funkcija.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00116}00116\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00117}00117\ \textcolor{comment}{\ *\ Išsaugo\ laiko\ matavimus\ į\ globalų\ \`{}timers`\ objektą.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00118}00118\ \textcolor{comment}{\ *\ Pagal\ parametrus\ gali\ rašyti\ į\ failus\ ir\ prašyti\ rikiavimo\ pasirinkimo.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00119}00119\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00120}00120\ \textcolor{comment}{\ *\ @param\ studis\ Studentų\ konteineris.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00121}00121\ \textcolor{comment}{\ *\ @param\ strategija\ Naudojama\ skirstymo\ strategija.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00122}00122\ \textcolor{comment}{\ *\ @param\ irasytiIFailus\ Jei\ \`{}true`,\ rezultatai\ išsaugomi\ į\ failus.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00123}00123\ \textcolor{comment}{\ *\ @param\ paprasytiRikiavimo\ Jei\ \`{}true`,\ vartotojas\ gali\ pasirinkti\ rikiavimą.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00124}00124\ \textcolor{comment}{\ *\ @return\ \`{}Skirstymorezultatas`\ su\ vargsiukais\ ir\ protais.}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00125}00125\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00127}00127\ \mbox{\hyperlink{structSkirstymorezultatas}{Skirstymorezultatas}}\ \mbox{\hyperlink{Generavimas_8h_abe3d250258257289fcd11ddaeb608055}{skirstymasGrupes}}(}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00128}00128\ \ \ \ \ \mbox{\hyperlink{classVector}{StudContainer}}\&\ studis,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00129}00129\ \ \ \ \ \mbox{\hyperlink{Generavimas_8h_affdf706008cc8ce58b7dd8c2b2aeeb14}{SkirstymoStrategija}}\ strategija,}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00130}00130\ \ \ \ \ \textcolor{keywordtype}{bool}\ irasytiIFailus\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{Generavimas_8h_source_l00131}00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ paprasytiRikiavimo\ =\ \textcolor{keyword}{true});}
+
+\end{DoxyCode}

@@ -1,0 +1,104 @@
+\doxysection{meniu.\+cpp}
+\hypertarget{meniu_8cpp_source}{}\label{meniu_8cpp_source}\mbox{\hyperlink{meniu_8cpp}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{meniu_8h}{meniu.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Generavimas_8h}{Generavimas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{skaitymas_8h}{skaitymas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tyrimas_8h}{tyrimas.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00011}\mbox{\hyperlink{meniu_8h_a4bb692c238b0368aa3ac013f967f18af}{00011}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{meniu_8cpp_a4bb692c238b0368aa3ac013f967f18af}{vykdytiMeniu}}(\mbox{\hyperlink{classVector}{StudContainer}}\&\ studis)}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPasirinkite\ programos\ eiga:\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}1\ -\/\ Ivesti\ studenta\ ranka\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}2\ -\/\ Skaityti\ is\ failo\ ir\ iskart\ apdoroti\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}3\ -\/\ Prideti\ studenta\ su\ atsitiktiniais\ pazymiais\ (su\ vardu)\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}4\ -\/\ Prideti\ sugeneruota\ studenta\ (auto\ vardas/pavarde)\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}5\ -\/\ Sugeneruoti\ studentu\ faila\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}6\ -\/\ Atlikti\ konteineriu\ ir\ strategiju\ tyrima\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}7\ -\/\ Baigti\ darba\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pasirinkimas\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ std::cin\ >>\ pasirinkimas;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!std::cin)}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Bloga\ ivestis."{}});}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (pasirinkimas)}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStudentas}{Studentas}}\ s;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{skaitymas_8h_a7e691d0dbb70e6032759fbfad443c490}{skaitomRanka}}(s);}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ studis.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(s);}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{skaitymas_8h_a90ec6d53fd600e09f06272997c86dc22}{failoSkaitymas}}(studis))}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStudentas}{Studentas}}\ s;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ v,\ p;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ varda:\ "{}};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ v;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a553cf719758f4821bbd6eeda454fdf03}{setVardas}}(v);}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Iveskite\ pavarde:\ "{}};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ p;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_aa2f8644798ffa4396c35400dfb10ab23}{setPavarde}}(p);}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a556816c96b5fd37bf186e57da67e4f91}{parinktiAtsitiktinius}}();}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ studis.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(s);}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ nr\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classStudentas}{Studentas}}\ s;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a553cf719758f4821bbd6eeda454fdf03}{setVardas}}(\textcolor{stringliteral}{"{}Vardas"{}}\ +\ std::to\_string(nr));}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_aa2f8644798ffa4396c35400dfb10ab23}{setPavarde}}(\textcolor{stringliteral}{"{}Pavarde"{}}\ +\ std::to\_string(nr));}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ nr++;}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ s.\mbox{\hyperlink{classStudentas_a556816c96b5fd37bf186e57da67e4f91}{parinktiAtsitiktinius}}();}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ studis.\mbox{\hyperlink{classVector_a7cb08d016f15c97741c849cdb83170e1}{push\_back}}(s);}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Generavimas_8h_a533a0a21b762dcd162d0c0ee9af14c1d}{generuotiFaila}}();}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{tyrimas_8h_a0fc853d31f208eafd9f0ecb727511e99}{vykdytiTyrima}}();}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Neteisingas\ pasirinkimas.\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{meniu_8cpp_source_l00099}00099\ \}}
+
+\end{DoxyCode}

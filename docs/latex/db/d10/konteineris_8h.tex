@@ -1,0 +1,96 @@
+\doxysection{konteineris.\+h Failo Nuoroda}
+\hypertarget{konteineris_8h}{}\label{konteineris_8h}\index{konteineris.h@{konteineris.h}}
+{\ttfamily \#include "{}Studentas.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Vector.\+h"{}}\newline
+\doxysubsubsection*{Tipų apibrėžimai}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea}{Studentu\+Konteineris}} = \mbox{\hyperlink{classVector}{Vector}}$<$ T $>$
+\item 
+using \mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} = \mbox{\hyperlink{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea}{Studentu\+Konteineris}}$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}{aktyvaus\+Konteinerio\+Pavadinimas}} ()
+\item 
+std\+::string \mbox{\hyperlink{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}{aktyvaus\+Konteinerio\+Trumpas\+Pavadinimas}} ()
+\item 
+{\footnotesize template$<$typename T , typename Alloc , typename Compare $>$ }\\void \mbox{\hyperlink{konteineris_8h_a78a77737a29b58defd2e834d981f3771}{konteinerio\+Sort}} (std\+::list$<$ T, Alloc $>$ \&konteineris, Compare comp)
+\item 
+{\footnotesize template$<$typename Container , typename Compare $>$ }\\void \mbox{\hyperlink{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802}{konteinerio\+Sort}} (Container \&konteineris, Compare comp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Tipų apibrėžimų Dokumentacija}
+\Hypertarget{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}\label{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa} 
+\index{konteineris.h@{konteineris.h}!StudContainer@{StudContainer}}
+\index{StudContainer@{StudContainer}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{StudContainer}{StudContainer}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{konteineris_8h_a71ef8b62b733ac294bcbd0808114ffaa}{Stud\+Container}} =  \mbox{\hyperlink{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea}{Studentu\+Konteineris}}$<$\mbox{\hyperlink{classStudentas}{Studentas}}$>$}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}} eilutėje \mbox{\hyperlink{konteineris_8h_source_l00072}{72}}.
+
+\Hypertarget{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea}\label{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea} 
+\index{konteineris.h@{konteineris.h}!StudentuKonteineris@{StudentuKonteineris}}
+\index{StudentuKonteineris@{StudentuKonteineris}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{StudentuKonteineris}{StudentuKonteineris}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{konteineris_8h_a9e91c12ffcb45e4add42b3f482085fea}{Studentu\+Konteineris}} =  \mbox{\hyperlink{classVector}{Vector}}$<$T$>$}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}} eilutėje \mbox{\hyperlink{konteineris_8h_source_l00044}{44}}.
+
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0}\label{konteineris_8h_affb0aabac553e6cf28ed415389b1c4e0} 
+\index{konteineris.h@{konteineris.h}!aktyvausKonteinerioPavadinimas@{aktyvausKonteinerioPavadinimas}}
+\index{aktyvausKonteinerioPavadinimas@{aktyvausKonteinerioPavadinimas}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{aktyvausKonteinerioPavadinimas()}{aktyvausKonteinerioPavadinimas()}}
+{\footnotesize\ttfamily std\+::string aktyvaus\+Konteinerio\+Pavadinimas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}} eilutėje \mbox{\hyperlink{konteineris_8h_source_l00046}{46}}.
+
+\Hypertarget{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e}\label{konteineris_8h_a1ccfb203c1563ac53807708248e3a95e} 
+\index{konteineris.h@{konteineris.h}!aktyvausKonteinerioTrumpasPavadinimas@{aktyvausKonteinerioTrumpasPavadinimas}}
+\index{aktyvausKonteinerioTrumpasPavadinimas@{aktyvausKonteinerioTrumpasPavadinimas}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{aktyvausKonteinerioTrumpasPavadinimas()}{aktyvausKonteinerioTrumpasPavadinimas()}}
+{\footnotesize\ttfamily std\+::string aktyvaus\+Konteinerio\+Trumpas\+Pavadinimas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}} eilutėje \mbox{\hyperlink{konteineris_8h_source_l00051}{51}}.
+
+\Hypertarget{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802}\label{konteineris_8h_ac56ca99e5e1df9fc0bcd0ef981ed2802} 
+\index{konteineris.h@{konteineris.h}!konteinerioSort@{konteinerioSort}}
+\index{konteinerioSort@{konteinerioSort}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{konteinerioSort()}{konteinerioSort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Container , typename Compare $>$ \\
+void konteinerio\+Sort (\begin{DoxyParamCaption}\item[{Container \&}]{konteineris,  }\item[{Compare}]{comp }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}} eilutėje \mbox{\hyperlink{konteineris_8h_source_l00081}{81}}.
+
+\Hypertarget{konteineris_8h_a78a77737a29b58defd2e834d981f3771}\label{konteineris_8h_a78a77737a29b58defd2e834d981f3771} 
+\index{konteineris.h@{konteineris.h}!konteinerioSort@{konteinerioSort}}
+\index{konteinerioSort@{konteinerioSort}!konteineris.h@{konteineris.h}}
+\doxysubsubsection{\texorpdfstring{konteinerioSort()}{konteinerioSort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Alloc , typename Compare $>$ \\
+void konteinerio\+Sort (\begin{DoxyParamCaption}\item[{std\+::list$<$ T, Alloc $>$ \&}]{konteineris,  }\item[{Compare}]{comp }\end{DoxyParamCaption})}
+
+
+
+Apibrėžimas failo \mbox{\hyperlink{konteineris_8h_source}{konteineris.\+h}} eilutėje \mbox{\hyperlink{konteineris_8h_source_l00075}{75}}.
+
