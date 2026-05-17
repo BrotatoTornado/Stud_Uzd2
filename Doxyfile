@@ -13,19 +13,19 @@ CREATE_SUBDIRS         = YES
 #---------------------------------------------------------------------------
 # Įvesties šaltiniai
 #---------------------------------------------------------------------------
-INPUT                  = src/Vector.h \
-                         src/Studentas.h src/Studentas.cpp \
-                         src/Zmogus.h src/Zmogus.cpp \
-                         src/konteineris.h \
-                         src/laikai.h src/laikai.cpp \
-                         src/skaitymas.h src/skaitymas.cpp \
-                         src/spausdinam.h src/spausdinam.cpp \
-                         src/meniu.h src/meniu.cpp \
-                         src/Generavimas.h src/Generavimas.cpp \
-                         src/tyrimas.h src/tyrimas.cpp \
-                         src/main.cpp \
-                         tests/vector_tests.cpp \
-                         benchmark/spartos_analize.cpp
+INPUT                  = Vector.h \
+                         Studentas.h Studentas.cpp \
+                         Zmogus.h  Zmogus.cpp \
+                          konteineris.h \
+                          laikai.h  laikai.cpp \
+                          skaitymas.h  skaitymas.cpp \
+                          spausdinam.h  spausdinam.cpp \
+                          meniu.h  meniu.cpp \
+                          Generavimas.h  Generavimas.cpp \
+                          tyrimas.h  tyrimas.cpp \
+                          main.cpp \
+                         vector_tests.cpp \
+                         spartos_analize.cpp
 
 RECURSIVE              = NO
 FILE_PATTERNS          = *.h *.cpp
@@ -39,7 +39,7 @@ HTML_FILE_EXTENSION    = .html
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
 
-GENERATE_LATEX         = NO
+GENERATE_LATEX         = YES
 GENERATE_MAN           = NO
 GENERATE_RTF           = NO
 GENERATE_XML           = NO
