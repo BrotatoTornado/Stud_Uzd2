@@ -272,11 +272,11 @@ Dokumentacija sukuriama:
 make programa_manoVector
 
 # 2. Paruošti struktūrą
-#    build\Release\programa_manoVector.exe
-#    data\studentai10000.txt
-#    data\studentai100000.txt
+#    programa_manoVector.exe
+#    studfailai\studentai10000.txt
+#    studfailai\studentai100000.txt ir t.t.
 
 # 3. Kompiliuoti .iss
-iscc installer\setup.iss
+iscc setup.iss
 # Arba atidaryti Inno Setup IDE ir paspausti Ctrl+F9
 ``
