@@ -1,3 +1,14 @@
+/**
+ * @file Studentas.cpp
+ * @brief Studentas klasės metodų realizacija.
+ *
+ * Realizuojami visi Rule of Five metodai, įvesties/išvesties operatoriai,
+ * galutinio balo skaičiavimas ir pagalbinės lyginimo funkcijos.
+ *
+ * @author Studentas
+ * @version 2.0
+ */
+
 #include "Studentas.h"
 
 #include <iomanip>
@@ -9,16 +20,27 @@
 #include <sstream>
 
 
+ /** @brief Numatytasis konstruktorius. Inicializuoja skaičinius laukus į 0. */
 Studentas::Studentas() : egzaminas(0), vidurkis(0.0f), galrezVid(0.0f), galrezMed(0.0f)
 {
 }
+
+/**
+ * @brief Srautinis konstruktorius.
+ * @details Nuskaito eilutę iš srauto per `readStudent()`.
+ * @param is Įvesties srautas (pvz. `std::istringstream`).
+ */
 
 Studentas::Studentas(std::istream& is): egzaminas(0), vidurkis(0.0f), galrezVid(0.0f), galrezMed(0.0f)
 {
     readStudent(is);
 }
 
-// Kopijavimo konstruktorius
+/**
+ * @brief Kopijavimo konstruktorius. Sukuria gilią kopiją.
+ * @param other Kopijuojamas objektas.
+ */
+
 Studentas::Studentas(const Studentas& other): Zmogus(other),
     egzaminas(other.egzaminas),
     nd(other.nd),
@@ -28,7 +50,13 @@ Studentas::Studentas(const Studentas& other): Zmogus(other),
 {
 }
 
-// Kopijavimo priskyrimo operatorius
+/**
+ * @brief Kopijavimo priskyrimo operatorius.
+ * @details Naudoja savipriskyrimo apsaugą (`if (this == &other)`).
+ * @param other Priskiriamas objektas.
+ * @return Nuoroda į šį objektą.
+ */
+
 Studentas& Studentas::operator=(const Studentas& other)
 {
     if (this == &other)
@@ -46,7 +74,13 @@ Studentas& Studentas::operator=(const Studentas& other)
     return *this;
 }
 
-// Perkėlimo konstruktorius
+/**
+ * @brief Perkėlimo konstruktorius.
+ * @details Po perkėlimo šaltinio skaičiniai laukai nulinami,
+ * `nd` vektorius perkeliamas.
+ * @param other Perkeliamas objektas (rvalue).
+ */
+
 Studentas::Studentas(Studentas&& other): Zmogus(std::move(other)),
     egzaminas(other.egzaminas),
     nd(std::move(other.nd)),
@@ -60,7 +94,13 @@ Studentas::Studentas(Studentas&& other): Zmogus(std::move(other)),
     other.galrezMed = 0.0f;
 }
 
-// Perkėlimo priskyrimo operatorius
+/**
+ * @brief Perkėlimo priskyrimo operatorius.
+ * @details Savipriskyrimo apsauga + resursų perkėlimas.
+ * @param other Perkeliamas objektas (rvalue).
+ * @return Nuoroda į šį objektą.
+ */
+
 Studentas& Studentas::operator=(Studentas&& other)
 {
     if (this == &other)
@@ -84,7 +124,12 @@ Studentas& Studentas::operator=(Studentas&& other)
 }
 
 
-// spausdinti – įgyvendina grynąją virtualią funkciją iš Zmogus
+/**
+ * @brief Išveda studento duomenis į srautą.
+ * @details Realizuoja `Zmogus::spausdinti()`.
+ * @param os Išvesties srautas.
+ */
+
 void Studentas::spausdinti(std::ostream& os) const
 {
     os << std::left << std::setw(15) << vardas
@@ -103,7 +148,17 @@ void Studentas::spausdinti(std::ostream& os) const
         << "  Gal.Med: " << galrezMed;
 }
 
-// suskaiciuotiGalutini – įgyvendina grynąją virtualią funkciją iš Zmogus
+/**
+ * @brief Apskaičiuoja galutinį įvertinimą.
+ * @details Realizuoja `Zmogus::suskaiciuotiGalutini()`.
+ *
+ * Formulė:
+ * - `galrezVid = 0.4 * vidurkis + 0.6 * egzaminas`
+ * - `galrezMed = 0.4 * mediana  + 0.6 * egzaminas`
+ *
+ * Mediana skaičiuojama iš surūšiuoto `nd` vektoriaus kopijos.
+ */
+
 void Studentas::suskaiciuotiGalutini()
 {
     std::vector<int> surikiuoti = nd;
@@ -133,12 +188,21 @@ void Studentas::suskaiciuotiGalutini()
     galrezMed = 0.4f * med + 0.6f * static_cast<float>(egzaminas);
 }
 
-// operator<< – delegacija į virtualią spausdinti()
+/**
+ * @brief Išvesties operatorius.
+ * @details Delegacija į `Studentas::spausdinti()` (virtualus dispatch).
+ */
+
 std::ostream& operator<<(std::ostream& os, const Studentas& s)
 {
     s.spausdinti(os);
     return os;
 }
+
+/**
+ * @brief Įvesties operatorius.
+ * @details Nuskaito duomenis ir apskaičiuoja galutinį balą.
+ */
 
 std::istream& operator>>(std::istream& is, Studentas& s)
 {
@@ -147,6 +211,11 @@ std::istream& operator>>(std::istream& is, Studentas& s)
     return is;
 }
 
+/**
+ * @brief Nuskaito studento duomenis iš srauto (vidinė funkcija).
+ * @details Formatas: `Vardas Pavardė ND1 ND2 ... NDn Egzaminas`
+ * Paskutinis skaičius laikomas egzamino pažymiu.
+ */
 
 std::istream& Studentas::readStudent(std::istream& is)
 {
@@ -189,6 +258,11 @@ std::istream& Studentas::readStudent(std::istream& is)
     return is;
 }
 
+/**
+ * @brief Interaktyviai įveda namų darbų pažymius.
+ * @throws std::runtime_error Jei neįvestas nė vienas pažymys.
+ */
+
 void Studentas::readNdInteractive()
 {
     std::cout << "Iveskite namu darbu pazymius (0 – pabaiga):" << std::endl;
@@ -229,6 +303,12 @@ void Studentas::readNdInteractive()
     vidurkis /= static_cast<float>(nd.size());
 }
 
+/**
+ * @brief Sugeneruoja atsitiktinius namų darbų ir egzamino pažymius.
+ * @details Naudoja `std::mt19937` su `std::random_device` sėkla.
+ * Pažymiai – intervale [1, 10].
+ */
+
 void Studentas::parinktiAtsitiktinius()
 {
     std::mt19937 gen(std::random_device{}());
@@ -250,22 +330,25 @@ void Studentas::parinktiAtsitiktinius()
     egzaminas  = dist(gen);
 }
 
-
+/** @brief Rikiavimas pagal vardą (didėjančiai). */
 bool comparePagalVarda(const Studentas& a, const Studentas& b)
 {
     return a.getVardas() < b.getVardas();
 }
 
+/** @brief Rikiavimas pagal pavardę (didėjančiai). */
 bool comparePagalPavarde(const Studentas& a, const Studentas& b)
 {
     return a.getPavarde() < b.getPavarde();
 }
 
+/** @brief Rikiavimas pagal galutinį vidurkio balą (didėjančiai). */
 bool comparePagalGalVid(const Studentas& a, const Studentas& b)
 {
     return a.getgalrezVid() < b.getgalrezVid();
 }
 
+/** @brief Rikiavimas pagal galutinį medianos balą (didėjančiai). */
 bool comparePagalGalMed(const Studentas& a, const Studentas& b)
 {
     return a.getgalrezMed() < b.getgalrezMed();
