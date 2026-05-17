@@ -6,7 +6,7 @@
  * ir visas su studentų generavimu bei grupavimu susijusias funkcijas.
  *
  * @author Studentas
- * @version 2.0
+ * @version 3.0
  */
 
 #pragma once
