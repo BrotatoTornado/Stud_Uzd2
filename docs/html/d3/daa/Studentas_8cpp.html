@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Studentų Projektas v3.0 – Vector&lt;T&gt;: Studentas.cpp Failo Nuoroda</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Studentų Projektas v3.0 – Vector&lt;T&gt;<span id="projectnumber">&#160;3.0</span>
+   </div>
+   <div id="projectbrief">std::vector alternatyva – nuosava Vector&lt;T&gt; klasė ir studentų valdymo programa</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Paieška');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcijos</a>  </div>
+  <div class="headertitle"><div class="title">Studentas.cpp Failo Nuoroda</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../d2/d8d/classStudentas.html" title="Konkreti klasė, paveldinti iš Zmogus.">Studentas</a> klasės metodų realizacija.  
+<a href="#details">Daugiau...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../da/d37/Studentas_8h_source.html">Studentas.h</a>&quot;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div>
+<p><a href="../../d3/daa/Studentas_8cpp_source.html">Eiti į šio failo programos kodą.</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Smulkus aprašymas</h2>
+<div class="textblock"><p><a class="el" href="../../d2/d8d/classStudentas.html" title="Konkreti klasė, paveldinti iš Zmogus.">Studentas</a> klasės metodų realizacija. </p>
+<p>Realizuojami visi Rule of Five metodai, įvesties/išvesties operatoriai, galutinio balo skaičiavimas ir pagalbinės lyginimo funkcijos.</p>
+<dl class="section author"><dt>Autorius</dt><dd><a class="el" href="../../d2/d8d/classStudentas.html" title="Konkreti klasė, paveldinti iš Zmogus.">Studentas</a> </dd></dl>
+<dl class="section version"><dt>Versija</dt><dd>3.0 </dd></dl>
+
+<p class="definition">Apibrėžimas faile <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a>.</p>
+</div><h2 class="groupheader">Funkcijos Dokumentacija</h2>
+<a id="a765147d9fed463e16e0c55e3e5da8aa1" name="a765147d9fed463e16e0c55e3e5da8aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765147d9fed463e16e0c55e3e5da8aa1">&#9670;&#160;</a></span>comparePagalGalMed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool comparePagalGalMed </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rikiavimas pagal galutinį medianos balą (didėjančiai). </p>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a> eilutėje <a class="el" href="../../d3/daa/Studentas_8cpp_source.html#l00352">352</a>.</p>
+
+</div>
+</div>
+<a id="a7603032016d04ebc25fc72a2581f7493" name="a7603032016d04ebc25fc72a2581f7493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7603032016d04ebc25fc72a2581f7493">&#9670;&#160;</a></span>comparePagalGalVid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool comparePagalGalVid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rikiavimas pagal galutinį vidurkio balą (didėjančiai). </p>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a> eilutėje <a class="el" href="../../d3/daa/Studentas_8cpp_source.html#l00346">346</a>.</p>
+
+</div>
+</div>
+<a id="a3bb6ccb88204b8e5648eaedf0ac7bfa7" name="a3bb6ccb88204b8e5648eaedf0ac7bfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bb6ccb88204b8e5648eaedf0ac7bfa7">&#9670;&#160;</a></span>comparePagalPavarde()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool comparePagalPavarde </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rikiavimas pagal pavardę (didėjančiai). </p>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a> eilutėje <a class="el" href="../../d3/daa/Studentas_8cpp_source.html#l00340">340</a>.</p>
+
+</div>
+</div>
+<a id="a82a044563f7e43f694ae771b27a6e89c" name="a82a044563f7e43f694ae771b27a6e89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a044563f7e43f694ae771b27a6e89c">&#9670;&#160;</a></span>comparePagalVarda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool comparePagalVarda </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rikiavimas pagal vardą (didėjančiai). </p>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a> eilutėje <a class="el" href="../../d3/daa/Studentas_8cpp_source.html#l00334">334</a>.</p>
+
+</div>
+</div>
+<a id="a4062cbd3f4c44fac2063e38cfa00a8cf" name="a4062cbd3f4c44fac2063e38cfa00a8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4062cbd3f4c44fac2063e38cfa00a8cf">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Išvesties operatorius. </p>
+<p>Delegacija į <code><a class="el" href="../../d2/d8d/classStudentas.html#af43672203b6f94265280ba9756ee4212" title="Išveda studento duomenis į nurodytą srautą.">Studentas::spausdinti()</a></code> (virtualus dispatch). </p>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a> eilutėje <a class="el" href="../../d3/daa/Studentas_8cpp_source.html#l00196">196</a>.</p>
+
+</div>
+</div>
+<a id="ac63003b577b137ac6ad5b1fb176bd59a" name="ac63003b577b137ac6ad5b1fb176bd59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac63003b577b137ac6ad5b1fb176bd59a">&#9670;&#160;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream &amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d8d/classStudentas.html">Studentas</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Įvesties operatorius. </p>
+<p>Nuskaito duomenis ir apskaičiuoja galutinį balą. </p>
+
+<p class="definition">Apibrėžimas failo <a class="el" href="../../d3/daa/Studentas_8cpp_source.html">Studentas.cpp</a> eilutėje <a class="el" href="../../d3/daa/Studentas_8cpp_source.html#l00207">207</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Sugeneruota&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
