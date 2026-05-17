@@ -35,7 +35,7 @@ programa_vector_O3: $(SRCS)
 
 .PHONY: opt_manoVector
 
-opt_vector: programa_manoVector_O1 programa_manoVector_O2 programa_manoVector_O3
+opt_manoVector: programa_manoVector_O1 programa_manoVector_O2 programa_manoVector_O3
 
 programa_manoVector_O1: $(SRCS)
 	$(CXX) $(CXXFLAGS) -O1 -DUSE_MYVECTOR $^ -o $@
