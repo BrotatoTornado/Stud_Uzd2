@@ -1,11 +1,11 @@
 # =============================================================================
 # Doxyfile – Doxygen konfigūracijos failas
-# Studentas projektas v1.2
+# Studentas projektas v2.0
 # =============================================================================
 
 # ─── Projekto informacija ─────────────────────────────────────────────────────
 PROJECT_NAME           = "Studentas projektas"
-PROJECT_NUMBER         = 1.2
+PROJECT_NUMBER         = 2.0
 PROJECT_BRIEF          = "Studentų duomenų valdymo sistema su Rule of Five klasėmis"
 OUTPUT_DIRECTORY       = docs
 
